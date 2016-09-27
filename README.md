@@ -1,7 +1,7 @@
-# PRECIS Codec
+# PRECIS Codec: Internationalized Usernames and Passwords
 
-The PRECIS codec makes i18n user names and passwords safer for use by applications. 
-PRECIS profiles transform strings into a canonical form, suitable for comparison.
+The PRECIS codec makes internationalized user names and passwords safer for use by applications. 
+PRECIS profiles transform unicode strings into a canonical form, suitable for byte-by-byte comparison.
 
 This module implements the PRECIS Framework as described in:
 
@@ -9,9 +9,19 @@ This module implements the PRECIS Framework as described in:
 - Preparation, Enforcement, and Comparison of Internationalized Strings Representing Usernames and Passwords (RFC 7613)
 - Preparation, Enforcement, and Comparison of Internationalized Strings Representing Nicknames (RFC 7700)
 
+## Supported Codecs
+
+- UsernamePreserved
+- UsernameCaseMapped
+- OpaqueString
+- NicknamePreserved
+- NicknameCaseMapped
+
 ## Usage
 
-```
+Import the `precis_codec` module to register the codec names. You can then `encode` any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
+
+```python
 >>> import precis_codec
 >>> 'Kevin'.encode('UsernamePreserved')
 b'Kevin'
@@ -23,36 +33,34 @@ b'Kevin'
 b'kevin'
 >>> '\uFF2Bevin'.encode('OpaqueString')
 b'\xef\xbc\xabevin'
+>>> '\U0001F17Aevin'.encode('UsernamePreserved')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ...
+  File "precis_codec/baseclass.py", line 29, in _enforce
+    '%s/%s' % (prop, kind))
+UnicodeEncodeError: 'usernamepreserved' codec can't encode character 'U0001f17a' in position 0: FREE_PVAL/symbols
 ```
-
-## Supported Codecs
-
-- UsernamePreserved
-- UsernameCaseMapped
-- OpaqueString
-- NicknamePreserved
-- NicknameCaseMapped
 
 ## Examples
 
-UsernamePreserved
+There are multiple ways to write "Kevin" by varying only the "K".
 
-```
-'Kevin'       ->  'Kevin'
-'\u212Aevin'  ->  'Kevin'
-'\uFF2Bevin'  ->  'Kevin'
-'\u039Aevin'  ->  '\u039Aevin'
-'\u1E32evin'  ->  '\u1E32evin'
-'\u1E34evin'  ->  '\u1E34evin'
-'\u2C69evin'  ->  '\u2C69evin'
-'\uA740evin'  ->  '\uA740evin'
-'\uA742evin'  ->  '\uA742evin'
-'\uA744evin'  ->  '\uA744evin'
-'\uA7A2evin'  ->  '\uA7A2evin'
-'\u24C0evin'  ->   DISALLOWED
-'\U000E004B'  ->   DISALLOWED
-'\U0001F11A'  ->   DISALLOWED
-'\U0001F13A'  ->   DISALLOWED
-'\U0001F15A'  ->   DISALLOWED
-'\U0001F17A'  ->   DISALLOWED
-```
+Original String|UsernamePreserved|UsernameCaseMapped
+---------------|-----------------|------------------
+Kevin | Kevin | kevin
+&#x212A;evin '\u212Aevin' | Kevin | kevin
+&#xFF2B;evin '\uFF2Bevin' | Kevin | kevin
+&#x039A;evin '\u039Aevin' | &#x039A;evin '\u039Aevin' | &#x03BA;evin '\u03BAevin'
+&#x1e32;evin '\u1E32evin' | &#x1e32;evin '\u1E32evin' | &#x1E33;evin '\u1E33evin'
+&#x1E34;evin '\u1E34evin' | &#x1E34;evin '\u1E34evin' | &#x1E35;evin '\u1E35evin'
+&#x2c69;evin '\u2C69evin' | &#x2c69;evin '\u2C69evin' | &#x2C6A;evin '\u2C6Aevin'
+&#xA740;evin '\uA740evin' | &#xA740;evin '\uA740evin' | &#xA741;evin '\uA741evin'
+&#xA742;evin '\uA742evin' | &#xA742;evin '\uA742evin' | &#xA743;evin '\uA743evin'
+&#xA744;evin '\uA744evin' | &#xA744;evin '\uA744evin' | &#xA745;evin '\uA745evin'
+&#xA7A2;evin '\uA7A2evin' | &#xA7A2;evin '\uA7A2evin' | &#xA7A3;evin '\uA7A3evin'
+&#x24C0;evin '\u24C0evin'  | DISALLOWED | DISALLOWED
+&#x1F11A;evin '\U0001F11Aevin' | DISALLOWED | DISALLOWED
+&#x1F13A;evin '\U0001F13Aevin' | DISALLOWED | DISALLOWED
+&#x1F15A;evin '\U0001F15Aevin' | DISALLOWED | DISALLOWED
+&#x1F17A;evin '\U0001F17Aevin' | DISALLOWED | DISALLOWED
