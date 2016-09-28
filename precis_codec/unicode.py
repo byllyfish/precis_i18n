@@ -48,9 +48,9 @@ class UnicodeData(object):
 
         return self._halfwidth_chars.sub(decompose, value)
 
-    # Map all white space {Zs} to ' '
-
-    def replace_whitespace(self, value):
+    def map_nonascii_space_to_ascii(self, value):
+        """ Convert non-ASCII white space {Zs} to ASCII ' '.
+        """
         return self._space_chars.sub(' ', value)
 
     # These methods are specialized for use by PRECIS.

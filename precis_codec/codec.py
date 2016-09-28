@@ -2,7 +2,7 @@
 
 import codecs
 
-from precis_codec.profile import (NicknameCaseMapped, NicknamePreserved,
+from precis_codec.profile import (Nickname,
                                   OpaqueString, UsernameCaseMapped,
                                   UsernameCasePreserved)
 from precis_codec.unicode import UnicodeData
@@ -29,8 +29,7 @@ _codecs = {
     'usernamecasepreserved': UsernameCasePreserved,
     'usernamecasemapped': UsernameCaseMapped,
     'opaquestring': OpaqueString,
-    'nicknamepreserved': NicknamePreserved,
-    'nicknamecasemapped': NicknameCaseMapped
+    'nickname': Nickname
 }
 
 

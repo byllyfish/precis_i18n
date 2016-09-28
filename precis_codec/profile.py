@@ -5,6 +5,10 @@ from precis_codec.bidi import bidi_rule, has_rtl
 
 
 class Profile(object):
+    """
+    Abstract base class for a PRECIS profile.
+    """
+
     def __init__(self, base, name):
         self._base = base
         self._name = name
@@ -54,6 +58,32 @@ class Profile(object):
 
 
 class UsernameCasePreserved(Profile):
+    """
+    Name:  UsernameCasePreserved.
+
+    Base Class:  IdentifierClass.
+    
+    Applicability:  Usernames in security and application protocols.
+    
+    Replaces:  The SASLprep profile of stringprep.
+    
+    Width-Mapping Rule:  Map fullwidth and halfwidth characters to their
+       decomposition mappings.
+    
+    Additional Mapping Rule:  None.
+    
+    Case-Mapping Rule:  None.
+    
+    Normalization Rule:  NFC.
+    
+    Directionality Rule:  The "Bidi Rule" defined in RFC 5893 applies.
+    
+    Enforcement:  To be defined by security or application protocols that
+       use this profile.
+    
+    Specification:  RFC7613, Section 3.3. 
+    """
+
     def __init__(self, ucd, name='UsernameCasePreserved'):
         super().__init__(IdentifierClass(ucd), name)
 
@@ -70,6 +100,33 @@ class UsernameCasePreserved(Profile):
 
 
 class UsernameCaseMapped(UsernameCasePreserved):
+    """
+    Name:  UsernameCaseMapped.
+    
+    Base Class:  IdentifierClass.
+    
+    Applicability:  Usernames in security and application protocols.
+    
+    Replaces:  The SASLprep profile of stringprep.
+    
+    Width-Mapping Rule:  Map fullwidth and halfwidth characters to their
+       decomposition mappings.
+    
+    Additional Mapping Rule:  None.
+    
+    Case-Mapping Rule:  Map uppercase and titlecase characters to
+       lowercase.
+    
+    Normalization Rule:  NFC.
+    
+    Directionality Rule:  The "Bidi Rule" defined in RFC 5893 applies.
+    
+    Enforcement:  To be defined by security or application protocols that
+       use this profile.
+    
+    Specification:  RFC7613, Section 3.2.  
+    """
+
     def __init__(self, ucd, name='UsernameCaseMapped'):
         super().__init__(ucd, name)
 
@@ -78,25 +135,79 @@ class UsernameCaseMapped(UsernameCasePreserved):
 
 
 class OpaqueString(Profile):
+    """
+    Name:  OpaqueString.
+
+    Base Class:  FreeformClass.
+
+    Applicability:  Passwords and other opaque strings in security and
+       application protocols.
+
+    Replaces:  The SASLprep profile of stringprep.
+
+    Width-Mapping Rule:  None.
+
+    Additional Mapping Rule:  Map non-ASCII space characters to ASCII
+       space.
+
+    Case-Mapping Rule:  None.
+
+    Normalization Rule:  NFC.
+
+    Directionality Rule:  None.
+
+    Enforcement:  To be defined by security or application protocols that
+       use this profile.
+
+    Specification:  RFC7613, Section 4.2.
+    """
+
     def __init__(self, ucd, name='OpaqueString'):
         super().__init__(FreeFormClass(ucd), name)
 
+    def additional_mapping_rule(self, value):
+        return self.base.ucd.map_nonascii_space_to_ascii(value)
 
-class NicknamePreserved(Profile):
-    def __init__(self, ucd, name='NicknamePreserved'):
+
+class Nickname(Profile):
+    """
+    Name:  Nickname.
+ 
+    Base Class:  FreeformClass.
+ 
+    Applicability:  Nicknames in messaging and text conferencing
+       technologies; petnames for devices, accounts, and people; and
+       other uses of nicknames or petnames.
+ 
+    Replaces:  None.
+ 
+    Width Mapping Rule:  None (handled via NFKC).
+ 
+    Additional Mapping Rule:  Map non-ASCII space characters to ASCII
+       space, strip leading and trailing space characters, map interior
+       sequences of multiple space characters to a single ASCII space.
+ 
+    Case Mapping Rule:  Map uppercase and titlecase characters to
+       lowercase using Unicode Default Case Folding.
+ 
+    Normalization Rule:  NFKC.
+ 
+    Directionality Rule:  None.
+ 
+    Enforcement:  To be specified by applications.
+ 
+    Specification:  RFC7700
+    """
+
+    def __init__(self, ucd, name='Nickname'):
         super().__init__(FreeFormClass(ucd), name)
 
     def additional_mapping_rule(self, value):
-        temp = self.base.ucd.replace_whitespace(value).strip()
-        return re.sub(r'  +', ' ', temp)
-
-    def normalization_rule(self, value):
-        return self.base.ucd.normalize('NFKC', value)
-
-
-class NicknameCaseMapped(NicknamePreserved):
-    def __init__(self, ucd, name='NicknameCaseMapped'):
-        super().__init__(ucd, name)
+        temp = self.base.ucd.map_nonascii_space_to_ascii(value)
+        return re.sub(r'  +', ' ', temp.strip())
 
     def case_mapping_rule(self, value):
         return value.casefold()
+
+    def normalization_rule(self, value):
+        return self.base.ucd.normalize('NFKC', value)

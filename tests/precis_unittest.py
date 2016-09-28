@@ -6,7 +6,7 @@ import precis_codec.context as pc
 from precis_codec.baseclass import FreeFormClass, IdentifierClass
 from precis_codec.bidi import bidi_rule, has_rtl
 from precis_codec.derived import derived_property
-from precis_codec.profile import UsernameCaseMapped, UsernameCasePreserved, NicknameCaseMapped
+from precis_codec.profile import UsernameCaseMapped, UsernameCasePreserved, Nickname
 from precis_codec.unicode import UnicodeData
 
 UCD = UnicodeData()
@@ -16,10 +16,9 @@ class TestCodec(unittest.TestCase):
     def test_encode(self):
         self.assertEqual('Juliet'.encode('UsernameCasePreserved'), b'Juliet')
         self.assertEqual('Juliet'.encode('UsernameCaseMapped'), b'juliet')
-        self.assertEqual(' pa  ss \u1FBF'.encode('OpaqueString'),
-                         b' pa  ss \xe1\xbe\xbf')
-        self.assertEqual('Juliet'.encode('NicknamePreserved'), b'Juliet')
-        self.assertEqual('Juliet'.encode('NicknameCaseMapped'), b'juliet')
+        self.assertEqual(' pass \u1FBF\u3000'.encode('OpaqueString'),
+                         b' pass \xe1\xbe\xbf ')
+        self.assertEqual(' Juliet '.encode('Nickname'), b'juliet')
 
     def test_decode(self):
         with self.assertRaises(NotImplementedError):
@@ -27,6 +26,7 @@ class TestCodec(unittest.TestCase):
 
     def test_encode_errors(self):
         with self.assertRaises(ValueError):
+            # errors must be 'strict'; 'replace' and others are not supported.
             'Juliet'.encode('opaquestring', errors='replace')
 
 
@@ -81,9 +81,9 @@ class TestUsernameCaseMapped(unittest.TestCase):
             b'\xc3\xa9\xcc\x81\xcc\x81')
 
 
-class TestNicknameCaseMapped(unittest.TestCase):
+class TestNickname(unittest.TestCase):
     def test_enforce(self):
-        profile = NicknameCaseMapped(UCD)
+        profile = Nickname(UCD)
         self.assertEqual(profile.enforce('Juliet'), b'juliet')
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'),
@@ -408,9 +408,9 @@ class TestPrecisUnicodeData(unittest.TestCase):
 
     def test_replace_whitespace(self):
         self.assertEqual(
-            UCD.replace_whitespace(
-                ' .\u00a0.\u1680.\u2000.\u200A.\u202F.\u205F.\u3000'),
-            ' . . . . . . . ')
+            UCD.map_nonascii_space_to_ascii(
+                ' .\u00a0.\u1680 .\u2000.\u200A.\u202F.\u205F.\u3000'),
+            ' . .  . . . . . ')
 
     def test_default_ignorable_code_point(self):
         self.assertTrue(UCD.default_ignorable(0x00ad))

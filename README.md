@@ -15,8 +15,7 @@ Each PRECIS profile has a corresponding codec name. The `CaseMapped` variant con
 
 - UsernameCasePreserved
 - UsernameCaseMapped
-- NicknamePreserved
-- NicknameCaseMapped
+- Nickname
 - OpaqueString
 
 ## Usage
@@ -48,7 +47,7 @@ UnicodeEncodeError: 'usernamecasepreserved' codec can't encode character 'U0001f
 
 There are multiple ways to write "Kevin" by varying only the "K".
 
-Original String|UsernameCasePreserved|UsernameCaseMapped|NicknameCaseMapped
+Original String|UsernameCasePreserved|UsernameCaseMapped|Nickname
 ---------------|-----------------|------------------|------------------
 Kevin | Kevin | kevin | kevin
 &#x212A;evin '\u212Aevin' | Kevin | kevin | kevin
