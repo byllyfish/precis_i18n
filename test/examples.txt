@@ -52,7 +52,7 @@ ALLOW  Σ
 ALLOW  σ
 ALLOW  ς
 
-ALLOW  ~`!@#$%^&*()-_=+[{}]\|;:'",<.>/?
+ALLOW  ~`!@#$%^&*()-_=+[{}]\\|;:'",<.>/?
 ALLOW  A\uA717
 ALLOW  é
 ALLOW  é́́  é́́
@@ -208,7 +208,7 @@ ALLOW  Σ  σ
 ALLOW  σ
 ALLOW  ς  σ
 
-ALLOW  ~`!@#$%^&*()-_=+[{}]\|;:'",<.>/?
+ALLOW  ~`!@#$%^&*()-_=+[{}]\\|;:'",<.>/?
 ALLOW  é
 ALLOW  é́́  é́́
 ALLOW  é    é
