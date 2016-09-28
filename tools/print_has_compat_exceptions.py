@@ -1,9 +1,9 @@
 from precis_codec.derived import derived_property
-from precis_codec.profile import UsernamePreserved
+from precis_codec.profile import UsernameCasePreserved
 from precis_codec.unicode import UnicodeData
 
 UCD = UnicodeData()
-profile = UsernamePreserved(UCD)
+profile = UsernameCasePreserved(UCD)
 
 count = 0
 ascii = 0

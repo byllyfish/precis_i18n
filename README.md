@@ -13,7 +13,7 @@ This module implements the PRECIS Framework as described in:
 
 Each PRECIS profile has a corresponding codec name. The `CaseMapped` variant converts the string to lower case for implementing case-insensitive comparison.
 
-- UsernamePreserved
+- UsernameCasePreserved
 - UsernameCaseMapped
 - NicknamePreserved
 - NicknameCaseMapped
@@ -25,30 +25,30 @@ Import the `precis_codec` module to register the PRECIS codec names. Use the `en
 
 ```python
 >>> import precis_codec
->>> 'Kevin'.encode('UsernamePreserved')
+>>> 'Kevin'.encode('UsernameCasePreserved')
 b'Kevin'
->>> '\u212Aevin'.encode('UsernamePreserved')
+>>> '\u212Aevin'.encode('UsernameCasePreserved')
 b'Kevin'
->>> '\uFF2Bevin'.encode('UsernamePreserved')
+>>> '\uFF2Bevin'.encode('UsernameCasePreserved')
 b'Kevin'
 >>> '\u212Aevin'.encode('UsernameCaseMapped')
 b'kevin'
 >>> '\uFF2Bevin'.encode('OpaqueString')
 b'\xef\xbc\xabevin'
->>> '\U0001F17Aevin'.encode('UsernamePreserved')
+>>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   ...
   File "precis_codec/baseclass.py", line 29, in _enforce
     '%s/%s' % (prop, kind))
-UnicodeEncodeError: 'usernamepreserved' codec can't encode character 'U0001f17a' in position 0: FREE_PVAL/symbols
+UnicodeEncodeError: 'usernamecasepreserved' codec can't encode character 'U0001f17a' in position 0: FREE_PVAL/symbols
 ```
 
 ## Examples
 
 There are multiple ways to write "Kevin" by varying only the "K".
 
-Original String|UsernamePreserved|UsernameCaseMapped|NicknameCaseMapped
+Original String|UsernameCasePreserved|UsernameCaseMapped|NicknameCaseMapped
 ---------------|-----------------|------------------|------------------
 Kevin | Kevin | kevin | kevin
 &#x212A;evin '\u212Aevin' | Kevin | kevin | kevin

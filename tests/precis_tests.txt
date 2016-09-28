@@ -8,7 +8,7 @@
 # DISALLOW input reason
 
 
-PROFILE UsernamePreserved
+PROFILE UsernameCasePreserved
 
 DISALLOW  \u0000         DISALLOWED/controls
 DISALLOW  \U0010FFFF     DISALLOWED/precis_ignorable_properties

@@ -4,7 +4,7 @@ import codecs
 
 from precis_codec.profile import (NicknameCaseMapped, NicknamePreserved,
                                   OpaqueString, UsernameCaseMapped,
-                                  UsernamePreserved)
+                                  UsernameCasePreserved)
 from precis_codec.unicode import UnicodeData
 
 UCD = UnicodeData()
@@ -26,7 +26,7 @@ def _not_supported(input, errors='strict'):
 
 
 _codecs = {
-    'usernamepreserved': UsernamePreserved,
+    'usernamecasepreserved': UsernameCasePreserved,
     'usernamecasemapped': UsernameCaseMapped,
     'opaquestring': OpaqueString,
     'nicknamepreserved': NicknamePreserved,

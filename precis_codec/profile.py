@@ -53,8 +53,8 @@ class Profile(object):
         return value
 
 
-class UsernamePreserved(Profile):
-    def __init__(self, ucd, name='UsernamePreserved'):
+class UsernameCasePreserved(Profile):
+    def __init__(self, ucd, name='UsernameCasePreserved'):
         super().__init__(IdentifierClass(ucd), name)
 
     def width_mapping_rule(self, value):
@@ -69,7 +69,7 @@ class UsernamePreserved(Profile):
         return value
 
 
-class UsernameCaseMapped(UsernamePreserved):
+class UsernameCaseMapped(UsernameCasePreserved):
     def __init__(self, ucd, name='UsernameCaseMapped'):
         super().__init__(ucd, name)
 

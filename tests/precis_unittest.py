@@ -6,7 +6,7 @@ import precis_codec.context as pc
 from precis_codec.baseclass import FreeFormClass, IdentifierClass
 from precis_codec.bidi import bidi_rule, has_rtl
 from precis_codec.derived import derived_property
-from precis_codec.profile import UsernameCaseMapped, UsernamePreserved, NicknameCaseMapped
+from precis_codec.profile import UsernameCaseMapped, UsernameCasePreserved, NicknameCaseMapped
 from precis_codec.unicode import UnicodeData
 
 UCD = UnicodeData()
@@ -14,7 +14,7 @@ UCD = UnicodeData()
 
 class TestCodec(unittest.TestCase):
     def test_encode(self):
-        self.assertEqual('Juliet'.encode('UsernamePreserved'), b'Juliet')
+        self.assertEqual('Juliet'.encode('UsernameCasePreserved'), b'Juliet')
         self.assertEqual('Juliet'.encode('UsernameCaseMapped'), b'juliet')
         self.assertEqual(' pa  ss \u1FBF'.encode('OpaqueString'),
                          b' pa  ss \xe1\xbe\xbf')
@@ -23,16 +23,16 @@ class TestCodec(unittest.TestCase):
 
     def test_decode(self):
         with self.assertRaises(NotImplementedError):
-            b'Juliet'.decode('UsernamePreserved')
+            b'Juliet'.decode('UsernameCasePreserved')
 
     def test_encode_errors(self):
         with self.assertRaises(ValueError):
             'Juliet'.encode('opaquestring', errors='replace')
 
 
-class TestUsernamePreserved(unittest.TestCase):
+class TestUsernameCasePreserved(unittest.TestCase):
     def test_enforce(self):
-        profile = UsernamePreserved(UCD)
+        profile = UsernameCasePreserved(UCD)
         self.assertEqual(profile.enforce('Juliet'), b'Juliet')
         self.assertEqual(profile.enforce('J*'), b'J*')
         self.assertEqual(
@@ -49,9 +49,9 @@ class TestUsernamePreserved(unittest.TestCase):
 
     def test_identifier_oddities(self):
         # Make a list of all codepoints < 10,000 which are allowed in the
-        # UsernamePreserved profile even though they are not allowed in
+        # UsernameCasePreserved profile even though they are not allowed in
         # IdentifierClass.
-        profile = UsernamePreserved(UCD)
+        profile = UsernameCasePreserved(UCD)
         allowed = []
         for cp in range(0, 10000):
             try:
