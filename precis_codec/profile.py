@@ -88,7 +88,7 @@ class NicknamePreserved(Profile):
 
     def additional_mapping_rule(self, value):
         temp = self.base.ucd.replace_whitespace(value).strip()
-        return re.sub(r'  +', temp, ' ')
+        return re.sub(r'  +', ' ', temp)
 
     def normalization_rule(self, value):
         return self.base.ucd.normalize('NFKC', value)
