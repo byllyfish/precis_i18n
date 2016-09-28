@@ -6,7 +6,7 @@ import precis_codec.context as pc
 from precis_codec.baseclass import FreeFormClass, IdentifierClass
 from precis_codec.bidi import bidi_rule, has_rtl
 from precis_codec.derived import derived_property
-from precis_codec.profile import UsernameCaseMapped, UsernamePreserved
+from precis_codec.profile import UsernameCaseMapped, UsernamePreserved, NicknameCaseMapped
 from precis_codec.unicode import UnicodeData
 
 UCD = UnicodeData()
@@ -18,6 +18,8 @@ class TestCodec(unittest.TestCase):
         self.assertEqual('Juliet'.encode('UsernameCaseMapped'), b'juliet')
         self.assertEqual(' pa  ss \u1FBF'.encode('OpaqueString'),
                          b' pa  ss \xe1\xbe\xbf')
+        self.assertEqual('Juliet'.encode('NicknamePreserved'), b'Juliet')
+        self.assertEqual('Juliet'.encode('NicknameCaseMapped'), b'juliet')
 
     def test_decode(self):
         with self.assertRaises(NotImplementedError):
@@ -73,6 +75,15 @@ class TestUsernamePreserved(unittest.TestCase):
 class TestUsernameCaseMapped(unittest.TestCase):
     def test_enforce(self):
         profile = UsernameCaseMapped(UCD)
+        self.assertEqual(profile.enforce('Juliet'), b'juliet')
+        self.assertEqual(
+            profile.enforce('E\u0301\u0301\u0301'),
+            b'\xc3\xa9\xcc\x81\xcc\x81')
+
+
+class TestNicknameCaseMapped(unittest.TestCase):
+    def test_enforce(self):
+        profile = NicknameCaseMapped(UCD)
         self.assertEqual(profile.enforce('Juliet'), b'juliet')
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'),
@@ -206,7 +217,11 @@ class TestDerivedProperty(unittest.TestCase):
 
         # In Unicode 9.0, U+08E2 is 'DISALLOWED'. Before Unicode 9.0, it is
         # UNASSIGNED.
-        self.assertEqual(derived_property(0x08e2, UCD), ())
+        prop = derived_property(0x08e2, UCD)[0]
+        if UCD.version >= 9.0:
+            self.assertEqual(prop, 'DISALLOWED')
+        else:
+            self.assertEqual(prop, 'UNASSIGNED')
 
 
 class TestPrecisContextRule(unittest.TestCase):
