@@ -41,6 +41,7 @@ class TestUsernameCasePreserved(unittest.TestCase):
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'),
             b'\xc3\x89\xcc\x81\xcc\x81')
+        self.assertEqual(profile.enforce(b'Juliet'), b'Juliet')
 
         self.profile_fail(profile, '', r'empty')
         self.profile_fail(profile, ' J', r'x')
@@ -49,6 +50,11 @@ class TestUsernameCasePreserved(unittest.TestCase):
     def profile_fail(self, profile, value, reason):
         with self.assertRaisesRegex(UnicodeEncodeError, reason):
             profile.enforce(value)
+
+    def test_invalid_argument(self):
+        profile = UsernameCasePreserved(UCD)
+        with self.assertRaisesRegex(ValueError, 'not a string'):
+            profile.enforce(1)
 
     def test_identifier_oddities(self):
         # Make a list of all codepoints < 10,000 which are allowed in the
