@@ -1,5 +1,7 @@
 # PRECIS Codec: Internationalized Usernames and Passwords
 
+[![Build Status](https://travis-ci.org/byllyfish/precis_codec.svg?branch=master)](https://travis-ci.org/byllyfish/precis_codec) [![codecov.io](https://codecov.io/gh/byllyfish/precis_codec/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_codec?branch=master)
+
 The PRECIS codec makes internationalized user names and passwords safer for use by applications. 
 PRECIS profiles transform unicode strings into a canonical UTF-8 form, suitable for byte-by-byte comparison.
 
