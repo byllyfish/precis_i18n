@@ -177,20 +177,3 @@ _EXCEPTIONS_TABLE = {
 }
 
 _BACKWARD_COMPATIBLE_TABLE = {}
-
-if __name__ == '__main__':
-    # Print derived property of code points passed as integer arguments.
-    import sys
-    from precis_codec.unicode import UnicodeData
-
-    UCD = UnicodeData()
-
-    for arg in sys.argv[1:]:
-        try:
-            codes = [int(arg, base=0)]
-        except ValueError:
-            codes = [ord(x)
-                     for x in arg.encode('utf-8').decode('unicode-escape')]
-        for code in codes:
-            prop, subtype = derived_property(code, UCD)
-            print('%4.4x %s/%s' % (code, prop, subtype))

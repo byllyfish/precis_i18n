@@ -7,7 +7,7 @@ from precis_codec.baseclass import FreeFormClass, IdentifierClass
 from precis_codec.bidi import bidi_rule, has_rtl
 from precis_codec.derived import derived_property
 from precis_codec.profile import UsernameCaseMapped, UsernameCasePreserved, Nickname
-from precis_codec.unicode import UnicodeData
+from precis_codec.unicode import UnicodeData, _version_to_float
 
 UCD = UnicodeData()
 
@@ -25,9 +25,12 @@ class TestCodec(unittest.TestCase):
             b'Juliet'.decode('UsernameCasePreserved')
 
     def test_encode_errors(self):
+        # errors must be 'strict'; 'replace' and others are not supported.
         with self.assertRaises(ValueError):
-            # errors must be 'strict'; 'replace' and others are not supported.
             'Juliet'.encode('opaquestring', errors='replace')
+        # non-matching codec names shouldn't work.
+        with self.assertRaises(LookupError):
+            'Juliet'.encode('opaquestring_nonexistant')
 
 
 class TestUsernameCasePreserved(unittest.TestCase):
@@ -137,6 +140,8 @@ class TestPrecisIdentifierClass(unittest.TestCase):
             ident.enforce('\u0660\u0661\u0662\u0669'),
             '\u0660\u0661\u0662\u0669')
         self.assertEqual(ident.enforce('\u0370\u0371'), '\u0370\u0371')
+        # CONTEXTJ
+        self.assertEqual(ident.enforce('\u094d\u200c'), '\u094d\u200c')
 
     def test_invalid_identifier(self):
         ident = IdentifierClass(UCD)
@@ -489,6 +494,12 @@ class TestPrecisUnicodeData(unittest.TestCase):
         # Invalid: U T J T U
         self.assertFalse(
             UCD.valid_jointype('\u0031\u0300\u200c\u0301\u0032', 2))
+
+    def test_version_to_float(self):
+        self.assertEqual(_version_to_float('8.0.0'), 8.0)
+        self.assertEqual(_version_to_float('6.3.1'), 6.3)
+        with self.assertRaises(ValueError):
+            _version_to_float('8.0')
 
 
 if __name__ == '__main__':
