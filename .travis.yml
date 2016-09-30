@@ -4,5 +4,11 @@ python:
   - "3.4"
   - "3.5"
   - "nightly"
+install:
+  - pip3 install codecov
 script:
   - python3 -m unittest discover
+  - coverage run --source precis_codec -m unittest test/test_precis.py
+after_success:
+  - if [ "$TRAVIS_PYTHON_VERSION" != "nightly" ]; then codecov; fi
+
