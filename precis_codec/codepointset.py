@@ -1,5 +1,6 @@
 import io
 import re
+from bisect import bisect_left
 
 
 class CodepointSet(object):
@@ -14,40 +15,63 @@ class CodepointSet(object):
     the index of the next largest char. If this index is odd, the code point is
     in the set.
     """
-    RANGE = re.compile(r'^\s*([0-9A-Fa-f]+)(?:\.\.([0-9A-Fa-f]+))?\s*$')
 
     def __init__(self, table):
-        elems = self._parse(table)
+        elems = _coalesce(_parse(table))
         self._table = ''.join([chr(lo) + chr(hi) for (lo, hi) in elems])
+        assert (len(self._table) % 2) == 0
 
     def __contains__(self, cp):
-        assert isinstance(cp, int)
-        # Binary search.
-        lo, hi = 0, len(self._table)
-        while lo < hi:
-            mid = int((lo + hi) / 2)
-            elem = ord(self._table[mid])
-            if cp == elem:
-                return True
-            if cp < elem:
-                hi = mid
-            else:
-                lo = mid + 1
-        return (lo % 2) == 1
+        """ Return true if code point `cp` is in the set.
+        """
+        if not 0 <= cp <= 0x10FFFF:
+            return False
+        char = chr(cp)
+        idx = bisect_left(self._table, char)
+        if idx >= len(self._table):
+            return False
+        return (idx % 2) == 1 or self._table[idx] == char
 
-    def _parse(self, table):
-        elems = []
-        for line in io.StringIO(table):
-            line = line.strip()
-            if not line:
-                continue
-            m = self.RANGE.match(line)
-            if not m:
-                continue
-            lo = int(m.group(1), 16)
-            hi = int(m.group(2), 16) if m.group(2) else lo
-            assert lo <= hi
-            elems.append((lo, hi))
-        elems.sort()
-        # TODO: coalesce adjacent ranges after sorting.
-        return elems
+    def __eq__(self, rhs):
+        return self._table == rhs._table
+
+    def __repr__(self):
+        elems = '\\n'.join(['%04X..%04X' % item for item in self.items()])
+        return "CodepointSet('%s')" % elems
+
+    def items(self):
+        for i in range(len(self._table) // 2):
+            lo = ord(self._table[2*i])
+            hi = ord(self._table[2*i+1])
+            yield (lo, hi)
+
+
+_RANGE = re.compile(r'^\s*([0-9A-Fa-f]+)(?:\.\.([0-9A-Fa-f]+))?\s*$')
+
+
+def _parse(table):
+    elems = []
+    for line in io.StringIO(table):
+        m = _RANGE.match(line.strip())
+        if not m:
+            continue
+        lo = int(m.group(1), 16)
+        hi = int(m.group(2), 16) if m.group(2) else lo
+        if lo > hi:
+            raise ValueError('Range lo > hi')
+        elems.append((lo, hi))
+    return elems
+
+
+def _coalesce(elems):
+    elems.sort()
+    i = 0
+    while i < len(elems) - 1:
+        (lo0, hi0), (lo1, hi1) = elems[i:i+2]
+        if not lo0 <= hi0 < lo1 <= hi1:
+            raise ValueError('Range overlaps at index %d: %r' % (i, elems[i:i+2]))
+        if lo1 == hi0 + 1:
+            elems[i:i+2] = [(lo0, hi1)]
+        else:
+            i += 1
+    return elems
