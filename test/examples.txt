@@ -194,6 +194,22 @@ DISALLOW  '\x20Juliet'              FREE_PVAL/spaces
 DISALLOW  'Juliet\x20'             FREE_PVAL/spaces
 DISALLOW  'Juliet\x20\x20Capulet'   FREE_PVAL/spaces
 
+# Bidirectional text
+
+ALLOW     \u05d0\u05d1
+ALLOW     \u05d0\u1ab6\u05d1
+DISALLOW  \u05d0\u05d1+      bidi rule
+DISALLOW  +\u05d0\u05d1      bidi rule
+DISALLOW  A\u05d0\u05d1      bidi rule
+DISALLOW  \u05d0\u05d1A      bidi rule
+DISALLOW  \u05d0A\u05d1      bidi rule
+
+# Only apply bidi rule for strings with RTL codepoints.
+
+ALLOW    Juliet+
+ALLOW   +Juliet
+DISALLOW  Juliet\u05d1       bidi rule
+
 
 PROFILE UsernameCaseMapped
 

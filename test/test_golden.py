@@ -41,15 +41,17 @@ def _read_golden():
             fields = [_unescape(s) for s in line.strip().split()]
             if len(fields) == 0 or fields[0].startswith('#'):
                 continue
+            if len(fields) == 2:
+                fields.append(fields[1])
 
             cmd = fields[0].upper()
             if cmd == 'PROFILE':
                 profile = fields[1]
             elif cmd == 'ALLOW':
-                if len(fields) == 2:
-                    fields.append(fields[1])
                 yield (profile, True, fields[1], fields[2])
             elif cmd == 'DISALLOW':
+                if len(fields) == 2:
+                    fields.append('')
                 yield (profile, False, fields[1], fields[2])
 
 
