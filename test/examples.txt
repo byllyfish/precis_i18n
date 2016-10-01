@@ -197,7 +197,9 @@ DISALLOW  'Juliet\x20\x20Capulet'   FREE_PVAL/spaces
 # Bidirectional text
 
 ALLOW     \u05d0\u05d1
-ALLOW     \u05d0\u1ab6\u05d1
+ALLOW     \u05d0\u20d6\u05d1
+# This test fails on systems before Unicode 7.0; U+1AB6 was introduced in 7.0.
+# ALLOW     \u05d0\u1ab6\u05d1
 DISALLOW  \u05d0\u05d1+      bidi rule
 DISALLOW  +\u05d0\u05d1      bidi rule
 DISALLOW  A\u05d0\u05d1      bidi rule
