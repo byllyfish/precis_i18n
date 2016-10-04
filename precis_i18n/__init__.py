@@ -1,5 +1,5 @@
-import precis_codec.profile as _profile
-import precis_codec.unicode as _unicode
+import precis_i18n.profile as _profile
+import precis_i18n.unicode as _unicode
 
 __version__ = '0.1.1'
 

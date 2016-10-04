@@ -21,14 +21,14 @@ This module implements the PRECIS Framework as described in:
 Usage
 -----
 
-Import the ``precis_codec.codec`` module to register the PRECIS codec
+Import the ``precis_i18n.codec`` module to register the PRECIS codec
 names. Use the ``encode`` method with any unicode string. ``encode``
 will raise a ``UnicodeEncodeError`` if the string is disallowed.
 
 ::
 
 
-    >>> import precis_codec.codec
+    >>> import precis_i18n.codec
     >>> 'Kevin'.encode('UsernameCasePreserved')
     b'Kevin'
     >>> '\u212Aevin'.encode('UsernameCasePreserved')
@@ -50,7 +50,7 @@ a codec.
 ::
 
 
-    >>> from precis_codec import usernamecasemapped as username
+    >>> from precis_i18n import usernamecasemapped as username
     >>> username.enforce('Kevin')
     b'kevin'
     >>> username.enforce('\u212Aevin')
@@ -116,8 +116,8 @@ There are multiple ways to write "Kevin" by varying only the "K".
 +---------------------------------------+-----------------------------------+-----------------------------------+---------------------------------------+
 
 .. |MIT licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://raw.githubusercontent.com/byllyfish/precis_codec/master/LICENSE.txt
-.. |Build Status| image:: https://travis-ci.org/byllyfish/precis_codec.svg?branch=master
-   :target: https://travis-ci.org/byllyfish/precis_codec
-.. |codecov.io| image:: https://codecov.io/gh/byllyfish/precis_codec/coverage.svg?branch=master
-   :target: https://codecov.io/gh/byllyfish/precis_codec?branch=master
+   :target: https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt
+.. |Build Status| image:: https://travis-ci.org/byllyfish/precis_i18n.svg?branch=master
+   :target: https://travis-ci.org/byllyfish/precis_i18n
+.. |codecov.io| image:: https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master
+   :target: https://codecov.io/gh/byllyfish/precis_i18n?branch=master

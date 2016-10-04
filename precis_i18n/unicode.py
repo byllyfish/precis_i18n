@@ -1,7 +1,7 @@
 import re
 import unicodedata
 
-from precis_codec.codepointset import CodepointSet
+from precis_i18n.codepointset import CodepointSet
 
 
 def _version_to_float(version):

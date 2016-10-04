@@ -265,7 +265,7 @@ class UnicodeDatabase(object):
     def check_precis(self, ucd):
         """ Compare derived property computation to `precis` value in database.
         """
-        from precis_codec.derived import derived_property
+        from precis_i18n.derived import derived_property
 
         cur = self._conn.cursor()
         sql = 'SELECT cp, precis, age FROM codepoints WHERE age <= %g' % UCD.version
@@ -283,7 +283,7 @@ if __name__ == '__main__':
     except sqlite3.OperationalError:
         pass
 
-    from precis_codec.unicode import UnicodeData
+    from precis_i18n.unicode import UnicodeData
 
     UCD = UnicodeData()
     db.check_has_compat(UCD)

@@ -1,5 +1,5 @@
-from precis_codec.context import context_rule
-from precis_codec.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
+from precis_i18n.context import context_rule
+from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
                                   derived_property)
 
 

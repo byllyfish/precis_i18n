@@ -1,6 +1,6 @@
 # PRECIS Codec: Internationalized Usernames and Passwords
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_codec/master/LICENSE.txt) [![Build Status](https://travis-ci.org/byllyfish/precis_codec.svg?branch=master)](https://travis-ci.org/byllyfish/precis_codec) [![codecov.io](https://codecov.io/gh/byllyfish/precis_codec/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_codec?branch=master)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt) [![Build Status](https://travis-ci.org/byllyfish/precis_i18n.svg?branch=master)](https://travis-ci.org/byllyfish/precis_i18n) [![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_i18n?branch=master)
 
 If you want your app to accept unicode user names and passwords, you must be careful in how you compare them. The PRECIS codec makes internationalized user names and passwords safer for use by applications. PRECIS profiles transform unicode strings into a canonical UTF-8 form, suitable for byte-by-byte comparison.
 
@@ -12,11 +12,11 @@ This module implements the PRECIS Framework as described in:
 
 ## Usage
 
-Import the `precis_codec.codec` module to register the PRECIS codec names. Use the `encode` method with any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
+Import the `precis_i18n.codec` module to register the PRECIS codec names. Use the `encode` method with any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
 
 ```
 
->>> import precis_codec.codec
+>>> import precis_i18n.codec
 >>> 'Kevin'.encode('UsernameCasePreserved')
 b'Kevin'
 >>> '\u212Aevin'.encode('UsernameCasePreserved')
@@ -38,7 +38,7 @@ Alternatively, you can use a PRECIS profile directly, without installing a codec
 
 ```
 
->>> from precis_codec import usernamecasemapped as username
+>>> from precis_i18n import usernamecasemapped as username
 >>> username.enforce('Kevin')
 b'kevin'
 >>> username.enforce('\u212Aevin')

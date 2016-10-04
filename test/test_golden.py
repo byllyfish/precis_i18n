@@ -1,5 +1,5 @@
 import unittest
-import precis_codec
+import precis_i18n
 import os
 
 

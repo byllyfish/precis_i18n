@@ -1,6 +1,6 @@
-from precis_codec.derived import derived_property
-from precis_codec.profile import UsernameCasePreserved
-from precis_codec.unicode import UnicodeData
+from precis_i18n.derived import derived_property
+from precis_i18n.profile import UsernameCasePreserved
+from precis_i18n.unicode import UnicodeData
 
 UCD = UnicodeData()
 profile = UsernameCasePreserved(UCD)

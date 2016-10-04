@@ -2,12 +2,12 @@
 
 import unittest
 
-import precis_codec.context as pc
-from precis_codec.baseclass import FreeFormClass, IdentifierClass
-from precis_codec.bidi import bidi_rule, has_rtl
-from precis_codec.derived import derived_property
-from precis_codec.profile import UsernameCaseMapped, UsernameCasePreserved, Nickname
-from precis_codec.unicode import UnicodeData, _version_to_float
+import precis_i18n.context as pc
+from precis_i18n.baseclass import FreeFormClass, IdentifierClass
+from precis_i18n.bidi import bidi_rule, has_rtl
+from precis_i18n.derived import derived_property
+from precis_i18n.profile import UsernameCaseMapped, UsernameCasePreserved, Nickname
+from precis_i18n.unicode import UnicodeData, _version_to_float
 
 UCD = UnicodeData()
 

@@ -1,5 +1,5 @@
 import codecs
-from precis_codec import (usernamecasepreserved, usernamecasemapped, opaquestring, nickname)
+from precis_i18n import (usernamecasepreserved, usernamecasemapped, opaquestring, nickname)
 
 
 def _make_encode(profile):

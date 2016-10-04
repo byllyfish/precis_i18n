@@ -1,7 +1,7 @@
 import re
 
-from precis_codec.baseclass import FreeFormClass, IdentifierClass
-from precis_codec.bidi import bidi_rule, has_rtl
+from precis_i18n.baseclass import FreeFormClass, IdentifierClass
+from precis_i18n.bidi import bidi_rule, has_rtl
 
 
 class Profile(object):

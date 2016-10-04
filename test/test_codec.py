@@ -1,5 +1,5 @@
 import unittest
-import precis_codec.codec
+import precis_i18n.codec
 
 
 class TestCodec(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from precis_codec.codepointset import CodepointSet
+from precis_i18n.codepointset import CodepointSet
 
 
 class TestCodepointSet(unittest.TestCase):
