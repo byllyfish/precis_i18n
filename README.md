@@ -1,6 +1,6 @@
 # PRECIS Codec: Internationalized Usernames and Passwords
 
-[![Build Status](https://travis-ci.org/byllyfish/precis_codec.svg?branch=master)](https://travis-ci.org/byllyfish/precis_codec) [![codecov.io](https://codecov.io/gh/byllyfish/precis_codec/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_codec?branch=master)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_codec/master/LICENSE.txt) [![Build Status](https://travis-ci.org/byllyfish/precis_codec.svg?branch=master)](https://travis-ci.org/byllyfish/precis_codec) [![codecov.io](https://codecov.io/gh/byllyfish/precis_codec/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_codec?branch=master)
 
 The PRECIS codec makes internationalized user names and passwords safer for use by applications. 
 PRECIS profiles transform unicode strings into a canonical UTF-8 form, suitable for byte-by-byte comparison.
@@ -15,7 +15,7 @@ This module implements the PRECIS Framework as described in:
 
 Import the `precis_codec.codec` module to register the PRECIS codec names. Use the `encode` method with any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
 
-```python
+```
 
 >>> import precis_codec.codec
 >>> 'Kevin'.encode('UsernameCasePreserved')
@@ -37,7 +37,7 @@ UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001
 
 Alternatively, you can use a PRECIS profile directly, without installing a codec.
 
-```python
+```
 
 >>> from precis_codec import usernamecasemapped as username
 >>> username.enforce('Kevin')
@@ -84,7 +84,3 @@ Kevin | Kevin | kevin | kevin
 &#x1F13A;evin '\U0001F13Aevin' | DISALLOWED | DISALLOWED | Kevin
 &#x1F15A;evin '\U0001F15Aevin' | DISALLOWED | DISALLOWED | &#x1F15A;evin '\U0001F15Aevin'
 &#x1F17A;evin '\U0001F17Aevin' | DISALLOWED | DISALLOWED | &#x1F17A;evin '\U0001F17Aevin'
-
-## License
-
-MIT License
