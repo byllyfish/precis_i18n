@@ -1,14 +1,16 @@
-# PRECIS Codec: Internationalized Usernames and Passwords
+# PRECIS-i18n: Internationalized Usernames and Passwords
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt) [![Build Status](https://travis-ci.org/byllyfish/precis_i18n.svg?branch=master)](https://travis-ci.org/byllyfish/precis_i18n) [![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_i18n?branch=master)
 
-If you want your app to accept unicode user names and passwords, you must be careful in how you compare them. The PRECIS codec makes internationalized user names and passwords safer for use by applications. PRECIS profiles transform unicode strings into a canonical UTF-8 form, suitable for byte-by-byte comparison.
+If you want your application to accept unicode user names and passwords, you must be careful in how you validate and compare them. The PRECIS framework makes internationalized user names and passwords safer for use by applications. PRECIS profiles transform unicode strings into a canonical UTF-8 form, suitable for byte-by-byte comparison.
 
 This module implements the PRECIS Framework as described in:
 
-- PRECIS Framework: Preparation, Enforcement, and Comparison of Internationalized Strings in Application Protocols (RFC 7564)
-- Preparation, Enforcement, and Comparison of Internationalized Strings Representing Usernames and Passwords (RFC 7613)
-- Preparation, Enforcement, and Comparison of Internationalized Strings Representing Nicknames (RFC 7700)
+- PRECIS Framework: Preparation, Enforcement, and Comparison of Internationalized Strings in Application Protocols ([RFC 7564](https://tools.ietf.org/html/rfc7564))
+- Preparation, Enforcement, and Comparison of Internationalized Strings Representing Usernames and Passwords ([RFC 7613](https://tools.ietf.org/html/rfc7613))
+- Preparation, Enforcement, and Comparison of Internationalized Strings Representing Nicknames ([RFC 7700](https://tools.ietf.org/html/rfc7700))
+
+Requires Python 3.3 or later.
 
 ## Usage
 
@@ -38,28 +40,28 @@ Alternatively, you can use a PRECIS profile directly, without installing a codec
 
 ```
 
->>> from precis_i18n import usernamecasemapped as username
->>> username.enforce('Kevin')
+>>> from precis_i18n import usernamecasemapped as username_cm
+>>> username_cm.enforce('Kevin')
 b'kevin'
->>> username.enforce('\u212Aevin')
+>>> username_cm.enforce('\u212Aevin')
 b'kevin'
->>> username.enforce('\uFF2Bevin')
+>>> username_cm.enforce('\uFF2Bevin')
 b'kevin'
->>> username.enforce('\U0001F17Aevin')
+>>> username_cm.enforce('\U0001F17Aevin')
 Traceback (most recent call last):
     ...
 UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
 
 ```
 
-## Supported Codecs
+## Supported Profiles and Codecs
 
 Each PRECIS profile has a corresponding codec name. The `casemapped` variant converts the string to lower case for implementing case-insensitive comparison.
 
 - usernamecasepreserved
 - usernamecasemapped
-- nickname
 - opaquestring
+- nickname
 
 ## Examples
 
