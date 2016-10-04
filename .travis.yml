@@ -8,7 +8,8 @@ install:
   - pip3 install codecov
 script:
   - python3 -m unittest discover
-  - coverage run --source precis_codec -m unittest test/test_precis.py test/test_codepointset.py
+  - python3 -m doctest README.md long_description.rst
+  - coverage run --source precis_codec -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py
 after_success:
   - if [ "$TRAVIS_PYTHON_VERSION" != "nightly" ]; then codecov; fi
 

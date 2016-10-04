@@ -13,11 +13,11 @@ This module implements the PRECIS Framework as described in:
 
 ## Usage
 
-Import the `precis_codec` module to register the PRECIS codec names. Use the `encode` method with any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
+Import the `precis_codec.codec` module to register the PRECIS codec names. Use the `encode` method with any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
 
 ```python
 
->>> import precis_codec
+>>> import precis_codec.codec
 >>> 'Kevin'.encode('UsernameCasePreserved')
 b'Kevin'
 >>> '\u212Aevin'.encode('UsernameCasePreserved')
@@ -31,18 +31,36 @@ b'\xef\xbc\xabevin'
 >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
 Traceback (most recent call last):
     ...
-UnicodeEncodeError: 'usernamecasepreserved' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+
+```
+
+Alternatively, you can use a PRECIS profile directly, without installing a codec.
+
+```python
+
+>>> from precis_codec import usernamecasemapped as username
+>>> username.enforce('Kevin')
+b'kevin'
+>>> username.enforce('\u212Aevin')
+b'kevin'
+>>> username.enforce('\uFF2Bevin')
+b'kevin'
+>>> username.enforce('\U0001F17Aevin')
+Traceback (most recent call last):
+    ...
+UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
 
 ```
 
 ## Supported Codecs
 
-Each PRECIS profile has a corresponding codec name. The `CaseMapped` variant converts the string to lower case for implementing case-insensitive comparison.
+Each PRECIS profile has a corresponding codec name. The `casemapped` variant converts the string to lower case for implementing case-insensitive comparison.
 
-- UsernameCasePreserved
-- UsernameCaseMapped
-- Nickname
-- OpaqueString
+- usernamecasepreserved
+- usernamecasemapped
+- nickname
+- opaquestring
 
 ## Examples
 

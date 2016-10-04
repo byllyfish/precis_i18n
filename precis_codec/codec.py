@@ -1,22 +1,12 @@
-# codec.py
-
 import codecs
-
-from precis_codec.profile import (Nickname,
-                                  OpaqueString, UsernameCaseMapped,
-                                  UsernameCasePreserved)
-from precis_codec.unicode import UnicodeData
-
-UCD = UnicodeData()
+from precis_codec import (usernamecasepreserved, usernamecasemapped, opaquestring, nickname)
 
 
-def _make_encode(profile, name):
-    obj = profile(UCD, name)
-
+def _make_encode(profile):
     def encode(input, errors='strict'):
         if errors != 'strict':
             raise ValueError('invalid errors argument')
-        return (obj.enforce(input), len(input))
+        return (profile.enforce(input), len(input))
 
     return encode
 
@@ -25,12 +15,7 @@ def _not_supported(input, errors='strict'):
     raise NotImplementedError('decode not supported')
 
 
-_codecs = {
-    'usernamecasepreserved': UsernameCasePreserved,
-    'usernamecasemapped': UsernameCaseMapped,
-    'opaquestring': OpaqueString,
-    'nickname': Nickname
-}
+_codecs = { p.name.lower(): p for p in (usernamecasepreserved, usernamecasemapped, opaquestring, nickname) }
 
 
 def search(name):
@@ -38,7 +23,7 @@ def search(name):
     if profile:
         return codecs.CodecInfo(
             name=name,
-            encode=_make_encode(profile, name),
+            encode=_make_encode(profile),
             decode=_not_supported)
     return None
 
