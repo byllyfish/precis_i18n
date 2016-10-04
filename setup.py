@@ -9,6 +9,7 @@ from setuptools import setup
 # To use a consistent encoding
 from codecs import open
 from os import path
+import re
 
 here = path.abspath(path.dirname(__file__))
 
@@ -16,10 +17,15 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'long_description.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+# Extract version number.
+with open(path.join(here, 'precis_codec/__init__.py'), encoding='utf-8') as f:
+    version_regex = re.compile(r"(?m)__version__\s*=\s*'(\d+\.\d+\.\d+)'")
+    version = version_regex.search(f.read())[1]
+
 setup(
     name='precis_codec',
     packages=['precis_codec'],
-    version='0.1.0',
+    version=version,
     license='MIT',
 
     description='PRECIS Codec: Internationalized Usernames and Passwords',
