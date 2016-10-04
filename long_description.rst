@@ -16,18 +16,6 @@ This module implements the PRECIS Framework as described in:
 -  Preparation, Enforcement, and Comparison of Internationalized Strings
    Representing Nicknames (RFC 7700)
 
-Supported Codecs
-----------------
-
-Each PRECIS profile has a corresponding codec name. The ``CaseMapped``
-variant converts the string to lower case for implementing
-case-insensitive comparison.
-
--  UsernameCasePreserved
--  UsernameCaseMapped
--  Nickname
--  OpaqueString
-
 Usage
 -----
 
@@ -36,6 +24,7 @@ Use the ``encode`` method with any unicode string. ``encode`` will raise
 a ``UnicodeEncodeError`` if the string is disallowed.
 
 .. code:: python
+
 
     >>> import precis_codec
     >>> 'Kevin'.encode('UsernameCasePreserved')
@@ -50,11 +39,25 @@ a ``UnicodeEncodeError`` if the string is disallowed.
     b'\xef\xbc\xabevin'
     >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
     Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-      ...
-      File "precis_codec/baseclass.py", line 29, in _enforce
-        '%s/%s' % (prop, kind))
-    UnicodeEncodeError: 'usernamecasepreserved' codec can't encode character 'U0001f17a' in position 0: FREE_PVAL/symbols
+        ...
+    UnicodeEncodeError: 'usernamecasepreserved' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+
+Supported Codecs
+----------------
+
+Each PRECIS profile has a corresponding codec name. The ``CaseMapped``
+variant converts the string to lower case for implementing
+case-insensitive comparison.
+
+-  UsernameCasePreserved
+-  UsernameCaseMapped
+-  Nickname
+-  OpaqueString
+
+License
+-------
+
+MIT License
 
 .. |Build Status| image:: https://travis-ci.org/byllyfish/precis_codec.svg?branch=master
    :target: https://travis-ci.org/byllyfish/precis_codec
