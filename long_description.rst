@@ -3,9 +3,11 @@ PRECIS Codec: Internationalized Usernames and Passwords
 
 |MIT licensed| |Build Status| |codecov.io|
 
-The PRECIS codec makes internationalized user names and passwords safer
-for use by applications. PRECIS profiles transform unicode strings into
-a canonical UTF-8 form, suitable for byte-by-byte comparison.
+If you want your app to accept unicode user names and passwords, you
+must be careful in how you compare them. The PRECIS codec makes
+internationalized user names and passwords safer for use by
+applications. PRECIS profiles transform unicode strings into a canonical
+UTF-8 form, suitable for byte-by-byte comparison.
 
 This module implements the PRECIS Framework as described in:
 
