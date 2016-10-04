@@ -20,7 +20,7 @@ with open(path.join(here, 'long_description.rst'), encoding='utf-8') as f:
 # Extract version number.
 with open(path.join(here, 'precis_i18n/__init__.py'), encoding='utf-8') as f:
     version_regex = re.compile(r"(?m)__version__\s*=\s*'(\d+\.\d+\.\d+)'")
-    version = version_regex.search(f.read())[1]
+    version = version_regex.search(f.read()).group(1)
 
 setup(
     name='precis_i18n',
@@ -28,9 +28,9 @@ setup(
     version=version,
     license='MIT',
 
-    description='PRECIS Codec: Internationalized Usernames and Passwords',
+    description='PRECIS-i18n: Internationalized Usernames and Passwords',
     long_description=long_description,
-    keywords='precis i18n username password',
+    keywords='precis codec username password',
 
     # The project's main homepage and author.
     url='https://github.com/byllyfish/precis_i18n',
