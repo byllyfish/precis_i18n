@@ -93,3 +93,6 @@ class TestCodepointSet(unittest.TestCase):
 
         cps = CodepointSet('AAA\nBBB..CCC\n')
         self.assertEqual(repr(cps), r"CodepointSet('0AAA\n0BBB..0CCC')")
+
+        cps = CodepointSet('\n  \n # comment  \n   \n')
+        self.assertEqual(repr(cps), "CodepointSet('')")
