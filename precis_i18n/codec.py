@@ -1,3 +1,7 @@
+"""
+Registers precis_i18n codec.
+"""
+
 import codecs
 from precis_i18n import (usernamecasepreserved, usernamecasemapped, opaquestring, nickname)
 
@@ -19,6 +23,8 @@ _codecs = { p.name.lower(): p for p in (usernamecasepreserved, usernamecasemappe
 
 
 def search(name):
+    """ Search function to register for PRECIS codecs.
+    """
     profile = _codecs.get(name)
     if profile:
         return codecs.CodecInfo(

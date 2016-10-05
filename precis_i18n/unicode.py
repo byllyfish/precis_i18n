@@ -1,3 +1,7 @@
+"""
+Implements the UnicodeData class.
+"""
+
 import re
 import unicodedata
 
@@ -12,6 +16,12 @@ def _version_to_float(version):
 
 
 class UnicodeData(object):
+    """
+    Adapter for Python's built-in unicodedata module.
+
+    This class extends the unicodedata module for use in PRECIS profiles.
+    """
+
     _halfwidth_chars = re.compile(r'[\uff01-\uffef]')
     _space_chars = re.compile(r'[\u00a0\u1680\u2000-\u200A\u202F\u205F\u3000]')
 
@@ -37,9 +47,9 @@ class UnicodeData(object):
     def normalize(self, form, value):
         return self._ucd.normalize(form, value)
 
-    # Map half-width and full-width chars to their compat equivs.
-
     def width_map(self, value):
+        """ Map half-width and full-width chars to their compat equivs.
+        """
         def decompose(m):
             char = m.group(0)
             assert len(char) == 1
@@ -52,8 +62,6 @@ class UnicodeData(object):
         """ Convert non-ASCII white space {Zs} to ASCII ' '.
         """
         return self._space_chars.sub(' ', value)
-
-    # These methods are specialized for use by PRECIS.
 
     def default_ignorable(self, cp):
         return cp in _DEFAULT_IGNORABLE
@@ -117,9 +125,7 @@ class UnicodeData(object):
             return 'T'
         return None
 
-# From http://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt
-# DerivedCoreProperties-9.0.0.txt
-# Date: 2016-06-01, 10:34:24 GMT
+# http://www.unicode.org/Public/9.0.0/ucd/DerivedCoreProperties.txt
 # Derived Property: Default_Ignorable_Code_Point
 _DEFAULT_IGNORABLE = CodepointSet('''
 00AD
@@ -150,6 +156,8 @@ E0100..E01EF
 E01F0..E0FFF
 ''')
 
+# http://www.unicode.org/Public/9.0.0/ucd/extracted/DerivedJoiningType.txt
+# Joining_Type=Dual_Joining
 _JOINTYPE_DUAL_JOINING = CodepointSet('''
 0620
 0626
@@ -211,6 +219,8 @@ A840..A871
 1E900..1E943
 ''')
 
+# http://www.unicode.org/Public/9.0.0/ucd/extracted/DerivedJoiningType.txt
+# Joining_Type=Right_Joining
 _JOINTYPE_RIGHT_JOINING = CodepointSet('''
 0622..0625
 0627
@@ -265,12 +275,16 @@ _JOINTYPE_RIGHT_JOINING = CodepointSet('''
 10BA9..10BAC
 ''')
 
+# http://www.unicode.org/Public/9.0.0/ucd/extracted/DerivedJoiningType.txt
+# Joining_Type=Left_Joining
 _JOINTYPE_LEFT_JOINING = CodepointSet('''
 A872
 10ACD
 10AD7
 ''')
 
+# http://www.unicode.org/Public/9.0.0/ucd/extracted/DerivedJoiningType.txt
+# Joining_Type=Transparent
 _JOINTYPE_TRANSPARENT = CodepointSet('''
 00AD
 0300..036F
@@ -580,6 +594,7 @@ E0100..E01EF
 ''')
 
 # http://www.unicode.org/Public/9.0.0/ucd/Scripts.txt
+# Greek
 _GREEK_SCRIPT = CodepointSet('''
 0370..0373
 0375
@@ -639,6 +654,7 @@ AB65
 ''')
 
 # http://www.unicode.org/Public/9.0.0/ucd/Scripts.txt
+# Hebrew
 _HEBREW_SCRIPT = CodepointSet('''
 0591..05BD
 05BE
@@ -664,6 +680,8 @@ FB43..FB44
 FB46..FB4F
 ''')
 
+# http://www.unicode.org/Public/9.0.0/ucd/Scripts.txt
+# Hiragana, Katakana, Han
 _HIRAGANA_KATAKANA_HAN = CodepointSet('''
 # Hiragana
 3041..3096
@@ -701,7 +719,8 @@ FA70..FAD9
 2F800..2FA1D
 ''')
 
-# http://www.unicode.org/Public/UCD/latest/ucd/HangulSyllableType.txt
+# http://www.unicode.org/Public/9.0.0/ucd/HangulSyllableType.txt
+# Leading_Jamo, Vowel_Jamo, Trailing_Jamo
 _OLD_HANGUL_JAMO = CodepointSet('''
 # Leading_Jamo
 1100..115F

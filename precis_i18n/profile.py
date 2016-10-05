@@ -1,3 +1,7 @@
+"""
+Implements the PRECIS profile classes.
+"""
+
 import re
 
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass
@@ -7,6 +11,8 @@ from precis_i18n.bidi import bidi_rule, has_rtl
 class Profile(object):
     """
     Abstract base class for a PRECIS profile.
+
+    Subclasses should override the `*_rule` methods.
     """
 
     def __init__(self, base, name):
@@ -22,6 +28,8 @@ class Profile(object):
         return self._name
 
     def enforce(self, value):
+        """ Enforce the profile.
+        """
         # If we get called with a byte string, decode it first.
         if isinstance(value, bytes):
             value = value.decode('utf-8')

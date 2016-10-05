@@ -1,10 +1,14 @@
+"""
+Implements the CodepointSet class.
+"""
+
 import io
 import re
 from bisect import bisect_left
 
 
 class CodepointSet(object):
-    """ Concrete class for a set of Unicode code points.
+    """ Concrete class for an immutable set of Unicode code points.
 
     Inclusive ranges [a, b] are stored as adjacent unicode characters in a
     string. The low end of a range has an even index. The high end is at an
@@ -18,7 +22,7 @@ class CodepointSet(object):
 
     def __init__(self, table):
         elems = _coalesce(_parse(table))
-        self._table = ''.join([chr(lo) + chr(hi) for (lo, hi) in elems])
+        self._table = ''.join(chr(lo) + chr(hi) for (lo, hi) in elems)
         assert (len(self._table) % 2) == 0
 
     def __contains__(self, cp):

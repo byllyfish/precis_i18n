@@ -1,3 +1,7 @@
+"""
+Implements the BiDi Rule from RFC 5893, Section 2.
+"""
+
 # The Bidi Rule (Source: RFC 5893, Section 2)
 #
 # The following rule, consisting of six conditions, applies to labels
@@ -40,6 +44,8 @@ _RTL_ANY = {'R', 'AL', 'AN'}
 
 
 def bidi_rule(value, ucd):
+    """ Return true if `value` obeys the "BiDi" rule.
+    """
     bidi = ucd.bidirectional(value[0])
     if bidi in _LTR_FIRST:
         return _bidi_rule(value, ucd, _LTR_ALLOWED, _LTR_LAST, _LTR_EXCL)
@@ -50,6 +56,8 @@ def bidi_rule(value, ucd):
 
 
 def _bidi_rule(value, ucd, allowed, last, exclusive):
+    """ Checks the bidi_rule for LTR or RTL, depending on parameters.
+    """
     assert ucd.bidirectional(value[0]) in (_LTR_FIRST | _RTL_FIRST)
     # Starting from the end, find the first character whose bidi is not 'NSM'.
     found = -1

@@ -1,14 +1,27 @@
-def _before(value, offset):
-    if offset <= 0:
-        raise IndexError(offset - 1)
-    return ord(value[offset - 1])
+""" 
+Implements PRECIS context rules for characters with derived properties of
+CONTEXTJ and CONTEXTO.
+"""
 
+def context_rule(value, offset, ucd):
+    """ Apply the context rule to `value[offset]`.
 
-def _after(value, offset):
-    return ord(value[offset + 1])
+    Return true if successful.
+    """
+    cp = ord(value[offset])
+    try:
+        if ucd.arabic_indic(cp):
+            return rule_arabic_indic(value, offset, ucd)
+        elif ucd.extended_arabic_indic(cp):
+            return rule_extended_arabic_indic(value, offset, ucd)
+        else:
+            return _RULES[cp](value, offset, ucd)
+    except IndexError:
+        # Handle failure of _before and _after accessors.
+        return False
+
 
 # These rules test a character at a given offset in the string.
-
 
 def rule_zero_width_nonjoiner(value, offset, ucd):
     assert value[offset] == '\u200c'
@@ -69,14 +82,11 @@ _RULES = {
 }
 
 
-def context_rule(value, offset, ucd):
-    cp = ord(value[offset])
-    try:
-        if ucd.arabic_indic(cp):
-            return rule_arabic_indic(value, offset, ucd)
-        elif ucd.extended_arabic_indic(cp):
-            return rule_extended_arabic_indic(value, offset, ucd)
-        else:
-            return _RULES[cp](value, offset, ucd)
-    except IndexError:
-        return False
+def _before(value, offset):
+    if offset <= 0:
+        raise IndexError(offset - 1)
+    return ord(value[offset - 1])
+
+
+def _after(value, offset):
+    return ord(value[offset + 1])

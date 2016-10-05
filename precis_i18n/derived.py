@@ -1,5 +1,5 @@
 """
-Defines PRECIS (RFC 7564) `derived_property` function.
+Implements the PRECIS (RFC 7564) `derived_property` function.
 """
 
 PVALID = 'PVALID'

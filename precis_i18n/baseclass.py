@@ -1,17 +1,29 @@
+"""
+Implements the PRECIS string classes.
+"""
+
 from precis_i18n.context import context_rule
 from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
-                                  derived_property)
+                                 derived_property)
 
 
 class BaseClass(object):
+    """ Abstract base class for all String classes in PRECIS framework.
+
+    Subclasses must set `_allowed` to a tuple of derived property names.
+    """
+    _allowed = ()
+
     def __init__(self, ucd):
         self._ucd = ucd
 
     @property
     def ucd(self):
+        """ Unicode character database.
+        """
         return self._ucd
 
-    def _enforce(self, value, codec_name, *allowed):
+    def enforce(self, value, codec_name='precis'):
         """ Ensure that all characters in `value` are allowed by the string
         class.
 
@@ -19,7 +31,7 @@ class BaseClass(object):
         """
         for i, char in enumerate(value):
             prop, kind = derived_property(ord(char), self.ucd)
-            if prop in allowed:
+            if prop in self._allowed:
                 continue
             elif prop == CONTEXTJ and context_rule(value, i, self.ucd):
                 continue
@@ -31,10 +43,12 @@ class BaseClass(object):
 
 
 class IdentifierClass(BaseClass):
-    def enforce(self, value, codec_name='precis-identifier'):
-        return self._enforce(value, codec_name, PVALID)
+    """ Concrete class representing PRECIS IdentifierClass from RFC 7564.
+    """
+    _allowed = (PVALID,)
 
 
 class FreeFormClass(BaseClass):
-    def enforce(self, value, codec_name='precis-freeform'):
-        return self._enforce(value, codec_name, PVALID, FREE_PVAL)
+    """ Concrete class repsenting PRECIS FreeFormClass from RFC 7564.
+    """
+    _allowed = (PVALID, FREE_PVAL)
