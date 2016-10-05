@@ -70,18 +70,18 @@ There are multiple ways to write "Kevin" by varying only the "K".
 Original String|UsernameCasePreserved|UsernameCaseMapped|Nickname
 ---------------|-----------------|------------------|------------------
 Kevin | Kevin | kevin | kevin
-&#x212A;evin '\u212Aevin' | Kevin | kevin | kevin
-&#xFF2B;evin '\uFF2Bevin' | Kevin | kevin | kevin
-&#x039A;evin '\u039Aevin' | &#x039A;evin '\u039Aevin' | &#x03BA;evin '\u03BAevin' | &#x03BA;evin '\u03BAevin'
-&#x1e32;evin '\u1E32evin' | &#x1e32;evin '\u1E32evin' | &#x1E33;evin '\u1E33evin' | &#x1E33;evin '\u1E33evin'
-&#x1E34;evin '\u1E34evin' | &#x1E34;evin '\u1E34evin' | &#x1E35;evin '\u1E35evin' | &#x1E35;evin '\u1E35evin'
-&#x2c69;evin '\u2C69evin' | &#x2c69;evin '\u2C69evin' | &#x2C6A;evin '\u2C6Aevin' | &#x2C6A;evin '\u2C6Aevin'
-&#xA740;evin '\uA740evin' | &#xA740;evin '\uA740evin' | &#xA741;evin '\uA741evin' | &#xA741;evin '\uA741evin'
-&#xA742;evin '\uA742evin' | &#xA742;evin '\uA742evin' | &#xA743;evin '\uA743evin' | &#xA743;evin '\uA743evin'
-&#xA744;evin '\uA744evin' | &#xA744;evin '\uA744evin' | &#xA745;evin '\uA745evin' | &#xA745;evin '\uA745evin'
-&#xA7A2;evin '\uA7A2evin' | &#xA7A2;evin '\uA7A2evin' | &#xA7A3;evin '\uA7A3evin' | &#xA7A3;evin '\uA7A3evin'
-&#x24C0;evin '\u24C0evin'  | DISALLOWED | DISALLOWED | kevin
-&#x1F11A;evin '\U0001F11Aevin' | DISALLOWED | DISALLOWED | (K)evin
-&#x1F13A;evin '\U0001F13Aevin' | DISALLOWED | DISALLOWED | Kevin
-&#x1F15A;evin '\U0001F15Aevin' | DISALLOWED | DISALLOWED | &#x1F15A;evin '\U0001F15Aevin'
-&#x1F17A;evin '\U0001F17Aevin' | DISALLOWED | DISALLOWED | &#x1F17A;evin '\U0001F17Aevin'
+&#8490;evin '\u212aevin' | Kevin | kevin | kevin
+&#65323;evin '\uff2bevin' | Kevin | kevin | kevin
+&#922;evin '\u039aevin' | &#922;evin '\u039aevin' | &#954;evin '\u03baevin' | &#954;evin '\u03baevin'
+&#7730;evin '\u1e32evin' | &#7730;evin '\u1e32evin' | &#7731;evin '\u1e33evin' | &#7731;evin '\u1e33evin'
+&#7732;evin '\u1e34evin' | &#7732;evin '\u1e34evin' | &#7733;evin '\u1e35evin' | &#7733;evin '\u1e35evin'
+&#11369;evin '\u2c69evin' | &#11369;evin '\u2c69evin' | &#11370;evin '\u2c6aevin' | &#11370;evin '\u2c6aevin'
+&#42816;evin '\ua740evin' | &#42816;evin '\ua740evin' | &#42817;evin '\ua741evin' | &#42817;evin '\ua741evin'
+&#42818;evin '\ua742evin' | &#42818;evin '\ua742evin' | &#42819;evin '\ua743evin' | &#42819;evin '\ua743evin'
+&#42820;evin '\ua744evin' | &#42820;evin '\ua744evin' | &#42821;evin '\ua745evin' | &#42821;evin '\ua745evin'
+&#42914;evin '\ua7a2evin' | &#42914;evin '\ua7a2evin' | &#42915;evin '\ua7a3evin' | &#42915;evin '\ua7a3evin'
+&#9408;evin '\u24c0evin' | DISALLOWED | DISALLOWED | kevin
+&#127258;evin '\U0001f11aevin' | DISALLOWED | DISALLOWED | (K)evin
+&#127290;evin '\U0001f13aevin' | DISALLOWED | DISALLOWED | Kevin
+&#127322;evin '\U0001f15aevin' | DISALLOWED | DISALLOWED | &#127322;evin '\U0001f15aevin'
+&#127354;evin '\U0001f17aevin' | DISALLOWED | DISALLOWED | &#127354;evin '\U0001f17aevin'
