@@ -18,11 +18,23 @@ class CodepointSet(object):
     matches a char in the string, the code point is in the set. If not, find
     the index of the next largest char. If this index is odd, the code point is
     in the set.
+
+    This class is constructed from a multi-line string containing a sequence of
+    codepoints and codepoint ranges.
+
+      HHHH
+      HHHH..HHHH
+
+    H is a hexadecimal digit.
+
+    Note: Sets with any non-BMP codepoints will use 32-bits for all codepoints. 
+    (PEP 393 Flexible String Representation)
     """
 
     def __init__(self, table):
-        elems = _coalesce(_parse(table))
-        self._table = ''.join(chr(lo) + chr(hi) for (lo, hi) in elems)
+        """ Construct set from a string containing codepoint ranges.
+        """
+        self._table = _stringify(_coalesce(_parse(table)))
         assert (len(self._table) % 2) == 0
 
     def __contains__(self, cp):
@@ -37,27 +49,38 @@ class CodepointSet(object):
         return (idx % 2) == 1 or self._table[idx] == char
 
     def __eq__(self, rhs):
+        """ Return true if two sets are equal.
+        """
         return self._table == rhs._table
 
     def __repr__(self):
-        elems = '\\n'.join(['%04X..%04X' % item for item in self.items()])
+        """ Return string representation of set.
+        """
+        elems = '\\n'.join(_repr(elem) for elem in self.items())
         return "CodepointSet('%s')" % elems
 
     def items(self):
+        """ Generator yielding sequence of range tuples (lo, hi).
+        """
         for i in range(len(self._table) // 2):
             lo = ord(self._table[2*i])
             hi = ord(self._table[2*i+1])
             yield (lo, hi)
 
 
-_RANGE = re.compile(r'^\s*([0-9A-Fa-f]+)(?:\.\.([0-9A-Fa-f]+))?\s*$')
-
-
 def _parse(table):
+    """ Parse a multi-line string containing a codepoint or codepoint range.
+
+    Return a list of tuples (lo, hi).
+    """
+    codepoint = re.compile(r'^([0-9A-Fa-f]+)(?:\.\.([0-9A-Fa-f]+))?$')
     elems = []
     for line in io.StringIO(table):
-        m = _RANGE.match(line.strip())
+        line = line.strip()
+        m = codepoint.match(line)
         if not m:
+            if line and line[0] != '#':
+                raise ValueError('Unable to parse line: %s' % line)
             continue
         lo = int(m.group(1), 16)
         hi = int(m.group(2), 16) if m.group(2) else lo
@@ -68,6 +91,8 @@ def _parse(table):
 
 
 def _coalesce(elems):
+    """ Sort elements and coalesce adjacent ranges.
+    """
     elems.sort()
     i = 0
     while i < len(elems) - 1:
@@ -79,3 +104,18 @@ def _coalesce(elems):
         else:
             i += 1
     return elems
+
+
+def _stringify(elems):
+    """ Convert a sequence of ranges into a unicode string.
+    """
+    return ''.join(chr(lo) + chr(hi) for (lo, hi) in elems)
+
+
+def _repr(elem):
+    """ Return string representation for tuple (lo, hi)
+    """
+    if elem[0] == elem[1]:
+        return '%04X' % elem[0]
+    else:
+        return '%04X..%04X' % elem
