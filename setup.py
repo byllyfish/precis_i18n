@@ -22,6 +22,13 @@ with open(path.join(here, 'precis_i18n/__init__.py'), encoding='utf-8') as f:
     version_regex = re.compile(r"(?m)__version__\s*=\s*'(\d+\.\d+\.\d+)'")
     version = version_regex.search(f.read()).group(1)
 
+# Running `python setup.py test` should run unit tests (see `test_suite`).
+def all_tests():
+    import unittest
+    test_loader = unittest.TestLoader()
+    return test_loader.discover('test')
+
+
 setup(
     name='precis_i18n',
     packages=['precis_i18n'],
@@ -61,4 +68,5 @@ setup(
     ],
 
     zip_safe=True,
+    test_suite="setup.all_tests"
 )

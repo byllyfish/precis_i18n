@@ -1,2 +1,2 @@
-include long_description.rst test/examples.txt
+include README.md long_description.rst test/examples.txt
 exclude test/test_derived_props.py
