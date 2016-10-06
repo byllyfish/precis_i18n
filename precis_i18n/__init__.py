@@ -5,7 +5,7 @@ precis_i18n
 import precis_i18n.profile as _profile
 import precis_i18n.unicode as _unicode
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 
 _ucd = _unicode.UnicodeData()
 
