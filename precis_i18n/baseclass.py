@@ -12,6 +12,7 @@ class BaseClass(object):
 
     Subclasses must set `_allowed` to a tuple of derived property names.
     """
+    _name = 'precis'
     _allowed = ()
 
     def __init__(self, ucd):
@@ -23,12 +24,21 @@ class BaseClass(object):
         """
         return self._ucd
 
-    def enforce(self, value, codec_name='precis'):
+    @property
+    def name(self):
+        """ The profile's name.
+        """
+        return self._name
+
+    def enforce(self, value, codec_name=None):
         """ Ensure that all characters in `value` are allowed by the string
         class.
 
         Return original `value` or raise a `UnicodeEncodeError`.
         """
+        if codec_name is None:
+            codec_name = self.name
+
         for i, char in enumerate(value):
             prop, kind = derived_property(ord(char), self.ucd)
             if prop in self._allowed:
@@ -45,10 +55,13 @@ class BaseClass(object):
 class IdentifierClass(BaseClass):
     """ Concrete class representing PRECIS IdentifierClass from RFC 7564.
     """
+    _name = 'IdentifierClass'
     _allowed = (PVALID,)
 
 
 class FreeFormClass(BaseClass):
     """ Concrete class repsenting PRECIS FreeFormClass from RFC 7564.
     """
+    _name = 'FreeFormClass'
     _allowed = (PVALID, FREE_PVAL)
+    

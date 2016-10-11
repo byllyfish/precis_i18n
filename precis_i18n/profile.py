@@ -21,10 +21,14 @@ class Profile(object):
 
     @property
     def base(self):
+        """ The profile's base string instance.
+        """
         return self._base
 
     @property
     def name(self):
+        """ The profile's name.
+        """
         return self._name
 
     def enforce(self, value):

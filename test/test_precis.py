@@ -133,25 +133,25 @@ class TestPrecisIdentifierClass(unittest.TestCase):
         # FREE_PVAL/spaces
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\x20' in position 0: FREE_PVAL/spaces"):
+                r"'IdentifierClass' codec can't encode character '\\x20' in position 0: FREE_PVAL/spaces"):
             ident.enforce(' ')
 
         # DISALLOWED/precis_ignorable_properties
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\xad' in position 0: DISALLOWED/precis_ignorable_properties"):
+                r"'IdentifierClass' codec can't encode character '\\xad' in position 0: DISALLOWED/precis_ignorable_properties"):
             ident.enforce('\xad')
 
         # DISALLOWED/old_hangul_jamo
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\u1100' in position 0: DISALLOWED/old_hangul_jamo"):
+                r"'IdentifierClass' codec can't encode character '\\u1100' in position 0: DISALLOWED/old_hangul_jamo"):
             ident.enforce('\u1100')
 
         # FREE_PVAL/has_compat
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\u1fbf' in position 0: FREE_PVAL/has_compat"):
+                r"'IdentifierClass' codec can't encode character '\\u1fbf' in position 0: FREE_PVAL/has_compat"):
             ident.enforce('\u1FBF')
 
 
@@ -174,19 +174,19 @@ class TestPrecisFreeformClass(unittest.TestCase):
         # DISALLOWED/precis_ignorable_properties
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\xad' in position 0: DISALLOWED/precis_ignorable_properties"):
+                r"'FreeFormClass' codec can't encode character '\\xad' in position 0: DISALLOWED/precis_ignorable_properties"):
             free.enforce('\xad')
 
         # DISALLOWED/old_hangul_jamo
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\u1100' in position 0: DISALLOWED/old_hangul_jamo"):
+                r"'FreeFormClass' codec can't encode character '\\u1100' in position 0: DISALLOWED/old_hangul_jamo"):
             free.enforce('\u1100')
 
         # DISALLOWED/other (surrogates)
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'precis' codec can't encode character '\\ud800' in position 0: DISALLOWED/other"):
+                r"'FreeFormClass' codec can't encode character '\\ud800' in position 0: DISALLOWED/other"):
             free.enforce('\ud800\udc00')
 
 
