@@ -36,7 +36,7 @@ class TestGolden(unittest.TestCase):
         # assertion fails, the profile is not idempotent.
         idempotent = actual.encode(profile).decode('utf-8')
         if idempotent != actual:
-            print('\nIdempotent Fail: %s => %s => %s' % (input, actual, idempotent))
+            print('\n"%s" not idempotent: %s => %s => %s' % (profile, input, actual, idempotent))
         # The Nickname profile is not idempotent?
         if profile.lower() != 'nickname':
             self.assertEqual(idempotent, actual)
