@@ -2,3721 +2,3721 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "#",
     "output": "#",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\\",
     "output": "\\",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0000",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\t",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\n",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\r",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u001f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": " ",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "!",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "~",
     "output": "~",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u007f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0080",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u009f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00a0",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00fe",
     "output": "\u00fe",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00ff",
     "output": "\u00ff",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufffe",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\udbff\udfff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Kevin",
     "output": "Kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212aevin",
     "output": "Kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u039aevin",
     "output": "\u039aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1e32evin",
     "output": "\u1e32evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1e34evin",
     "output": "\u1e34evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "K\u0301evin",
     "output": "\u1e30evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "K\u0301\u0301evin",
     "output": "\u1e30\u0301evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "K\ua717evin",
     "output": "K\ua717evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u24c0evin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2c69evin",
     "output": "\u2c69evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ua740evin",
     "output": "\ua740evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ua742evin",
     "output": "\ua742evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ua744evin",
     "output": "\ua744evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ua7a2evin",
     "output": "\ua7a2evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uff2bevin",
     "output": "Kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\udb40\udc4bevin",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd1aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd3aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd5aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd7aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "StPeter",
     "output": "StPeter",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet",
     "output": "Juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet@Example.COM",
     "output": "Juliet@Example.COM",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Fussball",
     "output": "Fussball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Fu\u00dfball",
     "output": "Fu\u00dfball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u03c0",
     "output": "\u03c0",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u03a3",
     "output": "\u03a3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u03c3",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u03c2",
     "output": "\u03c2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "ju1iet",
     "output": "ju1iet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0cf1",
     "output": "\u0cf1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0cf2",
     "output": "\u0cf2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u19da",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/other_letter_digits"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "A\ua717",
     "output": "A\ua717",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00e9",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "e\u0301\u0301\u0301",
     "output": "\u00e9\u0301\u0301",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "e\u0301",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "o",
     "output": "o",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u03bf",
     "output": "\u03bf",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u043e",
     "output": "\u043e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufec9",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufeca",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufecb",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufecc",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uff76",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u30ab",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u3300",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u30a2\u30d1\u30fc\u30c8",
     "output": "\u30a2\u30d1\u30fc\u30c8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "i\u2079",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00bc",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u01c6",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe37",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u210c",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u210d",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2e2f",
     "output": "\u2e2f",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fef",
     "output": "`",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212a",
     "output": "K",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uff01",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
     "output": "Juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uff04",
     "output": "$",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe69",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Rs",
     "output": "Rs",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u20a8",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\uddfa\ud83c\uddf8",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "K",
     "output": "K",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212a",
     "output": "K",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u24c0",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2460",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u03a9",
     "output": "\u03a9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2126",
     "output": "\u03a9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00c7",
     "output": "\u00c7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "C\u0327",
     "output": "\u00c7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "q\u0307\u0323",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "q\u0323\u0307",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uac00",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1100\u1161",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212b",
     "output": "\u00c5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "A\u030a",
     "output": "\u00c5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "s\u0323\u0307",
     "output": "\u1e69",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufb01",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uac01",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1100\u1161\u11a8",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83d\udc7e",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83d\udc9a",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
     "output": "Z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": "Z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033dA\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362L\u0320\u0368\u0367\u0369\u0358G\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01ea\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0315\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u032d\u0322\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0334A\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u031d\u0327\u031d\u0356\u032c\u0329\u032f\u0334L\u031b\u034a\u0314\u0307\u0352\u0352\u0309\u0327\u032c\u0316\u0330\u032b\u0362\u033c\u0329\u035f\u0356G\u033d\u0307\u0360\u0350\u0313\u030c\u0342\u035d\u0313\u031d\u031e\u033c\u031d\u034d\u0336O\u033f\u0308\u035b\u0306\u030f\u034b\u0342\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u0321",
     "output": "Z\u0334\u0322\u032d\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u0315A\u0334\u0327\u031d\u031d\u0356\u032c\u0329\u032f\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u013b\u031b\u032c\u0316\u0330\u032b\u033c\u0329\u0356\u034a\u0314\u0307\u0352\u0352\u0309\u0362\u035fG\u0336\u031d\u031e\u033c\u031d\u034d\u033d\u0307\u0350\u0313\u030c\u0342\u0313\u0360\u035dO\u0321\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u033f\u0308\u035b\u0306\u030f\u034b\u0342",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
     "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u0386\u03b9\u0388\u0389\u0390\u038a\u03b0\u038e`\u038c\u038f\u03a9K\u00c5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00ad",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u034f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1806",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/punctuation"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u180b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u180c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u180d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u200b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u200c",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u200d",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2060",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe00",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe01",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe02",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe03",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe04",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe05",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe06",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe07",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe08",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe09",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe0a",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe0b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe0c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe0d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe0e",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe0f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet Capulet",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": " Juliet",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet ",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet  Capulet",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1+",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "+\u05d0\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "A\u05d0\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1A",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0A\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0(/%\\))\u05d1",
     "output": "\u05d0(/%\\))\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet+",
     "output": "Juliet+",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "+Juliet",
     "output": "+Juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "#",
     "output": "#",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\\",
     "output": "\\",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0000",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\t",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\n",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\r",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u001f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": " ",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "!",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "~",
     "output": "~",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u007f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0080",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u009f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00a0",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00fe",
     "output": "\u00fe",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00ff",
     "output": "\u00ff",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufffe",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\udbff\udfff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Kevin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212aevin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u039aevin",
     "output": "\u03baevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1e32evin",
     "output": "\u1e33evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1e34evin",
     "output": "\u1e35evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "K\u0301evin",
     "output": "\u1e31evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "K\u0301\u0301evin",
     "output": "\u1e31\u0301evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "K\ua717evin",
     "output": "k\ua717evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u24c0evin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2c69evin",
     "output": "\u2c6aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ua740evin",
     "output": "\ua741evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ua742evin",
     "output": "\ua743evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ua744evin",
     "output": "\ua745evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ua7a2evin",
     "output": "\ua7a3evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uff2bevin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\udb40\udc4bevin",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd1aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd3aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd5aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd7aevin",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "StPeter",
     "output": "stpeter",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet",
     "output": "juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet@Example.COM",
     "output": "juliet@example.com",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Fussball",
     "output": "fussball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Fu\u00dfball",
     "output": "fussball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u03c0",
     "output": "\u03c0",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u03a3",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u03c3",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u03c2",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "ju1iet",
     "output": "ju1iet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0cf1",
     "output": "\u0cf1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0cf2",
     "output": "\u0cf2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u19da",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/other_letter_digits"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "A\ua717",
     "output": "a\ua717",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00e9",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "e\u0301\u0301\u0301",
     "output": "\u00e9\u0301\u0301",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "e\u0301",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "o",
     "output": "o",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u03bf",
     "output": "\u03bf",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u043e",
     "output": "\u043e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufec9",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufeca",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufecb",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufecc",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uff76",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u30ab",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u3300",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u30a2\u30d1\u30fc\u30c8",
     "output": "\u30a2\u30d1\u30fc\u30c8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "i\u2079",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00bc",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u01c6",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe37",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u210c",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u210d",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2e2f",
     "output": "\u2e2f",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fef",
     "output": "`",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212a",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uff01",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
     "output": "juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uff04",
     "output": "$",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe69",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Rs",
     "output": "rs",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u20a8",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\uddfa\ud83c\uddf8",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "K",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212a",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u24c0",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2460",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u03a9",
     "output": "\u03c9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2126",
     "output": "\u03c9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00c7",
     "output": "\u00e7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "C\u0327",
     "output": "\u00e7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "q\u0307\u0323",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "q\u0323\u0307",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uac00",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1100\u1161",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212b",
     "output": "\u00e5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "A\u030a",
     "output": "\u00e5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "s\u0323\u0307",
     "output": "\u1e69",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufb01",
     "output": "fi",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uac01",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1100\u1161\u11a8",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83d\udc7e",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83d\udc9a",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
     "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0315\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u032d\u0322\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0334A\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u031d\u0327\u031d\u0356\u032c\u0329\u032f\u0334L\u031b\u034a\u0314\u0307\u0352\u0352\u0309\u0327\u032c\u0316\u0330\u032b\u0362\u033c\u0329\u035f\u0356G\u033d\u0307\u0360\u0350\u0313\u030c\u0342\u035d\u0313\u031d\u031e\u033c\u031d\u034d\u0336O\u033f\u0308\u035b\u0306\u030f\u034b\u0342\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u0321",
     "output": "z\u0334\u0322\u032d\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u0315a\u0334\u0327\u031d\u031d\u0356\u032c\u0329\u032f\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u013c\u031b\u032c\u0316\u0330\u032b\u033c\u0329\u0356\u034a\u0314\u0307\u0352\u0352\u0309\u0362\u035fg\u0336\u031d\u031e\u033c\u031d\u034d\u033d\u0307\u0350\u0313\u030c\u0342\u0313\u0360\u035do\u0321\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u033f\u0308\u035b\u0306\u030f\u034b\u0342",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
     "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00ad",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u034f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1806",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/punctuation"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u180b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u180c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u180d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u200b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u200c",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u200d",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2060",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe00",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe01",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe02",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe03",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe04",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe05",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe06",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe07",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe08",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe09",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe0a",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe0b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe0c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe0d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe0e",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe0f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet Capulet",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": " Juliet",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet ",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet  Capulet",
-    "output": "",
+    "output": null,
     "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0\u05d1+",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "+\u05d0\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "A\u05d0\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0\u05d1A",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0A\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0(/%\\))\u05d1",
     "output": "\u05d0(/%\\))\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet+",
     "output": "juliet+",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "+Juliet",
     "output": "+juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet\u05d1",
-    "output": "",
+    "output": null,
     "error": "bidi rule"
   },
   {
     "profile": "OpaqueString",
     "input": "",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "OpaqueString",
     "input": "#",
     "output": "#",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\\",
     "output": "\\",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u0000",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\t",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\n",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\r",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\u001f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": " ",
     "output": " ",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "!",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "~",
     "output": "~",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u007f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\u0080",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\u009f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "OpaqueString",
     "input": "\u00a0",
     "output": " ",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u00fe",
     "output": "\u00fe",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u00ff",
     "output": "\u00ff",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufffe",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\udbff\udfff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Kevin",
     "output": "Kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u212aevin",
     "output": "Kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u039aevin",
     "output": "\u039aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u1e32evin",
     "output": "\u1e32evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u1e34evin",
     "output": "\u1e34evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "K\u0301evin",
     "output": "\u1e30evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "K\u0301\u0301evin",
     "output": "\u1e30\u0301evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "K\ua717evin",
     "output": "K\ua717evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u24c0evin",
     "output": "\u24c0evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u2c69evin",
     "output": "\u2c69evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ua740evin",
     "output": "\ua740evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ua742evin",
     "output": "\ua742evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ua744evin",
     "output": "\ua744evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ua7a2evin",
     "output": "\ua7a2evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uff2bevin",
     "output": "\uff2bevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\udb40\udc4bevin",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83c\udd1aevin",
     "output": "\ud83c\udd1aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83c\udd3aevin",
     "output": "\ud83c\udd3aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83c\udd5aevin",
     "output": "\ud83c\udd5aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83c\udd7aevin",
     "output": "\ud83c\udd7aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "StPeter",
     "output": "StPeter",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet",
     "output": "Juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet@Example.COM",
     "output": "Juliet@Example.COM",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Fussball",
     "output": "Fussball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Fu\u00dfball",
     "output": "Fu\u00dfball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u03c0",
     "output": "\u03c0",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u03a3",
     "output": "\u03a3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u03c3",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u03c2",
     "output": "\u03c2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "ju1iet",
     "output": "ju1iet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u0cf1",
     "output": "\u0cf1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u0cf2",
     "output": "\u0cf2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u19da",
     "output": "\u19da",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "A\ua717",
     "output": "A\ua717",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u00e9",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "e\u0301\u0301\u0301",
     "output": "\u00e9\u0301\u0301",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "e\u0301",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "o",
     "output": "o",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u03bf",
     "output": "\u03bf",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u043e",
     "output": "\u043e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufec9",
     "output": "\ufec9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufeca",
     "output": "\ufeca",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufecb",
     "output": "\ufecb",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufecc",
     "output": "\ufecc",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uff76",
     "output": "\uff76",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u30ab",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u3300",
     "output": "\u3300",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u30a2\u30d1\u30fc\u30c8",
     "output": "\u30a2\u30d1\u30fc\u30c8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "i\u2079",
     "output": "i\u2079",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u00bc",
     "output": "\u00bc",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u01c6",
     "output": "\u01c6",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe37",
     "output": "\ufe37",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u210c",
     "output": "\u210c",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u210d",
     "output": "\u210d",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u2e2f",
     "output": "\u2e2f",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u1fef",
     "output": "`",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u212a",
     "output": "K",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uff01",
     "output": "\uff01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
     "output": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uff04",
     "output": "\uff04",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe69",
     "output": "\ufe69",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Rs",
     "output": "Rs",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u20a8",
     "output": "\u20a8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83c\uddfa\ud83c\uddf8",
     "output": "\ud83c\uddfa\ud83c\uddf8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "K",
     "output": "K",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u212a",
     "output": "K",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u24c0",
     "output": "\u24c0",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u2460",
     "output": "\u2460",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u03a9",
     "output": "\u03a9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u2126",
     "output": "\u03a9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u00c7",
     "output": "\u00c7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "C\u0327",
     "output": "\u00c7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "q\u0307\u0323",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "q\u0323\u0307",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uac00",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u1100\u1161",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u212b",
     "output": "\u00c5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "A\u030a",
     "output": "\u00c5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "s\u0323\u0307",
     "output": "\u1e69",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ufb01",
     "output": "\ufb01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\uac01",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u1100\u1161\u11a8",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83d\udc7e",
     "output": "\ud83d\udc7e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\ud83d\udc9a",
     "output": "\ud83d\udc9a",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
     "output": "Z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": "Z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033dA\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362L\u0320\u0368\u0367\u0369\u0358G\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01ea\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "Z\u0315\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u032d\u0322\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0334A\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u031d\u0327\u031d\u0356\u032c\u0329\u032f\u0334L\u031b\u034a\u0314\u0307\u0352\u0352\u0309\u0327\u032c\u0316\u0330\u032b\u0362\u033c\u0329\u035f\u0356G\u033d\u0307\u0360\u0350\u0313\u030c\u0342\u035d\u0313\u031d\u031e\u033c\u031d\u034d\u0336O\u033f\u0308\u035b\u0306\u030f\u034b\u0342\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u0321",
     "output": "Z\u0334\u0322\u032d\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u0315A\u0334\u0327\u031d\u031d\u0356\u032c\u0329\u032f\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u013b\u031b\u032c\u0316\u0330\u032b\u033c\u0329\u0356\u034a\u0314\u0307\u0352\u0352\u0309\u0362\u035fG\u0336\u031d\u031e\u033c\u031d\u034d\u033d\u0307\u0350\u0313\u030c\u0342\u0313\u0360\u035dO\u0321\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u033f\u0308\u035b\u0306\u030f\u034b\u0342",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
     "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u0386\u03b9\u0388\u0389\u0390\u038a\u03b0\u038e`\u038c\u038f\u03a9K\u00c5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u00ad",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\u034f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\u1806",
     "output": "\u1806",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u180b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\u180c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\u180d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\u200b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\u200c",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "OpaqueString",
     "input": "\u200d",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "OpaqueString",
     "input": "\u2060",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe00",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe01",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe02",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe03",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe04",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe05",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe06",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe07",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe08",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe09",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe0a",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe0b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe0c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe0d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe0e",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufe0f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet Capulet",
     "output": "Juliet Capulet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": " Juliet",
     "output": " Juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet ",
     "output": "Juliet ",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet  Capulet",
     "output": "Juliet  Capulet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u05d0\u05d1+",
     "output": "\u05d0\u05d1+",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "+\u05d0\u05d1",
     "output": "+\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "A\u05d0\u05d1",
     "output": "A\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u05d0\u05d1A",
     "output": "\u05d0\u05d1A",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u05d0A\u05d1",
     "output": "\u05d0A\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "\u05d0(/%\\))\u05d1",
     "output": "\u05d0(/%\\))\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet+",
     "output": "Juliet+",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "+Juliet",
     "output": "+Juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "OpaqueString",
     "input": "Juliet\u05d1",
     "output": "Juliet\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": "#",
     "output": "#",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\\",
     "output": "\\",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u0000",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "Nickname",
     "input": "\t",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": "\n",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": "\r",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": "\u001f",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": " ",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": "!",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "~",
     "output": "~",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u007f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "Nickname",
     "input": "\u0080",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "Nickname",
     "input": "\u009f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/controls"
   },
   {
     "profile": "Nickname",
     "input": "\u00a0",
-    "output": "",
+    "output": null,
     "error": "empty"
   },
   {
     "profile": "Nickname",
     "input": "\u00fe",
     "output": "\u00fe",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u00ff",
     "output": "\u00ff",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufffe",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\udbff\udfff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Kevin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u212aevin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u039aevin",
     "output": "\u03baevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u1e32evin",
     "output": "\u1e33evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u1e34evin",
     "output": "\u1e35evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "K\u0301evin",
     "output": "\u1e31evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "K\u0301\u0301evin",
     "output": "\u1e31\u0301evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "K\ua717evin",
     "output": "k\ua717evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u24c0evin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u2c69evin",
     "output": "\u2c6aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ua740evin",
     "output": "\ua741evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ua742evin",
     "output": "\ua743evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ua744evin",
     "output": "\ua745evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ua7a2evin",
     "output": "\ua7a3evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uff2bevin",
     "output": "kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\udb40\udc4bevin",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ud83c\udd1aevin",
     "output": "(K)evin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ud83c\udd3aevin",
     "output": "Kevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ud83c\udd5aevin",
     "output": "\ud83c\udd5aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ud83c\udd7aevin",
     "output": "\ud83c\udd7aevin",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "StPeter",
     "output": "stpeter",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Juliet",
     "output": "juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Juliet@Example.COM",
     "output": "juliet@example.com",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Fussball",
     "output": "fussball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Fu\u00dfball",
     "output": "fussball",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u03c0",
     "output": "\u03c0",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u03a3",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u03c3",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u03c2",
     "output": "\u03c3",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "ju1iet",
     "output": "ju1iet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u0cf1",
     "output": "\u0cf1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u0cf2",
     "output": "\u0cf2",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u19da",
     "output": "\u19da",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "A\ua717",
     "output": "a\ua717",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u00e9",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "e\u0301\u0301\u0301",
     "output": "\u00e9\u0301\u0301",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "e\u0301",
     "output": "\u00e9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "o",
     "output": "o",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u03bf",
     "output": "\u03bf",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u043e",
     "output": "\u043e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufec9",
     "output": "\u0639",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufeca",
     "output": "\u0639",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufecb",
     "output": "\u0639",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufecc",
     "output": "\u0639",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uff76",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u30ab",
     "output": "\u30ab",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u3300",
     "output": "\u30a2\u30d1\u30fc\u30c8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u30a2\u30d1\u30fc\u30c8",
     "output": "\u30a2\u30d1\u30fc\u30c8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "i\u2079",
     "output": "i9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u00bc",
     "output": "1\u20444",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u01c6",
     "output": "d\u017e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufe37",
     "output": "{",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u210c",
     "output": "H",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u210d",
     "output": "H",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u2e2f",
     "output": "\u2e2f",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u1fef",
     "output": "`",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u212a",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uff01",
     "output": "!",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
     "output": "juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uff04",
     "output": "$",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufe69",
     "output": "$",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Rs",
     "output": "rs",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u20a8",
     "output": "Rs",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ud83c\uddfa\ud83c\uddf8",
     "output": "\ud83c\uddfa\ud83c\uddf8",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "K",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u212a",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u24c0",
     "output": "k",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u2460",
     "output": "1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u03a9",
     "output": "\u03c9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u2126",
     "output": "\u03c9",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u00c7",
     "output": "\u00e7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "C\u0327",
     "output": "\u00e7",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "q\u0307\u0323",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "q\u0323\u0307",
     "output": "q\u0323\u0307",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uac00",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u1100\u1161",
     "output": "\uac00",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u212b",
     "output": "\u00e5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "A\u030a",
     "output": "\u00e5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "s\u0323\u0307",
     "output": "\u1e69",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ufb01",
     "output": "fi",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\uac01",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u1100\u1161\u11a8",
     "output": "\uac01",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ud83d\udc7e",
     "output": "\ud83d\udc7e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\ud83d\udc9a",
     "output": "\ud83d\udc9a",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
     "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "Z\u0315\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u032d\u0322\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0334A\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u031d\u0327\u031d\u0356\u032c\u0329\u032f\u0334L\u031b\u034a\u0314\u0307\u0352\u0352\u0309\u0327\u032c\u0316\u0330\u032b\u0362\u033c\u0329\u035f\u0356G\u033d\u0307\u0360\u0350\u0313\u030c\u0342\u035d\u0313\u031d\u031e\u033c\u031d\u034d\u0336O\u033f\u0308\u035b\u0306\u030f\u034b\u0342\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u0321",
     "output": "z\u0334\u0322\u032d\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u0315a\u0334\u0327\u031d\u031d\u0356\u032c\u0329\u032f\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u013c\u031b\u032c\u0316\u0330\u032b\u033c\u0329\u0356\u034a\u0314\u0307\u0352\u0352\u0309\u0362\u035fg\u0336\u031d\u031e\u033c\u031d\u034d\u033d\u0307\u0350\u0313\u030c\u0342\u0313\u0360\u035do\u0321\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u033f\u0308\u035b\u0306\u030f\u034b\u0342",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u037e",
     "output": ";",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
     "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u00ad",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\u034f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\u1806",
     "output": "\u1806",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u180b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\u180c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\u180d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\u200b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\u200c",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "Nickname",
     "input": "\u200d",
-    "output": "",
+    "output": null,
     "error": "CONTEXTJ/join_control"
   },
   {
     "profile": "Nickname",
     "input": "\u2060",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe00",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe01",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe02",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe03",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe04",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe05",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe06",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe07",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe08",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe09",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe0a",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe0b",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe0c",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe0d",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe0e",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufe0f",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "\ufeff",
-    "output": "",
+    "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
   },
   {
     "profile": "Nickname",
     "input": "Juliet Capulet",
     "output": "juliet capulet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": " Juliet",
     "output": "juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Juliet ",
     "output": "juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Juliet  Capulet",
     "output": "juliet capulet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u05d0\u05d1+",
     "output": "\u05d0\u05d1+",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "+\u05d0\u05d1",
     "output": "+\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "A\u05d0\u05d1",
     "output": "a\u05d0\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u05d0\u05d1A",
     "output": "\u05d0\u05d1a",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u05d0A\u05d1",
     "output": "\u05d0a\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "\u05d0(/%\\))\u05d1",
     "output": "\u05d0(/%\\))\u05d1",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Juliet+",
     "output": "juliet+",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "+Juliet",
     "output": "+juliet",
-    "error": ""
+    "error": null
   },
   {
     "profile": "Nickname",
     "input": "Juliet\u05d1",
     "output": "juliet\u05d1",
-    "error": ""
+    "error": null
   }
 ]

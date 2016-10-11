@@ -50,7 +50,7 @@ def main():
                                         ('output', output), 
                                         ('error', reason)]))
 
-    # Save results as a JSON file.
+    # Save results as an ASCII JSON file.
     json.dump(results, sys.stdout, indent=2, ensure_ascii=True)
 
 
