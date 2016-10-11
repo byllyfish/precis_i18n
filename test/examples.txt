@@ -14,7 +14,25 @@
 
 PROFILE UsernameCasePreserved
 
-DISALLOW  \u0000         DISALLOWED/controls
+# Edge cases
+
+ALLOW     \\
+DISALLOW  \x00           DISALLOWED/controls
+DISALLOW  \x09           DISALLOWED/controls
+DISALLOW  \x0A           DISALLOWED/controls
+DISALLOW  \x0D           DISALLOWED/controls
+DISALLOW  \x1F           DISALLOWED/controls
+DISALLOW  \x20           FREE_PVAL/spaces
+ALLOW     \x21
+ALLOW     \x7E
+DISALLOW  \x7F           DISALLOWED/controls
+DISALLOW  \x80           DISALLOWED/controls
+DISALLOW  \x9F           DISALLOWED/controls
+DISALLOW  \xA0           FREE_PVAL/has_compat
+ALLOW     \xFE
+ALLOW     \xFF
+DISALLOW  \uFEFF         DISALLOWED/precis_ignorable_properties
+DISALLOW  \uFFFE         DISALLOWED/precis_ignorable_properties
 DISALLOW  \U0010FFFF     DISALLOWED/precis_ignorable_properties
 
 # Kevin
@@ -43,6 +61,7 @@ DISALLOW  \U0001F17Aevin     FREE_PVAL/symbols
 
 # Examples from RFC 7564
 
+ALLOW  StPeter
 ALLOW  Juliet
 ALLOW  Juliet@Example.COM
 ALLOW  Fussball
@@ -51,6 +70,17 @@ ALLOW  π
 ALLOW  Σ
 ALLOW  σ
 ALLOW  ς
+ALLOW  ju1iet
+ALLOW  \u13DA\u13A2\u13B5\u13AC\u13A2\u13AC\u13D2
+
+# RFC 6452: Derived property changed in 6.0.
+
+ALLOW  \u0CF1
+ALLOW  \u0CF2
+DISALLOW  \u19DA    FREE_PVAL/other_letter_digits
+
+# "dotless i" in several Turkic languages (SpecialCasing.txt)
+# TODO
 
 ALLOW  ~`!@#$%^&*()-_=+[{}]\\|;:'",<.>/?
 ALLOW  A\uA717
@@ -206,11 +236,21 @@ DISALLOW  A\u05d0\u05d1      bidi rule
 DISALLOW  \u05d0\u05d1A      bidi rule
 DISALLOW  \u05d0A\u05d1      bidi rule
 
+# When rendered RTL, parens are mirrored but not solidus (on my mac).
+ALLOW     \u05d0(/%\\))\u05d1
+
 # Only apply bidi rule for strings with RTL codepoints.
 
 ALLOW    Juliet+
 ALLOW   +Juliet
 DISALLOW  Juliet\u05d1       bidi rule
+
+
+# More examples:
+
+ALLOW   !
+ALLOW   ~
+
 
 
 PROFILE UsernameCaseMapped
