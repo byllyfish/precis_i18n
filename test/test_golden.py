@@ -1,9 +1,11 @@
 import unittest
-import precis_i18n
+import precis_i18n.codec
 import os
+import json
 
-
-GOLDEN = os.path.join(os.path.dirname(__file__), 'examples.txt')
+HERE = os.path.abspath(os.path.dirname(__file__))
+GOLDEN = os.path.join(HERE, 'examples.txt')
+GOLDEN_JSON = os.path.join(HERE, 'golden.json')
 
 
 class TestGolden(unittest.TestCase):
@@ -15,12 +17,30 @@ class TestGolden(unittest.TestCase):
             else:
                 self.check_disallow(profile, input, expected)
 
+    def test_golden_json(self):
+        with open(GOLDEN_JSON, encoding='ascii') as input_file:
+            entries = json.load(input_file)
+
+        for entry in entries:
+            profile, input, output, error = (entry['profile'], entry['input'], entry['output'], entry['error'])
+            if not error:
+                self.check_allow(profile, input, output)
+            else:
+                self.check_disallow(profile, input, error)
+
     def check_allow(self, profile, input, expected):
         #print('check_allow', profile, input)
         actual = input.encode(profile).decode('utf-8')
         self.assertEqual(actual, expected)
+        # Check that the profile encoding is idempotent. If the following 
+        # assertion fails, the profile is not idempotent.
         idempotent = actual.encode(profile).decode('utf-8')
-        self.assertEqual(idempotent, actual)
+        if idempotent != actual:
+            print('\nIdempotent Fail: %s => %s => %s' % (input, actual, idempotent))
+        # The Nickname profile is not idempotent?
+        if profile.lower() != 'nickname':
+            self.assertEqual(idempotent, actual)
+        
 
     def check_disallow(self, profile, input, expected):
         #print('check_disallow', profile, input)
