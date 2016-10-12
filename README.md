@@ -57,15 +57,23 @@ UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17
 
 ## Supported Profiles and Codecs
 
-Each PRECIS profile has a corresponding codec name. The `casemapped` variant converts the string to lower case for implementing case-insensitive comparison.
+Each PRECIS profile has a corresponding codec name. The `CaseMapped` variant converts the string to lower case for implementing case-insensitive comparison.
 
-- usernamecasepreserved
-- usernamecasemapped
-- usernamecasemapped:tolower
-- opaquestring
-- nickname
-- identifierclass
-- freeformclass
+- UsernameCasePreserved
+- UsernameCaseMapped
+- OpaqueString
+- NicknameCasePreserved
+- NicknameCaseMapped
+
+The `CaseMapped` profiles use Unicode Default Case Folding. There are additional codecs that use Unicode `ToLower` to support draft RFC changes.
+
+- UsernameCaseMapped:ToLower
+- NicknameCaseMapped:ToLower
+
+The PRECIS base string classes are also available:
+
+- IdentifierClass
+- FreeFormClass
 
 ## Examples
 
