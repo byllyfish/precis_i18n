@@ -59,6 +59,15 @@ Fu\xdfball
 \u03c2
 ju1iet
 \u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2
+Foo
+foo
+Foo Bar
+foo bar
+\u03a3
+\u03c3
+\u03c2
+\u265a
+Richard \u2163
 
 # From RFC 6452: Derived property changed in 6.0.
 
@@ -226,3 +235,61 @@ A\u05d0\u05d1
 Juliet+
 +Juliet
 Juliet\u05d1
+
+# NFKC Ambiguity
+
+\u0B47\u0300\u0B3E\u0323
+
+# Not idempotent under Nickname (case preserved)?
+
+\xa8
+\xaf
+\xb4
+\xb8
+\u02d8
+\u02d9
+\u02da
+\u02db
+\u02dc
+\u02dd
+\u037a
+\u0384
+\u0385
+\u1fbd
+\u1fbf
+\u1fc0
+\u1fc1
+\u1fcd
+\u1fce
+\u1fcf
+\u1fdd
+\u1fde
+\u1fdf
+\u1fed
+\u1fee
+\u1ffd
+\u1ffe
+\u2017
+\u203e
+\u309b
+\u309c
+\ufc5e
+\ufc5f
+\ufc60
+\ufc61
+\ufc62
+\ufc63
+\ufe49
+\ufe4a
+\ufe4b
+\ufe4c
+\ufe70
+\ufe72
+\ufe74
+\ufe76
+\ufe78
+\ufe7a
+\ufe7c
+\ufe7e
+\uffe3
+

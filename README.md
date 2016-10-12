@@ -40,14 +40,15 @@ Alternatively, you can use a PRECIS profile directly, without installing a codec
 
 ```
 
->>> from precis_i18n import usernamecasemapped as username_cm
->>> username_cm.enforce('Kevin')
+>>> from precis_i18n import get_profile
+>>> username = get_profile('UsernameCaseMapped')
+>>> username.enforce('Kevin')
 b'kevin'
->>> username_cm.enforce('\u212Aevin')
+>>> username.enforce('\u212Aevin')
 b'kevin'
->>> username_cm.enforce('\uFF2Bevin')
+>>> username.enforce('\uFF2Bevin')
 b'kevin'
->>> username_cm.enforce('\U0001F17Aevin')
+>>> username.enforce('\U0001F17Aevin')
 Traceback (most recent call last):
     ...
 UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
@@ -60,8 +61,11 @@ Each PRECIS profile has a corresponding codec name. The `casemapped` variant con
 
 - usernamecasepreserved
 - usernamecasemapped
+- usernamecasemapped:tolower
 - opaquestring
 - nickname
+- identifierclass
+- freeformclass
 
 ## Examples
 

@@ -15,9 +15,18 @@ class Profile(object):
     Subclasses should override the `*_rule` methods.
     """
 
-    def __init__(self, base, name):
+    def __init__(self, base, name, casemap=None):
         self._base = base
         self._name = name
+        # casemap can be either None, 'fold', or 'lower'.
+        if casemap is None:
+            self._casemap = None
+        elif casemap == 'fold':
+            self._casemap = _casefold
+        elif casemap == 'lower':
+            self._casemap = _caselower
+        else:
+            raise ValueError('Unknown casemap value: %s' % casemap)
 
     @property
     def base(self):
@@ -60,6 +69,8 @@ class Profile(object):
         return value
 
     def case_mapping_rule(self, value):
+        if self._casemap:
+            return self._casemap(value)
         return value
 
     def normalization_rule(self, value):
@@ -69,9 +80,9 @@ class Profile(object):
         return value
 
 
-class UsernameCasePreserved(Profile):
+class Username(Profile):
     """
-    Name:  UsernameCasePreserved.
+    Name:  UsernameCasePreserved | UsernameCaseMapped
 
     Base Class:  IdentifierClass.
     
@@ -84,7 +95,8 @@ class UsernameCasePreserved(Profile):
     
     Additional Mapping Rule:  None.
     
-    Case-Mapping Rule:  None.
+    Case-Mapping Rule:  None | Map uppercase and titlecase characters to
+       lowercase.
     
     Normalization Rule:  NFC.
     
@@ -96,8 +108,8 @@ class UsernameCasePreserved(Profile):
     Specification:  RFC7613, Section 3.3. 
     """
 
-    def __init__(self, ucd, name='UsernameCasePreserved'):
-        super().__init__(IdentifierClass(ucd), name)
+    def __init__(self, ucd, name, casemap=None):
+        super().__init__(IdentifierClass(ucd), name, casemap)
 
     def width_mapping_rule(self, value):
         return self.base.ucd.width_map(value)
@@ -109,41 +121,6 @@ class UsernameCasePreserved(Profile):
                 raise UnicodeEncodeError(self.name, value, 0, len(value),
                                          'bidi rule')
         return value
-
-
-class UsernameCaseMapped(UsernameCasePreserved):
-    """
-    Name:  UsernameCaseMapped.
-    
-    Base Class:  IdentifierClass.
-    
-    Applicability:  Usernames in security and application protocols.
-    
-    Replaces:  The SASLprep profile of stringprep.
-    
-    Width-Mapping Rule:  Map fullwidth and halfwidth characters to their
-       decomposition mappings.
-    
-    Additional Mapping Rule:  None.
-    
-    Case-Mapping Rule:  Map uppercase and titlecase characters to
-       lowercase.
-    
-    Normalization Rule:  NFC.
-    
-    Directionality Rule:  The "Bidi Rule" defined in RFC 5893 applies.
-    
-    Enforcement:  To be defined by security or application protocols that
-       use this profile.
-    
-    Specification:  RFC7613, Section 3.2.  
-    """
-
-    def __init__(self, ucd, name='UsernameCaseMapped'):
-        super().__init__(ucd, name)
-
-    def case_mapping_rule(self, value):
-        return value.casefold()
 
 
 class OpaqueString(Profile):
@@ -174,8 +151,8 @@ class OpaqueString(Profile):
     Specification:  RFC7613, Section 4.2.
     """
 
-    def __init__(self, ucd, name='OpaqueString'):
-        super().__init__(FreeFormClass(ucd), name)
+    def __init__(self, ucd, name):
+        super().__init__(FreeFormClass(ucd), name, casemap=None)
 
     def additional_mapping_rule(self, value):
         return self.base.ucd.map_nonascii_space_to_ascii(value)
@@ -211,15 +188,20 @@ class Nickname(Profile):
     Specification:  RFC7700
     """
 
-    def __init__(self, ucd, name='Nickname'):
-        super().__init__(FreeFormClass(ucd), name)
+    def __init__(self, ucd, name, casemap=None):
+        super().__init__(FreeFormClass(ucd), name, casemap)
 
     def additional_mapping_rule(self, value):
         temp = self.base.ucd.map_nonascii_space_to_ascii(value)
         return re.sub(r'  +', ' ', temp.strip())
 
-    def case_mapping_rule(self, value):
-        return value.casefold()
-
     def normalization_rule(self, value):
         return self.base.ucd.normalize('NFKC', value)
+
+
+def _casefold(s):
+    return s.casefold()
+
+
+def _caselower(s):
+    return s.lower()
