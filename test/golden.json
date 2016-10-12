@@ -313,6 +313,60 @@
   },
   {
     "profile": "UsernameCasePreserved",
+    "input": "Foo",
+    "output": "Foo",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "Foo Bar",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "foo bar",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u03a3",
+    "output": "\u03a3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u265a",
+    "output": null,
+    "error": "FREE_PVAL/symbols"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "Richard \u2163",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
     "input": "\u0cf1",
     "output": "\u0cf1",
     "error": null
@@ -930,6 +984,312 @@
     "error": "bidi rule"
   },
   {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0b47\u0300\u0b3e\u0323",
+    "output": "\u0b47\u0300\u0b3e\u0323",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00a8",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00af",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00b4",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00b8",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u02d8",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u02d9",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u02da",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u02db",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u02dc",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u02dd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u037a",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0384",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0385",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fbd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fbf",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fc0",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fc1",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fcd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fce",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fcf",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fdd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fde",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fdf",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fed",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fee",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1ffd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1ffe",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u2017",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u203e",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u309b",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u309c",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufc5e",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufc5f",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufc60",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufc61",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufc62",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufc63",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe49",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe4a",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe4b",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe4c",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe70",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe72",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe74",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe76",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe78",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe7a",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe7c",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ufe7e",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\uffe3",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
     "profile": "UsernameCaseMapped",
     "input": "",
     "output": null,
@@ -1240,6 +1600,60 @@
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "Foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "Foo Bar",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "foo bar",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u03a3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u265a",
+    "output": null,
+    "error": "FREE_PVAL/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "Richard \u2163",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1860,6 +2274,312 @@
     "error": "bidi rule"
   },
   {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0b47\u0300\u0b3e\u0323",
+    "output": "\u0b47\u0300\u0b3e\u0323",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00a8",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00af",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00b4",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00b8",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u02d8",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u02d9",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u02da",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u02db",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u02dc",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u02dd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u037a",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0384",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0385",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fbd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fbf",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fc0",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fc1",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fcd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fce",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fcf",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fdd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fde",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fdf",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fed",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fee",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1ffd",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1ffe",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u2017",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u203e",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u309b",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u309c",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufc5e",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufc5f",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufc60",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufc61",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufc62",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufc63",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe49",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe4a",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe4b",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe4c",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe70",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe72",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe74",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe76",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe78",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe7a",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe7c",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ufe7e",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\uffe3",
+    "output": null,
+    "error": "FREE_PVAL/has_compat"
+  },
+  {
     "profile": "OpaqueString",
     "input": "",
     "output": null,
@@ -2169,6 +2889,60 @@
     "profile": "OpaqueString",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "Foo",
+    "output": "Foo",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "Foo Bar",
+    "output": "Foo Bar",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "foo bar",
+    "output": "foo bar",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u03a3",
+    "output": "\u03a3",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u265a",
+    "output": "\u265a",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "Richard \u2163",
+    "output": "Richard \u2163",
     "error": null
   },
   {
@@ -2790,6 +3564,312 @@
     "error": null
   },
   {
+    "profile": "OpaqueString",
+    "input": "\u0b47\u0300\u0b3e\u0323",
+    "output": "\u0b47\u0300\u0b3e\u0323",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00a8",
+    "output": "\u00a8",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00af",
+    "output": "\u00af",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00b4",
+    "output": "\u00b4",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00b8",
+    "output": "\u00b8",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u02d8",
+    "output": "\u02d8",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u02d9",
+    "output": "\u02d9",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u02da",
+    "output": "\u02da",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u02db",
+    "output": "\u02db",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u02dc",
+    "output": "\u02dc",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u02dd",
+    "output": "\u02dd",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u037a",
+    "output": "\u037a",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0384",
+    "output": "\u0384",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0385",
+    "output": "\u0385",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fbd",
+    "output": "\u1fbd",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fbf",
+    "output": "\u1fbf",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fc0",
+    "output": "\u1fc0",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fc1",
+    "output": "\u1fc1",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fcd",
+    "output": "\u1fcd",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fce",
+    "output": "\u1fce",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fcf",
+    "output": "\u1fcf",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fdd",
+    "output": "\u1fdd",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fde",
+    "output": "\u1fde",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fdf",
+    "output": "\u1fdf",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fed",
+    "output": "\u1fed",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fee",
+    "output": "\u0385",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1ffd",
+    "output": "\u00b4",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1ffe",
+    "output": "\u1ffe",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u2017",
+    "output": "\u2017",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u203e",
+    "output": "\u203e",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u309b",
+    "output": "\u309b",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u309c",
+    "output": "\u309c",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufc5e",
+    "output": "\ufc5e",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufc5f",
+    "output": "\ufc5f",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufc60",
+    "output": "\ufc60",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufc61",
+    "output": "\ufc61",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufc62",
+    "output": "\ufc62",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufc63",
+    "output": "\ufc63",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe49",
+    "output": "\ufe49",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe4a",
+    "output": "\ufe4a",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe4b",
+    "output": "\ufe4b",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe4c",
+    "output": "\ufe4c",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe70",
+    "output": "\ufe70",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe72",
+    "output": "\ufe72",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe74",
+    "output": "\ufe74",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe76",
+    "output": "\ufe76",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe78",
+    "output": "\ufe78",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe7a",
+    "output": "\ufe7a",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe7c",
+    "output": "\ufe7c",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ufe7e",
+    "output": "\ufe7e",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\uffe3",
+    "output": "\uffe3",
+    "error": null
+  },
+  {
     "profile": "Nickname",
     "input": "",
     "output": null,
@@ -3099,6 +4179,60 @@
     "profile": "Nickname",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "Foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "Foo Bar",
+    "output": "foo bar",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "foo bar",
+    "output": "foo bar",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u03a3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u265a",
+    "output": "\u265a",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "Richard \u2163",
+    "output": "richard iv",
     "error": null
   },
   {
@@ -3717,6 +4851,312 @@
     "profile": "Nickname",
     "input": "Juliet\u05d1",
     "output": "juliet\u05d1",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u0b47\u0300\u0b3e\u0323",
+    "output": "\u0b47\u0300\u0b3e\u0323",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u00a8",
+    "output": " \u0308",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u00af",
+    "output": " \u0304",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u00b4",
+    "output": " \u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u00b8",
+    "output": " \u0327",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u02d8",
+    "output": " \u0306",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u02d9",
+    "output": " \u0307",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u02da",
+    "output": " \u030a",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u02db",
+    "output": " \u0328",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u02dc",
+    "output": " \u0303",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u02dd",
+    "output": " \u030b",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u037a",
+    "output": " \u0345",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u0384",
+    "output": " \u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u0385",
+    "output": " \u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fbd",
+    "output": " \u0313",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fbf",
+    "output": " \u0313",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fc0",
+    "output": " \u0342",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fc1",
+    "output": " \u0308\u0342",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fcd",
+    "output": " \u0313\u0300",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fce",
+    "output": " \u0313\u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fcf",
+    "output": " \u0313\u0342",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fdd",
+    "output": " \u0314\u0300",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fde",
+    "output": " \u0314\u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fdf",
+    "output": " \u0314\u0342",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fed",
+    "output": " \u0308\u0300",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1fee",
+    "output": " \u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1ffd",
+    "output": " \u0301",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u1ffe",
+    "output": " \u0314",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u2017",
+    "output": " \u0333",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u203e",
+    "output": " \u0305",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u309b",
+    "output": " \u3099",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\u309c",
+    "output": " \u309a",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufc5e",
+    "output": " \u064c\u0651",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufc5f",
+    "output": " \u064d\u0651",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufc60",
+    "output": " \u064e\u0651",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufc61",
+    "output": " \u064f\u0651",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufc62",
+    "output": " \u0650\u0651",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufc63",
+    "output": " \u0651\u0670",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe49",
+    "output": " \u0305",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe4a",
+    "output": " \u0305",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe4b",
+    "output": " \u0305",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe4c",
+    "output": " \u0305",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe70",
+    "output": " \u064b",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe72",
+    "output": " \u064c",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe74",
+    "output": " \u064d",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe76",
+    "output": " \u064e",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe78",
+    "output": " \u064f",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe7a",
+    "output": " \u0650",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe7c",
+    "output": " \u0651",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\ufe7e",
+    "output": " \u0652",
+    "error": null
+  },
+  {
+    "profile": "Nickname",
+    "input": "\uffe3",
+    "output": " \u0304",
     "error": null
   }
 ]
