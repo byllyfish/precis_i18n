@@ -236,9 +236,10 @@ Juliet+
 +Juliet
 Juliet\u05d1
 
-# NFKC Ambiguity
+# Past normalization instability points (http://www.unicode.org/review/pr-29.html)
 
 \u0B47\u0300\u0B3E\u0323
+\u1100\u0300\u1161\u0323
 
 # Not idempotent under Nickname (case preserved)?
 
