@@ -55,14 +55,15 @@ a codec.
 ::
 
 
-    >>> from precis_i18n import usernamecasemapped as username_cm
-    >>> username_cm.enforce('Kevin')
+    >>> from precis_i18n import get_profile
+    >>> username = get_profile('UsernameCaseMapped')
+    >>> username.enforce('Kevin')
     b'kevin'
-    >>> username_cm.enforce('\u212Aevin')
+    >>> username.enforce('\u212Aevin')
     b'kevin'
-    >>> username_cm.enforce('\uFF2Bevin')
+    >>> username.enforce('\uFF2Bevin')
     b'kevin'
-    >>> username_cm.enforce('\U0001F17Aevin')
+    >>> username.enforce('\U0001F17Aevin')
     Traceback (most recent call last):
         ...
     UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
@@ -70,14 +71,27 @@ a codec.
 Supported Profiles and Codecs
 -----------------------------
 
-Each PRECIS profile has a corresponding codec name. The ``casemapped``
+Each PRECIS profile has a corresponding codec name. The ``CaseMapped``
 variant converts the string to lower case for implementing
 case-insensitive comparison.
 
--  usernamecasepreserved
--  usernamecasemapped
--  opaquestring
--  nickname
+-  UsernameCasePreserved
+-  UsernameCaseMapped
+-  OpaqueString
+-  NicknameCasePreserved
+-  NicknameCaseMapped
+
+The ``CaseMapped`` profiles use Unicode Default Case Folding. There are
+additional codecs that use Unicode ``ToLower`` to support draft RFC
+changes.
+
+-  UsernameCaseMapped:ToLower
+-  NicknameCaseMapped:ToLower
+
+The PRECIS base string classes are also available:
+
+-  IdentifierClass
+-  FreeFormClass
 
 .. |MIT licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt
