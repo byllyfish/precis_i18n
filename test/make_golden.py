@@ -11,7 +11,9 @@ import precis_i18n.codec
 from collections import OrderedDict
 
 
-PROFILES = ['UsernameCasePreserved', 'UsernameCaseMapped', 'OpaqueString', 'Nickname']
+PROFILES = ['UsernameCasePreserved', 'UsernameCaseMapped', 'OpaqueString', 
+            'NicknameCaseMapped', 'UsernameCaseMapped:ToLower', 'NicknameCasePreserved', 
+            'NicknameCaseMapped:ToLower', 'FreeFormClass', 'IdentifierClass']
 
 
 def _unescape(value):
