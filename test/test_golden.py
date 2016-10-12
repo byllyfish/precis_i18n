@@ -38,7 +38,7 @@ class TestGolden(unittest.TestCase):
         if idempotent != actual:
             print('\n"%s" not idempotent: "%s" => "%s" => "%s"' % (profile, _escape(input), _escape(actual), _escape(idempotent)))
         # The Nickname profile is not idempotent?
-        if profile.lower() != 'nickname':
+        if not profile.lower().startswith('nickname'):
             self.assertEqual(idempotent, actual)
         
 
