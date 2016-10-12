@@ -36,7 +36,7 @@ class TestGolden(unittest.TestCase):
         # assertion fails, the profile is not idempotent.
         idempotent = actual.encode(profile).decode('utf-8')
         if idempotent != actual:
-            print('\n"%s" not idempotent: %s => %s => %s' % (profile, input, actual, idempotent))
+            print('\n"%s" not idempotent: "%s" => "%s" => "%s"' % (profile, _escape(input), _escape(actual), _escape(idempotent)))
         # The Nickname profile is not idempotent?
         if profile.lower() != 'nickname':
             self.assertEqual(idempotent, actual)
@@ -77,6 +77,10 @@ def _read_golden():
 
 def _unescape(s):
     return s.encode('raw-unicode-escape').decode('unicode_escape')
+
+
+def _escape(s):
+    return s.encode('unicode_escape').decode('ascii')
 
 
 if __name__ == '__main__':

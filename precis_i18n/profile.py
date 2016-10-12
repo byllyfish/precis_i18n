@@ -58,9 +58,7 @@ class Profile(object):
         if not temp:
             raise UnicodeEncodeError(self.name, temp, 0, 1, 'empty')
         # Apply behavioral rules from the base string class last.
-        temp = self.base.enforce(temp, self.name)
-        # Return byte string encoded in utf-8.
-        return temp.encode('utf-8')
+        return self.base.enforce(temp, self.name)
 
     def width_mapping_rule(self, value):
         return value

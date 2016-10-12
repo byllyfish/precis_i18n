@@ -8,7 +8,10 @@ class TestCodec(unittest.TestCase):
         self.assertEqual('Juliet'.encode('UsernameCaseMapped'), b'juliet')
         self.assertEqual(' pass \u1FBF\u3000'.encode('OpaqueString'),
                          b' pass \xe1\xbe\xbf ')
-        self.assertEqual(' Juliet '.encode('Nickname'), b'juliet')
+        self.assertEqual(' Juliet '.encode('NicknameCaseMapped'), b'juliet')
+        self.assertEqual('Juliet'.encode('IdentifierClass'), b'Juliet')
+        self.assertEqual('Juliet'.encode('FreeFormClass'), b'Juliet')
+
 
     def test_decode(self):
         with self.assertRaises(NotImplementedError):
