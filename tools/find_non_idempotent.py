@@ -8,7 +8,7 @@ profile = get_profile('nicknamecasemapped:ToLower')
 def _escape(s):
     return s.encode('unicode-escape').decode('ascii')
 
-for cp in range(0x03d3, 0x03d5):
+for cp in range(0x0110000):
     original = chr(cp)
     try:
         actual = profile.enforce(original).decode('utf-8')
