@@ -7,6 +7,8 @@ HERE = os.path.abspath(os.path.dirname(__file__))
 GOLDEN = os.path.join(HERE, 'examples.txt')
 GOLDEN_JSON = os.path.join(HERE, 'golden.json')
 
+UCD_VERSION = precis_i18n.get_profile('FreeFormClass').ucd.version
+
 
 class TestGolden(unittest.TestCase):
 
@@ -22,6 +24,8 @@ class TestGolden(unittest.TestCase):
             entries = json.load(input_file)
 
         for entry in entries:
+            if 'unicode_version' in entry and UCD_VERSION < entry['unicode_version']:
+                continue
             profile, input, output, error = (entry['profile'], entry['input'], entry['output'], entry['error'])
             if not error:
                 self.check_allow(profile, input, output)

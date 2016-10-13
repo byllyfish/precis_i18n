@@ -7,13 +7,21 @@
 
 import json
 import sys
+import re
 import precis_i18n.codec
 from collections import OrderedDict
-
 
 PROFILES = ['UsernameCasePreserved', 'UsernameCaseMapped', 'OpaqueString', 
             'NicknameCaseMapped', 'UsernameCaseMapped:ToLower', 'NicknameCasePreserved', 
             'NicknameCaseMapped:ToLower', 'FreeFormClass', 'IdentifierClass']
+
+EXCEPTIONS = {
+    # ToLower difference before Unicode 8.0. The lower case characters weren't
+    # added until Unicode 8.0.
+    '\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2': (re.compile(r'.+:ToLower'), 8.0),
+    # U+1AB6 was introduced in 7.0.
+    '\u05d0\u1ab6\u05d1': (re.compile(r'.'), 7.0),
+}
 
 
 def _unescape(value):
@@ -41,16 +49,25 @@ def main():
     results = []
     for profile in PROFILES:
         for data in inputs:
+            unicode_version = None
+            # Skip this profile for certain exceptions.
+            if data in EXCEPTIONS:
+                excl = EXCEPTIONS[data]
+                if excl[0].match(profile):
+                    unicode_version = excl[1]
             try:
                 output = data.encode(profile).decode('utf-8')
                 reason = None
             except UnicodeEncodeError as ex:
                 output = None
                 reason = ex.reason
-            results.append(OrderedDict([('profile', profile), 
-                                        ('input', data), 
-                                        ('output', output), 
-                                        ('error', reason)]))
+            elem = OrderedDict([('profile', profile), 
+                                ('input', data), 
+                                ('output', output), 
+                                ('error', reason)])
+            if unicode_version is not None:
+                elem['unicode_version'] = unicode_version
+            results.append(elem)
 
     # Save results as an ASCII JSON file.
     json.dump(results, sys.stdout, indent=2, ensure_ascii=True)

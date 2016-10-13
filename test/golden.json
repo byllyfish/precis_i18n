@@ -931,6 +931,13 @@
   },
   {
     "profile": "UsernameCasePreserved",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1+",
     "output": null,
     "error": "bidi rule"
@@ -2224,6 +2231,13 @@
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
     "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3523,6 +3537,13 @@
   },
   {
     "profile": "OpaqueString",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "OpaqueString",
     "input": "\u05d0\u05d1+",
     "output": "\u05d0\u05d1+",
     "error": null
@@ -4819,6 +4840,13 @@
   },
   {
     "profile": "NicknameCaseMapped",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "NicknameCaseMapped",
     "input": "\u05d0\u05d1+",
     "output": "\u05d0\u05d1+",
     "error": null
@@ -5493,7 +5521,8 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\uabaa\uab72\uab85\uab7c\uab72\uab7c\uaba2",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6112,6 +6141,13 @@
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
     "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7411,6 +7447,13 @@
   },
   {
     "profile": "NicknameCasePreserved",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "NicknameCasePreserved",
     "input": "\u05d0\u05d1+",
     "output": "\u05d0\u05d1+",
     "error": null
@@ -8085,7 +8128,8 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\uabaa\uab72\uab85\uab7c\uab72\uab7c\uaba2",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -8704,6 +8748,13 @@
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
     "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -10003,6 +10054,13 @@
   },
   {
     "profile": "FreeFormClass",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "FreeFormClass",
     "input": "\u05d0\u05d1+",
     "output": "\u05d0\u05d1+",
     "error": null
@@ -11296,6 +11354,13 @@
     "input": "\u05d0\u20d6\u05d1",
     "output": "\u05d0\u20d6\u05d1",
     "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
   },
   {
     "profile": "IdentifierClass",

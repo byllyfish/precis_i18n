@@ -220,7 +220,7 @@ Juliet\x20\x20Capulet
 \u05d0\u05d1
 \u05d0\u20d6\u05d1
 # This test fails on systems before Unicode 7.0; U+1AB6 was introduced in 7.0.
-#    \u05d0\u1ab6\u05d1
+\u05d0\u1ab6\u05d1
 \u05d0\u05d1+
 +\u05d0\u05d1
 A\u05d0\u05d1
