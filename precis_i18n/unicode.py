@@ -8,6 +8,8 @@ import unicodedata
 from precis_i18n.codepointset import CodepointSet
 
 
+# pylint: disable=no-self-use
+
 def _version_to_float(version):
     m = re.match(r'^([0-9]+\.[0-9]+)\.[0-9]+$', version)
     if not m:
