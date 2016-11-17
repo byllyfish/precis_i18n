@@ -58,7 +58,7 @@ def bidi_rule(value, ucd):
 def _bidi_rule(value, ucd, allowed, last, exclusive):
     """ Checks the bidi_rule for LTR or RTL, depending on parameters.
     """
-    assert ucd.bidirectional(value[0]) in (_LTR_FIRST | _RTL_FIRST)
+    assert ucd.bidirectional(value[0]) in _LTR_FIRST | _RTL_FIRST
     # Starting from the end, find the first character whose bidi is not 'NSM'.
     found = -1
     for i in reversed(range(len(value))):
