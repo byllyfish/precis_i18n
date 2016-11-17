@@ -1,4 +1,4 @@
-""" 
+"""
 Implements PRECIS context rules for characters with derived properties of
 CONTEXTJ and CONTEXTO.
 """

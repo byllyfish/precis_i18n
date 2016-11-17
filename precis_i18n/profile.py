@@ -83,27 +83,27 @@ class Username(Profile):
     Name:  UsernameCasePreserved | UsernameCaseMapped
 
     Base Class:  IdentifierClass.
-    
+
     Applicability:  Usernames in security and application protocols.
-    
+
     Replaces:  The SASLprep profile of stringprep.
-    
+
     Width-Mapping Rule:  Map fullwidth and halfwidth characters to their
        decomposition mappings.
-    
+
     Additional Mapping Rule:  None.
-    
+
     Case-Mapping Rule:  None | Map uppercase and titlecase characters to
        lowercase.
-    
+
     Normalization Rule:  NFC.
-    
+
     Directionality Rule:  The "Bidi Rule" defined in RFC 5893 applies.
-    
+
     Enforcement:  To be defined by security or application protocols that
        use this profile.
-    
-    Specification:  RFC7613, Section 3.3. 
+
+    Specification:  RFC7613, Section 3.3.
     """
 
     def __init__(self, ucd, name, casemap=None):
@@ -159,30 +159,30 @@ class OpaqueString(Profile):
 class Nickname(Profile):
     """
     Name:  Nickname.
- 
+
     Base Class:  FreeformClass.
- 
+
     Applicability:  Nicknames in messaging and text conferencing
        technologies; petnames for devices, accounts, and people; and
        other uses of nicknames or petnames.
- 
+
     Replaces:  None.
- 
+
     Width Mapping Rule:  None (handled via NFKC).
- 
+
     Additional Mapping Rule:  Map non-ASCII space characters to ASCII
        space, strip leading and trailing space characters, map interior
        sequences of multiple space characters to a single ASCII space.
- 
+
     Case Mapping Rule:  Map uppercase and titlecase characters to
        lowercase using Unicode Default Case Folding.
- 
+
     Normalization Rule:  NFKC.
- 
+
     Directionality Rule:  None.
- 
+
     Enforcement:  To be specified by applications.
- 
+
     Specification:  RFC7700
     """
 

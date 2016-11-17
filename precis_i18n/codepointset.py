@@ -27,7 +27,7 @@ class CodepointSet(object):
 
     H is a hexadecimal digit.
 
-    Note: Sets with any non-BMP codepoints will use 32-bits for all codepoints. 
+    Note: Sets with any non-BMP codepoints will use 32-bits for all codepoints.
     (PEP 393 Flexible String Representation)
     """
 
