@@ -3,6 +3,7 @@ Implements PRECIS context rules for characters with derived properties of
 CONTEXTJ and CONTEXTO.
 """
 
+
 def context_rule(value, offset, ucd):
     """ Apply the context rule to `value[offset]`.
 
@@ -22,6 +23,7 @@ def context_rule(value, offset, ucd):
 
 
 # These rules test a character at a given offset in the string.
+
 
 def rule_zero_width_nonjoiner(value, offset, ucd):
     assert value[offset] == '\u200c'
@@ -50,6 +52,7 @@ def rule_greek(value, offset, ucd):
 def rule_hebrew(value, offset, ucd):
     assert value[offset] in '\u05f3\u05f4'
     return ucd.hebrew_script(_before(value, offset))
+
 
 # These rules ignore the offset argument; they test the entire string. A string
 # only needs to be tested once, irrespective of the number of times the rule is

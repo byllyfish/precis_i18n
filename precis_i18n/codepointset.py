@@ -63,8 +63,8 @@ class CodepointSet(object):
         """ Generator yielding sequence of range tuples (lo, hi).
         """
         for i in range(len(self._table) // 2):
-            lo = ord(self._table[2*i])
-            hi = ord(self._table[2*i+1])
+            lo = ord(self._table[2 * i])
+            hi = ord(self._table[2 * i + 1])
             yield (lo, hi)
 
 
@@ -96,11 +96,12 @@ def _coalesce(elems):
     elems.sort()
     i = 0
     while i < len(elems) - 1:
-        (lo0, hi0), (lo1, hi1) = elems[i:i+2]
+        (lo0, hi0), (lo1, hi1) = elems[i:i + 2]
         if not lo0 <= hi0 < lo1 <= hi1:
-            raise ValueError('Range overlaps at index %d: %r' % (i, elems[i:i+2]))
+            raise ValueError('Range overlaps at index %d: %r' %
+                             (i, elems[i:i + 2]))
         if lo1 == hi0 + 1:
-            elems[i:i+2] = [(lo0, hi1)]
+            elems[i:i + 2] = [(lo0, hi1)]
         else:
             i += 1
     return elems

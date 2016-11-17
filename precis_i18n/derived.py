@@ -35,7 +35,8 @@ def derived_property(cp, ucd):
     if in_exceptions(cp):
         return exceptions(cp), 'exceptions'
     elif in_backward_compatible(cp):
-        return backward_compatible(cp), 'backward_compatible' # pragma: no cover
+        return backward_compatible(
+            cp), 'backward_compatible'  # pragma: no cover
     elif in_unassigned(cp, category, ucd):
         return UNASSIGNED, 'unassigned'
     elif in_ascii7(cp):

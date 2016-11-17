@@ -50,6 +50,7 @@ class UnicodeData(object):
     def width_map(self, value):
         """ Map half-width and full-width chars to their compat equivs.
         """
+
         def decompose(m):
             char = m.group(0)
             assert len(char) == 1
@@ -124,6 +125,7 @@ class UnicodeData(object):
         elif cp in _JOINTYPE_TRANSPARENT:
             return 'T'
         return None
+
 
 # http://www.unicode.org/Public/9.0.0/ucd/DerivedCoreProperties.txt
 # Derived Property: Default_Ignorable_Code_Point

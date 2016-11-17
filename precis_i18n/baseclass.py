@@ -55,7 +55,7 @@ class BaseClass(object):
 class IdentifierClass(BaseClass):
     """ Concrete class representing PRECIS IdentifierClass from RFC 7564.
     """
-    _allowed = (PVALID,)
+    _allowed = (PVALID, )
 
     def __init__(self, ucd, name='IdentifierClass'):
         super().__init__(ucd, name)
@@ -65,6 +65,6 @@ class FreeFormClass(BaseClass):
     """ Concrete class repsenting PRECIS FreeFormClass from RFC 7564.
     """
     _allowed = (PVALID, FREE_PVAL)
-    
+
     def __init__(self, ucd, name='FreeFormClass'):
         super().__init__(ucd, name)
