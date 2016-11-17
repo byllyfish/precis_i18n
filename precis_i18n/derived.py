@@ -9,6 +9,7 @@ UNASSIGNED = 'UNASSIGNED'
 CONTEXTJ = 'CONTEXTJ'
 CONTEXTO = 'CONTEXTO'
 
+# pylint: disable=too-many-return-statements,too-many-branches
 
 def derived_property(cp, ucd):
     """ Return value of the PRECIS derived property of a code point.
@@ -34,32 +35,32 @@ def derived_property(cp, ucd):
 
     if in_exceptions(cp):
         return exceptions(cp), 'exceptions'
-    elif in_backward_compatible(cp):
+    if in_backward_compatible(cp):
         return backward_compatible(
             cp), 'backward_compatible'  # pragma: no cover
-    elif in_unassigned(cp, category, ucd):
+    if in_unassigned(cp, category, ucd):
         return UNASSIGNED, 'unassigned'
-    elif in_ascii7(cp):
+    if in_ascii7(cp):
         return PVALID, 'ascii7'
-    elif in_join_control(cp):
+    if in_join_control(cp):
         return CONTEXTJ, 'join_control'
-    elif in_old_hangul_jamo(cp, ucd):
+    if in_old_hangul_jamo(cp, ucd):
         return DISALLOWED, 'old_hangul_jamo'
-    elif in_precis_ignorable_properties(cp, ucd):
+    if in_precis_ignorable_properties(cp, ucd):
         return DISALLOWED, 'precis_ignorable_properties'
-    elif in_controls(cp, ucd):
+    if in_controls(cp, ucd):
         return DISALLOWED, 'controls'
-    elif in_has_compat(cp, ucd):
+    if in_has_compat(cp, ucd):
         return FREE_PVAL, 'has_compat'
-    elif in_letter_digits(category):
+    if in_letter_digits(category):
         return PVALID, 'letter_digits'
-    elif in_other_letter_digits(category):
+    if in_other_letter_digits(category):
         return FREE_PVAL, 'other_letter_digits'
-    elif in_spaces(category):
+    if in_spaces(category):
         return FREE_PVAL, 'spaces'
-    elif in_symbols(category):
+    if in_symbols(category):
         return FREE_PVAL, 'symbols'
-    elif in_punctuation(category):
+    if in_punctuation(category):
         return FREE_PVAL, 'punctuation'
     return DISALLOWED, 'other'
 
