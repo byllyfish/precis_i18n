@@ -2,17 +2,17 @@ import precis_i18n.baseclass as _base
 import precis_i18n.profile as _profile
 import precis_i18n.unicode as _unicode
 
-_ucd = _unicode.UnicodeData()
+UCD = _unicode.UnicodeData()
 
 
 def _factory(profile, **kwds):
-    def construct():
-        return profile(_ucd, **kwds)
+    def _construct():
+        return profile(UCD, **kwds)
 
-    return construct
+    return _construct
 
 
-_profiles = {
+_PROFILES = {
     'identifierclass': _factory(
         _base.IdentifierClass, name='IdentifierClass'),
     'freeformclass': _factory(
@@ -39,4 +39,4 @@ _profiles = {
 
 
 def get_profile(name):
-    return _profiles[name.lower()]()
+    return _PROFILES[name.lower()]()

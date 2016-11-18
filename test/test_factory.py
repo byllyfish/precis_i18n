@@ -1,8 +1,7 @@
 import unittest
 import precis_i18n
 from precis_i18n import get_profile
-
-UCD = precis_i18n.factory._ucd
+from precis_i18n.factory import UCD
 
 
 class TestGetProfile(unittest.TestCase):
