@@ -7,15 +7,16 @@ from precis_i18n import get_profile
 
 
 def _make_encode(profile):
-    def encode(input, errors='strict'):
+    def encode(s, errors='strict'):
         if errors != 'strict':
             raise ValueError('invalid errors argument')
-        return (profile.enforce(input), len(input))
+        return (profile.enforce(s), len(s))
 
     return encode
 
 
-def _not_supported(input, errors='strict'):
+def _not_supported(s, errors='strict'):
+    # pylint: disable=unused-argument
     raise NotImplementedError('decode not supported')
 
 

@@ -40,8 +40,9 @@ def rule_zero_width_joiner(value, offset, ucd):
 
 
 def rule_middle_dot(value, offset, ucd):
+    # pylint: disable=unused-argument
     assert value[offset] == '\u00b7'
-    return _before(value, offset) == 0x06c and _after(value, offset) == 0x06c
+    return 0x06c == _before(value, offset) == _after(value, offset)
 
 
 def rule_greek(value, offset, ucd):

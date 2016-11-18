@@ -32,6 +32,9 @@ class TestCodepointSet(unittest.TestCase):
         self.assertEqual(cps, CodepointSet('0000..00FF'))
         self.assertNotEqual(cps, CodepointSet('0000..00FE'))
 
+        # Non-CodepointSet always not-equal.
+        self.assertFalse(cps == 'what?')
+
     def test_repr(self):
         cps = CodepointSet('')
         self.assertEqual(repr(cps), "CodepointSet('')")

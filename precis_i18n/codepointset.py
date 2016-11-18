@@ -31,6 +31,8 @@ class CodepointSet(object):
     (PEP 393 Flexible String Representation)
     """
 
+    # pylint: disable=too-few-public-methods
+
     def __init__(self, table):
         """ Construct set from a string containing codepoint ranges.
         """
@@ -51,6 +53,9 @@ class CodepointSet(object):
     def __eq__(self, rhs):
         """ Return true if two sets are equal.
         """
+        # pylint: disable=protected-access
+        if self.__class__ != rhs.__class__:
+            return False
         return self._table == rhs._table
 
     def __repr__(self):

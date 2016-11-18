@@ -110,10 +110,10 @@ class UnicodeData(object):
 
     def _scan_join(self, iterable, term):
         for char in iterable:
-            jt = self._join_type(ord(char))
-            if jt == term or jt == 'D':
+            join_type = self._join_type(ord(char))
+            if join_type == term or join_type == 'D':
                 return True
-            if jt != 'T':
+            if join_type != 'T':
                 return False
         return False
 
