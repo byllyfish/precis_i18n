@@ -3,11 +3,11 @@ Implements the PRECIS profile classes.
 """
 
 import re
-
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass
 from precis_i18n.bidi import bidi_rule, has_rtl
 
 # pylint: disable=no-self-use
+
 
 class Profile(object):
     """
