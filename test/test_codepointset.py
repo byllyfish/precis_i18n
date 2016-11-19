@@ -3,7 +3,6 @@ from precis_i18n.codepointset import CodepointSet
 
 
 class TestCodepointSet(unittest.TestCase):
-    
     def test_contains(self):
         cps = CodepointSet('0000\n')
         actual = [cp in cps for cp in range(-1, 4)]
@@ -46,7 +45,8 @@ class TestCodepointSet(unittest.TestCase):
         self.assertEqual(repr(cps), "CodepointSet('0000..00FF')")
 
         cps = CodepointSet('0001..FFFF\n100000..10FFFF')
-        self.assertEqual(repr(cps), r"CodepointSet('0001..FFFF\n100000..10FFFF')")
+        self.assertEqual(
+            repr(cps), r"CodepointSet('0001..FFFF\n100000..10FFFF')")
 
         cps = CodepointSet('FFFF..1FFFF')
         self.assertEqual(repr(cps), "CodepointSet('FFFF..1FFFF')")
@@ -79,7 +79,6 @@ class TestCodepointSet(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             CodepointSet('0000\n000G')
-
 
     def test_even_odd(self):
         data = '\n'.join("%04X" % cp for cp in range(0, 10000, 2))

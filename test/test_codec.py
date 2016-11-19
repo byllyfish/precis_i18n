@@ -12,7 +12,6 @@ class TestCodec(unittest.TestCase):
         self.assertEqual('Juliet'.encode('IdentifierClass'), b'Juliet')
         self.assertEqual('Juliet'.encode('FreeFormClass'), b'Juliet')
 
-
     def test_decode(self):
         with self.assertRaises(NotImplementedError):
             b'Juliet'.decode('UsernameCasePreserved')

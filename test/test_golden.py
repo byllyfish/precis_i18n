@@ -10,15 +10,16 @@ UCD_VERSION = precis_i18n.get_profile('FreeFormClass').ucd.version
 
 
 class TestGolden(unittest.TestCase):
-
     def test_golden_json(self):
         with open(GOLDEN_JSON, encoding='ascii') as input_file:
             entries = json.load(input_file)
 
         for entry in entries:
-            if 'unicode_version' in entry and UCD_VERSION < entry['unicode_version']:
+            if 'unicode_version' in entry and UCD_VERSION < entry[
+                    'unicode_version']:
                 continue
-            profile, input, output, error = (entry['profile'], entry['input'], entry['output'], entry['error'])
+            profile, input, output, error = (entry['profile'], entry['input'],
+                                             entry['output'], entry['error'])
             if not error:
                 self.check_allow(profile, input, output)
             else:
@@ -32,11 +33,11 @@ class TestGolden(unittest.TestCase):
         # assertion fails, the profile is not idempotent.
         idempotent = actual.encode(profile).decode('utf-8')
         if idempotent != actual:
-            print('\n"%s" not idempotent: "%s" => "%s" => "%s"' % (profile, _escape(input), _escape(actual), _escape(idempotent)))
+            print('\n"%s" not idempotent: "%s" => "%s" => "%s"' % (
+                profile, _escape(input), _escape(actual), _escape(idempotent)))
         # The Nickname profile is not idempotent?
         if not profile.lower().startswith('nickname'):
             self.assertEqual(idempotent, actual)
-        
 
     def check_disallow(self, profile, input, expected):
         #print('check_disallow', profile, input)

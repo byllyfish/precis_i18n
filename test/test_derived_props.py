@@ -4,7 +4,6 @@ import sys
 from precis_i18n.derived import derived_property
 from precis_i18n.unicode import UnicodeData
 
-
 UCD = UnicodeData()
 GOLDNAME = 'derived-props-%.1f.txt' % UCD.version
 GOLDPATH = os.path.join(os.path.dirname(__file__), GOLDNAME)
@@ -38,7 +37,7 @@ def enumerate_derived_props(begin=0, end=0x00110000):
     for cp in range(start + 1, end):
         prop = '/'.join(derived_property(cp, UCD))
         if prop != prev:
-            yield (start, cp-1, prev)
+            yield (start, cp - 1, prev)
             start = cp
             prev = prop
     yield (start, cp, prev)
