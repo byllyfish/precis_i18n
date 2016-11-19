@@ -1,6 +1,7 @@
 [MESSAGES CONTROL]
 
-disable=missing-docstring
+# yapf produces bad-continuation's on overlong `with` statements.
+disable=missing-docstring,bad-continuation,line-too-long
 
 [BASIC]
 

@@ -8,8 +8,8 @@
 import json
 import sys
 import re
-import precis_i18n.codec
 from collections import OrderedDict
+import precis_i18n.codec
 
 PROFILES = [
     'UsernameCasePreserved', 'UsernameCaseMapped', 'OpaqueString',
