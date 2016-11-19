@@ -4,20 +4,12 @@ import os
 import json
 
 HERE = os.path.abspath(os.path.dirname(__file__))
-GOLDEN = os.path.join(HERE, 'examples.txt')
 GOLDEN_JSON = os.path.join(HERE, 'golden.json')
 
 UCD_VERSION = precis_i18n.get_profile('FreeFormClass').ucd.version
 
 
 class TestGolden(unittest.TestCase):
-
-    def test_golden_file(self):
-        for profile, allow, input, expected in _read_golden():
-            if allow:
-                self.check_allow(profile, input, expected)
-            else:
-                self.check_disallow(profile, input, expected)
 
     def test_golden_json(self):
         with open(GOLDEN_JSON, encoding='ascii') as input_file:
@@ -50,37 +42,6 @@ class TestGolden(unittest.TestCase):
         #print('check_disallow', profile, input)
         with self.assertRaisesRegex(UnicodeEncodeError, expected):
             input.encode(profile)
-
-
-
-def _read_golden():
-    """ Generator function to return 4-tuples with test data:
-    
-        (profile, allow, input, expected)
-
-    e.g. ('UsernameCaseMapped', True, 'Kevin', 'kevin')
-    """
-    with open(GOLDEN, encoding='utf-8') as golden:
-        for line in golden:
-            fields = [_unescape(s) for s in line.strip().split()]
-            if len(fields) == 0 or fields[0].startswith('#'):
-                continue
-            if len(fields) == 2:
-                fields.append(fields[1])
-
-            cmd = fields[0].upper()
-            if cmd == 'PROFILE':
-                profile = fields[1]
-            elif cmd == 'ALLOW':
-                yield (profile, True, fields[1], fields[2])
-            elif cmd == 'DISALLOW':
-                if len(fields) == 2:
-                    fields.append('')
-                yield (profile, False, fields[1], fields[2])
-
-
-def _unescape(s):
-    return s.encode('raw-unicode-escape').decode('unicode_escape')
 
 
 def _escape(s):
