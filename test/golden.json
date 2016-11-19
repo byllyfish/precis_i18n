@@ -919,6 +919,42 @@
   },
   {
     "profile": "UsernameCasePreserved",
+    "input": "\"Juliet\"",
+    "output": "\"Juliet\"",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "'Juliet'",
+    "output": "'Juliet'",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "'Juliet '",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "' Juliet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "'Juliet Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "'Juliet  Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -1301,6 +1337,24 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -2246,6 +2300,42 @@
   },
   {
     "profile": "UsernameCaseMapped",
+    "input": "\"Juliet\"",
+    "output": "\"juliet\"",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "'Juliet'",
+    "output": "'juliet'",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "'Juliet '",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "' Juliet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "'Juliet Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "'Juliet  Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -2628,6 +2718,24 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3573,6 +3681,42 @@
   },
   {
     "profile": "OpaqueString",
+    "input": "\"Juliet\"",
+    "output": "\"Juliet\"",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "'Juliet'",
+    "output": "'Juliet'",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "'Juliet '",
+    "output": "'Juliet '",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "' Juliet'",
+    "output": "' Juliet'",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "'Juliet Capulet'",
+    "output": "'Juliet Capulet'",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "'Juliet  Capulet'",
+    "output": "'Juliet  Capulet'",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -3955,6 +4099,24 @@
     "input": "\uffe3",
     "output": "\uffe3",
     "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "OpaqueString",
@@ -4900,6 +5062,42 @@
   },
   {
     "profile": "NicknameCaseMapped",
+    "input": "\"Juliet\"",
+    "output": "\"juliet\"",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "'Juliet'",
+    "output": "'juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "'Juliet '",
+    "output": "'juliet '",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "' Juliet'",
+    "output": "' juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "'Juliet Capulet'",
+    "output": "'juliet capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "'Juliet  Capulet'",
+    "output": "'juliet capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -5282,6 +5480,24 @@
     "input": "\uffe3",
     "output": " \u0304",
     "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6228,6 +6444,42 @@
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
+    "input": "\"Juliet\"",
+    "output": "\"juliet\"",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "'Juliet'",
+    "output": "'juliet'",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "'Juliet '",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "' Juliet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "'Juliet Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "'Juliet  Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -6610,6 +6862,24 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7555,6 +7825,42 @@
   },
   {
     "profile": "NicknameCasePreserved",
+    "input": "\"Juliet\"",
+    "output": "\"Juliet\"",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "'Juliet'",
+    "output": "'Juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "'Juliet '",
+    "output": "'Juliet '",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "' Juliet'",
+    "output": "' Juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "'Juliet Capulet'",
+    "output": "'Juliet Capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "'Juliet  Capulet'",
+    "output": "'Juliet Capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -7937,6 +8243,24 @@
     "input": "\uffe3",
     "output": " \u0304",
     "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -8883,6 +9207,42 @@
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
+    "input": "\"Juliet\"",
+    "output": "\"juliet\"",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "'Juliet'",
+    "output": "'juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "'Juliet '",
+    "output": "'juliet '",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "' Juliet'",
+    "output": "' juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "'Juliet Capulet'",
+    "output": "'juliet capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "'Juliet  Capulet'",
+    "output": "'juliet capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -9265,6 +9625,24 @@
     "input": "\uffe3",
     "output": " \u0304",
     "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -10210,6 +10588,42 @@
   },
   {
     "profile": "FreeFormClass",
+    "input": "\"Juliet\"",
+    "output": "\"Juliet\"",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "'Juliet'",
+    "output": "'Juliet'",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "'Juliet '",
+    "output": "'Juliet '",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "' Juliet'",
+    "output": "' Juliet'",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "'Juliet Capulet'",
+    "output": "'Juliet Capulet'",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "'Juliet  Capulet'",
+    "output": "'Juliet  Capulet'",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -10592,6 +11006,24 @@
     "input": "\uffe3",
     "output": "\uffe3",
     "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "FreeFormClass",
@@ -11537,6 +11969,42 @@
   },
   {
     "profile": "IdentifierClass",
+    "input": "\"Juliet\"",
+    "output": "\"Juliet\"",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "'Juliet'",
+    "output": "'Juliet'",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "'Juliet '",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "' Juliet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "'Juliet Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "'Juliet  Capulet'",
+    "output": null,
+    "error": "FREE_PVAL/spaces"
+  },
+  {
+    "profile": "IdentifierClass",
     "input": "\u05d0\u05d1",
     "output": "\u05d0\u05d1",
     "error": null
@@ -11919,6 +12387,24 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "IdentifierClass",

@@ -214,6 +214,14 @@ Juliet\x20Capulet
 Juliet\x20
 Juliet\x20\x20Capulet
 
+# Quotes
+
+"Juliet"
+'Juliet'
+'Juliet\x20'
+'\x20Juliet'
+'Juliet\x20Capulet'
+'Juliet\x20\x20Capulet'
 
 # Bidirectional text
 
@@ -294,8 +302,12 @@ Juliet\u05d1
 \ufe7e
 \uffe3
 
+# middle_dot
 # https://www.ietf.org/mail-archive/web/precis/current/msg01169.html
 
+\u00b7
+\u00b7l
+l\u00b7
 rul\u00b7lz
 ruL\u00b7Lz
 rul\u00b7ze
