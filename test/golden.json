@@ -1303,6 +1303,30 @@
     "error": "FREE_PVAL/has_compat"
   },
   {
+    "profile": "UsernameCasePreserved",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "ruL\u00b7Lz",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
     "profile": "UsernameCaseMapped",
     "input": "",
     "output": null,
@@ -2604,6 +2628,30 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "ruL\u00b7Lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "OpaqueString",
@@ -3909,6 +3957,30 @@
     "error": null
   },
   {
+    "profile": "OpaqueString",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "ruL\u00b7Lz",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
     "profile": "NicknameCaseMapped",
     "input": "",
     "output": null,
@@ -5210,6 +5282,30 @@
     "input": "\uffe3",
     "output": " \u0304",
     "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "ruL\u00b7Lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6514,6 +6610,30 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "ruL\u00b7Lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -7819,6 +7939,30 @@
     "error": null
   },
   {
+    "profile": "NicknameCasePreserved",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "ruL\u00b7Lz",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "",
     "output": null,
@@ -9121,6 +9265,30 @@
     "input": "\uffe3",
     "output": " \u0304",
     "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "ruL\u00b7Lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   },
   {
     "profile": "FreeFormClass",
@@ -10426,6 +10594,30 @@
     "error": null
   },
   {
+    "profile": "FreeFormClass",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "ruL\u00b7Lz",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
     "profile": "IdentifierClass",
     "input": "",
     "output": "",
@@ -11727,5 +11919,29 @@
     "input": "\uffe3",
     "output": null,
     "error": "FREE_PVAL/has_compat"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "ruL\u00b7Lz",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "CONTEXTO/exceptions"
   }
 ]

@@ -69,8 +69,9 @@ def main():
                 elem['unicode_version'] = unicode_version
             results.append(elem)
 
-    # Save results as an ASCII JSON file.
+    # Save results as an ASCII JSON file. Make sure file ends with LF.
     json.dump(results, sys.stdout, indent=2, ensure_ascii=True)
+    sys.stdout.write('\n')
 
 
 if __name__ == '__main__':

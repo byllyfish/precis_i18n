@@ -294,3 +294,10 @@ Juliet\u05d1
 \ufe7e
 \uffe3
 
+# https://www.ietf.org/mail-archive/web/precis/current/msg01169.html
+
+rul\u00b7lz
+ruL\u00b7Lz
+rul\u00b7ze
+ru\u00b7lze
+
