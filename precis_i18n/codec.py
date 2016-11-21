@@ -7,12 +7,12 @@ from precis_i18n import get_profile
 
 
 def _make_encode(profile):
-    def encode(s, errors='strict'):
+    def _encode(s, errors='strict'):
         if errors != 'strict':
             raise ValueError('invalid errors argument')
         return (profile.enforce(s), len(s))
 
-    return encode
+    return _encode
 
 
 def _not_supported(s, errors='strict'):

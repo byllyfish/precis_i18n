@@ -52,13 +52,13 @@ class UnicodeData(object):
         """ Map half-width and full-width chars to their compat equivs.
         """
 
-        def decompose(m):
+        def _decompose(m):
             char = m.group(0)
             assert len(char) == 1
             norm = self._ucd.normalize('NFKC', char)
             return norm if len(norm) == 1 else char
 
-        return self._halfwidth_chars.sub(decompose, value)
+        return self._halfwidth_chars.sub(_decompose, value)
 
     def map_nonascii_space_to_ascii(self, value):
         """ Convert non-ASCII white space {Zs} to ASCII ' '.
