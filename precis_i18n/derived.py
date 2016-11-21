@@ -67,66 +67,104 @@ def derived_property(cp, ucd):
 
 
 def in_letter_digits(category):
+    """ Category for code points informally described as "language characters".
+    """
     return category in {'Ll', 'Lu', 'Lo', 'Nd', 'Lm', 'Mn', 'Mc'}
 
 
 def in_exceptions(cp):
+    """ Code points for which the derived property cannot be assigned using
+    only the Unicode core property values.
+    """
     return cp in _EXCEPTIONS_TABLE
 
 
 def in_backward_compatible(cp):
+    """ Code points whose Unicode property values have changed such that their
+    derived property changed.
+    """
     return cp in _BACKWARD_COMPATIBLE_TABLE
 
 
 def in_join_control(cp):
+    """ Code points for Join Control characters required under some
+    circumstances. (CONTEXTJ)
+    """
     return 0x200c <= cp <= 0x200d
 
 
 def in_old_hangul_jamo(cp, ucd):
+    """ Code points for all conjoining Hangul Jamo (Leading Jamo, Vowel Jamo,
+    and Trailing Jamo).
+    """
     return ucd.old_hangul_jamo(cp)
 
 
 def in_unassigned(cp, category, ucd):
+    """ Code points that are not (yet) assigned in Unicode.
+    """
     return category == 'Cn' and not ucd.noncharacter(cp)
 
 
 def in_ascii7(cp):
+    """ Code points for all printable, non-space characters from the 7-bit
+    ASCII range
+    """
     return 0x21 <= cp <= 0x7E
 
 
 def in_controls(cp, ucd):
+    """ Code points for all control characters.
+    """
     return ucd.control(cp)
 
 
 def in_precis_ignorable_properties(cp, ucd):
+    """ Code points that are discouraged from use in PRECIS string classes.
+    """
     return ucd.default_ignorable(cp) or ucd.noncharacter(cp)
 
 
 def in_spaces(category):
+    """ Category for code points that are space characters.
+    """
     return category in {'Zs'}
 
 
 def in_symbols(category):
+    """ Category for code points that are symbols.
+    """
     return category in {'Sm', 'Sc', 'Sk', 'So'}
 
 
 def in_punctuation(category):
+    """ Category for code points that are punctuation characters.
+    """
     return category in {'Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'}
 
 
 def in_has_compat(cp, ucd):
+    """ Code points that have compatibility equivalents.
+    """
     return ucd.has_compat(cp)
 
 
 def in_other_letter_digits(category):
+    """ Code points that are letters and digits other than the "traditional"
+    letters and digits
+    """
     return category in {'Lt', 'Nl', 'No', 'Me'}
 
 
 def exceptions(cp):
+    """ Return derived property for exception codepoint.
+    """
     return _EXCEPTIONS_TABLE[cp]
 
 
 def backward_compatible(cp):  # pragma: no cover
+    """ Return derived property for backward-compatible code point.
+    """
     return _BACKWARD_COMPATIBLE_TABLE[cp]
 
 

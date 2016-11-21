@@ -1,3 +1,7 @@
+"""
+Implements the `get_profile` factory function used to create profiles by name.
+"""
+
 import precis_i18n.baseclass as _base
 import precis_i18n.profile as _profile
 import precis_i18n.unicode as _unicode
@@ -39,7 +43,7 @@ _PROFILES = {
 
 
 def get_profile(name):
-    """ Retrieve the desired PRECIS profile.
+    """ Return the desired PRECIS profile.
 
     name: name of a PRECIS profile
 
