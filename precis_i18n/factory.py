@@ -39,4 +39,21 @@ _PROFILES = {
 
 
 def get_profile(name):
+    """ Retrieve the desired PRECIS profile.
+
+    name: name of a PRECIS profile
+
+       IdentifierClass
+       FreeFormClass
+       UsernameCasePreserved
+       UsernameCaseMapped
+       UsernameCaseMapped:ToLower
+       OpaqueString
+       NicknameCasePreserved
+       NicknameCaseMapped
+       NicknameCaseMapped:ToLower
+       Nickname (backward-compatible alias for NicknameCaseMapped)
+
+    This function constructs a new profile each time; there is no cache.
+    """
     return _PROFILES[name.lower()]()
