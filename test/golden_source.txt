@@ -76,7 +76,11 @@ Richard \u2163
 \u19da
 
 # "dotless i" in several Turkic languages (SpecialCasing.txt)
-# TODO
+# (It looks like Python3 ignores locale-specific special casing rules.)
+
+i\u0130\u0131I
+I\u0307
+\u0131\u0307
 
 #
 

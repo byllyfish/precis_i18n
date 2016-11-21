@@ -385,6 +385,24 @@
   },
   {
     "profile": "UsernameCasePreserved",
+    "input": "i\u0130\u0131I",
+    "output": "i\u0130\u0131I",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "I\u0307",
+    "output": "\u0130",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
     "input": "A\ua717",
     "output": "A\ua717",
     "error": null
@@ -1763,6 +1781,24 @@
     "input": "\u19da",
     "output": null,
     "error": "FREE_PVAL/other_letter_digits"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "i\u0130\u0131I",
+    "output": "ii\u0307\u0131i",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "I\u0307",
+    "output": "i\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3147,6 +3183,24 @@
   },
   {
     "profile": "OpaqueString",
+    "input": "i\u0130\u0131I",
+    "output": "i\u0130\u0131I",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "I\u0307",
+    "output": "\u0130",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
     "input": "A\ua717",
     "output": "A\ua717",
     "error": null
@@ -4524,6 +4578,24 @@
     "profile": "NicknameCaseMapped",
     "input": "\u19da",
     "output": "\u19da",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "i\u0130\u0131I",
+    "output": "ii\u0307\u0131i",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "I\u0307",
+    "output": "i\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
     "error": null
   },
   {
@@ -5910,6 +5982,24 @@
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
+    "input": "i\u0130\u0131I",
+    "output": "ii\u0307\u0131i",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "I\u0307",
+    "output": "i\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
     "input": "A\ua717",
     "output": "a\ua717",
     "error": null
@@ -7287,6 +7377,24 @@
     "profile": "NicknameCasePreserved",
     "input": "\u19da",
     "output": "\u19da",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "i\u0130\u0131I",
+    "output": "i\u0130\u0131I",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "I\u0307",
+    "output": "\u0130",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
     "error": null
   },
   {
@@ -8669,6 +8777,24 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u19da",
     "output": "\u19da",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "i\u0130\u0131I",
+    "output": "ii\u0307\u0131i",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "I\u0307",
+    "output": "i\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
     "error": null
   },
   {
@@ -10054,6 +10180,24 @@
   },
   {
     "profile": "FreeFormClass",
+    "input": "i\u0130\u0131I",
+    "output": "i\u0130\u0131I",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "I\u0307",
+    "output": "I\u0307",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
     "input": "A\ua717",
     "output": "A\ua717",
     "error": null
@@ -11432,6 +11576,24 @@
     "input": "\u19da",
     "output": null,
     "error": "FREE_PVAL/other_letter_digits"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "i\u0130\u0131I",
+    "output": "i\u0130\u0131I",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "I\u0307",
+    "output": "I\u0307",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
   },
   {
     "profile": "IdentifierClass",
