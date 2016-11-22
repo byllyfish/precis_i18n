@@ -4,22 +4,42 @@ CONTEXTJ and CONTEXTO.
 """
 
 
+def context_rule_error(value, offset, ucd):
+    """ Apply the context rule to `value[offset]`.
+
+    Return '' if there is no error. Return name of the rule if it fails.
+    """
+    cp = ord(value[offset])
+    if ucd.arabic_indic(cp):
+        rule = rule_arabic_indic
+    elif ucd.extended_arabic_indic(cp):
+        rule = rule_extended_arabic_indic
+    else:
+        rule = _RULES[cp]
+
+    try:
+        valid = rule(value, offset, ucd)
+    except IndexError:
+        # Handle failure of _before and _after accessors.
+        valid = False
+
+    if valid:
+        return ''
+
+    # If context rule fails, return name of context rule (the name of the
+    # function with 'rule_' prefix removed.)
+    result = rule.__name__
+    if result.startswith('rule_'):
+        result = result[5:]
+    return result
+
+
 def context_rule(value, offset, ucd):
     """ Apply the context rule to `value[offset]`.
 
     Return true if successful.
     """
-    cp = ord(value[offset])
-    try:
-        if ucd.arabic_indic(cp):
-            return rule_arabic_indic(value, offset, ucd)
-        elif ucd.extended_arabic_indic(cp):
-            return rule_extended_arabic_indic(value, offset, ucd)
-        else:
-            return _RULES[cp](value, offset, ucd)
-    except IndexError:
-        # Handle failure of _before and _after accessors.
-        return False
+    return not context_rule_error(value, offset, ucd)
 
 
 # These rules test a character at a given offset in the string.

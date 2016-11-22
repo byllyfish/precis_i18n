@@ -328,7 +328,7 @@ class TestPrecisContextRule(unittest.TestCase):
         # Invalid: 0x6f0 0x06f1 0x06f2 0x0660
         self.assertFalse(pc.context_rule('\u06f0\u06f1\u06f2\u0660', 0, UCD))
 
-        # 8. No rule matches.
+        # 9. No rule matches.
         with self.assertRaises(KeyError):
             pc.context_rule('a', 0, UCD)
 

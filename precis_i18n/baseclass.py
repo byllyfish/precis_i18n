@@ -2,7 +2,7 @@
 Implements the PRECIS string classes.
 """
 
-from precis_i18n.context import context_rule
+from precis_i18n.context import context_rule_error
 from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
                                  derived_property)
 
@@ -43,12 +43,16 @@ class BaseClass(object):
             prop, kind = derived_property(ord(char), self.ucd)
             if prop in self._allowed:
                 continue
-            elif prop == CONTEXTJ and context_rule(value, i, self.ucd):
-                continue
-            elif prop == CONTEXTO and context_rule(value, i, self.ucd):
-                continue
-            raise UnicodeEncodeError(codec_name, value, i, i + 1,
-                                     '%s/%s' % (prop, kind))
+
+            if prop == CONTEXTJ or prop == CONTEXTO:
+                # Replace `kind` ('exceptions', 'join_control') with the
+                # specific name of the context rule, if the rule fails.
+                kind = context_rule_error(value, i, self.ucd)
+                if not kind:
+                    continue
+
+            raise_error(codec_name, value, i, (prop, kind))
+
         return value.encode('utf-8')
 
 
@@ -68,3 +72,21 @@ class FreeFormClass(BaseClass):
 
     def __init__(self, ucd, name='FreeFormClass'):
         super().__init__(ucd, name)
+
+
+def raise_error(encoding, value, offset, error):
+    """ Raise formatted UnicodeEncodeError exception.
+    """
+    if offset < 0:
+        start = 0
+        end = len(value)
+    else:
+        start = offset
+        end = offset + 1
+
+    if isinstance(error, tuple):
+        reason = '/'.join(error).rstrip('/')
+    else:
+        reason = str(error)
+
+    raise UnicodeEncodeError(encoding, value, start, end, reason)

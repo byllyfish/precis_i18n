@@ -795,13 +795,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1360,19 +1360,19 @@
     "profile": "UsernameCasePreserved",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1384,19 +1384,19 @@
     "profile": "UsernameCasePreserved",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2194,13 +2194,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2759,19 +2759,19 @@
     "profile": "UsernameCaseMapped",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2789,13 +2789,13 @@
     "profile": "UsernameCaseMapped",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "OpaqueString",
@@ -3593,13 +3593,13 @@
     "profile": "OpaqueString",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "OpaqueString",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "OpaqueString",
@@ -4158,19 +4158,19 @@
     "profile": "OpaqueString",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "OpaqueString",
@@ -4182,19 +4182,19 @@
     "profile": "OpaqueString",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -4992,13 +4992,13 @@
     "profile": "NicknameCaseMapped",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -5557,19 +5557,19 @@
     "profile": "NicknameCaseMapped",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -5587,13 +5587,13 @@
     "profile": "NicknameCaseMapped",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6392,13 +6392,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6957,19 +6957,19 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6987,13 +6987,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -7791,13 +7791,13 @@
     "profile": "NicknameCasePreserved",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -8356,19 +8356,19 @@
     "profile": "NicknameCasePreserved",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -8380,19 +8380,19 @@
     "profile": "NicknameCasePreserved",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -9191,13 +9191,13 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -9756,19 +9756,19 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -9786,13 +9786,13 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "FreeFormClass",
@@ -10590,13 +10590,13 @@
     "profile": "FreeFormClass",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "FreeFormClass",
@@ -11155,19 +11155,19 @@
     "profile": "FreeFormClass",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "FreeFormClass",
@@ -11179,19 +11179,19 @@
     "profile": "FreeFormClass",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "IdentifierClass",
@@ -11989,13 +11989,13 @@
     "profile": "IdentifierClass",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_nonjoiner"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/join_control"
+    "error": "CONTEXTJ/zero_width_joiner"
   },
   {
     "profile": "IdentifierClass",
@@ -12554,19 +12554,19 @@
     "profile": "IdentifierClass",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "IdentifierClass",
@@ -12578,18 +12578,18 @@
     "profile": "IdentifierClass",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/exceptions"
+    "error": "CONTEXTO/middle_dot"
   }
 ]

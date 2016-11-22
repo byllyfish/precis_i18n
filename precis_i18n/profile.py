@@ -3,7 +3,7 @@ Implements the PRECIS profile classes.
 """
 
 import re
-from precis_i18n.baseclass import FreeFormClass, IdentifierClass
+from precis_i18n.baseclass import FreeFormClass, IdentifierClass, raise_error
 from precis_i18n.bidi import bidi_rule, has_rtl
 
 # pylint: disable=no-self-use
@@ -57,7 +57,7 @@ class Profile(object):
         temp = self.directionality_rule(temp)
         # Make sure the resulting value is not empty.
         if not temp:
-            raise UnicodeEncodeError(self.name, temp, 0, 1, 'empty')
+            raise_error(self.name, temp, 0, 'empty')
         # Apply behavioral rules from the base string class last.
         return self.base.enforce(temp, self.name)
 
@@ -117,8 +117,7 @@ class Username(Profile):
         # Only apply the "bidi rule" if the string contains RTL characters.
         if has_rtl(value, self.base.ucd):
             if not bidi_rule(value, self.base.ucd):
-                raise UnicodeEncodeError(self.name, value, 0,
-                                         len(value), 'bidi rule')
+                raise_error(self.name, value, -1, 'bidi rule')
         return value
 
 
