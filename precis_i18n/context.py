@@ -38,7 +38,7 @@ def rule_zero_width_nonjoiner(value, offset, ucd):
       such conjuncts."
     """
     assert value[offset] == '\u200c'
-    if ucd.combining_virana(_before(value, offset)):
+    if ucd.combining_virama(_before(value, offset)):
         return True
     if ucd.valid_jointype(value, offset):
         return True
@@ -55,7 +55,7 @@ def rule_zero_width_joiner(value, offset, ucd):
       such conjuncts."
     """
     assert value[offset] == '\u200d'
-    return ucd.combining_virana(_before(value, offset))
+    return ucd.combining_virama(_before(value, offset))
 
 
 def rule_middle_dot(value, offset, ucd):

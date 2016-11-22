@@ -160,10 +160,10 @@ class TestDerivedProperty(unittest.TestCase):
 class TestPrecisContextRule(unittest.TestCase):
     def test_rule_zero_width_nonjoiner(self):
         # We're going to use a872 and 0622 in some tests. Make sure they aren't
-        # combining_virana().
-        self.assertFalse(UCD.combining_virana(0xa872))
-        self.assertFalse(UCD.combining_virana(0x0622))
-        # Valid: combining_virana before
+        # combining_virama().
+        self.assertFalse(UCD.combining_virama(0xa872))
+        self.assertFalse(UCD.combining_virama(0x0622))
+        # Valid: combining_virama before
         self.assertTrue(pc.rule_zero_width_nonjoiner('\u094d\u200c', 1, UCD))
         # Invalid: invalid join_type
         self.assertFalse(pc.rule_zero_width_nonjoiner('\ua872\u200c', 1, UCD))
@@ -178,11 +178,11 @@ class TestPrecisContextRule(unittest.TestCase):
             pc.rule_zero_width_nonjoiner('\u0622\u200c\ua872', 1, UCD))
 
     def test_rule_zero_width_joiner(self):
-        # Valid: combining_virana before
+        # Valid: combining_virama before
         self.assertTrue(pc.rule_zero_width_joiner('\u094d\u200d', 1, UCD))
-        # Invalid: no combining_virana before
+        # Invalid: no combining_virama before
         self.assertFalse(pc.rule_zero_width_joiner('A\u200d', 1, UCD))
-        # Invalid: no combining_virana before, jointype(L J R)
+        # Invalid: no combining_virama before, jointype(L J R)
         self.assertFalse(
             pc.rule_zero_width_joiner('\ua872\u200d\u0622', 1, UCD))
 
@@ -253,7 +253,7 @@ class TestPrecisContextRule(unittest.TestCase):
 
     def test_context_rule(self):
         # 1. rule_zero_width_nonjoiner
-        # Valid: combining_virana before
+        # Valid: combining_virama before
         self.assertTrue(pc.context_rule('\u094d\u200c', 1, UCD))
         # Invalid: invalid join_type
         self.assertFalse(pc.context_rule('\ua872\u200c', 1, UCD))
@@ -265,11 +265,11 @@ class TestPrecisContextRule(unittest.TestCase):
         self.assertFalse(pc.context_rule('\u0622\u200c\ua872', 1, UCD))
 
         # 2. rule_zero_width_joiner
-        # Valid: combining_virana before
+        # Valid: combining_virama before
         self.assertTrue(pc.context_rule('\u094d\u200d', 1, UCD))
-        # Invalid: no combining_virana before
+        # Invalid: no combining_virama before
         self.assertFalse(pc.context_rule('A\u200d', 1, UCD))
-        # Invalid: no combining_virana before, jointype(L J R)
+        # Invalid: no combining_virama before, jointype(L J R)
         self.assertFalse(pc.context_rule('\ua872\u200d\u0622', 1, UCD))
 
         # 3. rule_middle_dot
@@ -386,9 +386,9 @@ class TestPrecisUnicodeData(unittest.TestCase):
         self.assertFalse(UCD.hiragana_katakana_han_script(0x3006))
         self.assertFalse(UCD.hiragana_katakana_han_script(0x30fb))
 
-    def test_combining_virana(self):
-        self.assertTrue(UCD.combining_virana(0x1714))
-        self.assertFalse(UCD.combining_virana(0x1715))
+    def test_combining_virama(self):
+        self.assertTrue(UCD.combining_virama(0x1714))
+        self.assertFalse(UCD.combining_virama(0x1715))
 
     def test_arabic_indic(self):
         self.assertTrue(UCD.arabic_indic(0x669))

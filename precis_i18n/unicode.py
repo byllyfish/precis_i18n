@@ -93,7 +93,7 @@ class UnicodeData(object):
     def hiragana_katakana_han_script(self, cp):
         return cp in _HIRAGANA_KATAKANA_HAN
 
-    def combining_virana(self, cp):
+    def combining_virama(self, cp):
         return self.combining(chr(cp)) == 9
 
     def arabic_indic(self, cp):
