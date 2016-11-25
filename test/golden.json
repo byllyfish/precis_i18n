@@ -1399,6 +1399,198 @@
     "error": "CONTEXTO/middle_dot"
   },
   {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0600",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
     "profile": "UsernameCaseMapped",
     "input": "",
     "output": null,
@@ -2796,6 +2988,198 @@
     "input": "ru\u00b7lze",
     "output": null,
     "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00df",
+    "output": "ss",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0600",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "OpaqueString",
@@ -4197,6 +4581,198 @@
     "error": "CONTEXTO/middle_dot"
   },
   {
+    "profile": "OpaqueString",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "CONTEXTO/arabic_indic"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "CONTEXTO/extended_arabic_indic"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
     "profile": "NicknameCaseMapped",
     "input": "",
     "output": null,
@@ -5594,6 +6170,198 @@
     "input": "ru\u00b7lze",
     "output": null,
     "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u00df",
+    "output": "ss",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "CONTEXTO/arabic_indic"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "CONTEXTO/extended_arabic_indic"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6994,6 +7762,198 @@
     "input": "ru\u00b7lze",
     "output": null,
     "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0600",
+    "output": null,
+    "error": "bidi rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -8395,6 +9355,198 @@
     "error": "CONTEXTO/middle_dot"
   },
   {
+    "profile": "NicknameCasePreserved",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "CONTEXTO/arabic_indic"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "CONTEXTO/extended_arabic_indic"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "",
     "output": null,
@@ -9793,6 +10945,198 @@
     "input": "ru\u00b7lze",
     "output": null,
     "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "CONTEXTO/arabic_indic"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "CONTEXTO/extended_arabic_indic"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "FreeFormClass",
@@ -11194,6 +12538,198 @@
     "error": "CONTEXTO/middle_dot"
   },
   {
+    "profile": "FreeFormClass",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "CONTEXTO/arabic_indic"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "CONTEXTO/extended_arabic_indic"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
     "profile": "IdentifierClass",
     "input": "",
     "output": "",
@@ -12591,5 +14127,197 @@
     "input": "ru\u00b7lze",
     "output": null,
     "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u00df",
+    "output": "\u00df",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u03c2",
+    "output": "\u03c2",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u00b7",
+    "output": null,
+    "error": "CONTEXTO/middle_dot"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0375",
+    "output": null,
+    "error": "CONTEXTO/greek"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u05f3",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u05f4",
+    "output": null,
+    "error": "CONTEXTO/hebrew"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u30fb",
+    "output": null,
+    "error": "CONTEXTO/katakana_middle_dot"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "CONTEXTO/arabic_indic"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "CONTEXTO/extended_arabic_indic"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "UNASSIGNED/unassigned"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
   }
 ]
