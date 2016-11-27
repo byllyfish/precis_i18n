@@ -51,7 +51,7 @@ class BaseClass(object):
                 if not kind:
                     continue
 
-            raise_error(codec_name, value, i, (prop, kind))
+            raise_error(codec_name, value, i, kind)
 
         return value.encode('utf-8')
 
@@ -84,9 +84,5 @@ def raise_error(encoding, value, offset, error):
         start = offset
         end = offset + 1
 
-    if isinstance(error, tuple):
-        reason = '/'.join(error).rstrip('/')
-    else:
-        reason = str(error)
-
+    reason = 'DISALLOWED/%s' % error
     raise UnicodeEncodeError(encoding, value, start, end, reason)

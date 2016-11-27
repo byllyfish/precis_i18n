@@ -91,7 +91,7 @@ def rule_middle_dot(value, offset, ucd):
     return 0x06c == _before(value, offset) == _after(value, offset)
 
 
-def rule_greek(value, offset, ucd):
+def rule_greek_keraia(value, offset, ucd):
     """ Return true if context permits GREEK LOWER NUMERAL SIGN (U+0375).
 
     From https://tools.ietf.org/html/rfc5892#appendix-A.4:
@@ -102,7 +102,7 @@ def rule_greek(value, offset, ucd):
     return ucd.greek_script(_after(value, offset))
 
 
-def rule_hebrew(value, offset, ucd):
+def rule_hebrew_punctuation(value, offset, ucd):
     """ Return true if context permits HEBREW PUNCTUATION GERESH or GERSHAYIM
     (U+05F3, U+05F4).
 
@@ -161,9 +161,9 @@ _RULES = {
     0x200c: rule_zero_width_nonjoiner,
     0x200d: rule_zero_width_joiner,
     0x00b7: rule_middle_dot,
-    0x0375: rule_greek,
-    0x05f3: rule_hebrew,
-    0x05f4: rule_hebrew,
+    0x0375: rule_greek_keraia,
+    0x05f3: rule_hebrew_punctuation,
+    0x05f4: rule_hebrew_punctuation,
     0x30fb: rule_katakana_middle_dot,
 }
 

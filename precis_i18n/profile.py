@@ -117,7 +117,7 @@ class Username(Profile):
         # Only apply the "bidi rule" if the string contains RTL characters.
         if has_rtl(value, self.base.ucd):
             if not bidi_rule(value, self.base.ucd):
-                raise_error(self.name, value, -1, 'bidi rule')
+                raise_error(self.name, value, -1, 'bidi_rule')
         return value
 
 

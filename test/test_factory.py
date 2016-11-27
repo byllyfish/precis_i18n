@@ -22,7 +22,7 @@ class TestUsernameCasePreserved(unittest.TestCase):
 
         self.profile_fail(profile, '', r'empty')
         self.profile_fail(profile, ' J', r'x')
-        self.profile_fail(profile, '\u05d0*', r'bidi rule')
+        self.profile_fail(profile, '\u05d0*', r'bidi_rule')
 
     def profile_fail(self, profile, value, reason):
         with self.assertRaisesRegex(UnicodeEncodeError, reason):

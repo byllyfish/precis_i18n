@@ -65,10 +65,10 @@ class TestPrecisIdentifierClass(unittest.TestCase):
 
     def test_invalid_identifier(self):
         ident = IdentifierClass(UCD)
-        # FREE_PVAL/spaces
+        # DISALLOWED/spaces
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'IdentifierClass' codec can't encode character '\\x20' in position 0: FREE_PVAL/spaces"
+                r"'IdentifierClass' codec can't encode character '\\x20' in position 0: DISALLOWED/spaces"
         ):
             ident.enforce(' ')
 
@@ -86,10 +86,10 @@ class TestPrecisIdentifierClass(unittest.TestCase):
         ):
             ident.enforce('\u1100')
 
-        # FREE_PVAL/has_compat
+        # DISALLOWED/has_compat
         with self.assertRaisesRegex(
                 UnicodeEncodeError,
-                r"'IdentifierClass' codec can't encode character '\\u1fbf' in position 0: FREE_PVAL/has_compat"
+                r"'IdentifierClass' codec can't encode character '\\u1fbf' in position 0: DISALLOWED/has_compat"
         ):
             ident.enforce('\u1FBF')
 
@@ -200,27 +200,27 @@ class TestPrecisContextRule(unittest.TestCase):
         with self.assertRaises(IndexError):
             pc.rule_middle_dot('\u006c\u00b7', 1, UCD)
 
-    def test_rule_greek(self):
+    def test_rule_greek_keraia(self):
         # Valid: 0375 03ff
-        self.assertTrue(pc.rule_greek('\u0375\u03ff', 0, UCD))
+        self.assertTrue(pc.rule_greek_keraia('\u0375\u03ff', 0, UCD))
         # Invalid: 0375 1d25
-        self.assertFalse(pc.rule_greek('\u0375\u1d25', 0, UCD))
+        self.assertFalse(pc.rule_greek_keraia('\u0375\u1d25', 0, UCD))
         # Invalid: undefined after
         with self.assertRaises(IndexError):
-            pc.rule_greek('\u0375', 0, UCD)
+            pc.rule_greek_keraia('\u0375', 0, UCD)
 
-    def test_rule_hebrew(self):
+    def test_rule_hebrew_punctuation(self):
         # Valid: 0591 05f3
-        self.assertTrue(pc.rule_hebrew('\u0591\u05f3', 1, UCD))
+        self.assertTrue(pc.rule_hebrew_punctuation('\u0591\u05f3', 1, UCD))
         # Valid: 0591 05f4
-        self.assertTrue(pc.rule_hebrew('\u0591\u05f4', 1, UCD))
+        self.assertTrue(pc.rule_hebrew_punctuation('\u0591\u05f4', 1, UCD))
         # Invalid: 0031 05f3
-        self.assertFalse(pc.rule_hebrew('\u0031\u05f3', 1, UCD))
+        self.assertFalse(pc.rule_hebrew_punctuation('\u0031\u05f3', 1, UCD))
         # Invalid: 0031 05f4
-        self.assertFalse(pc.rule_hebrew('\u0031\u05f4', 1, UCD))
+        self.assertFalse(pc.rule_hebrew_punctuation('\u0031\u05f4', 1, UCD))
         # Invalid: undefined after
         with self.assertRaises(IndexError):
-            pc.rule_hebrew('\u05f3', 0, UCD)
+            pc.rule_hebrew_punctuation('\u05f3', 0, UCD)
 
     def test_katatana_middle_dot(self):
         # Valid: 0x30fb 0x2e99
@@ -284,7 +284,7 @@ class TestPrecisContextRule(unittest.TestCase):
         # Invalid: undefined after
         self.assertFalse(pc.context_rule('\u006c\u00b7', 1, UCD))
 
-        # 4. rule_greek
+        # 4. rule_greek_keraia
         # Valid: 0375 03ff
         self.assertTrue(pc.context_rule('\u0375\u03ff', 0, UCD))
         # Invalid: 0375 1d25
@@ -292,7 +292,7 @@ class TestPrecisContextRule(unittest.TestCase):
         # Invalid: undefined after
         self.assertFalse(pc.context_rule('\u0375', 0, UCD))
 
-        # 5. rule_hebrew
+        # 5. rule_hebrew_punctuation
         # Valid: 0591 05f3
         self.assertTrue(pc.context_rule('\u0591\u05f3', 1, UCD))
         # Valid: 0591 05f4

@@ -3,7 +3,7 @@
     "profile": "UsernameCasePreserved",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -51,7 +51,7 @@
     "profile": "UsernameCasePreserved",
     "input": " ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -87,7 +87,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u00a0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -177,7 +177,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u24c0evin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -225,25 +225,25 @@
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd1aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd3aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd5aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\udd7aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -327,13 +327,13 @@
     "profile": "UsernameCasePreserved",
     "input": "Foo Bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "foo bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -357,13 +357,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u265a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Richard \u2163",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -381,7 +381,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u19da",
     "output": null,
-    "error": "FREE_PVAL/other_letter_digits"
+    "error": "DISALLOWED/other_letter_digits"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -447,25 +447,25 @@
     "profile": "UsernameCasePreserved",
     "input": "\ufec9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufeca",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufecb",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufecc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -483,7 +483,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u3300",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -495,37 +495,37 @@
     "profile": "UsernameCasePreserved",
     "input": "i\u2079",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00bc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u01c6",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe37",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u210c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u210d",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -573,7 +573,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\ufe69",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -585,13 +585,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u20a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83c\uddfa\ud83c\uddf8",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -609,13 +609,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u24c0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2460",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -687,7 +687,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\ufb01",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -705,13 +705,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\ud83d\udc7e",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ud83d\udc9a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -765,7 +765,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u1806",
     "output": null,
-    "error": "FREE_PVAL/punctuation"
+    "error": "DISALLOWED/punctuation"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -795,13 +795,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -915,25 +915,25 @@
     "profile": "UsernameCasePreserved",
     "input": "Juliet Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": " Juliet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Juliet  Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -951,25 +951,25 @@
     "profile": "UsernameCasePreserved",
     "input": "'Juliet '",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "' Juliet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "'Juliet Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "'Juliet  Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -994,31 +994,31 @@
     "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1+",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "+\u05d0\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "A\u05d0\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0\u05d1A",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05d0A\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1042,7 +1042,7 @@
     "profile": "UsernameCasePreserved",
     "input": "Juliet\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1060,319 +1060,319 @@
     "profile": "UsernameCasePreserved",
     "input": "\u00a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00af",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00b4",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00b8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u02d8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u02d9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u02da",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u02db",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u02dc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u02dd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u037a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0384",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0385",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fbd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fbf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fc0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fc1",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fcd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fce",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fcf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fdd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fde",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fdf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fed",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fee",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1ffd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1ffe",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2017",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u203e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u309b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u309c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufc5e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufc5f",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufc60",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufc61",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufc62",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufc63",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe49",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe4a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe4b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe4c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe70",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe72",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe74",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe76",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe78",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe7a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe7c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\ufe7e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\uffe3",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1384,19 +1384,19 @@
     "profile": "UsernameCasePreserved",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1438,37 +1438,37 @@
     "profile": "UsernameCasePreserved",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1492,13 +1492,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1564,7 +1564,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u0600",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1576,7 +1576,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1594,7 +1594,7 @@
     "profile": "UsernameCaseMapped",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1642,7 +1642,7 @@
     "profile": "UsernameCaseMapped",
     "input": " ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1678,7 +1678,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u00a0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1768,7 +1768,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u24c0evin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1816,25 +1816,25 @@
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd1aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd3aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd5aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\udd7aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1918,13 +1918,13 @@
     "profile": "UsernameCaseMapped",
     "input": "Foo Bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "foo bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1948,13 +1948,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u265a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Richard \u2163",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -1972,7 +1972,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u19da",
     "output": null,
-    "error": "FREE_PVAL/other_letter_digits"
+    "error": "DISALLOWED/other_letter_digits"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2038,25 +2038,25 @@
     "profile": "UsernameCaseMapped",
     "input": "\ufec9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufeca",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufecb",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufecc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2074,7 +2074,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u3300",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2086,37 +2086,37 @@
     "profile": "UsernameCaseMapped",
     "input": "i\u2079",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00bc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u01c6",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe37",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u210c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u210d",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2164,7 +2164,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\ufe69",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2176,13 +2176,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u20a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83c\uddfa\ud83c\uddf8",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2200,13 +2200,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u24c0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2460",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2296,13 +2296,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\ud83d\udc7e",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ud83d\udc9a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2356,7 +2356,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u1806",
     "output": null,
-    "error": "FREE_PVAL/punctuation"
+    "error": "DISALLOWED/punctuation"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2386,13 +2386,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2506,25 +2506,25 @@
     "profile": "UsernameCaseMapped",
     "input": "Juliet Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": " Juliet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Juliet  Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2542,25 +2542,25 @@
     "profile": "UsernameCaseMapped",
     "input": "'Juliet '",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "' Juliet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "'Juliet Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "'Juliet  Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2585,31 +2585,31 @@
     "profile": "UsernameCaseMapped",
     "input": "\u05d0\u05d1+",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "+\u05d0\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "A\u05d0\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0\u05d1A",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05d0A\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2633,7 +2633,7 @@
     "profile": "UsernameCaseMapped",
     "input": "Juliet\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2651,319 +2651,319 @@
     "profile": "UsernameCaseMapped",
     "input": "\u00a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00af",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00b4",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00b8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u02d8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u02d9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u02da",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u02db",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u02dc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u02dd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u037a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0384",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0385",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fbd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fbf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fc0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fc1",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fcd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fce",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fcf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fdd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fde",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fdf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fed",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fee",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1ffd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1ffe",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2017",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u203e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u309b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u309c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufc5e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufc5f",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufc60",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufc61",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufc62",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufc63",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe49",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe4a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe4b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe4c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe70",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe72",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe74",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe76",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe78",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe7a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe7c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\ufe7e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\uffe3",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2981,13 +2981,13 @@
     "profile": "UsernameCaseMapped",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3029,37 +3029,37 @@
     "profile": "UsernameCaseMapped",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3083,13 +3083,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3155,7 +3155,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u0600",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3167,7 +3167,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3185,7 +3185,7 @@
     "profile": "OpaqueString",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "OpaqueString",
@@ -3977,13 +3977,13 @@
     "profile": "OpaqueString",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "OpaqueString",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "OpaqueString",
@@ -4542,19 +4542,19 @@
     "profile": "OpaqueString",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
@@ -4566,19 +4566,19 @@
     "profile": "OpaqueString",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
@@ -4620,31 +4620,31 @@
     "profile": "OpaqueString",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "OpaqueString",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "OpaqueString",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "OpaqueString",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "OpaqueString",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "OpaqueString",
@@ -4674,13 +4674,13 @@
     "profile": "OpaqueString",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "CONTEXTO/arabic_indic"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "OpaqueString",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "CONTEXTO/extended_arabic_indic"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "OpaqueString",
@@ -4758,7 +4758,7 @@
     "profile": "OpaqueString",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "OpaqueString",
@@ -4776,7 +4776,7 @@
     "profile": "NicknameCaseMapped",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -4800,31 +4800,31 @@
     "profile": "NicknameCaseMapped",
     "input": "\t",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\n",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\r",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u001f",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": " ",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -4860,7 +4860,7 @@
     "profile": "NicknameCaseMapped",
     "input": "\u00a0",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -5568,13 +5568,13 @@
     "profile": "NicknameCaseMapped",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6133,19 +6133,19 @@
     "profile": "NicknameCaseMapped",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6163,13 +6163,13 @@
     "profile": "NicknameCaseMapped",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6211,31 +6211,31 @@
     "profile": "NicknameCaseMapped",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6265,13 +6265,13 @@
     "profile": "NicknameCaseMapped",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "CONTEXTO/arabic_indic"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "CONTEXTO/extended_arabic_indic"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6349,7 +6349,7 @@
     "profile": "NicknameCaseMapped",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6367,7 +6367,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6415,7 +6415,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": " ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6451,7 +6451,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00a0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6541,7 +6541,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u24c0evin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6589,25 +6589,25 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83c\udd1aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83c\udd3aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83c\udd5aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83c\udd7aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6692,13 +6692,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Foo Bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "foo bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6722,13 +6722,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u265a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Richard \u2163",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6746,7 +6746,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u19da",
     "output": null,
-    "error": "FREE_PVAL/other_letter_digits"
+    "error": "DISALLOWED/other_letter_digits"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6812,25 +6812,25 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufec9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufeca",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufecb",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufecc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6848,7 +6848,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u3300",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6860,37 +6860,37 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "i\u2079",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00bc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u01c6",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe37",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u210c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u210d",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6938,7 +6938,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe69",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6950,13 +6950,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u20a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83c\uddfa\ud83c\uddf8",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -6974,13 +6974,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u24c0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u2460",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7052,7 +7052,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufb01",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7070,13 +7070,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83d\udc7e",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ud83d\udc9a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7130,7 +7130,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1806",
     "output": null,
-    "error": "FREE_PVAL/punctuation"
+    "error": "DISALLOWED/punctuation"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7160,13 +7160,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7280,25 +7280,25 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Juliet Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": " Juliet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Juliet ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Juliet  Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7316,25 +7316,25 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "'Juliet '",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "' Juliet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "'Juliet Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "'Juliet  Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7359,31 +7359,31 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u05d0\u05d1+",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "+\u05d0\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "A\u05d0\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u05d0\u05d1A",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u05d0A\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7407,7 +7407,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Juliet\u05d1",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7425,319 +7425,319 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00af",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b4",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u02d8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u02d9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u02da",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u02db",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u02dc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u02dd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u037a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0384",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0385",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fbd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fbf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fc0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fc1",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fcd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fce",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fcf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fdd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fde",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fdf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fed",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fee",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1ffd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1ffe",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u2017",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u203e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u309b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u309c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufc5e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufc5f",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufc60",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufc61",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufc62",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufc63",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe49",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe4a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe4b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe4c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe70",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe72",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe74",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe76",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe78",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe7a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe7c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\ufe7e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\uffe3",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7755,13 +7755,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7803,37 +7803,37 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7857,13 +7857,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7929,7 +7929,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0600",
     "output": null,
-    "error": "bidi rule"
+    "error": "DISALLOWED/bidi_rule"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7941,7 +7941,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7959,7 +7959,7 @@
     "profile": "NicknameCasePreserved",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -7983,31 +7983,31 @@
     "profile": "NicknameCasePreserved",
     "input": "\t",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\n",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\r",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u001f",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": " ",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -8043,7 +8043,7 @@
     "profile": "NicknameCasePreserved",
     "input": "\u00a0",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -8751,13 +8751,13 @@
     "profile": "NicknameCasePreserved",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9316,19 +9316,19 @@
     "profile": "NicknameCasePreserved",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9340,19 +9340,19 @@
     "profile": "NicknameCasePreserved",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9394,31 +9394,31 @@
     "profile": "NicknameCasePreserved",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9448,13 +9448,13 @@
     "profile": "NicknameCasePreserved",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "CONTEXTO/arabic_indic"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "CONTEXTO/extended_arabic_indic"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9532,7 +9532,7 @@
     "profile": "NicknameCasePreserved",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9550,7 +9550,7 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -9574,31 +9574,31 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\t",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\n",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\r",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u001f",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": " ",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -9634,7 +9634,7 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00a0",
     "output": null,
-    "error": "empty"
+    "error": "DISALLOWED/empty"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -10343,13 +10343,13 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -10908,19 +10908,19 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -10938,13 +10938,13 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -10986,31 +10986,31 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -11040,13 +11040,13 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "CONTEXTO/arabic_indic"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "CONTEXTO/extended_arabic_indic"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -11124,7 +11124,7 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -11934,13 +11934,13 @@
     "profile": "FreeFormClass",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "FreeFormClass",
@@ -12499,19 +12499,19 @@
     "profile": "FreeFormClass",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
@@ -12523,19 +12523,19 @@
     "profile": "FreeFormClass",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
@@ -12577,31 +12577,31 @@
     "profile": "FreeFormClass",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "FreeFormClass",
@@ -12631,13 +12631,13 @@
     "profile": "FreeFormClass",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "CONTEXTO/arabic_indic"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "FreeFormClass",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "CONTEXTO/extended_arabic_indic"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "FreeFormClass",
@@ -12715,7 +12715,7 @@
     "profile": "FreeFormClass",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "FreeFormClass",
@@ -12781,7 +12781,7 @@
     "profile": "IdentifierClass",
     "input": " ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
@@ -12817,7 +12817,7 @@
     "profile": "IdentifierClass",
     "input": "\u00a0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -12865,7 +12865,7 @@
     "profile": "IdentifierClass",
     "input": "\u212aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -12907,7 +12907,7 @@
     "profile": "IdentifierClass",
     "input": "\u24c0evin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -12943,7 +12943,7 @@
     "profile": "IdentifierClass",
     "input": "\uff2bevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -12955,25 +12955,25 @@
     "profile": "IdentifierClass",
     "input": "\ud83c\udd1aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ud83c\udd3aevin",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ud83c\udd5aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ud83c\udd7aevin",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "IdentifierClass",
@@ -13057,13 +13057,13 @@
     "profile": "IdentifierClass",
     "input": "Foo Bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": "foo bar",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
@@ -13087,13 +13087,13 @@
     "profile": "IdentifierClass",
     "input": "\u265a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "IdentifierClass",
     "input": "Richard \u2163",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
@@ -13111,7 +13111,7 @@
     "profile": "IdentifierClass",
     "input": "\u19da",
     "output": null,
-    "error": "FREE_PVAL/other_letter_digits"
+    "error": "DISALLOWED/other_letter_digits"
   },
   {
     "profile": "IdentifierClass",
@@ -13177,31 +13177,31 @@
     "profile": "IdentifierClass",
     "input": "\ufec9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufeca",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufecb",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufecc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\uff76",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13213,7 +13213,7 @@
     "profile": "IdentifierClass",
     "input": "\u3300",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13225,37 +13225,37 @@
     "profile": "IdentifierClass",
     "input": "i\u2079",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00bc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u01c6",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe37",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u210c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u210d",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13267,43 +13267,43 @@
     "profile": "IdentifierClass",
     "input": "\u037e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fef",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u212a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\uff01",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\uff04",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe69",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13315,13 +13315,13 @@
     "profile": "IdentifierClass",
     "input": "\u20a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ud83c\uddfa\ud83c\uddf8",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "IdentifierClass",
@@ -13333,19 +13333,19 @@
     "profile": "IdentifierClass",
     "input": "\u212a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u24c0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u2460",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13357,7 +13357,7 @@
     "profile": "IdentifierClass",
     "input": "\u2126",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13399,7 +13399,7 @@
     "profile": "IdentifierClass",
     "input": "\u212b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13417,7 +13417,7 @@
     "profile": "IdentifierClass",
     "input": "\ufb01",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13435,31 +13435,31 @@
     "profile": "IdentifierClass",
     "input": "\ud83d\udc7e",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ud83d\udc9a",
     "output": null,
-    "error": "FREE_PVAL/symbols"
+    "error": "DISALLOWED/symbols"
   },
   {
     "profile": "IdentifierClass",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13471,13 +13471,13 @@
     "profile": "IdentifierClass",
     "input": "\u037e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
@@ -13495,7 +13495,7 @@
     "profile": "IdentifierClass",
     "input": "\u1806",
     "output": null,
-    "error": "FREE_PVAL/punctuation"
+    "error": "DISALLOWED/punctuation"
   },
   {
     "profile": "IdentifierClass",
@@ -13525,13 +13525,13 @@
     "profile": "IdentifierClass",
     "input": "\u200c",
     "output": null,
-    "error": "CONTEXTJ/zero_width_nonjoiner"
+    "error": "DISALLOWED/zero_width_nonjoiner"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u200d",
     "output": null,
-    "error": "CONTEXTJ/zero_width_joiner"
+    "error": "DISALLOWED/zero_width_joiner"
   },
   {
     "profile": "IdentifierClass",
@@ -13645,25 +13645,25 @@
     "profile": "IdentifierClass",
     "input": "Juliet Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": " Juliet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": "Juliet ",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": "Juliet  Capulet",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
@@ -13681,25 +13681,25 @@
     "profile": "IdentifierClass",
     "input": "'Juliet '",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": "' Juliet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": "'Juliet Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
     "input": "'Juliet  Capulet'",
     "output": null,
-    "error": "FREE_PVAL/spaces"
+    "error": "DISALLOWED/spaces"
   },
   {
     "profile": "IdentifierClass",
@@ -13790,319 +13790,319 @@
     "profile": "IdentifierClass",
     "input": "\u00a8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00af",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00b4",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00b8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u02d8",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u02d9",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u02da",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u02db",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u02dc",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u02dd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u037a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u0384",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u0385",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fbd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fbf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fc0",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fc1",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fcd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fce",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fcf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fdd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fde",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fdf",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fed",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1fee",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1ffd",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u1ffe",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u2017",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u203e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u309b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u309c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufc5e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufc5f",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufc60",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufc61",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufc62",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufc63",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe49",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe4a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe4b",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe4c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe70",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe72",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe74",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe76",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe78",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe7a",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe7c",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\ufe7e",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\uffe3",
     "output": null,
-    "error": "FREE_PVAL/has_compat"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u00b7l",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "l\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
@@ -14114,19 +14114,19 @@
     "profile": "IdentifierClass",
     "input": "ruL\u00b7Lz",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "rul\u00b7ze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "ru\u00b7lze",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
@@ -14168,31 +14168,31 @@
     "profile": "IdentifierClass",
     "input": "\u00b7",
     "output": null,
-    "error": "CONTEXTO/middle_dot"
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u0375",
     "output": null,
-    "error": "CONTEXTO/greek"
+    "error": "DISALLOWED/greek_keraia"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u05f3",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u05f4",
     "output": null,
-    "error": "CONTEXTO/hebrew"
+    "error": "DISALLOWED/hebrew_punctuation"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u30fb",
     "output": null,
-    "error": "CONTEXTO/katakana_middle_dot"
+    "error": "DISALLOWED/katakana_middle_dot"
   },
   {
     "profile": "IdentifierClass",
@@ -14222,13 +14222,13 @@
     "profile": "IdentifierClass",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "CONTEXTO/arabic_indic"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "IdentifierClass",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "CONTEXTO/extended_arabic_indic"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "IdentifierClass",
@@ -14306,7 +14306,7 @@
     "profile": "IdentifierClass",
     "input": "\udb40\uddf0",
     "output": null,
-    "error": "UNASSIGNED/unassigned"
+    "error": "DISALLOWED/unassigned"
   },
   {
     "profile": "IdentifierClass",
