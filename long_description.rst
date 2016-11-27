@@ -47,7 +47,7 @@ will raise a ``UnicodeEncodeError`` if the string is disallowed.
     >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
     Traceback (most recent call last):
         ...
-    UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+    UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
 Alternatively, you can use a PRECIS profile directly, without installing
 a codec.
@@ -66,7 +66,7 @@ a codec.
     >>> username.enforce('\U0001F17Aevin')
     Traceback (most recent call last):
         ...
-    UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+    UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
 Supported Profiles and Codecs
 -----------------------------

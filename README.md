@@ -32,7 +32,7 @@ b'\xef\xbc\xabevin'
 >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
 Traceback (most recent call last):
     ...
-UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
 ```
 
@@ -51,7 +51,7 @@ b'kevin'
 >>> username.enforce('\U0001F17Aevin')
 Traceback (most recent call last):
     ...
-UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: FREE_PVAL/symbols
+UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
 ```
 
@@ -83,7 +83,7 @@ kind of error.
 Reason | Explanation
 -------|-------------
 DISALLOWED/arabic_indic | Arabic-Indic digits cannot be mixed with Extended Arabic-Indic Digits. (Context)
-DISALLOWED/bidi_rule | Right-to-left characters violate the "Bidi" rule. (Context)
+DISALLOWED/bidi_rule | Right-to-left string cannot contain left-to-right characters due to the "Bidi" rule. (Context)
 DISALLOWED/controls | Control character is not allowed.
 DISALLOWED/empty | After applying the profile, the result cannot be empty.
 DISALLOWED/exceptions | Exception character is not allowed.
@@ -91,8 +91,8 @@ DISALLOWED/extended_arabic_indic | Extended Arabic-Indic digits cannot be mixed 
 DISALLOWED/greek_keraia | Greek keraia must be followed by a Greek character. (Context)
 DISALLOWED/has_compat | Compatibility characters are not allowed.
 DISALLOWED/hebrew_punctuation | Hebrew punctuation geresh or gershayim must be preceded by Hebrew character. (Context)
-DISALLOWED/katakana_middle_dot | Katakana middle dot must be accompanied by a "Hiragana", "Katakana", or "Han" character. (Context)
-DISALLOWED/middle_dot | Middle dot must be between 'l' characters. (Context)
+DISALLOWED/katakana_middle_dot | Katakana middle dot must be accompanied by a Hiragana, Katakana, or Han character. (Context)
+DISALLOWED/middle_dot | Middle dot must be surrounded by the letter 'l'. (Context)
 DISALLOWED/old_hangul_jamo | Conjoining Hangul Jamo is not allowed.
 DISALLOWED/other | Other character is not allowed.
 DISALLOWED/other_letter_digits | Non-traditional letter or digit is not allowed.
