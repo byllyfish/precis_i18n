@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+
+- Improve error messages when a string is disallowed.
+- Clean up test examples. Add a few more test cases.
+
 ## 0.3.0
 
 - Added the `get_profile` function to access profiles, when not using the codec.
