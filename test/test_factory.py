@@ -20,9 +20,9 @@ class TestUsernameCasePreserved(unittest.TestCase):
             b'\xc3\x89\xcc\x81\xcc\x81')
         self.assertEqual(profile.enforce(b'Juliet'), b'Juliet')
 
-        self.profile_fail(profile, '', r'empty')
-        self.profile_fail(profile, ' J', r'x')
-        self.profile_fail(profile, '\u05d0*', r'bidi_rule')
+        self.profile_fail(profile, '', 'empty')
+        self.profile_fail(profile, ' J', 'spaces')
+        self.profile_fail(profile, '\u05d0*', 'bidi_rule')
 
     def profile_fail(self, profile, value, reason):
         with self.assertRaisesRegex(UnicodeEncodeError, reason):

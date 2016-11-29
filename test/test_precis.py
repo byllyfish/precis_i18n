@@ -1,12 +1,15 @@
 # test_precis.py
 
 import unittest
+import platform
 
 import precis_i18n.context as pc
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass
 from precis_i18n.bidi import bidi_rule, has_rtl
 from precis_i18n.derived import derived_property
 from precis_i18n.unicode import UnicodeData, _version_to_float
+
+_PYPY = (platform.python_implementation() == 'PyPy')
 
 UCD = UnicodeData()
 
@@ -130,7 +133,11 @@ class TestPrecisFreeformClass(unittest.TestCase):
                 UnicodeEncodeError,
                 r"'FreeFormClass' codec can't encode character '\\ud800' in position 0: DISALLOWED/other"
         ):
-            free.enforce('\ud800\udc00')
+            if _PYPY:
+                # pypy3-v5.5.0 treats surrogate pairs in .pyc files differently. (issue #2441)
+                free.enforce('\ud800 \udc00')
+            else:
+                free.enforce('\ud800\udc00')
 
 
 class TestDerivedProperty(unittest.TestCase):

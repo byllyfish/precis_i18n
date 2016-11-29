@@ -57,7 +57,7 @@ class Profile(object):
         temp = self.directionality_rule(temp)
         # Make sure the resulting value is not empty.
         if not temp:
-            raise_error(self.name, temp, 0, 'empty')
+            raise_error(self.name, value, -1, 'empty')
         # Apply behavioral rules from the base string class last.
         return self.base.enforce(temp, self.name)
 
