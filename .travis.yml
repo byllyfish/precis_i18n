@@ -20,15 +20,15 @@ install:
           rm -rf "$PYENV_ROOT" && git clone --depth 1 https://github.com/yyuu/pyenv.git "$PYENV_ROOT"
         fi
         "$PYENV_ROOT/bin/pyenv" install --skip-existing "$PYPY3_VERSION"
-        virtualenv --python="$PYENV_ROOT/versions/$PYPY3_VERSION/bin/python" "$HOME/virtualenvs/$PYPY3_VERSION"
+        virtualenv --version
+        virtualenv --python="$PYENV_ROOT/versions/$PYPY3_VERSION/bin/python" --no-setuptools --no-pip --no-wheel "$HOME/virtualenvs/$PYPY3_VERSION"
         source "$HOME/virtualenvs/$PYPY3_VERSION/bin/activate"
       fi
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
-
 script:
   - python3 -m unittest discover
   - python3 -m doctest README.md long_description.rst
-  - coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py
+  - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py; fi
 
 after_success:
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then codecov; fi
