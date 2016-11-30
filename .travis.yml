@@ -3,14 +3,33 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
+  - "3.6-dev"
   - "nightly"
-  - "pypy3.3-5.5-alpha"
+  - "pypy3"
+
 install:
-  - pip3 install codecov
+  # Install a recent build of pypy3.
+  # https://github.com/frol/flask-restplus-server-example/blob/master/.travis.yml
+  - |
+      if [ "$TRAVIS_PYTHON_VERSION" = "pypy3" ]; then
+        PYPY3_VERSION="pypy3.3-5.5-alpha"
+        PYENV_ROOT="$HOME/.pyenv"
+        if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
+          pushd "$PYENV_ROOT" && git pull && popd
+        else
+          rm -rf "$PYENV_ROOT" && git clone --depth 1 https://github.com/yyuu/pyenv.git "$PYENV_ROOT"
+        fi
+        "$PYENV_ROOT/bin/pyenv" install --skip-existing "$PYPY3_VERSION"
+        virtualenv --python="$PYENV_ROOT/versions/$PYPY3_VERSION/bin/python" "$HOME/virtualenvs/$PYPY3_VERSION"
+        source "$HOME/virtualenvs/$PYPY3_VERSION/bin/activate"
+      fi
+  - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
+
 script:
   - python3 -m unittest discover
   - python3 -m doctest README.md long_description.rst
   - coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py
+
 after_success:
-  - if [ "$TRAVIS_PYTHON_VERSION" != "nightly" ]; then codecov; fi
+  - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then codecov; fi
 
