@@ -21,7 +21,7 @@ install:
         fi
         "$PYENV_ROOT/bin/pyenv" install --skip-existing "$PYPY3_VERSION"
         virtualenv --version
-        virtualenv --python="$PYENV_ROOT/versions/$PYPY3_VERSION/bin/python" --no-setuptools --no-pip --no-wheel "$HOME/virtualenvs/$PYPY3_VERSION"
+        virtualenv --python="$PYENV_ROOT/versions/$PYPY3_VERSION/bin/python" --no-setuptools --no-pip "$HOME/virtualenvs/$PYPY3_VERSION"
         source "$HOME/virtualenvs/$PYPY3_VERSION/bin/activate"
       fi
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
