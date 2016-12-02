@@ -1,6 +1,4 @@
-"""
-Implements the PRECIS (RFC 7564) `derived_property` function.
-"""
+"""Implements the PRECIS (RFC 7564) `derived_property` function."""
 
 PVALID = 'PVALID'
 FREE_PVAL = 'FREE_PVAL'
@@ -13,8 +11,9 @@ CONTEXTO = 'CONTEXTO'
 
 
 def derived_property(cp, ucd):
-    """ Return value of the PRECIS derived property of a code point.
-        From section 8 of RFC 7564:
+    """Return value of the PRECIS derived property of a code point.
+
+    From section 8 of RFC 7564:
 
        If .cp. .in. Exceptions Then Exceptions(cp);
        Else If .cp. .in. BackwardCompatible Then BackwardCompatible(cp);
@@ -31,6 +30,13 @@ def derived_property(cp, ucd):
        Else If .cp. .in. Symbols Then ID_DIS or FREE_PVAL;
        Else If .cp. .in. Punctuation Then ID_DIS or FREE_PVAL;
        Else DISALLOWED;
+
+    Args:
+        cp (int): Code point.
+        ucd (UnicodeData): Unicode character database.
+
+    Returns:
+        str: Derived property for `cp`.
     """
     category = ucd.category(chr(cp))
 
@@ -67,103 +73,205 @@ def derived_property(cp, ucd):
 
 
 def in_letter_digits(category):
-    """ Category for code points informally described as "language characters".
+    """Category for code points informally described as "language characters".
+
+    Args:
+        category (str): Unicode general category.
+
+    Returns:
+        bool: True if `category` in set.
     """
     return category in {'Ll', 'Lu', 'Lo', 'Nd', 'Lm', 'Mn', 'Mc'}
 
 
 def in_exceptions(cp):
-    """ Code points for which the derived property cannot be assigned using
+    """Code points for which the derived property cannot be assigned using
     only the Unicode core property values.
+
+    Args:
+        cp (int): Code point.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return cp in _EXCEPTIONS_TABLE
 
 
 def in_backward_compatible(cp):
-    """ Code points whose Unicode property values have changed such that their
+    """Code points whose Unicode property values have changed such that their
     derived property changed.
+
+    Args:
+        cp (int): Code point.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return cp in _BACKWARD_COMPATIBLE_TABLE
 
 
 def in_join_control(cp):
-    """ Code points for Join Control characters required under some
+    """Code points for Join Control characters required under some
     circumstances. (CONTEXTJ)
+
+    Args:
+        cp (int): Code point.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return 0x200c <= cp <= 0x200d
 
 
 def in_old_hangul_jamo(cp, ucd):
-    """ Code points for all conjoining Hangul Jamo (Leading Jamo, Vowel Jamo,
+    """Code points for all conjoining Hangul Jamo (Leading Jamo, Vowel Jamo,
     and Trailing Jamo).
+
+    Args:
+        cp (int): Code point.
+        ucd (UnicodeData): Unicode character database.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return ucd.old_hangul_jamo(cp)
 
 
 def in_unassigned(cp, category, ucd):
-    """ Code points that are not (yet) assigned in Unicode.
+    """Code points that are not (yet) assigned in Unicode.
+
+    Args:
+        cp (int): Code point.
+        category (str): Unicode general category for `cp`.
+        ucd (UnicodeData): Unicode character database.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return category == 'Cn' and not ucd.noncharacter(cp)
 
 
 def in_ascii7(cp):
-    """ Code points for all printable, non-space characters from the 7-bit
-    ASCII range
+    """Code points for all printable, non-space characters from the 7-bit
+    ASCII range.
+
+    Args:
+        cp (int): Code point.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return 0x21 <= cp <= 0x7E
 
 
 def in_controls(cp, ucd):
-    """ Code points for all control characters.
+    """Code points for all control characters.
+
+    Args:
+        cp (int): Code point.
+        ucd (UnicodeData): Unicode character database.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return ucd.control(cp)
 
 
 def in_precis_ignorable_properties(cp, ucd):
-    """ Code points that are discouraged from use in PRECIS string classes.
+    """Code points that are discouraged from use in PRECIS string classes.
+
+    Args:
+        cp (int): Code point.
+        ucd (UnicodeData): Unicode character database.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return ucd.default_ignorable(cp) or ucd.noncharacter(cp)
 
 
 def in_spaces(category):
-    """ Category for code points that are space characters.
+    """Category for code points that are space characters.
+
+    Args:
+        category (str): Unicode general category.
+
+    Returns:
+        bool: True if `category` in set.
     """
     return category in {'Zs'}
 
 
 def in_symbols(category):
-    """ Category for code points that are symbols.
+    """Category for code points that are symbols.
+
+    Args:
+        category (str): Unicode general category.
+
+    Returns:
+        bool: True if `category` in set.
     """
     return category in {'Sm', 'Sc', 'Sk', 'So'}
 
 
 def in_punctuation(category):
-    """ Category for code points that are punctuation characters.
+    """Category for code points that are punctuation characters.
+
+    Args:
+        category (str): Unicode general category.
+
+    Returns:
+        bool: True if `category` in set.
     """
     return category in {'Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'}
 
 
 def in_has_compat(cp, ucd):
-    """ Code points that have compatibility equivalents.
+    """Code points that have compatibility equivalents.
+
+    Args:
+        cp (int): Code point.
+        ucd (UnicodeData): Unicode character database.
+
+    Returns:
+        bool: True if `cp` is in set.
     """
     return ucd.has_compat(cp)
 
 
 def in_other_letter_digits(category):
-    """ Code points that are letters and digits other than the "traditional"
-    letters and digits
+    """Code points that are letters and digits other than the "traditional"
+    letters and digits.
+
+    Args:
+        category (str): Unicode general category.
+
+    Returns:
+        bool: True if `category` in set.
     """
     return category in {'Lt', 'Nl', 'No', 'Me'}
 
 
 def exceptions(cp):
-    """ Return derived property for exception codepoint.
+    """Return derived property for exception codepoint.
+
+    Args:
+        cp (int): Code point.
+
+    Returns:
+        str: Derived property for `cp`.
     """
     return _EXCEPTIONS_TABLE[cp]
 
 
 def backward_compatible(cp):  # pragma: no cover
-    """ Return derived property for backward-compatible code point.
+    """Return derived property for backward-compatible code point.
+
+    Args:
+        cp (int): Code point.
+
+    Returns:
+        str: Derived property for `cp`.
     """
     return _BACKWARD_COMPATIBLE_TABLE[cp]
 

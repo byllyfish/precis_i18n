@@ -21,7 +21,13 @@ def _not_supported(s, errors='strict'):
 
 
 def search(name):
-    """ Search function to register for PRECIS codecs.
+    """Search function registered for PRECIS codecs.
+
+    Args:
+        name (str): Codec name.
+
+    Returns:
+        CodecInfo: Encode/decode information.
     """
     return codecs.CodecInfo(
         name=name,

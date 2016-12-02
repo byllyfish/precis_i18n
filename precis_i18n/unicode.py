@@ -1,6 +1,4 @@
-"""
-Implements the UnicodeData class.
-"""
+"""Implements the UnicodeData class."""
 
 import re
 import unicodedata
@@ -17,10 +15,12 @@ def _version_to_float(version):
 
 
 class UnicodeData(object):
-    """
-    Adapter for Python's built-in unicodedata module.
+    """Adapter for Python's built-in unicodedata module.
 
     This class extends the unicodedata module for use in PRECIS profiles.
+
+    Args:
+        ucd (Union[module,object]): Implements `unicodedata` interface.
     """
 
     _halfwidth_chars = re.compile(r'[\uff01-\uffef]')
@@ -49,7 +49,13 @@ class UnicodeData(object):
         return self._ucd.normalize(form, value)
 
     def width_map(self, value):
-        """ Map half-width and full-width chars to their compat equivs.
+        """Map half-width and full-width chars to their compat equivs.
+
+        Args:
+            value (str): Value to transform.
+
+        Returns:
+            str: Result.
         """
 
         def _decompose(m):
@@ -61,7 +67,13 @@ class UnicodeData(object):
         return self._halfwidth_chars.sub(_decompose, value)
 
     def map_nonascii_space_to_ascii(self, value):
-        """ Convert non-ASCII white space {Zs} to ASCII ' '.
+        """Convert non-ASCII white space {Zs} to ASCII space.
+
+        Args:
+            value (str): Value to transform.
+
+        Returns:
+            str: Result.
         """
         return self._space_chars.sub(' ', value)
 

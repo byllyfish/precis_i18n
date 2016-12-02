@@ -1,6 +1,4 @@
-"""
-Implements the PRECIS string classes.
-"""
+"""Implements the PRECIS string classes."""
 
 from precis_i18n.context import context_rule_error
 from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
@@ -8,33 +6,38 @@ from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
 
 
 class BaseClass(object):
-    """ Abstract base class for all String classes in PRECIS framework.
+    """Abstract base class for all String classes in PRECIS framework.
 
-    Subclasses must set `_allowed` to a tuple of derived property names.
+    Subclasses must set `_allowed` to a tuple of derived property names. For
+    example, `_allowed = (PVALID, )`.
+
+    Args:
+        ucd (UnicodeData): Unicode character database.
+        name (str): String class name.
+
+    Attributes:
+        ucd (UnicodeData): Unicode character database.
+        name (str): String class name.
     """
     _allowed = ()
 
     def __init__(self, ucd, name):
-        self._ucd = ucd
-        self._name = name
-
-    @property
-    def ucd(self):
-        """ Unicode character database.
-        """
-        return self._ucd
-
-    @property
-    def name(self):
-        """ The profile's name.
-        """
-        return self._name
+        self.ucd = ucd
+        self.name = name
 
     def enforce(self, value, codec_name=None):
-        """ Ensure that all characters in `value` are allowed by the string
-        class.
+        """Ensure that all characters in `value` are allowed by the string class.
 
-        Return UTF-8 `value` or raise a `UnicodeEncodeError`.
+        Args:
+            value (str): String value to enforce.
+            codec_name (Optional[str]): Codec name to report in exceptions. If
+                None, use `self.name`.
+
+        Returns:
+            bytes: Value encoded in UTF-8.
+
+        Raises:
+            UnicodeEncodeError: Value is disallowed by the string class.
         """
         if codec_name is None:
             codec_name = self.name
@@ -57,7 +60,11 @@ class BaseClass(object):
 
 
 class IdentifierClass(BaseClass):
-    """ Concrete class representing PRECIS IdentifierClass from RFC 7564.
+    """Concrete class representing PRECIS IdentifierClass from RFC 7564.
+
+    Args:
+        ucd (UnicodeData): Unicode character database.
+        name (str): String class name.
     """
     _allowed = (PVALID, )
 
@@ -66,7 +73,11 @@ class IdentifierClass(BaseClass):
 
 
 class FreeFormClass(BaseClass):
-    """ Concrete class repsenting PRECIS FreeFormClass from RFC 7564.
+    """Concrete class repsenting PRECIS FreeFormClass from RFC 7564.
+
+    Args:
+        ucd (UnicodeData): Unicode character database.
+        name (str): String class name.
     """
     _allowed = (PVALID, FREE_PVAL)
 
@@ -75,7 +86,17 @@ class FreeFormClass(BaseClass):
 
 
 def raise_error(encoding, value, offset, error):
-    """ Raise formatted UnicodeEncodeError exception.
+    """Raise specially formatted UnicodeEncodeError exception.
+
+    Args:
+        encoding (str): Name of the encoding/codec.
+        value (str): Value being encoded.
+        offset (int): Offset in `value` where error detected. Use -1 to indicate
+            the entire string.
+        error (str): Subtype of error detected.
+
+    Raises:
+        UnicodeEncodeError: Always.
     """
     if offset < 0:
         start = 0

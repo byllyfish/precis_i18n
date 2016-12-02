@@ -1,6 +1,4 @@
-"""
-Implements the PRECIS profile classes.
-"""
+"""Implements the PRECIS profile classes."""
 
 import re
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass, raise_error
@@ -10,10 +8,14 @@ from precis_i18n.bidi import bidi_rule, has_rtl
 
 
 class Profile(object):
-    """
-    Abstract base class for a PRECIS profile.
+    """Base class for a PRECIS profile.
 
     Subclasses should override the `*_rule` methods.
+
+    Args:
+        base (BaseClass): Base string class.
+        name (str): Name of profile.
+        casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
 
     def __init__(self, base, name, casemap=None):
@@ -31,18 +33,28 @@ class Profile(object):
 
     @property
     def base(self):
-        """ The profile's base string instance.
-        """
+        """Base string class."""
         return self._base
 
     @property
     def name(self):
-        """ The profile's name.
-        """
+        """Profile name."""
         return self._name
 
     def enforce(self, value):
-        """ Enforce the profile.
+        """Ensure that all characters in `value` are allowed by the profile.
+
+        If `value` is bytes, it's first decoded as UTF-8 to a string.
+
+        Args:
+            value (Union[str, bytes]): String value to enforce.
+
+        Returns:
+            bytes: Value encoded in UTF-8.
+
+        Raises:
+            UnicodeEncodeError: Value is disallowed by the profile.
+            ValueError: `value` not a string or bytes.
         """
         # If we get called with a byte string, decode it first.
         if isinstance(value, bytes):
@@ -62,58 +74,107 @@ class Profile(object):
         return self.base.enforce(temp, self.name)
 
     def width_mapping_rule(self, value):
+        """Apply width mapping rule.
+
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
         return value
 
     def additional_mapping_rule(self, value):
+        """Apply additional mapping rule.
+
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
         return value
 
     def case_mapping_rule(self, value):
+        """Apply case mapping rule.
+
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
         if self._casemap:
             return self._casemap(value)
         return value
 
     def normalization_rule(self, value):
+        """Apply normalization rule.
+
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
         return self.base.ucd.normalize('NFC', value)
 
     def directionality_rule(self, value):
+        """Apply directionality rule.
+
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
         return value
 
 
 class Username(Profile):
-    """
-    Name:  UsernameCasePreserved | UsernameCaseMapped
+    """Concrete class for Username profile.
 
-    Base Class:  IdentifierClass.
+    Reference:
+        Name:  UsernameCasePreserved | UsernameCaseMapped
 
-    Applicability:  Usernames in security and application protocols.
+        Base Class:  IdentifierClass.
 
-    Replaces:  The SASLprep profile of stringprep.
+        Applicability:  Usernames in security and application protocols.
 
-    Width-Mapping Rule:  Map fullwidth and halfwidth characters to their
-       decomposition mappings.
+        Replaces:  The SASLprep profile of stringprep.
 
-    Additional Mapping Rule:  None.
+        Width-Mapping Rule:  Map fullwidth and halfwidth characters to their
+           decomposition mappings.
 
-    Case-Mapping Rule:  None | Map uppercase and titlecase characters to
-       lowercase.
+        Additional Mapping Rule:  None.
 
-    Normalization Rule:  NFC.
+        Case-Mapping Rule:  None | Map uppercase and titlecase characters to
+           lowercase.
 
-    Directionality Rule:  The "Bidi Rule" defined in RFC 5893 applies.
+        Normalization Rule:  NFC.
 
-    Enforcement:  To be defined by security or application protocols that
-       use this profile.
+        Directionality Rule:  The "Bidi Rule" defined in RFC 5893 applies.
 
-    Specification:  RFC7613, Section 3.3.
+        Enforcement:  To be defined by security or application protocols that
+           use this profile.
+
+        Specification:  RFC7613, Section 3.3.
+
+    Args:
+        ucd (UnicodeData): Unicode character database.
+        name (str): Name of profile.
+        casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
 
     def __init__(self, ucd, name, casemap=None):
         super().__init__(IdentifierClass(ucd), name, casemap)
 
     def width_mapping_rule(self, value):
+        # Override
         return self.base.ucd.width_map(value)
 
     def directionality_rule(self, value):
+        # Override
         # Only apply the "bidi rule" if the string contains RTL characters.
         if has_rtl(value, self.base.ucd):
             if not bidi_rule(value, self.base.ucd):
@@ -122,78 +183,94 @@ class Username(Profile):
 
 
 class OpaqueString(Profile):
-    """
-    Name:  OpaqueString.
+    """Concrete class for OpaqueString profile.
 
-    Base Class:  FreeformClass.
+    Reference:
+        Name:  OpaqueString.
 
-    Applicability:  Passwords and other opaque strings in security and
-       application protocols.
+        Base Class:  FreeformClass.
 
-    Replaces:  The SASLprep profile of stringprep.
+        Applicability:  Passwords and other opaque strings in security and
+           application protocols.
 
-    Width-Mapping Rule:  None.
+        Replaces:  The SASLprep profile of stringprep.
 
-    Additional Mapping Rule:  Map non-ASCII space characters to ASCII
-       space.
+        Width-Mapping Rule:  None.
 
-    Case-Mapping Rule:  None.
+        Additional Mapping Rule:  Map non-ASCII space characters to ASCII
+           space.
 
-    Normalization Rule:  NFC.
+        Case-Mapping Rule:  None.
 
-    Directionality Rule:  None.
+        Normalization Rule:  NFC.
 
-    Enforcement:  To be defined by security or application protocols that
-       use this profile.
+        Directionality Rule:  None.
 
-    Specification:  RFC7613, Section 4.2.
+        Enforcement:  To be defined by security or application protocols that
+           use this profile.
+
+        Specification:  RFC7613, Section 4.2.
+
+    Args:
+        ucd (UnicodeData): Unicode character database.
+        name (str): Name of profile.
     """
 
     def __init__(self, ucd, name):
         super().__init__(FreeFormClass(ucd), name, casemap=None)
 
     def additional_mapping_rule(self, value):
+        # Override
         return self.base.ucd.map_nonascii_space_to_ascii(value)
 
 
 class Nickname(Profile):
-    """
-    Name:  Nickname.
+    """Concrete class for Nickname profile.
 
-    Base Class:  FreeformClass.
+    Reference:
+        Name:  Nickname.
 
-    Applicability:  Nicknames in messaging and text conferencing
-       technologies; petnames for devices, accounts, and people; and
-       other uses of nicknames or petnames.
+        Base Class:  FreeformClass.
 
-    Replaces:  None.
+        Applicability:  Nicknames in messaging and text conferencing
+           technologies; petnames for devices, accounts, and people; and
+           other uses of nicknames or petnames.
 
-    Width Mapping Rule:  None (handled via NFKC).
+        Replaces:  None.
 
-    Additional Mapping Rule:  Map non-ASCII space characters to ASCII
-       space, strip leading and trailing space characters, map interior
-       sequences of multiple space characters to a single ASCII space.
+        Width Mapping Rule:  None (handled via NFKC).
 
-    Case Mapping Rule:  Map uppercase and titlecase characters to
-       lowercase using Unicode Default Case Folding.
+        Additional Mapping Rule:  Map non-ASCII space characters to ASCII
+           space, strip leading and trailing space characters, map interior
+           sequences of multiple space characters to a single ASCII space.
 
-    Normalization Rule:  NFKC.
+        Case Mapping Rule:  Map uppercase and titlecase characters to
+           lowercase using Unicode Default Case Folding.
 
-    Directionality Rule:  None.
+        Normalization Rule:  NFKC.
 
-    Enforcement:  To be specified by applications.
+        Directionality Rule:  None.
 
-    Specification:  RFC7700
+        Enforcement:  To be specified by applications.
+
+        Specification:  RFC7700
+
+    Args:
+        ucd (UnicodeData): Unicode character database.
+        name (str): Name of profile.
+        casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
 
     def __init__(self, ucd, name, casemap=None):
         super().__init__(FreeFormClass(ucd), name, casemap)
 
     def additional_mapping_rule(self, value):
+        # Override
         temp = self.base.ucd.map_nonascii_space_to_ascii(value)
         return re.sub(r'  +', ' ', temp.strip())
 
     def normalization_rule(self, value):
+        # Override
         return self.base.ucd.normalize('NFKC', value)
 
 
