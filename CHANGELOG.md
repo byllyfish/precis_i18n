@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+- Add LICENSE.txt to source tarball (Issue 1).
+
 ## 0.4.0
 
 - Improve error messages when a string is disallowed.
