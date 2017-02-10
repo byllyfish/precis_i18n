@@ -3,6 +3,7 @@
 ## 0.4.1
 
 - Add LICENSE.txt and CHANGELOG.md to source tarball (Issue 1).
+- Update travis and pypi metadata for Python 3.6.
 
 ## 0.4.0
 
