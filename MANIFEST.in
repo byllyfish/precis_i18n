@@ -1,2 +1,2 @@
-include README.md long_description.rst test/golden.json
+include README.md LICENSE.txt long_description.rst test/golden.json
 exclude test/test_derived_props.py
