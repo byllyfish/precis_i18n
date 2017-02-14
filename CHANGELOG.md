@@ -1,8 +1,13 @@
 # Changelog
 
+## 0.5.0
+
+- (API CHANGE) Profile's `enforce` method now returns a Unicode string instead of UTF-8 bytes. This API change affects code that uses get_profile() to obtain a profile. The codec still returns UTF-8 bytes. (Issue 2)
+- The codec search function now returns None when it doesn't find a matching codec.
+
 ## 0.4.1
 
-- Add LICENSE.txt and CHANGELOG.md to source tarball (Issue 1).
+- Add LICENSE.txt and CHANGELOG.md to source tarball. (Issue 1)
 - Update travis and pypi metadata for Python 3.6.
 
 ## 0.4.0
