@@ -50,7 +50,7 @@ class Profile(object):
             value (Union[str, bytes]): String value to enforce.
 
         Returns:
-            bytes: Value encoded in UTF-8.
+            str: Enforced value.
 
         Raises:
             UnicodeEncodeError: Value is disallowed by the profile.

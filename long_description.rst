@@ -58,11 +58,11 @@ a codec.
     >>> from precis_i18n import get_profile
     >>> username = get_profile('UsernameCaseMapped')
     >>> username.enforce('Kevin')
-    b'kevin'
+    'kevin'
     >>> username.enforce('\u212Aevin')
-    b'kevin'
+    'kevin'
     >>> username.enforce('\uFF2Bevin')
-    b'kevin'
+    'kevin'
     >>> username.enforce('\U0001F17Aevin')
     Traceback (most recent call last):
         ...

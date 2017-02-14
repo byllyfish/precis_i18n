@@ -34,7 +34,7 @@ class BaseClass(object):
                 None, use `self.name`.
 
         Returns:
-            bytes: Value encoded in UTF-8.
+            str: Enforced value.
 
         Raises:
             UnicodeEncodeError: Value is disallowed by the string class.
@@ -56,7 +56,7 @@ class BaseClass(object):
 
             raise_error(codec_name, value, i, kind)
 
-        return value.encode('utf-8')
+        return value
 
 
 class IdentifierClass(BaseClass):

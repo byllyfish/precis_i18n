@@ -13,12 +13,12 @@ class TestGetProfile(unittest.TestCase):
 class TestUsernameCasePreserved(unittest.TestCase):
     def test_enforce(self):
         profile = get_profile('UsernameCasePreserved')
-        self.assertEqual(profile.enforce('Juliet'), b'Juliet')
-        self.assertEqual(profile.enforce('J*'), b'J*')
+        self.assertEqual(profile.enforce('Juliet'), 'Juliet')
+        self.assertEqual(profile.enforce('J*'), 'J*')
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'),
-            b'\xc3\x89\xcc\x81\xcc\x81')
-        self.assertEqual(profile.enforce(b'Juliet'), b'Juliet')
+            '\u00c9\u0301\u0301')
+        self.assertEqual(profile.enforce(b'Juliet'), 'Juliet')
 
         self.profile_fail(profile, '', 'empty')
         self.profile_fail(profile, ' J', 'spaces')
@@ -61,25 +61,25 @@ class TestUsernameCasePreserved(unittest.TestCase):
 class TestUsernameCaseMapped(unittest.TestCase):
     def test_enforce(self):
         profile = get_profile('UsernameCaseMapped')
-        self.assertEqual(profile.enforce('Juliet'), b'juliet')
+        self.assertEqual(profile.enforce('Juliet'), 'juliet')
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'),
-            b'\xc3\xa9\xcc\x81\xcc\x81')
+            '\u00e9\u0301\u0301')
 
 
 class TestNickname(unittest.TestCase):
     def test_enforce(self):
         profile = get_profile('Nickname')
-        self.assertEqual(profile.enforce('Juliet'), b'juliet')
+        self.assertEqual(profile.enforce('Juliet'), 'juliet')
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'),
-            b'\xc3\xa9\xcc\x81\xcc\x81')
+            '\u00e9\u0301\u0301')
 
 
 class TestUsername(unittest.TestCase):
     def test_constructor(self):
         profile = precis_i18n.profile.Username(UCD, 'name', 'lower')
-        self.assertEqual(profile.enforce('Fu\u00dfball'), b'fu\xc3\x9fball')
+        self.assertEqual(profile.enforce('Fu\u00dfball'), 'fu\u00dfball')
 
     def test_constructor_fail(self):
         with self.assertRaises(ValueError):

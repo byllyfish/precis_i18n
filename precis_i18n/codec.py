@@ -1,6 +1,4 @@
-"""
-Registers precis_i18n codec.
-"""
+"""Registers precis_i18n codec."""
 
 import codecs
 from precis_i18n import get_profile
@@ -10,7 +8,7 @@ def _make_encode(profile):
     def _encode(s, errors='strict'):
         if errors != 'strict':
             raise ValueError('invalid errors argument')
-        return (profile.enforce(s), len(s))
+        return (profile.enforce(s).encode('utf-8'), len(s))
 
     return _encode
 

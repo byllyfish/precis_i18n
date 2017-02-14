@@ -55,16 +55,16 @@ class TestBidiRule(unittest.TestCase):
 class TestPrecisIdentifierClass(unittest.TestCase):
     def test_valid_identifier(self):
         ident = IdentifierClass(UCD)
-        self.assertEqual(ident.enforce('abc').decode('utf-8'), 'abc')
-        self.assertEqual(ident.enforce('123').decode('utf-8'), '123')
+        self.assertEqual(ident.enforce('abc'), 'abc')
+        self.assertEqual(ident.enforce('123'), '123')
         self.assertEqual(
-            ident.enforce('\u0660\u0661\u0662\u0669').decode('utf-8'),
+            ident.enforce('\u0660\u0661\u0662\u0669'),
             '\u0660\u0661\u0662\u0669')
         self.assertEqual(
-            ident.enforce('\u0370\u0371').decode('utf-8'), '\u0370\u0371')
+            ident.enforce('\u0370\u0371'), '\u0370\u0371')
         # CONTEXTJ
         self.assertEqual(
-            ident.enforce('\u094d\u200c').decode('utf-8'), '\u094d\u200c')
+            ident.enforce('\u094d\u200c'), '\u094d\u200c')
 
     def test_invalid_identifier(self):
         ident = IdentifierClass(UCD)
@@ -101,15 +101,15 @@ class TestPrecisFreeformClass(unittest.TestCase):
     def test_valid_freeform(self):
         free = FreeFormClass(UCD)
 
-        self.assertEqual(free.enforce('abc').decode('utf-8'), 'abc')
-        self.assertEqual(free.enforce('123').decode('utf-8'), '123')
+        self.assertEqual(free.enforce('abc'), 'abc')
+        self.assertEqual(free.enforce('123'), '123')
         self.assertEqual(
-            free.enforce('\u0660\u0661\u0662\u0669').decode('utf-8'),
+            free.enforce('\u0660\u0661\u0662\u0669'),
             '\u0660\u0661\u0662\u0669')
         self.assertEqual(
-            free.enforce('\u0370\u0371').decode('utf-8'), '\u0370\u0371')
-        self.assertEqual(free.enforce(' ').decode('utf-8'), ' ')
-        self.assertEqual(free.enforce('\u1FBF').decode('utf-8'), '\u1FBF')
+            free.enforce('\u0370\u0371'), '\u0370\u0371')
+        self.assertEqual(free.enforce(' '), ' ')
+        self.assertEqual(free.enforce('\u1FBF'), '\u1FBF')
 
     def test_invalid_freeform(self):
         free = FreeFormClass(UCD)

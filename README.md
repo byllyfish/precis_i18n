@@ -2,7 +2,7 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt) [![Build Status](https://travis-ci.org/byllyfish/precis_i18n.svg?branch=master)](https://travis-ci.org/byllyfish/precis_i18n) [![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_i18n?branch=master)
 
-If you want your application to accept unicode user names and passwords, you must be careful in how you validate and compare them. The PRECIS framework makes internationalized user names and passwords safer for use by applications. PRECIS profiles transform unicode strings into a canonical UTF-8 form, suitable for byte-by-byte comparison.
+If you want your application to accept unicode user names and passwords, you must be careful in how you validate and compare them. The PRECIS framework makes internationalized user names and passwords safer for use by applications. PRECIS profiles transform unicode strings into a canonical form, suitable for comparison.
 
 This module implements the PRECIS Framework as described in:
 
@@ -14,7 +14,7 @@ Requires Python 3.3 or later.
 
 ## Usage
 
-Import the `precis_i18n.codec` module to register the PRECIS codec names. Use the `encode` method with any unicode string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
+Import the `precis_i18n.codec` module to register the PRECIS codec names. Use the `str.encode` method with any unicode string. The result will be a UTF-8 encoded byte string. `encode` will raise a `UnicodeEncodeError` if the string is disallowed.
 
 ```
 
@@ -36,18 +36,18 @@ UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001
 
 ```
 
-Alternatively, you can use a PRECIS profile directly, without installing a codec.
+Alternatively, you can use a PRECIS profile directly, without installing a codec. Use `get_profile` to obtain a profile object, then use its `enforce` method. The `enforce` method returns a Unicode string.
 
 ```
 
 >>> from precis_i18n import get_profile
 >>> username = get_profile('UsernameCaseMapped')
 >>> username.enforce('Kevin')
-b'kevin'
+'kevin'
 >>> username.enforce('\u212Aevin')
-b'kevin'
+'kevin'
 >>> username.enforce('\uFF2Bevin')
-b'kevin'
+'kevin'
 >>> username.enforce('\U0001F17Aevin')
 Traceback (most recent call last):
     ...
