@@ -60,11 +60,9 @@ class TestPrecisIdentifierClass(unittest.TestCase):
         self.assertEqual(
             ident.enforce('\u0660\u0661\u0662\u0669'),
             '\u0660\u0661\u0662\u0669')
-        self.assertEqual(
-            ident.enforce('\u0370\u0371'), '\u0370\u0371')
+        self.assertEqual(ident.enforce('\u0370\u0371'), '\u0370\u0371')
         # CONTEXTJ
-        self.assertEqual(
-            ident.enforce('\u094d\u200c'), '\u094d\u200c')
+        self.assertEqual(ident.enforce('\u094d\u200c'), '\u094d\u200c')
 
     def test_invalid_identifier(self):
         ident = IdentifierClass(UCD)
@@ -106,8 +104,7 @@ class TestPrecisFreeformClass(unittest.TestCase):
         self.assertEqual(
             free.enforce('\u0660\u0661\u0662\u0669'),
             '\u0660\u0661\u0662\u0669')
-        self.assertEqual(
-            free.enforce('\u0370\u0371'), '\u0370\u0371')
+        self.assertEqual(free.enforce('\u0370\u0371'), '\u0370\u0371')
         self.assertEqual(free.enforce(' '), ' ')
         self.assertEqual(free.enforce('\u1FBF'), '\u1FBF')
 

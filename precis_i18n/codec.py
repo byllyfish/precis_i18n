@@ -33,9 +33,7 @@ def search(name):
         return None
 
     return codecs.CodecInfo(
-        name=name,
-        encode=_make_encode(profile),
-        decode=_not_supported)
+        name=name, encode=_make_encode(profile), decode=_not_supported)
 
 
 codecs.register(search)
