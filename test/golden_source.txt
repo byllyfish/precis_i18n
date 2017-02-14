@@ -367,3 +367,7 @@ ru\u00b7lze
 \uD800
 \uD8FF
 
+# Discussed on mailing list.
+
+\u03A8\u03D3\u03A7\u0397
+

@@ -1591,6 +1591,12 @@
     "error": "DISALLOWED/other"
   },
   {
+    "profile": "UsernameCasePreserved",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
     "profile": "UsernameCaseMapped",
     "input": "",
     "output": null,
@@ -3180,6 +3186,12 @@
     "input": "\ud8ff",
     "output": null,
     "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "OpaqueString",
@@ -4773,6 +4785,12 @@
     "error": "DISALLOWED/other"
   },
   {
+    "profile": "OpaqueString",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": "\u03a8\u03d3\u03a7\u0397",
+    "error": null
+  },
+  {
     "profile": "NicknameCaseMapped",
     "input": "",
     "output": null,
@@ -6362,6 +6380,12 @@
     "input": "\ud8ff",
     "output": null,
     "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": "\u03c8\u038e\u03c7\u03b7",
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -7954,6 +7978,12 @@
     "input": "\ud8ff",
     "output": null,
     "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9547,6 +9577,12 @@
     "error": "DISALLOWED/other"
   },
   {
+    "profile": "NicknameCasePreserved",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": "\u03a8\u038e\u03a7\u0397",
+    "error": null
+  },
+  {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "",
     "output": null,
@@ -11137,6 +11173,12 @@
     "input": "\ud8ff",
     "output": null,
     "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": "\u03c8\u038e\u03c7\u03b7",
+    "error": null
   },
   {
     "profile": "FreeFormClass",
@@ -12730,6 +12772,12 @@
     "error": "DISALLOWED/other"
   },
   {
+    "profile": "FreeFormClass",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": "\u03a8\u03d3\u03a7\u0397",
+    "error": null
+  },
+  {
     "profile": "IdentifierClass",
     "input": "",
     "output": "",
@@ -14319,5 +14367,11 @@
     "input": "\ud8ff",
     "output": null,
     "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   }
 ]
