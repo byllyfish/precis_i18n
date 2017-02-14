@@ -7,7 +7,7 @@ If you want your application to accept unicode user names and passwords,
 you must be careful in how you validate and compare them. The PRECIS
 framework makes internationalized user names and passwords safer for use
 by applications. PRECIS profiles transform unicode strings into a
-canonical UTF-8 form, suitable for byte-by-byte comparison.
+canonical form, suitable for comparison.
 
 This module implements the PRECIS Framework as described in:
 
@@ -26,9 +26,30 @@ Requires Python 3.3 or later.
 Usage
 -----
 
-Import the ``precis_i18n.codec`` module to register the PRECIS codec
-names. Use the ``encode`` method with any unicode string. ``encode``
-will raise a ``UnicodeEncodeError`` if the string is disallowed.
+Use the ``get_profile`` function to obtain a profile object, then use
+its ``enforce`` method. The ``enforce`` method returns a Unicode string.
+
+::
+
+
+    >>> from precis_i18n import get_profile
+    >>> username = get_profile('UsernameCaseMapped')
+    >>> username.enforce('Kevin')
+    'kevin'
+    >>> username.enforce('\u212Aevin')
+    'kevin'
+    >>> username.enforce('\uFF2Bevin')
+    'kevin'
+    >>> username.enforce('\U0001F17Aevin')
+    Traceback (most recent call last):
+        ...
+    UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
+
+Alternatively, you can use the Python ``str.encode`` API. Import the
+``precis_i18n.codec`` module to register the PRECIS codec names. Now you
+can use the ``str.encode`` method with any unicode string. The result
+will be a UTF-8 encoded byte string or a ``UnicodeEncodeError`` if the
+string is disallowed.
 
 ::
 
@@ -48,25 +69,6 @@ will raise a ``UnicodeEncodeError`` if the string is disallowed.
     Traceback (most recent call last):
         ...
     UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
-
-Alternatively, you can use a PRECIS profile directly, without installing
-a codec.
-
-::
-
-
-    >>> from precis_i18n import get_profile
-    >>> username = get_profile('UsernameCaseMapped')
-    >>> username.enforce('Kevin')
-    'kevin'
-    >>> username.enforce('\u212Aevin')
-    'kevin'
-    >>> username.enforce('\uFF2Bevin')
-    'kevin'
-    >>> username.enforce('\U0001F17Aevin')
-    Traceback (most recent call last):
-        ...
-    UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
 Supported Profiles and Codecs
 -----------------------------
