@@ -64,5 +64,8 @@ def get_profile(name):
 
     Returns:
         AbstractProfile: PRECIS profile object.
+
+    Raises:
+        KeyError: Profile not found.
     """
     return _PROFILES[name.lower()]()

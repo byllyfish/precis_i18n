@@ -27,11 +27,16 @@ def search(name):
         name (str): Codec name.
 
     Returns:
-        CodecInfo: Encode/decode information.
+        CodecInfo: Encode/decode information or None if not found.
     """
+    try:
+        profile = get_profile(name)
+    except KeyError:
+        return None
+
     return codecs.CodecInfo(
         name=name,
-        encode=_make_encode(get_profile(name)),
+        encode=_make_encode(profile),
         decode=_not_supported)
 
 

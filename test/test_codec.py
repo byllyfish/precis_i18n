@@ -1,4 +1,5 @@
 import unittest
+import codecs
 import precis_i18n.codec
 
 
@@ -21,5 +22,18 @@ class TestCodec(unittest.TestCase):
         with self.assertRaises(ValueError):
             'Juliet'.encode('opaquestring', errors='replace')
         # non-matching codec names shouldn't work.
-        with self.assertRaises(LookupError):
+        with self.assertRaises(LookupError) as cm:
             'Juliet'.encode('opaquestring_nonexistant')
+        # Exception must be LookupError (not KeyError or IndexError).
+        self.assertIs(type(cm.exception), LookupError)
+
+    def test_search_function(self):
+        _search = precis_i18n.codec.search
+
+        # Check search function result.
+        codec_info = _search('usernamecasepreserved')
+        self.assertIsInstance(codec_info, codecs.CodecInfo)
+
+        # Search function must return None for non-existant codec.
+        codec_info = _search('opaquestring_nonexistant')
+        self.assertIs(codec_info, None)
