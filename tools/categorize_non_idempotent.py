@@ -8,8 +8,8 @@ def _escape(s):
 
 
 def _idempotent_ignoring_space(profile, value):
-    result1 = profile.enforce(value).decode('utf-8')
-    result2 = profile.enforce(result1).decode('utf-8')
+    result1 = profile.enforce(value)
+    result2 = profile.enforce(result1)
     return result1.strip() == result2.strip()
 
 

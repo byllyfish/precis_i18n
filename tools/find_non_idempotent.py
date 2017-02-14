@@ -11,11 +11,11 @@ def _escape(s):
 for cp in range(0x0110000):
     original = chr(cp)
     try:
-        actual = profile.enforce(original).decode('utf-8')
+        actual = profile.enforce(original)
         if actual != original:
-            idempotent = profile.enforce(actual).decode('utf-8')
+            idempotent = profile.enforce(actual)
             if idempotent.strip() != actual.strip():
-                print(_escape(original), original, _escape(actual), _escape(idempotent), ';', unicodedata.decomposition(original))
+                print(_escape(original), unicodedata.name(original), ';', unicodedata.decomposition(original))
     except UnicodeEncodeError:
         pass
 
