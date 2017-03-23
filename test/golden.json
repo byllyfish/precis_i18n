@@ -1597,6 +1597,162 @@
     "error": "DISALLOWED/has_compat"
   },
   {
+    "profile": "UsernameCasePreserved",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u1fb7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u1fc7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u1ff7",
+    "error": null
+  },
+  {
     "profile": "UsernameCaseMapped",
     "input": "",
     "output": null,
@@ -3192,6 +3348,162 @@
     "input": "\u03a8\u03d3\u03a7\u0397",
     "output": null,
     "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb6\u03b9\u1fb6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc6\u03b9\u1fc6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff6\u03b9\u1ff6\u03b9",
+    "error": null
   },
   {
     "profile": "OpaqueString",
@@ -4791,6 +5103,162 @@
     "error": null
   },
   {
+    "profile": "OpaqueString",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u1fb7",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u1fc7",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u1ff7",
+    "error": null
+  },
+  {
     "profile": "NicknameCaseMapped",
     "input": "",
     "output": null,
@@ -6385,6 +6853,162 @@
     "profile": "NicknameCaseMapped",
     "input": "\u03a8\u03d3\u03a7\u0397",
     "output": "\u03c8\u038e\u03c7\u03b7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb6\u03b9\u1fb6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc6\u03b9\u1fc6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff6\u03b9\u1ff6\u03b9",
     "error": null
   },
   {
@@ -7986,6 +8610,162 @@
     "error": "DISALLOWED/has_compat"
   },
   {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u1fb7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u1fc7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u1ff7",
+    "error": null
+  },
+  {
     "profile": "NicknameCasePreserved",
     "input": "",
     "output": null,
@@ -9580,6 +10360,162 @@
     "profile": "NicknameCasePreserved",
     "input": "\u03a8\u03d3\u03a7\u0397",
     "output": "\u03a8\u038e\u03a7\u0397",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u1fb7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u1fc7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u1ff7",
     "error": null
   },
   {
@@ -11178,6 +12114,162 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u03a8\u03d3\u03a7\u0397",
     "output": "\u03c8\u038e\u03c7\u03b7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u1fb7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u1fc7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u1ff7",
     "error": null
   },
   {
@@ -12778,6 +13870,162 @@
     "error": null
   },
   {
+    "profile": "FreeFormClass",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0j\u030c",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u03b9\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03c5\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96h\u0331",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97t\u0308",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98w\u030a",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99y\u030a",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u03c5\u0313",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u03c5\u0313\u0300",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u03c5\u0313\u0301",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u03c5\u0313\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u03b1\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u03b1\u0342\u0345",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u03b7\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u03b7\u0342\u0345",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u03b9\u0308\u0300",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u1fd3\u03b9\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u03b9\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u03b9\u0308\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u03c5\u0308\u0300",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u1fe3\u03c5\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u03c1\u0313",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u03c5\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u03c5\u0308\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u03c9\u0342",
+    "error": null
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u03c9\u0342\u0345",
+    "error": null
+  },
+  {
     "profile": "IdentifierClass",
     "input": "",
     "output": "",
@@ -14373,5 +15621,161 @@
     "input": "\u03a8\u03d3\u03a7\u0397",
     "output": null,
     "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0j\u030c",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u03b9\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03c5\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96h\u0331",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97t\u0308",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98w\u030a",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99y\u030a",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u03c5\u0313",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u03c5\u0313\u0300",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u03c5\u0313\u0301",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u03c5\u0313\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u03b1\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb7\u03b1\u0342\u0345",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u03b7\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc7\u03b7\u0342\u0345",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u03b9\u0308\u0300",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u03b9\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u03b9\u0308\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u03c5\u0308\u0300",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u03c1\u0313",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u03c5\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u03c5\u0308\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u03c9\u0342",
+    "error": null
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff7\u03c9\u0342\u0345",
+    "error": null
   }
 ]
