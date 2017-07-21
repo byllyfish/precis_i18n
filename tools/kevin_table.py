@@ -26,8 +26,8 @@ def _column(s):
 
 
 
-print('Original String|UsernameCasePreserved|UsernameCaseMapped|Nickname')
-print('---------------|-----------------|------------------|------------------')
+print('Original String|UsernameCasePreserved|UsernameCaseMapped|NicknameCaseMapped')
+print('---------------|---------------------|------------------|------------------')
 
 for k in letter_k:
     kevin = chr(k) + 'evin'
@@ -42,7 +42,7 @@ for k in letter_k:
     except UnicodeEncodeError:
         case_mapped = 'DISALLOWED'
 
-    nickname = kevin.encode('Nickname').decode('utf-8')
+    nickname = kevin.encode('NicknameCaseMapped').decode('utf-8')
 
     col1 = _column(kevin)
     col2 = _column(case_preserved)

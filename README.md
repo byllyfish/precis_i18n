@@ -109,8 +109,8 @@ DISALLOWED/zero_width_nonjoiner | Zero width non-joiner must immediately follow 
 
 There are multiple ways to write "Kevin" by varying only the "K".
 
-Original String|UsernameCasePreserved|UsernameCaseMapped|Nickname
----------------|-----------------|------------------|------------------
+Original String|UsernameCasePreserved|UsernameCaseMapped|NicknameCaseMapped
+---------------|---------------------|------------------|------------------
 Kevin | Kevin | kevin | kevin
 &#8490;evin '\u212aevin' | Kevin | kevin | kevin
 &#65323;evin '\uff2bevin' | Kevin | kevin | kevin
@@ -123,7 +123,7 @@ Kevin | Kevin | kevin | kevin
 &#42820;evin '\ua744evin' | &#42820;evin '\ua744evin' | &#42821;evin '\ua745evin' | &#42821;evin '\ua745evin'
 &#42914;evin '\ua7a2evin' | &#42914;evin '\ua7a2evin' | &#42915;evin '\ua7a3evin' | &#42915;evin '\ua7a3evin'
 &#9408;evin '\u24c0evin' | DISALLOWED | DISALLOWED | kevin
-&#127258;evin '\U0001f11aevin' | DISALLOWED | DISALLOWED | (K)evin
-&#127290;evin '\U0001f13aevin' | DISALLOWED | DISALLOWED | Kevin
+&#127258;evin '\U0001f11aevin' | DISALLOWED | DISALLOWED | (k)evin
+&#127290;evin '\U0001f13aevin' | DISALLOWED | DISALLOWED | kevin
 &#127322;evin '\U0001f15aevin' | DISALLOWED | DISALLOWED | &#127322;evin '\U0001f15aevin'
 &#127354;evin '\U0001f17aevin' | DISALLOWED | DISALLOWED | &#127354;evin '\U0001f17aevin'
