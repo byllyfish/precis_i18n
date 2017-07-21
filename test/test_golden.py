@@ -36,9 +36,7 @@ class TestGolden(unittest.TestCase):
             print('\n"%s" not idempotent: "%s" => "%s" => "%s"' %
                   (profile, _escape(input_), _escape(actual),
                    _escape(idempotent)))
-        # The Nickname profile is not idempotent?
-        if not profile.lower().startswith('nickname'):
-            self.assertEqual(idempotent, actual)
+        self.assertEqual(idempotent, actual)
 
     def check_disallow(self, profile, input_, expected):
         #print('check_disallow', profile, input_)

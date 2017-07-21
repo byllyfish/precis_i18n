@@ -5483,13 +5483,13 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\ud83c\udd1aevin",
-    "output": "(K)evin",
+    "output": "(k)evin",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ud83c\udd3aevin",
-    "output": "Kevin",
+    "output": "kevin",
     "error": null
   },
   {
@@ -5777,13 +5777,13 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\u210c",
-    "output": "H",
+    "output": "h",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u210d",
-    "output": "H",
+    "output": "h",
     "error": null
   },
   {
@@ -5843,7 +5843,7 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\u20a8",
-    "output": "Rs",
+    "output": "rs",
     "error": null
   },
   {
@@ -6318,301 +6318,301 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\u00a8",
-    "output": " \u0308",
+    "output": "\u0308",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u00af",
-    "output": " \u0304",
+    "output": "\u0304",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u00b4",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u00b8",
-    "output": " \u0327",
+    "output": "\u0327",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u02d8",
-    "output": " \u0306",
+    "output": "\u0306",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u02d9",
-    "output": " \u0307",
+    "output": "\u0307",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u02da",
-    "output": " \u030a",
+    "output": "\u030a",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u02db",
-    "output": " \u0328",
+    "output": "\u0328",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u02dc",
-    "output": " \u0303",
+    "output": "\u0303",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u02dd",
-    "output": " \u030b",
+    "output": "\u030b",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u037a",
-    "output": " \u0345",
+    "output": "\u03b9",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u0384",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u0385",
-    "output": " \u0308\u0301",
+    "output": "\u0308\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fbd",
-    "output": " \u0313",
+    "output": "\u0313",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fbf",
-    "output": " \u0313",
+    "output": "\u0313",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fc0",
-    "output": " \u0342",
+    "output": "\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fc1",
-    "output": " \u0308\u0342",
+    "output": "\u0308\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fcd",
-    "output": " \u0313\u0300",
+    "output": "\u0313\u0300",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fce",
-    "output": " \u0313\u0301",
+    "output": "\u0313\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fcf",
-    "output": " \u0313\u0342",
+    "output": "\u0313\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fdd",
-    "output": " \u0314\u0300",
+    "output": "\u0314\u0300",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fde",
-    "output": " \u0314\u0301",
+    "output": "\u0314\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fdf",
-    "output": " \u0314\u0342",
+    "output": "\u0314\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fed",
-    "output": " \u0308\u0300",
+    "output": "\u0308\u0300",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1fee",
-    "output": " \u0308\u0301",
+    "output": "\u0308\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1ffd",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1ffe",
-    "output": " \u0314",
+    "output": "\u0314",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u2017",
-    "output": " \u0333",
+    "output": "\u0333",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u203e",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u309b",
-    "output": " \u3099",
+    "output": "\u3099",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u309c",
-    "output": " \u309a",
+    "output": "\u309a",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufc5e",
-    "output": " \u064c\u0651",
+    "output": "\u064c\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufc5f",
-    "output": " \u064d\u0651",
+    "output": "\u064d\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufc60",
-    "output": " \u064e\u0651",
+    "output": "\u064e\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufc61",
-    "output": " \u064f\u0651",
+    "output": "\u064f\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufc62",
-    "output": " \u0650\u0651",
+    "output": "\u0650\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufc63",
-    "output": " \u0651\u0670",
+    "output": "\u0651\u0670",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe49",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe4a",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe4b",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe4c",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe70",
-    "output": " \u064b",
+    "output": "\u064b",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe72",
-    "output": " \u064c",
+    "output": "\u064c",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe74",
-    "output": " \u064d",
+    "output": "\u064d",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe76",
-    "output": " \u064e",
+    "output": "\u064e",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe78",
-    "output": " \u064f",
+    "output": "\u064f",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe7a",
-    "output": " \u0650",
+    "output": "\u0650",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe7c",
-    "output": " \u0651",
+    "output": "\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\ufe7e",
-    "output": " \u0652",
+    "output": "\u0652",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\uffe3",
-    "output": " \u0304",
+    "output": "\u0304",
     "error": null
   },
   {
@@ -6852,7 +6852,7 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\u03a8\u03d3\u03a7\u0397",
-    "output": "\u03c8\u038e\u03c7\u03b7",
+    "output": "\u03c8\u03cd\u03c7\u03b7",
     "error": null
   },
   {
@@ -9825,301 +9825,301 @@
   {
     "profile": "NicknameCasePreserved",
     "input": "\u00a8",
-    "output": " \u0308",
+    "output": "\u0308",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u00af",
-    "output": " \u0304",
+    "output": "\u0304",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u00b4",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u00b8",
-    "output": " \u0327",
+    "output": "\u0327",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u02d8",
-    "output": " \u0306",
+    "output": "\u0306",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u02d9",
-    "output": " \u0307",
+    "output": "\u0307",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u02da",
-    "output": " \u030a",
+    "output": "\u030a",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u02db",
-    "output": " \u0328",
+    "output": "\u0328",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u02dc",
-    "output": " \u0303",
+    "output": "\u0303",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u02dd",
-    "output": " \u030b",
+    "output": "\u030b",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u037a",
-    "output": " \u0345",
+    "output": "\u0345",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u0384",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u0385",
-    "output": " \u0308\u0301",
+    "output": "\u0308\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fbd",
-    "output": " \u0313",
+    "output": "\u0313",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fbf",
-    "output": " \u0313",
+    "output": "\u0313",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fc0",
-    "output": " \u0342",
+    "output": "\u0342",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fc1",
-    "output": " \u0308\u0342",
+    "output": "\u0308\u0342",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fcd",
-    "output": " \u0313\u0300",
+    "output": "\u0313\u0300",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fce",
-    "output": " \u0313\u0301",
+    "output": "\u0313\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fcf",
-    "output": " \u0313\u0342",
+    "output": "\u0313\u0342",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fdd",
-    "output": " \u0314\u0300",
+    "output": "\u0314\u0300",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fde",
-    "output": " \u0314\u0301",
+    "output": "\u0314\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fdf",
-    "output": " \u0314\u0342",
+    "output": "\u0314\u0342",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fed",
-    "output": " \u0308\u0300",
+    "output": "\u0308\u0300",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1fee",
-    "output": " \u0308\u0301",
+    "output": "\u0308\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1ffd",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1ffe",
-    "output": " \u0314",
+    "output": "\u0314",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u2017",
-    "output": " \u0333",
+    "output": "\u0333",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u203e",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u309b",
-    "output": " \u3099",
+    "output": "\u3099",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u309c",
-    "output": " \u309a",
+    "output": "\u309a",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufc5e",
-    "output": " \u064c\u0651",
+    "output": "\u064c\u0651",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufc5f",
-    "output": " \u064d\u0651",
+    "output": "\u064d\u0651",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufc60",
-    "output": " \u064e\u0651",
+    "output": "\u064e\u0651",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufc61",
-    "output": " \u064f\u0651",
+    "output": "\u064f\u0651",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufc62",
-    "output": " \u0650\u0651",
+    "output": "\u0650\u0651",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufc63",
-    "output": " \u0651\u0670",
+    "output": "\u0651\u0670",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe49",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe4a",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe4b",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe4c",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe70",
-    "output": " \u064b",
+    "output": "\u064b",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe72",
-    "output": " \u064c",
+    "output": "\u064c",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe74",
-    "output": " \u064d",
+    "output": "\u064d",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe76",
-    "output": " \u064e",
+    "output": "\u064e",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe78",
-    "output": " \u064f",
+    "output": "\u064f",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe7a",
-    "output": " \u0650",
+    "output": "\u0650",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe7c",
-    "output": " \u0651",
+    "output": "\u0651",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\ufe7e",
-    "output": " \u0652",
+    "output": "\u0652",
     "error": null
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\uffe3",
-    "output": " \u0304",
+    "output": "\u0304",
     "error": null
   },
   {
@@ -10743,13 +10743,13 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ud83c\udd1aevin",
-    "output": "(K)evin",
+    "output": "(k)evin",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ud83c\udd3aevin",
-    "output": "Kevin",
+    "output": "kevin",
     "error": null
   },
   {
@@ -11038,13 +11038,13 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u210c",
-    "output": "H",
+    "output": "h",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u210d",
-    "output": "H",
+    "output": "h",
     "error": null
   },
   {
@@ -11104,7 +11104,7 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u20a8",
-    "output": "Rs",
+    "output": "rs",
     "error": null
   },
   {
@@ -11579,301 +11579,301 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00a8",
-    "output": " \u0308",
+    "output": "\u0308",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00af",
-    "output": " \u0304",
+    "output": "\u0304",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b4",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u00b8",
-    "output": " \u0327",
+    "output": "\u0327",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u02d8",
-    "output": " \u0306",
+    "output": "\u0306",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u02d9",
-    "output": " \u0307",
+    "output": "\u0307",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u02da",
-    "output": " \u030a",
+    "output": "\u030a",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u02db",
-    "output": " \u0328",
+    "output": "\u0328",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u02dc",
-    "output": " \u0303",
+    "output": "\u0303",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u02dd",
-    "output": " \u030b",
+    "output": "\u030b",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u037a",
-    "output": " \u0345",
+    "output": "\u0345",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u0384",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u0385",
-    "output": " \u0308\u0301",
+    "output": "\u0308\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fbd",
-    "output": " \u0313",
+    "output": "\u0313",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fbf",
-    "output": " \u0313",
+    "output": "\u0313",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fc0",
-    "output": " \u0342",
+    "output": "\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fc1",
-    "output": " \u0308\u0342",
+    "output": "\u0308\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fcd",
-    "output": " \u0313\u0300",
+    "output": "\u0313\u0300",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fce",
-    "output": " \u0313\u0301",
+    "output": "\u0313\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fcf",
-    "output": " \u0313\u0342",
+    "output": "\u0313\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fdd",
-    "output": " \u0314\u0300",
+    "output": "\u0314\u0300",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fde",
-    "output": " \u0314\u0301",
+    "output": "\u0314\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fdf",
-    "output": " \u0314\u0342",
+    "output": "\u0314\u0342",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fed",
-    "output": " \u0308\u0300",
+    "output": "\u0308\u0300",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1fee",
-    "output": " \u0308\u0301",
+    "output": "\u0308\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1ffd",
-    "output": " \u0301",
+    "output": "\u0301",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1ffe",
-    "output": " \u0314",
+    "output": "\u0314",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u2017",
-    "output": " \u0333",
+    "output": "\u0333",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u203e",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u309b",
-    "output": " \u3099",
+    "output": "\u3099",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u309c",
-    "output": " \u309a",
+    "output": "\u309a",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufc5e",
-    "output": " \u064c\u0651",
+    "output": "\u064c\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufc5f",
-    "output": " \u064d\u0651",
+    "output": "\u064d\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufc60",
-    "output": " \u064e\u0651",
+    "output": "\u064e\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufc61",
-    "output": " \u064f\u0651",
+    "output": "\u064f\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufc62",
-    "output": " \u0650\u0651",
+    "output": "\u0650\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufc63",
-    "output": " \u0651\u0670",
+    "output": "\u0651\u0670",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe49",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe4a",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe4b",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe4c",
-    "output": " \u0305",
+    "output": "\u0305",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe70",
-    "output": " \u064b",
+    "output": "\u064b",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe72",
-    "output": " \u064c",
+    "output": "\u064c",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe74",
-    "output": " \u064d",
+    "output": "\u064d",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe76",
-    "output": " \u064e",
+    "output": "\u064e",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe78",
-    "output": " \u064f",
+    "output": "\u064f",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe7a",
-    "output": " \u0650",
+    "output": "\u0650",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe7c",
-    "output": " \u0651",
+    "output": "\u0651",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ufe7e",
-    "output": " \u0652",
+    "output": "\u0652",
     "error": null
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\uffe3",
-    "output": " \u0304",
+    "output": "\u0304",
     "error": null
   },
   {
@@ -12113,7 +12113,7 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u03a8\u03d3\u03a7\u0397",
-    "output": "\u03c8\u038e\u03c7\u03b7",
+    "output": "\u03c8\u03cd\u03c7\u03b7",
     "error": null
   },
   {

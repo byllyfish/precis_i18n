@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0-dev1
+
+- (IMPORTANT) This version changes the results of the Nickname profiles.
+- Add support for proposed changes to RFC 7564 that will make the Nickname profile idempotent.
+
 ## 0.5.0
 
 - (API CHANGE) Profile's `enforce` method now returns a Unicode string instead of UTF-8 bytes. This API change affects code that uses get_profile() to obtain a profile. The codec still returns UTF-8 bytes. (Issue 2)

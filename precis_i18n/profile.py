@@ -61,17 +61,28 @@ class Profile(object):
             value = value.decode('utf-8')
         elif not isinstance(value, str):
             raise ValueError('not a string')
-        # Apply the five rules in order specified by RFC 7564.
-        temp = self.width_mapping_rule(value)
-        temp = self.additional_mapping_rule(temp)
-        temp = self.case_mapping_rule(temp)
-        temp = self.normalization_rule(temp)
-        temp = self.directionality_rule(temp)
+        temp = self.apply_five_rules(value)
+        temp = self.idempotence_check(temp)
         # Make sure the resulting value is not empty.
         if not temp:
             raise_error(self.name, value, -1, 'empty')
         # Apply behavioral rules from the base string class last.
         return self.base.enforce(temp, self.name)
+
+    def apply_five_rules(self, value):
+        """Apply the five rules specified by RFC 7564 in order.
+
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
+        temp = self.width_mapping_rule(value)
+        temp = self.additional_mapping_rule(temp)
+        temp = self.case_mapping_rule(temp)
+        temp = self.normalization_rule(temp)
+        return self.directionality_rule(temp)
 
     def width_mapping_rule(self, value):
         """Apply width mapping rule.
@@ -128,6 +139,20 @@ class Profile(object):
         Returns:
             str: Enforced value.
         """
+        return value
+
+    def idempotence_check(self, value):
+        """Check that profile result is idempotent.
+
+        Profiles that are not idempotent should override this method.
+        
+        Args:
+            value (str): Value to enforce.
+
+        Returns:
+            str: Enforced value.
+        """
+        assert self.apply_five_rules(value) == value
         return value
 
 
@@ -272,6 +297,14 @@ class Nickname(Profile):
     def normalization_rule(self, value):
         # Override
         return self.base.ucd.normalize('NFKC', value)
+
+    def idempotence_check(self, value):
+        # Override
+        # Nickname profile is not idempotent due to ordering of additional
+        # and case mapping rules, so we apply them again.
+        temp = self.apply_five_rules(value)
+        assert self.apply_five_rules(temp) == temp
+        return temp
 
 
 def _casefold(s):
