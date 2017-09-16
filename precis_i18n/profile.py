@@ -152,7 +152,9 @@ class Profile(object):
         Returns:
             str: Enforced value.
         """
-        assert self.apply_five_rules(value) == value
+        new_value = self.apply_five_rules(value)
+        if new_value != value:
+            raise_error(self.name, value, -1, 'not_idempotent')
         return value
 
 
@@ -302,9 +304,8 @@ class Nickname(Profile):
         # Override
         # Nickname profile is not idempotent due to ordering of additional
         # and case mapping rules, so we apply them again.
-        temp = self.apply_five_rules(value)
-        assert self.apply_five_rules(temp) == temp
-        return temp
+        value = self.apply_five_rules(value)
+        return super().idempotence_check(value)
 
 
 def _casefold(s):

@@ -93,6 +93,7 @@ DISALLOWED/has_compat | Compatibility characters are not allowed.
 DISALLOWED/hebrew_punctuation | Hebrew punctuation geresh or gershayim must be preceded by Hebrew character. (Context)
 DISALLOWED/katakana_middle_dot | Katakana middle dot must be accompanied by a Hiragana, Katakana, or Han character. (Context)
 DISALLOWED/middle_dot | Middle dot must be surrounded by the letter 'l'. (Context)
+DISALLOWED/not_idempotent | After reapplying the profile, the result is not stable.
 DISALLOWED/old_hangul_jamo | Conjoining Hangul Jamo is not allowed.
 DISALLOWED/other | Other character is not allowed.
 DISALLOWED/other_letter_digits | Non-traditional letter or digit is not allowed.
