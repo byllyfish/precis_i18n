@@ -71,7 +71,17 @@ class TestNickname(unittest.TestCase):
         self.assertEqual(profile.enforce('Juliet'), 'juliet')
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'), '\u00e9\u0301\u0301')
+        self.assertEqual(profile.enforce('\u03d4'), '\u03cb')
 
+
+class TestNicknameCaseMapped(unittest.TestCase):
+    def test_enforce(self):
+        profile = get_profile('NicknameCaseMapped:ToLower')
+        self.assertEqual(profile.enforce('Juliet'), 'juliet')
+        self.assertEqual(
+            profile.enforce('E\u0301\u0301\u0301'), '\u00e9\u0301\u0301')
+        self.assertEqual(profile.enforce('\u03d4'), '\u03cb')
+        
 
 class TestUsername(unittest.TestCase):
     def test_constructor(self):
