@@ -1,20 +1,19 @@
 #!/bin/bash
 #
 # Submit package to pypi.
+# 
+# Usage:
+#    ./tools/pypi_submit.sh pypi
 
 set -e
 
 PYPI="${1:-pypitest}"
+GPG_KEY="F0BB53DAD0664BD49C6C2304A0BC617BBE7CC332"
 
 # Make sure we are in the correct directory.
 if [ ! -f "setup.py" ]; then
   echo "Can't find setup.py. Check current working directory."
   exit 1
-fi
-
-# Verify long_description.rst is newer than README.md
-if [ README.md -nt long_description.rst ]; then
-    echo "Must fix: pandoc README.md -o long_description.rst"
 fi
 
 echo "Remove old files:" build dist *.egg-info
@@ -25,6 +24,10 @@ python3.5 setup.py sdist
 
 echo "Build wheel"
 python3.5 setup.py bdist_wheel
+
+echo "Sign packages"
+gpg -u $GPG_KEY --detach-sign -a dist/*.whl
+gpg -u $GPG_KEY --detach-sign -a dist/*.gz
 
 # Uncomment to register module.
 #twine register -r "$PYPI" dist/*.whl
