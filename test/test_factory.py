@@ -81,7 +81,7 @@ class TestNicknameCaseMapped(unittest.TestCase):
         self.assertEqual(
             profile.enforce('E\u0301\u0301\u0301'), '\u00e9\u0301\u0301')
         self.assertEqual(profile.enforce('\u03d4'), '\u03cb')
-        
+
 
 class TestUsername(unittest.TestCase):
     def test_constructor(self):

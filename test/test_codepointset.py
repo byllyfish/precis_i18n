@@ -40,7 +40,7 @@ class TestCodepointSet(unittest.TestCase):
         self.assertEqual(len(cps), 2)
 
         cps = CodepointSet('10000..10FFFF')
-        self.assertEqual(len(cps), 0x10FFFF-0x10000+1)
+        self.assertEqual(len(cps), 0x10FFFF - 0x10000 + 1)
 
     def test_equals(self):
         cps = CodepointSet('0000..00FF')
