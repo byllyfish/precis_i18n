@@ -54,6 +54,19 @@ class CodepointSet(object):
             return False
         return (idx % 2) == 1 or self._table[idx] == char
 
+    def __len__(self):
+        """Return size of set.
+
+        Used for debugging only.
+
+        Returns:
+            int: Count of total code points.
+        """
+        count = 0
+        for lo, hi in self.items():
+            count += hi - lo + 1
+        return count
+
     def __eq__(self, rhs):
         """Check if set is equal to other set.
 
