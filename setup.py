@@ -12,10 +12,10 @@ from os import path
 import re
 
 here = path.abspath(path.dirname(__file__))
-description_path = path.join(here, 'long_description.rst')
+description_path = path.join(here, 'README.rst')
 version_path = path.join(here, 'precis_i18n', '__init__.py')
 
-# Read long_description.rst.
+# Read README.rst.
 with open(description_path, encoding='utf-8') as f:
     long_description = f.read()
 

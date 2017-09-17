@@ -1,9 +1,11 @@
 # Changelog
 
-## 0.6.0-dev1
+## 0.6.0
 
-- (IMPORTANT) This version changes the results of the Nickname profiles.
+- (IMPORTANT) This version changes the results of the Nickname profile.
 - Add support for proposed changes to RFC 7564 that will make the Nickname profile idempotent.
+- Add the "DISALLOWED/not_idempotent" error message.
+- Sign pypi package with gpg.
 
 ## 0.5.0
 

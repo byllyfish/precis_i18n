@@ -80,30 +80,30 @@ The PRECIS base string classes are also available:
 A PRECIS profile raises a `UnicodeEncodeError` exception if a string is disallowed. The `reason` field specifies the
 kind of error.
 
-Reason | Explanation
--------|-------------
-DISALLOWED/arabic_indic | Arabic-Indic digits cannot be mixed with Extended Arabic-Indic Digits. (Context)
-DISALLOWED/bidi_rule | Right-to-left string cannot contain left-to-right characters due to the "Bidi" rule. (Context)
-DISALLOWED/controls | Control character is not allowed.
-DISALLOWED/empty | After applying the profile, the result cannot be empty.
-DISALLOWED/exceptions | Exception character is not allowed.
-DISALLOWED/extended_arabic_indic | Extended Arabic-Indic digits cannot be mixed with Arabic-Indic Digits. (Context)
-DISALLOWED/greek_keraia | Greek keraia must be followed by a Greek character. (Context)
-DISALLOWED/has_compat | Compatibility characters are not allowed.
-DISALLOWED/hebrew_punctuation | Hebrew punctuation geresh or gershayim must be preceded by Hebrew character. (Context)
-DISALLOWED/katakana_middle_dot | Katakana middle dot must be accompanied by a Hiragana, Katakana, or Han character. (Context)
-DISALLOWED/middle_dot | Middle dot must be surrounded by the letter 'l'. (Context)
-DISALLOWED/not_idempotent | After reapplying the profile, the result is not stable.
-DISALLOWED/old_hangul_jamo | Conjoining Hangul Jamo is not allowed.
-DISALLOWED/other | Other character is not allowed.
-DISALLOWED/other_letter_digits | Non-traditional letter or digit is not allowed.
+Reason                                 | Explanation
+---------------------------------------|------------------------------------------------------------
+DISALLOWED/arabic_indic                | Arabic-Indic digits cannot be mixed with Extended Arabic-Indic Digits. (Context)
+DISALLOWED/bidi_rule                   | Right-to-left string cannot contain left-to-right characters due to the "Bidi" rule. (Context)
+DISALLOWED/controls                    | Control character is not allowed.
+DISALLOWED/empty                       | After applying the profile, the result cannot be empty.
+DISALLOWED/exceptions                  | Exception character is not allowed.
+DISALLOWED/extended_arabic_indic       | Extended Arabic-Indic digits cannot be mixed with Arabic-Indic Digits. (Context)
+DISALLOWED/greek_keraia                | Greek keraia must be followed by a Greek character. (Context)
+DISALLOWED/has_compat                  | Compatibility characters are not allowed.
+DISALLOWED/hebrew_punctuation          | Hebrew punctuation geresh or gershayim must be preceded by Hebrew character. (Context)
+DISALLOWED/katakana_middle_dot         | Katakana middle dot must be accompanied by a Hiragana, Katakana, or Han character. (Context)
+DISALLOWED/middle_dot                  | Middle dot must be surrounded by the letter 'l'. (Context)
+DISALLOWED/not_idempotent              | After reapplying the profile, the result is not stable.
+DISALLOWED/old_hangul_jamo             | Conjoining Hangul Jamo is not allowed.
+DISALLOWED/other                       | Other character is not allowed.
+DISALLOWED/other_letter_digits         | Non-traditional letter or digit is not allowed.
 DISALLOWED/precis_ignorable_properties | Default ignorable or non-character is not allowed.
-DISALLOWED/punctuation | Non-ASCII punctuation character is not allowed.
-DISALLOWED/spaces | Space character is not allowed.
-DISALLOWED/symbols | Non-ASCII symbol character is not allowed.
-DISALLOWED/unassigned | Unassigned unicode character is not allowed.
-DISALLOWED/zero_width_joiner | Zero width joiner must immediately follow a combining virama. (Context)
-DISALLOWED/zero_width_nonjoiner | Zero width non-joiner must immediately follow a combining virama, or appear where it breaks a cursive connection in a formally cursive script. (Context)
+DISALLOWED/punctuation                 | Non-ASCII punctuation character is not allowed.
+DISALLOWED/spaces                      | Space character is not allowed.
+DISALLOWED/symbols                     | Non-ASCII symbol character is not allowed.
+DISALLOWED/unassigned                  | Unassigned unicode character is not allowed.
+DISALLOWED/zero_width_joiner           | Zero width joiner must immediately follow a combining virama. (Context)
+DISALLOWED/zero_width_nonjoiner        | Zero width non-joiner must immediately follow a combining virama, or appear where it breaks a cursive connection in a formally cursive script. (Context)
 
 
 ## Examples
@@ -113,18 +113,19 @@ There are multiple ways to write "Kevin" by varying only the "K".
 Original String|UsernameCasePreserved|UsernameCaseMapped|NicknameCaseMapped
 ---------------|---------------------|------------------|------------------
 Kevin | Kevin | kevin | kevin
-&#8490;evin '\u212aevin' | Kevin | kevin | kevin
-&#65323;evin '\uff2bevin' | Kevin | kevin | kevin
-&#922;evin '\u039aevin' | &#922;evin '\u039aevin' | &#954;evin '\u03baevin' | &#954;evin '\u03baevin'
-&#7730;evin '\u1e32evin' | &#7730;evin '\u1e32evin' | &#7731;evin '\u1e33evin' | &#7731;evin '\u1e33evin'
-&#7732;evin '\u1e34evin' | &#7732;evin '\u1e34evin' | &#7733;evin '\u1e35evin' | &#7733;evin '\u1e35evin'
-&#11369;evin '\u2c69evin' | &#11369;evin '\u2c69evin' | &#11370;evin '\u2c6aevin' | &#11370;evin '\u2c6aevin'
-&#42816;evin '\ua740evin' | &#42816;evin '\ua740evin' | &#42817;evin '\ua741evin' | &#42817;evin '\ua741evin'
-&#42818;evin '\ua742evin' | &#42818;evin '\ua742evin' | &#42819;evin '\ua743evin' | &#42819;evin '\ua743evin'
-&#42820;evin '\ua744evin' | &#42820;evin '\ua744evin' | &#42821;evin '\ua745evin' | &#42821;evin '\ua745evin'
-&#42914;evin '\ua7a2evin' | &#42914;evin '\ua7a2evin' | &#42915;evin '\ua7a3evin' | &#42915;evin '\ua7a3evin'
-&#9408;evin '\u24c0evin' | DISALLOWED | DISALLOWED | kevin
-&#127258;evin '\U0001f11aevin' | DISALLOWED | DISALLOWED | (k)evin
-&#127290;evin '\U0001f13aevin' | DISALLOWED | DISALLOWED | kevin
-&#127322;evin '\U0001f15aevin' | DISALLOWED | DISALLOWED | &#127322;evin '\U0001f15aevin'
-&#127354;evin '\U0001f17aevin' | DISALLOWED | DISALLOWED | &#127354;evin '\U0001f17aevin'
+&#8490;evin (&#92;u212aevin) | Kevin | kevin | kevin
+&#65323;evin (&#92;uff2bevin) | Kevin | kevin | kevin
+&#922;evin (&#92;u039aevin) | &#922;evin (&#92;u039aevin) | &#954;evin (&#92;u03baevin) | &#954;evin (&#92;u03baevin)
+&#7730;evin (&#92;u1e32evin) | &#7730;evin (&#92;u1e32evin) | &#7731;evin (&#92;u1e33evin) | &#7731;evin (&#92;u1e33evin)
+&#7732;evin (&#92;u1e34evin) | &#7732;evin (&#92;u1e34evin) | &#7733;evin (&#92;u1e35evin) | &#7733;evin (&#92;u1e35evin)
+&#11369;evin (&#92;u2c69evin) | &#11369;evin (&#92;u2c69evin) | &#11370;evin (&#92;u2c6aevin) | &#11370;evin (&#92;u2c6aevin)
+&#42816;evin (&#92;ua740evin) | &#42816;evin (&#92;ua740evin) | &#42817;evin (&#92;ua741evin) | &#42817;evin (&#92;ua741evin)
+&#42818;evin (&#92;ua742evin) | &#42818;evin (&#92;ua742evin) | &#42819;evin (&#92;ua743evin) | &#42819;evin (&#92;ua743evin)
+&#42820;evin (&#92;ua744evin) | &#42820;evin (&#92;ua744evin) | &#42821;evin (&#92;ua745evin) | &#42821;evin (&#92;ua745evin)
+&#42914;evin (&#92;ua7a2evin) | &#42914;evin (&#92;ua7a2evin) | &#42915;evin (&#92;ua7a3evin) | &#42915;evin (&#92;ua7a3evin)
+&#9408;evin (&#92;u24c0evin) | DISALLOWED | DISALLOWED | kevin
+&#127258;evin (&#92;U0001f11aevin) | DISALLOWED | DISALLOWED | (k)evin
+&#127290;evin (&#92;U0001f13aevin) | DISALLOWED | DISALLOWED | kevin
+&#127322;evin (&#92;U0001f15aevin) | DISALLOWED | DISALLOWED | &#127322;evin (&#92;U0001f15aevin)
+&#127354;evin (&#92;U0001f17aevin) | DISALLOWED | DISALLOWED | &#127354;evin (&#92;U0001f17aevin)
+
