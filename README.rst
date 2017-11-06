@@ -13,13 +13,13 @@ This module implements the PRECIS Framework as described in:
 
 -  PRECIS Framework: Preparation, Enforcement, and Comparison of
    Internationalized Strings in Application Protocols (`RFC
-   7564 <https://tools.ietf.org/html/rfc7564>`__)
+   8264 <https://tools.ietf.org/html/rfc8264>`__)
 -  Preparation, Enforcement, and Comparison of Internationalized Strings
    Representing Usernames and Passwords (`RFC
-   7613 <https://tools.ietf.org/html/rfc7613>`__)
+   8265 <https://tools.ietf.org/html/rfc8265>`__)
 -  Preparation, Enforcement, and Comparison of Internationalized Strings
    Representing Nicknames (`RFC
-   7700 <https://tools.ietf.org/html/rfc7700>`__)
+   8266 <https://tools.ietf.org/html/rfc8266>`__)
 
 Requires Python 3.3 or later.
 

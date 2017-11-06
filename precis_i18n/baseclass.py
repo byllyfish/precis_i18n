@@ -60,7 +60,7 @@ class BaseClass(object):
 
 
 class IdentifierClass(BaseClass):
-    """Concrete class representing PRECIS IdentifierClass from RFC 7564.
+    """Concrete class representing PRECIS IdentifierClass from RFC 8264.
 
     Args:
         ucd (UnicodeData): Unicode character database.
@@ -73,7 +73,7 @@ class IdentifierClass(BaseClass):
 
 
 class FreeFormClass(BaseClass):
-    """Concrete class repsenting PRECIS FreeFormClass from RFC 7564.
+    """Concrete class repsenting PRECIS FreeFormClass from RFC 8264.
 
     Args:
         ucd (UnicodeData): Unicode character database.

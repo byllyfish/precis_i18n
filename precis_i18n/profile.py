@@ -70,7 +70,7 @@ class Profile(object):
         return self.base.enforce(temp, self.name)
 
     def apply_five_rules(self, value):
-        """Apply the five rules specified by RFC 7564 in order.
+        """Apply the five rules specified by RFC 8264 in order.
 
         Args:
             value (str): Value to enforce.
@@ -185,7 +185,7 @@ class Username(Profile):
         Enforcement:  To be defined by security or application protocols that
            use this profile.
 
-        Specification:  RFC7613, Section 3.3.
+        Specification:  RFC 8265, Section 3.3.
 
     Args:
         ucd (UnicodeData): Unicode character database.
@@ -236,7 +236,7 @@ class OpaqueString(Profile):
         Enforcement:  To be defined by security or application protocols that
            use this profile.
 
-        Specification:  RFC7613, Section 4.2.
+        Specification:  RFC 8265, Section 4.2.
 
     Args:
         ucd (UnicodeData): Unicode character database.
@@ -280,7 +280,7 @@ class Nickname(Profile):
 
         Enforcement:  To be specified by applications.
 
-        Specification:  RFC7700
+        Specification:  RFC 8266
 
     Args:
         ucd (UnicodeData): Unicode character database.

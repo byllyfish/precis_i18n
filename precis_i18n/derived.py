@@ -1,4 +1,4 @@
-"""Implements the PRECIS (RFC 7564) `derived_property` function."""
+"""Implements the PRECIS (RFC 8264) `derived_property` function."""
 
 PVALID = 'PVALID'
 FREE_PVAL = 'FREE_PVAL'
@@ -13,7 +13,7 @@ CONTEXTO = 'CONTEXTO'
 def derived_property(cp, ucd):
     """Return value of the PRECIS derived property of a code point.
 
-    From section 8 of RFC 7564:
+    From section 8 of RFC 8264:
 
        If .cp. .in. Exceptions Then Exceptions(cp);
        Else If .cp. .in. BackwardCompatible Then BackwardCompatible(cp);
