@@ -55,10 +55,9 @@ def bidi_rule(value, ucd):
     bidi = ucd.bidirectional(value[0])
     if bidi in _LTR_FIRST:
         return _bidi_rule(value, ucd, _LTR_ALLOWED, _LTR_LAST, _LTR_EXCL)
-    elif bidi in _RTL_FIRST:
+    if bidi in _RTL_FIRST:
         return _bidi_rule(value, ucd, _RTL_ALLOWED, _RTL_LAST, _RTL_EXCL)
-    else:
-        return False
+    return False
 
 
 def _bidi_rule(value, ucd, allowed, last, exclusive):

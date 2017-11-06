@@ -180,5 +180,4 @@ def _repr(elem):
     """
     if elem[0] == elem[1]:
         return '%04X' % elem[0]
-    else:
-        return '%04X..%04X' % elem
+    return '%04X..%04X' % elem
