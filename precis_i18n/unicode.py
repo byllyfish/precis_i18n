@@ -83,7 +83,7 @@ class UnicodeData(object):
     def has_compat(self, cp):
         char = chr(cp)
         norm = self.normalize('NFKC', char)
-        assert len(norm) > 0
+        assert norm
         return norm != char
 
     def control(self, cp):
