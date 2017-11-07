@@ -21,9 +21,9 @@ class BaseClass(object):
     """
     _allowed = ()
 
-    def __init__(self, ucd, name):
+    def __init__(self, ucd, name=None):
         self.ucd = ucd
-        self.name = name
+        self.name = name or self.__class__.__name__
 
     def enforce(self, value, codec_name=None):
         """Ensure that all characters in `value` are allowed by the string class.
@@ -68,9 +68,6 @@ class IdentifierClass(BaseClass):
     """
     _allowed = (PVALID, )
 
-    def __init__(self, ucd, name='IdentifierClass'):
-        super().__init__(ucd, name)
-
 
 class FreeFormClass(BaseClass):
     """Concrete class repsenting PRECIS FreeFormClass from RFC 8264.
@@ -80,9 +77,6 @@ class FreeFormClass(BaseClass):
         name (str): String class name.
     """
     _allowed = (PVALID, FREE_PVAL)
-
-    def __init__(self, ucd, name='FreeFormClass'):
-        super().__init__(ucd, name)
 
 
 def raise_error(encoding, value, offset, error):

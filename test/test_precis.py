@@ -55,6 +55,7 @@ class TestBidiRule(unittest.TestCase):
 class TestPrecisIdentifierClass(unittest.TestCase):
     def test_valid_identifier(self):
         ident = IdentifierClass(UCD)
+        self.assertEqual(ident.name, 'IdentifierClass')
         self.assertEqual(ident.enforce('abc'), 'abc')
         self.assertEqual(ident.enforce('123'), '123')
         self.assertEqual(
@@ -98,7 +99,8 @@ class TestPrecisIdentifierClass(unittest.TestCase):
 class TestPrecisFreeformClass(unittest.TestCase):
     def test_valid_freeform(self):
         free = FreeFormClass(UCD)
-
+        self.assertEqual(free.name, 'FreeFormClass')
+        
         self.assertEqual(free.enforce('abc'), 'abc')
         self.assertEqual(free.enforce('123'), '123')
         self.assertEqual(
