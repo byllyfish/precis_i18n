@@ -100,7 +100,7 @@ class TestPrecisFreeformClass(unittest.TestCase):
     def test_valid_freeform(self):
         free = FreeFormClass(UCD)
         self.assertEqual(free.name, 'FreeFormClass')
-        
+
         self.assertEqual(free.enforce('abc'), 'abc')
         self.assertEqual(free.enforce('123'), '123')
         self.assertEqual(
@@ -258,85 +258,87 @@ class TestPrecisContextRule(unittest.TestCase):
             pc.rule_extended_arabic_indic('\u06f0\u06f1\u06f2\u0660', 0, UCD))
 
     def test_context_rule(self):
+        def _context_rule(value, offset, ucd):
+            return not pc.context_rule_error(value, offset, ucd)
         # 1. rule_zero_width_nonjoiner
         # Valid: combining_virama before
-        self.assertTrue(pc.context_rule('\u094d\u200c', 1, UCD))
+        self.assertTrue(_context_rule('\u094d\u200c', 1, UCD))
         # Invalid: invalid join_type
-        self.assertFalse(pc.context_rule('\ua872\u200c', 1, UCD))
+        self.assertFalse(_context_rule('\ua872\u200c', 1, UCD))
         # Invalid: undefined before
-        self.assertFalse(pc.context_rule('\u200c', 0, UCD))
+        self.assertFalse(_context_rule('\u200c', 0, UCD))
         # Valid: jointype(L J R)
-        self.assertTrue(pc.context_rule('\ua872\u200c\u0622', 1, UCD))
+        self.assertTrue(_context_rule('\ua872\u200c\u0622', 1, UCD))
         # Invalid: jointype(R J L)
-        self.assertFalse(pc.context_rule('\u0622\u200c\ua872', 1, UCD))
+        self.assertFalse(_context_rule('\u0622\u200c\ua872', 1, UCD))
 
         # 2. rule_zero_width_joiner
         # Valid: combining_virama before
-        self.assertTrue(pc.context_rule('\u094d\u200d', 1, UCD))
+        self.assertTrue(_context_rule('\u094d\u200d', 1, UCD))
         # Invalid: no combining_virama before
-        self.assertFalse(pc.context_rule('A\u200d', 1, UCD))
+        self.assertFalse(_context_rule('A\u200d', 1, UCD))
         # Invalid: no combining_virama before, jointype(L J R)
-        self.assertFalse(pc.context_rule('\ua872\u200d\u0622', 1, UCD))
+        self.assertFalse(_context_rule('\ua872\u200d\u0622', 1, UCD))
 
         # 3. rule_middle_dot
         # Valid: 6c b7 6c
-        self.assertTrue(pc.context_rule('\u006c\u00b7\u006c', 1, UCD))
+        self.assertTrue(_context_rule('\u006c\u00b7\u006c', 1, UCD))
         # Invalid before: 6d b7 6c
-        self.assertFalse(pc.context_rule('\u006d\u00b7\u006c', 1, UCD))
+        self.assertFalse(_context_rule('\u006d\u00b7\u006c', 1, UCD))
         # Invalid after: 6c b7 6d
-        self.assertFalse(pc.context_rule('\u006c\u00b7\u006d', 1, UCD))
+        self.assertFalse(_context_rule('\u006c\u00b7\u006d', 1, UCD))
         # Invalid: undefined before
-        self.assertFalse(pc.context_rule('\u00b7\u006c', 0, UCD))
+        self.assertFalse(_context_rule('\u00b7\u006c', 0, UCD))
         # Invalid: undefined after
-        self.assertFalse(pc.context_rule('\u006c\u00b7', 1, UCD))
+        self.assertFalse(_context_rule('\u006c\u00b7', 1, UCD))
 
         # 4. rule_greek_keraia
         # Valid: 0375 03ff
-        self.assertTrue(pc.context_rule('\u0375\u03ff', 0, UCD))
+        self.assertTrue(_context_rule('\u0375\u03ff', 0, UCD))
         # Invalid: 0375 1d25
-        self.assertFalse(pc.context_rule('\u0375\u1d25', 0, UCD))
+        self.assertFalse(_context_rule('\u0375\u1d25', 0, UCD))
         # Invalid: undefined after
-        self.assertFalse(pc.context_rule('\u0375', 0, UCD))
+        self.assertFalse(_context_rule('\u0375', 0, UCD))
 
         # 5. rule_hebrew_punctuation
         # Valid: 0591 05f3
-        self.assertTrue(pc.context_rule('\u0591\u05f3', 1, UCD))
+        self.assertTrue(_context_rule('\u0591\u05f3', 1, UCD))
         # Valid: 0591 05f4
-        self.assertTrue(pc.context_rule('\u0591\u05f4', 1, UCD))
+        self.assertTrue(_context_rule('\u0591\u05f4', 1, UCD))
         # Invalid: 0031 05f3
-        self.assertFalse(pc.context_rule('\u0031\u05f3', 1, UCD))
+        self.assertFalse(_context_rule('\u0031\u05f3', 1, UCD))
         # Invalid: 0031 05f4
-        self.assertFalse(pc.context_rule('\u0031\u05f4', 1, UCD))
+        self.assertFalse(_context_rule('\u0031\u05f4', 1, UCD))
         # Invalid: undefined after
-        self.assertFalse(pc.context_rule('\u05f3', 0, UCD))
+        self.assertFalse(_context_rule('\u05f3', 0, UCD))
 
         # 6. katakana_middle_dot
         # Valid: 0x30fb 0x2e99
-        self.assertTrue(pc.context_rule('\u30fb\u2e99', 0, UCD))
+        self.assertTrue(_context_rule('\u30fb\u2e99', 0, UCD))
         # Valid: 0x30f0 0x30fb 0x0021
-        self.assertTrue(pc.context_rule('\u30f0\u30fb\u0021', 1, UCD))
+        self.assertTrue(_context_rule('\u30f0\u30fb\u0021', 1, UCD))
         # Invalid: 0x30fb 0x3006
-        self.assertFalse(pc.context_rule('\u30fb\u3006', 0, UCD))
+        self.assertFalse(_context_rule('\u30fb\u3006', 0, UCD))
         # Invalid: 0x30fb 0x0021
-        self.assertFalse(pc.context_rule('\u0021\u30fb', 1, UCD))
+        self.assertFalse(_context_rule('\u0021\u30fb', 1, UCD))
         # Invalid: 0x30fb
-        self.assertFalse(pc.context_rule('\u30fb', 0, UCD))
+        self.assertFalse(_context_rule('\u30fb', 0, UCD))
 
         # 7. arabic_indic
         # Valid: 0x0660 0x0661 0x0662 0x0669
-        self.assertTrue(pc.context_rule('\u0660\u0661\u0662\u0669', 0, UCD))
+        self.assertTrue(_context_rule('\u0660\u0661\u0662\u0669', 0, UCD))
         # Invalid: 0x660 0x0661 0x0662 0x06f0
-        self.assertFalse(pc.context_rule('\u0660\u0661\u0662\u06f0', 0, UCD))
+        self.assertFalse(_context_rule('\u0660\u0661\u0662\u06f0', 0, UCD))
 
         # 8. extended_arabic_indic
         # Valid: 0x06f0 0x06f1 0x06f2 0x06f9
-        self.assertTrue(pc.context_rule('\u06f0\u06f1\u06f2\u06f9', 0, UCD))
+        self.assertTrue(_context_rule('\u06f0\u06f1\u06f2\u06f9', 0, UCD))
         # Invalid: 0x6f0 0x06f1 0x06f2 0x0660
-        self.assertFalse(pc.context_rule('\u06f0\u06f1\u06f2\u0660', 0, UCD))
+        self.assertFalse(_context_rule('\u06f0\u06f1\u06f2\u0660', 0, UCD))
 
         # 9. No rule matches.
         with self.assertRaises(KeyError):
-            pc.context_rule('a', 0, UCD)
+            _context_rule('a', 0, UCD)
 
 
 class TestPrecisUnicodeData(unittest.TestCase):

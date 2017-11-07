@@ -37,16 +37,6 @@ def context_rule_error(value, offset, ucd):
     return result
 
 
-def context_rule(value, offset, ucd):
-    """ Apply the context rule to `value[offset]`.
-
-    TODO: Remove this function.
-
-    Return true if successful.
-    """
-    return not context_rule_error(value, offset, ucd)
-
-
 # These rules test a character at a given offset in the string.
 
 
