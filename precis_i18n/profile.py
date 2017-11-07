@@ -145,7 +145,7 @@ class Profile(object):
         """Check that profile result is idempotent.
 
         Profiles that are not idempotent should override this method.
-        
+
         Args:
             value (str): Value to enforce.
 
