@@ -83,14 +83,16 @@ case-insensitive comparison.
 -  NicknameCasePreserved
 -  NicknameCaseMapped
 
-The ``CaseMapped`` profiles use Unicode Default Case Folding. There are
-additional codecs that use Unicode ``ToLower`` to support draft RFC
-changes.
+The ``CaseMapped`` profiles use Unicode ``ToLower`` per the latest RFC. Previous
+verions of this package used Unicode Default Case Folding. There are CaseMapped variants
+for different case transformations. These profile names are deprecated:
 
 -  UsernameCaseMapped:ToLower
+-  UsernameCaseMapped:CaseFold
 -  NicknameCaseMapped:ToLower
+-  NicknameCaseMapped:CaseFold
 
-The PRECIS base string classes are also available:
+The PRECIS base string classes are also available as codecs:
 
 -  IdentifierClass
 -  FreeFormClass
