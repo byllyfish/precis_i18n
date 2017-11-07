@@ -15,7 +15,7 @@ PROFILES = [
     'UsernameCasePreserved', 'UsernameCaseMapped', 'OpaqueString',
     'NicknameCaseMapped', 'UsernameCaseMapped:ToLower',
     'NicknameCasePreserved', 'NicknameCaseMapped:ToLower', 'FreeFormClass',
-    'IdentifierClass'
+    'IdentifierClass', 'UsernameCaseMapped:CaseFold', 'NicknameCaseMapped:CaseFold'
 ]
 
 EXCEPTIONS = {

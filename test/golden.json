@@ -15779,5 +15779,3513 @@
     "input": "\u1ff7\u03c9\u0342\u0345",
     "output": "\u1ff7\u03c9\u0342\u0345",
     "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "#",
+    "output": "#",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\\",
+    "output": "\\",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0000",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u001f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": " ",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "!",
+    "output": "!",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "~",
+    "output": "~",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u007f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0080",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u009f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00a0",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00fe",
+    "output": "\u00fe",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00ff",
+    "output": "\u00ff",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufeff",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufffe",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\udbff\udfff",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
+    "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Kevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u212aevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u039aevin",
+    "output": "\u03baevin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1e32evin",
+    "output": "\u1e33evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1e34evin",
+    "output": "\u1e35evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "K\u0301evin",
+    "output": "\u1e31evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "K\u0301\u0301evin",
+    "output": "\u1e31\u0301evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "K\ua717evin",
+    "output": "k\ua717evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u24c0evin",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2c69evin",
+    "output": "\u2c6aevin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ua740evin",
+    "output": "\ua741evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ua742evin",
+    "output": "\ua743evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ua744evin",
+    "output": "\ua745evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ua7a2evin",
+    "output": "\ua7a3evin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uff2bevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\udb40\udc4bevin",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83c\udd1aevin",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83c\udd3aevin",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83c\udd5aevin",
+    "output": null,
+    "error": "DISALLOWED/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83c\udd7aevin",
+    "output": null,
+    "error": "DISALLOWED/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "StPeter",
+    "output": "stpeter",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet",
+    "output": "juliet",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet@Example.COM",
+    "output": "juliet@example.com",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Fussball",
+    "output": "fussball",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Fu\u00dfball",
+    "output": "fussball",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03c0",
+    "output": "\u03c0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03a3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "ju1iet",
+    "output": "ju1iet",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
+    "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
+    "error": null,
+    "unicode_version": 8.0
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Foo Bar",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "foo bar",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03a3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u265a",
+    "output": null,
+    "error": "DISALLOWED/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Richard \u2163",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0cf1",
+    "output": "\u0cf1",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0cf2",
+    "output": "\u0cf2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u19da",
+    "output": null,
+    "error": "DISALLOWED/other_letter_digits"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "i\u0130\u0131I",
+    "output": "ii\u0307\u0131i",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "I\u0307",
+    "output": "i\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\ua717",
+    "output": "a\ua717",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00e9",
+    "output": "\u00e9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "e\u0301\u0301\u0301",
+    "output": "\u00e9\u0301\u0301",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "e\u0301",
+    "output": "\u00e9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "o",
+    "output": "o",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03bf",
+    "output": "\u03bf",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u043e",
+    "output": "\u043e",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufec9",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufeca",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufecb",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufecc",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uff76",
+    "output": "\u30ab",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u30ab",
+    "output": "\u30ab",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3300",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u30a2\u30d1\u30fc\u30c8",
+    "output": "\u30a2\u30d1\u30fc\u30c8",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "i\u2079",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00bc",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u01c6",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe37",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u210c",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u210d",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2e2f",
+    "output": "\u2e2f",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u037e",
+    "output": ";",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fef",
+    "output": "`",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u212a",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uff01",
+    "output": "!",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
+    "output": "juliet",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uff04",
+    "output": "$",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe69",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Rs",
+    "output": "rs",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u20a8",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83c\uddfa\ud83c\uddf8",
+    "output": null,
+    "error": "DISALLOWED/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "K",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u212a",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u24c0",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2460",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03a9",
+    "output": "\u03c9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2126",
+    "output": "\u03c9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00c7",
+    "output": "\u00e7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "C\u0327",
+    "output": "\u00e7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "q\u0307\u0323",
+    "output": "q\u0323\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "q\u0323\u0307",
+    "output": "q\u0323\u0307",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uac00",
+    "output": "\uac00",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1100\u1161",
+    "output": "\uac00",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u212b",
+    "output": "\u00e5",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\u030a",
+    "output": "\u00e5",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "s\u0323\u0307",
+    "output": "\u1e69",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufb01",
+    "output": "fi",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uac01",
+    "output": "\uac01",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1100\u1161\u11a8",
+    "output": "\uac01",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83d\udc7e",
+    "output": null,
+    "error": "DISALLOWED/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud83d\udc9a",
+    "output": null,
+    "error": "DISALLOWED/symbols"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
+    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
+    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Z\u0315\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u032d\u0322\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0334A\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u031d\u0327\u031d\u0356\u032c\u0329\u032f\u0334L\u031b\u034a\u0314\u0307\u0352\u0352\u0309\u0327\u032c\u0316\u0330\u032b\u0362\u033c\u0329\u035f\u0356G\u033d\u0307\u0360\u0350\u0313\u030c\u0342\u035d\u0313\u031d\u031e\u033c\u031d\u034d\u0336O\u033f\u0308\u035b\u0306\u030f\u034b\u0342\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u0321",
+    "output": "z\u0334\u0322\u032d\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u0315a\u0334\u0327\u031d\u031d\u0356\u032c\u0329\u032f\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u013c\u031b\u032c\u0316\u0330\u032b\u033c\u0329\u0356\u034a\u0314\u0307\u0352\u0352\u0309\u0362\u035fg\u0336\u031d\u031e\u033c\u031d\u034d\u033d\u0307\u0350\u0313\u030c\u0342\u0313\u0360\u035do\u0321\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u033f\u0308\u035b\u0306\u030f\u034b\u0342",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u037e",
+    "output": ";",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
+    "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00ad",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u034f",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1806",
+    "output": null,
+    "error": "DISALLOWED/punctuation"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u180b",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u180c",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u180d",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u200b",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u200c",
+    "output": null,
+    "error": "DISALLOWED/zero_width_nonjoiner"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u200d",
+    "output": null,
+    "error": "DISALLOWED/zero_width_joiner"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2060",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe00",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe01",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe02",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe03",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe04",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe05",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe06",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe07",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe08",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe09",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe0a",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe0b",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe0c",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe0d",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe0e",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe0f",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufeff",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet Capulet",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": " Juliet",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet ",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet  Capulet",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\"Juliet\"",
+    "output": "\"juliet\"",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "'Juliet'",
+    "output": "'juliet'",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "'Juliet '",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "' Juliet'",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "'Juliet Capulet'",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "'Juliet  Capulet'",
+    "output": null,
+    "error": "DISALLOWED/spaces"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0\u05d1",
+    "output": "\u05d0\u05d1",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0\u20d6\u05d1",
+    "output": "\u05d0\u20d6\u05d1",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0\u05d1+",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "+\u05d0\u05d1",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\u05d0\u05d1",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0\u05d1A",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0A\u05d1",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05d0(/%\\))\u05d1",
+    "output": "\u05d0(/%\\))\u05d1",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet+",
+    "output": "juliet+",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "+Juliet",
+    "output": "+juliet",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "Juliet\u05d1",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0b47\u0300\u0b3e\u0323",
+    "output": "\u0b47\u0300\u0b3e\u0323",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1100\u0300\u1161\u0323",
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00a8",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00af",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00b4",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00b8",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u02d8",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u02d9",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u02da",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u02db",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u02dc",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u02dd",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u037a",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0384",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0385",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fbd",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fbf",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fc0",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fc1",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fcd",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fce",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fcf",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fdd",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fde",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fdf",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fed",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fee",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1ffd",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1ffe",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2017",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u203e",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u309b",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u309c",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufc5e",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufc5f",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufc60",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufc61",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufc62",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufc63",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe49",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe4a",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe4b",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe4c",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe70",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe72",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe74",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe76",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe78",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe7a",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe7c",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ufe7e",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\uffe3",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00b7",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "ruL\u00b7Lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00df",
+    "output": "ss",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u00b7",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0375",
+    "output": null,
+    "error": "DISALLOWED/greek_keraia"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05f3",
+    "output": null,
+    "error": "DISALLOWED/hebrew_punctuation"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u05f4",
+    "output": null,
+    "error": "DISALLOWED/hebrew_punctuation"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u30fb",
+    "output": null,
+    "error": "DISALLOWED/katakana_middle_dot"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/bidi_rule"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "DISALLOWED/unassigned"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": null,
+    "error": "DISALLOWED/has_compat"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb6\u03b9\u1fb6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc6\u03b9\u1fc6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff6\u03b9\u1ff6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "#",
+    "output": "#",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\\",
+    "output": "\\",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0000",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\t",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\n",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\r",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u001f",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": " ",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "!",
+    "output": "!",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "~",
+    "output": "~",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u007f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0080",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u009f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00a0",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00fe",
+    "output": "\u00fe",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00ff",
+    "output": "\u00ff",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufeff",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufffe",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\udbff\udfff",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
+    "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Kevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u212aevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u039aevin",
+    "output": "\u03baevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1e32evin",
+    "output": "\u1e33evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1e34evin",
+    "output": "\u1e35evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "K\u0301evin",
+    "output": "\u1e31evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "K\u0301\u0301evin",
+    "output": "\u1e31\u0301evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "K\ua717evin",
+    "output": "k\ua717evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u24c0evin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2c69evin",
+    "output": "\u2c6aevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ua740evin",
+    "output": "\ua741evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ua742evin",
+    "output": "\ua743evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ua744evin",
+    "output": "\ua745evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ua7a2evin",
+    "output": "\ua7a3evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uff2bevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\udb40\udc4bevin",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83c\udd1aevin",
+    "output": "(k)evin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83c\udd3aevin",
+    "output": "kevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83c\udd5aevin",
+    "output": "\ud83c\udd5aevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83c\udd7aevin",
+    "output": "\ud83c\udd7aevin",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "StPeter",
+    "output": "stpeter",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet",
+    "output": "juliet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet@Example.COM",
+    "output": "juliet@example.com",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Fussball",
+    "output": "fussball",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Fu\u00dfball",
+    "output": "fussball",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03c0",
+    "output": "\u03c0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03a3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "ju1iet",
+    "output": "ju1iet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
+    "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
+    "error": null,
+    "unicode_version": 8.0
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "foo",
+    "output": "foo",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Foo Bar",
+    "output": "foo bar",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "foo bar",
+    "output": "foo bar",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03a3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03c3",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u265a",
+    "output": "\u265a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Richard \u2163",
+    "output": "richard iv",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0cf1",
+    "output": "\u0cf1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0cf2",
+    "output": "\u0cf2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u19da",
+    "output": "\u19da",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "i\u0130\u0131I",
+    "output": "ii\u0307\u0131i",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "I\u0307",
+    "output": "i\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0131\u0307",
+    "output": "\u0131\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\ua717",
+    "output": "a\ua717",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00e9",
+    "output": "\u00e9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "e\u0301\u0301\u0301",
+    "output": "\u00e9\u0301\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "e\u0301",
+    "output": "\u00e9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "o",
+    "output": "o",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03bf",
+    "output": "\u03bf",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u043e",
+    "output": "\u043e",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufec9",
+    "output": "\u0639",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufeca",
+    "output": "\u0639",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufecb",
+    "output": "\u0639",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufecc",
+    "output": "\u0639",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uff76",
+    "output": "\u30ab",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u30ab",
+    "output": "\u30ab",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3300",
+    "output": "\u30a2\u30d1\u30fc\u30c8",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u30a2\u30d1\u30fc\u30c8",
+    "output": "\u30a2\u30d1\u30fc\u30c8",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "i\u2079",
+    "output": "i9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00bc",
+    "output": "1\u20444",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u01c6",
+    "output": "d\u017e",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe37",
+    "output": "{",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u210c",
+    "output": "h",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u210d",
+    "output": "h",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2e2f",
+    "output": "\u2e2f",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u037e",
+    "output": ";",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fef",
+    "output": "`",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u212a",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uff01",
+    "output": "!",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uff2a\uff55\uff4c\uff49\uff45\uff54",
+    "output": "juliet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uff04",
+    "output": "$",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe69",
+    "output": "$",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Rs",
+    "output": "rs",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u20a8",
+    "output": "rs",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83c\uddfa\ud83c\uddf8",
+    "output": "\ud83c\uddfa\ud83c\uddf8",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "K",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u212a",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u24c0",
+    "output": "k",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2460",
+    "output": "1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03a9",
+    "output": "\u03c9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2126",
+    "output": "\u03c9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00c7",
+    "output": "\u00e7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "C\u0327",
+    "output": "\u00e7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "q\u0307\u0323",
+    "output": "q\u0323\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "q\u0323\u0307",
+    "output": "q\u0323\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uac00",
+    "output": "\uac00",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1100\u1161",
+    "output": "\uac00",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u212b",
+    "output": "\u00e5",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\u030a",
+    "output": "\u00e5",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "s\u0323\u0307",
+    "output": "\u1e69",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufb01",
+    "output": "fi",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uac01",
+    "output": "\uac01",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1100\u1161\u11a8",
+    "output": "\uac01",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83d\udc7e",
+    "output": "\ud83d\udc7e",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud83d\udc9a",
+    "output": "\ud83d\udc9a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
+    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
+    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Z\u0315\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u032d\u0322\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0334A\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u031d\u0327\u031d\u0356\u032c\u0329\u032f\u0334L\u031b\u034a\u0314\u0307\u0352\u0352\u0309\u0327\u032c\u0316\u0330\u032b\u0362\u033c\u0329\u035f\u0356G\u033d\u0307\u0360\u0350\u0313\u030c\u0342\u035d\u0313\u031d\u031e\u033c\u031d\u034d\u0336O\u033f\u0308\u035b\u0306\u030f\u034b\u0342\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u0321",
+    "output": "z\u0334\u0322\u032d\u0326\u0319\u0318\u0318\u0324\u0347\u0320\u0313\u030c\u035b\u0350\u0306\u0311\u0307\u0342\u034c\u0315a\u0334\u0327\u031d\u031d\u0356\u032c\u0329\u032f\u033f\u0311\u0309\u0308\u0302\u0308\u034c\u035c\u013c\u031b\u032c\u0316\u0330\u032b\u033c\u0329\u0356\u034a\u0314\u0307\u0352\u0352\u0309\u0362\u035fg\u0336\u031d\u031e\u033c\u031d\u034d\u033d\u0307\u0350\u0313\u030c\u0342\u0313\u0360\u035do\u0321\u032b\u032f\u0320\u0348\u032f\u0356\u033a\u033f\u0308\u035b\u0306\u030f\u034b\u0342",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u037e",
+    "output": ";",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
+    "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00ad",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u034f",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1806",
+    "output": "\u1806",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u180b",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u180c",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u180d",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u200b",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u200c",
+    "output": null,
+    "error": "DISALLOWED/zero_width_nonjoiner"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u200d",
+    "output": null,
+    "error": "DISALLOWED/zero_width_joiner"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2060",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe00",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe01",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe02",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe03",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe04",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe05",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe06",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe07",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe08",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe09",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe0a",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe0b",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe0c",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe0d",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe0e",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe0f",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufeff",
+    "output": null,
+    "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet Capulet",
+    "output": "juliet capulet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": " Juliet",
+    "output": "juliet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet ",
+    "output": "juliet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet  Capulet",
+    "output": "juliet capulet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\"Juliet\"",
+    "output": "\"juliet\"",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "'Juliet'",
+    "output": "'juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "'Juliet '",
+    "output": "'juliet '",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "' Juliet'",
+    "output": "' juliet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "'Juliet Capulet'",
+    "output": "'juliet capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "'Juliet  Capulet'",
+    "output": "'juliet capulet'",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0\u05d1",
+    "output": "\u05d0\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0\u20d6\u05d1",
+    "output": "\u05d0\u20d6\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0\u1ab6\u05d1",
+    "output": "\u05d0\u1ab6\u05d1",
+    "error": null,
+    "unicode_version": 7.0
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0\u05d1+",
+    "output": "\u05d0\u05d1+",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "+\u05d0\u05d1",
+    "output": "+\u05d0\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\u05d0\u05d1",
+    "output": "a\u05d0\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0\u05d1A",
+    "output": "\u05d0\u05d1a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0A\u05d1",
+    "output": "\u05d0a\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05d0(/%\\))\u05d1",
+    "output": "\u05d0(/%\\))\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet+",
+    "output": "juliet+",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "+Juliet",
+    "output": "+juliet",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "Juliet\u05d1",
+    "output": "juliet\u05d1",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0b47\u0300\u0b3e\u0323",
+    "output": "\u0b47\u0300\u0b3e\u0323",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1100\u0300\u1161\u0323",
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00a8",
+    "output": "\u0308",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00af",
+    "output": "\u0304",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00b4",
+    "output": "\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00b8",
+    "output": "\u0327",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u02d8",
+    "output": "\u0306",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u02d9",
+    "output": "\u0307",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u02da",
+    "output": "\u030a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u02db",
+    "output": "\u0328",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u02dc",
+    "output": "\u0303",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u02dd",
+    "output": "\u030b",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u037a",
+    "output": "\u03b9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0384",
+    "output": "\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0385",
+    "output": "\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fbd",
+    "output": "\u0313",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fbf",
+    "output": "\u0313",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fc0",
+    "output": "\u0342",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fc1",
+    "output": "\u0308\u0342",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fcd",
+    "output": "\u0313\u0300",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fce",
+    "output": "\u0313\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fcf",
+    "output": "\u0313\u0342",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fdd",
+    "output": "\u0314\u0300",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fde",
+    "output": "\u0314\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fdf",
+    "output": "\u0314\u0342",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fed",
+    "output": "\u0308\u0300",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fee",
+    "output": "\u0308\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1ffd",
+    "output": "\u0301",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1ffe",
+    "output": "\u0314",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2017",
+    "output": "\u0333",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u203e",
+    "output": "\u0305",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u309b",
+    "output": "\u3099",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u309c",
+    "output": "\u309a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufc5e",
+    "output": "\u064c\u0651",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufc5f",
+    "output": "\u064d\u0651",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufc60",
+    "output": "\u064e\u0651",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufc61",
+    "output": "\u064f\u0651",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufc62",
+    "output": "\u0650\u0651",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufc63",
+    "output": "\u0651\u0670",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe49",
+    "output": "\u0305",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe4a",
+    "output": "\u0305",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe4b",
+    "output": "\u0305",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe4c",
+    "output": "\u0305",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe70",
+    "output": "\u064b",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe72",
+    "output": "\u064c",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe74",
+    "output": "\u064d",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe76",
+    "output": "\u064e",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe78",
+    "output": "\u064f",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe7a",
+    "output": "\u0650",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe7c",
+    "output": "\u0651",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ufe7e",
+    "output": "\u0652",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\uffe3",
+    "output": "\u0304",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00b7",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00b7l",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "l\u00b7",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "rul\u00b7lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "ruL\u00b7Lz",
+    "output": "rul\u00b7lz",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "rul\u00b7ze",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "ru\u00b7lze",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00df",
+    "output": "ss",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03c2",
+    "output": "\u03c3",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u06fd",
+    "output": "\u06fd",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u06fe",
+    "output": "\u06fe",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0f0b",
+    "output": "\u0f0b",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3007",
+    "output": "\u3007",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u00b7",
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0375",
+    "output": null,
+    "error": "DISALLOWED/greek_keraia"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05f3",
+    "output": null,
+    "error": "DISALLOWED/hebrew_punctuation"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u05f4",
+    "output": null,
+    "error": "DISALLOWED/hebrew_punctuation"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u30fb",
+    "output": null,
+    "error": "DISALLOWED/katakana_middle_dot"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "output": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "output": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
+    "output": null,
+    "error": "DISALLOWED/arabic_indic"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
+    "output": null,
+    "error": "DISALLOWED/extended_arabic_indic"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0640",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u07fa",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u302e",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u302f",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3031",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3032",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3033",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3034",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u3035",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u303b",
+    "output": null,
+    "error": "DISALLOWED/exceptions"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0600",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\udb80\udc00",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\udb40\uddf0",
+    "output": null,
+    "error": "DISALLOWED/unassigned"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud800",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\ud8ff",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03a8\u03d3\u03a7\u0397",
+    "output": "\u03c8\u03cd\u03c7\u03b7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u01f0j\u030c",
+    "output": "\u01f0\u01f0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0390\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u03b0\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1e96h\u0331",
+    "output": "\u1e96\u1e96",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1e97t\u0308",
+    "output": "\u1e97\u1e97",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1e98w\u030a",
+    "output": "\u1e98\u1e98",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1e99y\u030a",
+    "output": "\u1e99\u1e99",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1f50\u03c5\u0313",
+    "output": "\u1f50\u1f50",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1f52\u03c5\u0313\u0300",
+    "output": "\u1f52\u1f52",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1f54\u03c5\u0313\u0301",
+    "output": "\u1f54\u1f54",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1f56\u03c5\u0313\u0342",
+    "output": "\u1f56\u1f56",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fb6\u03b1\u0342",
+    "output": "\u1fb6\u1fb6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fb7\u03b1\u0342\u0345",
+    "output": "\u1fb6\u03b9\u1fb6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fc6\u03b7\u0342",
+    "output": "\u1fc6\u1fc6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fc7\u03b7\u0342\u0345",
+    "output": "\u1fc6\u03b9\u1fc6\u03b9",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fd2\u03b9\u0308\u0300",
+    "output": "\u1fd2\u1fd2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fd3\u03b9\u0308\u0301",
+    "output": "\u0390\u0390",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fd6\u03b9\u0342",
+    "output": "\u1fd6\u1fd6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fd7\u03b9\u0308\u0342",
+    "output": "\u1fd7\u1fd7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fe2\u03c5\u0308\u0300",
+    "output": "\u1fe2\u1fe2",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fe3\u03c5\u0308\u0301",
+    "output": "\u03b0\u03b0",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fe4\u03c1\u0313",
+    "output": "\u1fe4\u1fe4",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fe6\u03c5\u0342",
+    "output": "\u1fe6\u1fe6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1fe7\u03c5\u0308\u0342",
+    "output": "\u1fe7\u1fe7",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1ff6\u03c9\u0342",
+    "output": "\u1ff6\u1ff6",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u1ff7\u03c9\u0342\u0345",
+    "output": "\u1ff6\u03b9\u1ff6\u03b9",
+    "error": null
   }
 ]
