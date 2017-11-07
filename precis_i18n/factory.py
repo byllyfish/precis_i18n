@@ -24,7 +24,9 @@ _PROFILES = {
     'usernamecasepreserved': _factory(
         _profile.Username, name='UsernameCasePreserved'),
     'usernamecasemapped': _factory(
-        _profile.Username, name='UsernameCaseMapped', casemap='fold'),
+        _profile.Username, name='UsernameCaseMapped', casemap='lower'),
+    'usernamecasemapped:casefold': _factory(
+        _profile.Username, name='UsernameCaseMapped:CaseFold', casemap='fold'),
     'usernamecasemapped:tolower': _factory(
         _profile.Username, name='UsernameCaseMapped:ToLower', casemap='lower'),
     'opaquestring': _factory(
@@ -32,13 +34,15 @@ _PROFILES = {
     'nicknamecasepreserved': _factory(
         _profile.Nickname, name='NicknameCasePreserved'),
     'nicknamecasemapped': _factory(
-        _profile.Nickname, name='NicknameCaseMapped', casemap='fold'),
+        _profile.Nickname, name='NicknameCaseMapped', casemap='lower'),
+    'nicknamecasemapped:casefold': _factory(
+        _profile.Nickname, name='NicknameCaseMapped:CaseFold', casemap='fold'),
     'nicknamecasemapped:tolower': _factory(
         _profile.Nickname, name='NicknameCaseMapped:ToLower', casemap='lower'),
 
     # Alias for backward-compatibility with previous version of codec.
     'nickname': _factory(
-        _profile.Nickname, name='Nickname', casemap='fold')
+        _profile.Nickname, name='Nickname', casemap='lower')
 }
 
 
@@ -50,10 +54,12 @@ def get_profile(name):
         "FreeFormClass"
         "UsernameCasePreserved"
         "UsernameCaseMapped"
+        "UsernameCaseMapped:CaseFold"
         "UsernameCaseMapped:ToLower"
         "OpaqueString"
         "NicknameCasePreserved"
         "NicknameCaseMapped"
+        "NicknameCaseMapped:CaseFold"
         "NicknameCaseMapped:ToLower"
         "Nickname" (alias for "NicknameCaseMapped")
 
