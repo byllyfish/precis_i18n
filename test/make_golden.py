@@ -22,7 +22,7 @@ EXCEPTIONS = {
     # ToLower difference before Unicode 8.0. The lower case characters weren't
     # added until Unicode 8.0.
     '\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2':
-    (re.compile(r'.+:ToLower'), 8.0),
+    (re.compile(r'.+CaseMapped(:ToLower)?'), 8.0),
     # U+1AB6 was introduced in 7.0.
     '\u05d0\u1ab6\u05d1': (re.compile(r'.'), 7.0),
 }

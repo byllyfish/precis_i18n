@@ -2062,7 +2062,8 @@
     "profile": "UsernameCaseMapped",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\uabaa\uab72\uab85\uab7c\uab72\uab7c\uaba2",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "UsernameCaseMapped",
@@ -5568,7 +5569,8 @@
     "profile": "NicknameCaseMapped",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\uabaa\uab72\uab85\uab7c\uab72\uab7c\uaba2",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "NicknameCaseMapped",
