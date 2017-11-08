@@ -1,12 +1,20 @@
 Changelog
 =========
 
+0.7.0
+-----
+
+-  (IMPORTANT) This version changes the results of the CaseMapped profiles due to publication of new RFC's.
+-  The CaseMapped profiles now default to using ToLower instead of CaseFold.
+-  Added profile variants for CaseFold, just for completeness.
+-  Update references to RFC numbers in documentation and comments.
+
 0.6.0
 -----
 
 -  (IMPORTANT) This version changes the results of the Nickname profile.
 -  Add support for proposed changes to RFC 7564 that will make the
-   Nickname profile idempotent.
+   Nickname profile idempotent (Issue #3).
 -  Add the "DISALLOWED/not\_idempotent" error message.
 -  Sign pypi package with gpg.
 
