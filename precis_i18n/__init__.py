@@ -1,6 +1,4 @@
-"""
-precis_i18n
-"""
+"""PRECIS-i18n: Internationalized Usernames and Passwords."""
 
 __version__ = '0.7.0'
 

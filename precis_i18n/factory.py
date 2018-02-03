@@ -1,6 +1,4 @@
-"""
-Implements the `get_profile` factory function used to create profiles by name.
-"""
+"""Implements the `get_profile` factory function used to create profiles."""
 
 import precis_i18n.baseclass as _base
 import precis_i18n.profile as _profile
