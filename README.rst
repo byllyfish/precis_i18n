@@ -128,8 +128,8 @@ is disallowed. The ``reason`` field specifies the kind of error.
 +------------------------------+---------------------------------------------+
 | DISALLOWED/has\_compat       | Compatibility characters are not allowed.   |
 +------------------------------+---------------------------------------------+
-| DISALLOWED/hebrew\_punctuati | Hebrew punctuation geresh or gershayim must |
-| on                           | be preceded by Hebrew character. (Context)  |
+| DISALLOWED/hebrew\           | Hebrew punctuation geresh or gershayim must |
+| _punctuation                 | be preceded by Hebrew character. (Context)  |
 +------------------------------+---------------------------------------------+
 | DISALLOWED/katakana\_middle\ | Katakana middle dot must be accompanied by  |
 | _dot                         | a Hiragana, Katakana, or Han character.     |
@@ -145,11 +145,11 @@ is disallowed. The ``reason`` field specifies the kind of error.
 +------------------------------+---------------------------------------------+
 | DISALLOWED/other             | Other character is not allowed.             |
 +------------------------------+---------------------------------------------+
-| DISALLOWED/other\_letter\_di | Non-traditional letter or digit is not      |
-| gits                         | allowed.                                    |
+| DISALLOWED/other\_letter\    | Non-traditional letter or digit is not      |
+| _digits                      | allowed.                                    |
 +------------------------------+---------------------------------------------+
-| DISALLOWED/precis\_ignorable | Default ignorable or non-character is not   |
-| \_properties                 | allowed.                                    |
+| DISALLOWED/precis\           | Default ignorable or non-character is not   |
+| _ignorable\_properties       | allowed.                                    |
 +------------------------------+---------------------------------------------+
 | DISALLOWED/punctuation       | Non-ASCII punctuation character is not      |
 |                              | allowed.                                    |
@@ -161,11 +161,11 @@ is disallowed. The ``reason`` field specifies the kind of error.
 | DISALLOWED/unassigned        | Unassigned unicode character is not         |
 |                              | allowed.                                    |
 +------------------------------+---------------------------------------------+
-| DISALLOWED/zero\_width\_join | Zero width joiner must immediately follow a |
-| er                           | combining virama. (Context)                 |
+| DISALLOWED/zero\_width\      | Zero width joiner must immediately follow a |
+| _joiner                      | combining virama. (Context)                 |
 +------------------------------+---------------------------------------------+
-| DISALLOWED/zero\_width\_nonj | Zero width non-joiner must immediately      |
-| oiner                        | follow a combining virama, or appear where  |
+| DISALLOWED/zero\_width\      | Zero width non-joiner must immediately      |
+| _nonjoiner                   | follow a combining virama, or appear where  |
 |                              | it breaks a cursive connection in a         |
 |                              | formally cursive script. (Context)          |
 +------------------------------+---------------------------------------------+
