@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.0
+-----
+
+-  Release 1.0 version.
+-  Add test that all codepoints are idempotent.
+-  Update copyright year (2018).
+
 0.7.0
 -----
 
