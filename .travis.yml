@@ -26,6 +26,7 @@ install:
       fi
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
 script:
+  - python3 -c 'import unicodedata; print("Unicode Version: %s" % unicodedata.unidata_version)'
   - python3 -m unittest discover
   - python3 -m doctest README.rst
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py; fi
