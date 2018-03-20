@@ -1,7 +1,7 @@
 language: python
 python:
   - "3.3"       # 6.1.0
-  - "3.4.1"     # 6.2.0
+  - "3.4.0"     # 6.2.0
   - "3.4"       # 6.3.0
   - "3.5"       # 8.0
   - "3.6"       # 9.0
@@ -27,9 +27,9 @@ install:
       fi
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
 script:
-  - python3 -c "import unicodedata; print(unicodedata.unidata_version)"
-  - python3 -m unittest discover
-  - python3 -m doctest README.rst
+  - python -c "import unicodedata; print(unicodedata.unidata_version)"
+  - python -m unittest discover
+  - python -m doctest README.rst
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py; fi
 
 after_success:
