@@ -20,7 +20,7 @@ install:
   # Install a recent build of pypy3.
   # https://github.com/frol/flask-restplus-server-example/blob/master/.travis.yml
   - |
-      if [ "$TRAVIS_PYTHON_VERSION" = "pypy3" ]; then
+      if [ "$TRAVIS_PYTHON_VERSION" = "pypy3-ignore" ]; then
         PYPY3_VERSION="pypy3.5-5.10.1"
         PYENV_ROOT="$HOME/.pyenv"
         if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
@@ -35,6 +35,7 @@ install:
       fi
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
 script:
+  - python --version
   - python -c "import unicodedata; print(unicodedata.unidata_version)"
   - python -m unittest discover
   - python -m doctest README.rst
