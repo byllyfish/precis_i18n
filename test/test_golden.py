@@ -27,7 +27,11 @@ class TestGolden(unittest.TestCase):
 
     def check_allow(self, profile, input_, expected):
         #print('check_allow', profile, input_)
-        actual = input_.encode(profile).decode('utf-8')
+        try:
+            actual = input_.encode(profile).decode('utf-8')
+        except UnicodeEncodeError as ex:
+            print('%s: %r' % (input_, ex))
+            raise
         self.assertEqual(actual, expected)
         # Check that the profile encoding is idempotent. If the following
         # assertion fails, the profile is not idempotent.
