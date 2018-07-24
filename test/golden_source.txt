@@ -400,3 +400,12 @@ ru\u00b7lze
 \u1ff6\u03c9\u0342
 \u1ff7\u03c9\u0342\u0345
 
+# Samples from http://unicode.org/faq/idn.html
+
+fa\u00DF
+T\u00DCRKIYE
+t\u00FCrk\u0131ye
+\u0392\u03CC\u03BB\u03BF\u03C2
+\u0392\u03CC\u03BB\u03BF\u03A3
+
+\u03A3\u03A3
