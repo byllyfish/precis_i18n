@@ -7,7 +7,7 @@ from precis_i18n.bidi import bidi_rule, has_rtl
 # pylint: disable=no-self-use
 
 
-class Profile(object):
+class Profile:
     """Base class for a PRECIS profile.
 
     Subclasses should override the `*_rule` methods.

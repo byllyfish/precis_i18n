@@ -14,7 +14,7 @@ def _version_to_float(version):
     return float(m.group(1))
 
 
-class UnicodeData(object):
+class UnicodeData:
     """Adapter for Python's built-in unicodedata module.
 
     This class extends the unicodedata module for use in PRECIS profiles.
@@ -122,7 +122,7 @@ class UnicodeData(object):
     def _scan_join(self, iterable, term):
         for char in iterable:
             join_type = self._join_type(ord(char))
-            if join_type == term or join_type == 'D':
+            if join_type in (term, 'D'):
                 return True
             if join_type != 'T':
                 return False
@@ -131,11 +131,11 @@ class UnicodeData(object):
     def _join_type(self, cp):
         if cp in _JOINTYPE_DUAL_JOINING:
             return 'D'
-        elif cp in _JOINTYPE_RIGHT_JOINING:
+        if cp in _JOINTYPE_RIGHT_JOINING:
             return 'R'
-        elif cp in _JOINTYPE_LEFT_JOINING:
+        if cp in _JOINTYPE_LEFT_JOINING:
             return 'L'
-        elif cp in _JOINTYPE_TRANSPARENT:
+        if cp in _JOINTYPE_TRANSPARENT:
             return 'T'
         return None
 

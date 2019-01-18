@@ -5,7 +5,7 @@ from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
                                  derived_property)
 
 
-class BaseClass(object):
+class BaseClass:
     """Abstract base class for all String classes in PRECIS framework.
 
     Subclasses must set `_allowed` to a tuple of derived property names. For
@@ -47,7 +47,7 @@ class BaseClass(object):
             if prop in self._allowed:
                 continue
 
-            if prop == CONTEXTJ or prop == CONTEXTO:
+            if prop in (CONTEXTJ, CONTEXTO):
                 # Replace `kind` ('exceptions', 'join_control') with the
                 # specific name of the context rule, if the rule fails.
                 kind = context_rule_error(value, i, self.ucd)

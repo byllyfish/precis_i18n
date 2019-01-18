@@ -5,7 +5,7 @@ import re
 from bisect import bisect_left
 
 
-class CodepointSet(object):
+class CodepointSet:
     """Concrete class for an immutable set of Unicode code points.
 
     Inclusive ranges [a, b] are stored as adjacent unicode characters in a
