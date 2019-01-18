@@ -9,3 +9,5 @@ docs/
 *.egg-info/
 ~old/
 venv*/
+.mypy_cache/
+pytype_output/
