@@ -13,8 +13,8 @@ matrix:
     - python: 3.7
       dist: xenial
       sudo: true
-    - python: pypy3
-      dist: trusty
+    # - python: pypy3
+    #  dist: trusty
 
 install:
   # Install a recent build of pypy3.
