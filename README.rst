@@ -97,6 +97,23 @@ The PRECIS base string classes are also available as codecs:
 -  IdentifierClass
 -  FreeFormClass
 
+Userparts and Space Delimited Usernames
+---------------------------------------
+
+The Username profiles in this implementation do not allow spaces. The Username
+profiles correspond to the definition of "userparts" in RFC 8265. If you want to
+allow spaces in your application's usernames, you must split the string first.
+
+::
+
+    def enforce_app_username(name):
+        profile = precis_i18n.get_profile('UsernameCasePreserved')
+        userparts = [profile.enforce(userpart) for userpart in name.split(' ')]
+        return ' '.join(userparts)
+
+Be aware that a username constructed this way can contain bidirectional text in
+the separate userparts.
+
 Error Messages
 --------------
 
