@@ -32,7 +32,7 @@ the rule to be satisfied.
 _LTR_FIRST = {'L'}
 _LTR_ALLOWED = {'L', 'EN', 'ES', 'CS', 'ET', 'ON', 'BN', 'NSM'}
 _LTR_LAST = {'L', 'EN'}
-_LTR_EXCL = {}
+_LTR_EXCL = set()
 
 _RTL_FIRST = {'R', 'AL'}
 _RTL_ALLOWED = {'R', 'AL', 'AN', 'EN', 'ES', 'CS', 'ET', 'ON', 'BN', 'NSM'}
