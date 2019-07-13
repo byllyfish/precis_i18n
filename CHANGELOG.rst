@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.0.1
+-----
+
+- Fixed a dict/set syntax typo that has no runtime effect (6ae6876).
+- Test forward compatibility of derived props test files as Unicode version increases.
+- Test Unicode 11.0 (Python 3.7).
+- Update copyright year (2019).
+
 1.0.0
 -----
 
