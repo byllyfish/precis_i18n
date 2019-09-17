@@ -17,11 +17,13 @@ class IdempotentTestCase(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'DISALLOWED/not_idempotent'):
             broken.enforce('x')
 
-
     def test_all_codepoints(self):
         """Verify all individual code points are idempotent.
         """
-        profiles = [get_profile(profile) for profile in ('UsernameCaseMapped', 'NicknameCaseMapped')]
+        profiles = [
+            get_profile(profile)
+            for profile in ('UsernameCaseMapped', 'NicknameCaseMapped')
+        ]
         for cp in range(0x0110000):
             original = chr(cp)
             for profile in profiles:

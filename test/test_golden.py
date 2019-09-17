@@ -15,8 +15,7 @@ class TestGolden(unittest.TestCase):
             entries = json.load(input_file)
 
         for entry in entries:
-            if 'unicode_version' in entry and UCD_VERSION < entry[
-                    'unicode_version']:
+            if 'unicode_version' in entry and UCD_VERSION < entry['unicode_version']:
                 continue
             profile, input_, output, error = (entry['profile'], entry['input'],
                                               entry['output'], entry['error'])

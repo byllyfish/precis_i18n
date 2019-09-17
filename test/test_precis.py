@@ -260,6 +260,7 @@ class TestPrecisContextRule(unittest.TestCase):
     def test_context_rule(self):
         def _context_rule(value, offset, ucd):
             return not pc.context_rule_error(value, offset, ucd)
+
         # 1. rule_zero_width_nonjoiner
         # Valid: combining_virama before
         self.assertTrue(_context_rule('\u094d\u200c', 1, UCD))

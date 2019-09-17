@@ -10,13 +10,14 @@ PROPS = {
     'UNASSIGNED': UNASSIGNED,
     'PVALID': 2,
     'FREE_PVAL': 3,
-    'ID_DIS or FREE_PVAL': 3,   # found in IANA format only
+    'ID_DIS or FREE_PVAL': 3,  # found in IANA format only
     'DISALLOWED': 4,
     'CONTEXTJ': 5,
     'CONTEXTO': 6
 }
 
-LINE_REGEX = re.compile(r'^([0-9A-F]{4,6})-([0-9A-F]{4,6}) ([A-Z_]+)/[a-z0-9_]+$')
+LINE_REGEX = re.compile(
+    r'^([0-9A-F]{4,6})-([0-9A-F]{4,6}) ([A-Z_]+)/[a-z0-9_]+$')
 
 IANA_LINE_REGEX = re.compile(r'^([0-9A-F]{4,6})(-[0-9A-F]{4,6})?,([^,]+),.+$')
 
@@ -35,7 +36,7 @@ def _load_table(filename):
 
             lo, hi = int(m.group(1), 16), int(m.group(2), 16)
             prop = PROPS[m.group(3)]
-            for cp in range(lo, hi+1):
+            for cp in range(lo, hi + 1):
                 table[cp] = prop
 
     # Check that all codepoints are assigned.
@@ -66,7 +67,7 @@ def _load_table_iana(filename):
                 hi = lo
 
             prop = PROPS[m.group(3)]
-            for cp in range(lo, hi+1):
+            for cp in range(lo, hi + 1):
                 table[cp] = prop
 
     # Check that all codepoints are assigned.
@@ -90,7 +91,6 @@ def _load_tables():
 
 
 class TestDerivedPropsFiles(unittest.TestCase):
-
     def test_derived_props(self):
         """Check derived property values do not change as UCD version increases.
 
@@ -102,10 +102,11 @@ class TestDerivedPropsFiles(unittest.TestCase):
             # Compare table i to table i+1.
             # If table[i] != table[i+1] then table[i] must equal UNASSIGNED(1).
             ver1, tbl1 = tables[i]
-            ver2, tbl2 = tables[i+1]
+            ver2, tbl2 = tables[i + 1]
             for j in range(0x110000):
                 if tbl1[j] != UNASSIGNED:
-                    self.assertEqual(tbl1[j], tbl2[j], 'cp = %d (%s -> %s)' % (j, ver1, ver2))
+                    self.assertEqual(tbl1[j], tbl2[j],
+                                     'cp = %d (%s -> %s)' % (j, ver1, ver2))
 
     def test_iana_derived_props(self):
         """Compare IANA precis-tables to derived-props-6.3.txt"""

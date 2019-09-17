@@ -90,4 +90,5 @@ class TestUsername(unittest.TestCase):
 
     def test_constructor_fail(self):
         with self.assertRaises(ValueError):
-            precis_i18n.profile.Username(UnicodeData(), 'name', 'unsupported-arg')
+            precis_i18n.profile.Username(UnicodeData(), 'name',
+                                         'unsupported-arg')
