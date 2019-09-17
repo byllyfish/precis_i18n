@@ -4,12 +4,10 @@ import precis_i18n.baseclass as _base
 import precis_i18n.profile as _profile
 import precis_i18n.unicode as _unicode
 
-UCD = _unicode.UnicodeData()
-
 
 def _factory(profile, **kwds):
-    def _construct():
-        return profile(UCD, **kwds)
+    def _construct(ucd):
+        return profile(ucd, **kwds)
 
     return _construct
 
@@ -48,7 +46,7 @@ _PROFILES = {
 }
 
 
-def get_profile(name):
+def get_profile(name, *, unicodedata=None):
     """Return the desired PRECIS profile object.
 
     Choose name from:
@@ -69,6 +67,7 @@ def get_profile(name):
 
     Args:
         name (str): name of a PRECIS profile
+        unicodedata (module|object): Alternative unicodedata interface
 
     Returns:
         AbstractProfile: PRECIS profile object.
@@ -76,4 +75,4 @@ def get_profile(name):
     Raises:
         KeyError: Profile not found.
     """
-    return _PROFILES[name.lower()]()
+    return _PROFILES[name.lower()](_unicode.UnicodeData(unicodedata))

@@ -26,9 +26,9 @@ class UnicodeData:
     _halfwidth_chars = re.compile(r'[\uff01-\uffef]')
     _space_chars = re.compile(r'[\u00a0\u1680\u2000-\u200A\u202F\u205F\u3000]')
 
-    def __init__(self, ucd=unicodedata):
-        self._ucd = ucd
-        self._version = _version_to_float(ucd.unidata_version)
+    def __init__(self, ucd=None):
+        self._ucd = ucd or unicodedata
+        self._version = _version_to_float(self._ucd.unidata_version)
 
     @property
     def version(self):

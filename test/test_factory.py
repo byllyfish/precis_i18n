@@ -1,7 +1,7 @@
 import unittest
 import precis_i18n
 from precis_i18n import get_profile
-from precis_i18n.factory import UCD
+from precis_i18n.unicode import UnicodeData
 
 
 class TestGetProfile(unittest.TestCase):
@@ -85,9 +85,9 @@ class TestNicknameCaseMapped(unittest.TestCase):
 
 class TestUsername(unittest.TestCase):
     def test_constructor(self):
-        profile = precis_i18n.profile.Username(UCD, 'name', 'lower')
+        profile = precis_i18n.profile.Username(UnicodeData(), 'name', 'lower')
         self.assertEqual(profile.enforce('Fu\u00dfball'), 'fu\u00dfball')
 
     def test_constructor_fail(self):
         with self.assertRaises(ValueError):
-            precis_i18n.profile.Username(UCD, 'name', 'unsupported-arg')
+            precis_i18n.profile.Username(UnicodeData(), 'name', 'unsupported-arg')

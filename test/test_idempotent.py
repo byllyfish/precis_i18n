@@ -1,5 +1,5 @@
 import unittest
-from precis_i18n.factory import UCD
+from precis_i18n.unicode import UnicodeData
 from precis_i18n.profile import Username
 from precis_i18n import get_profile
 
@@ -13,7 +13,7 @@ class IdempotentTestCase(unittest.TestCase):
             def additional_mapping_rule(self, value):
                 return '%s+' % value
 
-        broken = _BrokenProfile(UCD, name='Broken')
+        broken = _BrokenProfile(UnicodeData(), name='Broken')
         with self.assertRaisesRegex(ValueError, 'DISALLOWED/not_idempotent'):
             broken.enforce('x')
 
