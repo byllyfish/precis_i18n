@@ -4,6 +4,8 @@
 # 
 # Usage:
 #    ./tools/pypi_submit.sh pypi
+#
+# Requires:   setuptools wheel twine
 
 set -e
 
@@ -20,19 +22,19 @@ echo "Remove old files:" build dist *.egg-info
 rm -rf build dist *.egg-info
 
 echo "Build source distribution"
-python3.5 setup.py sdist
+python3 setup.py sdist
 
 echo "Build wheel"
-python3.5 setup.py bdist_wheel
+python3 setup.py bdist_wheel
 
-echo "Sign packages"
-gpg -u $GPG_KEY --detach-sign -a dist/*.whl
-gpg -u $GPG_KEY --detach-sign -a dist/*.gz
+#echo "Sign packages"
+#gpg -u $GPG_KEY --detach-sign -a dist/*.whl
+#gpg -u $GPG_KEY --detach-sign -a dist/*.gz
 
 # Uncomment to register module.
 #twine register -r "$PYPI" dist/*.whl
 
 echo "Upload to $PYPI"
-twine upload -r "$PYPI" dist/*
+twine upload --verbose -r "$PYPI" -s -i $GPG_KEY dist/*
 
 exit 0
