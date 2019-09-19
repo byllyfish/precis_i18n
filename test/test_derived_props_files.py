@@ -2,7 +2,7 @@ import unittest
 import os
 import re
 
-VERSIONS = ['6.1', '6.2', '6.3', '8.0', '9.0', '10.0']
+VERSIONS = ['6.1', '6.2', '6.3', '8.0', '9.0', '10.0', '11.0', '12.0', '12.1']
 
 UNASSIGNED = 1
 
@@ -22,6 +22,26 @@ LINE_REGEX = re.compile(
 IANA_LINE_REGEX = re.compile(r'^([0-9A-F]{4,6})(-[0-9A-F]{4,6})?,([^,]+),.+$')
 
 DIR_PATH = os.path.dirname(__file__)
+
+# Allowed transitions between two versions V1 -> V2 for specific code points.
+EXCEPTIONS = {
+    0x111c9: (PROPS['FREE_PVAL'], PROPS['PVALID'])  # SHARADA SANDHI MARK
+}
+
+
+def _allowed_change(cp, tbl1, tbl2):
+    """Return true if the transition is allowed.
+
+    We allow changing from UNASSIGNED to anything. Also, in 10.0 -> 11.0, the
+    code point 70089 (0x111c9, SHARADA SANDHI MARK) changed from FREE_PVAL to 
+    PVALID.
+    """
+    if tbl1 == UNASSIGNED:
+        return True
+    rule = EXCEPTIONS.get(cp)
+    if rule:
+        return (tbl1, tbl2) == rule
+    return False
 
 
 def _load_table(filename):
@@ -104,7 +124,7 @@ class TestDerivedPropsFiles(unittest.TestCase):
             ver1, tbl1 = tables[i]
             ver2, tbl2 = tables[i + 1]
             for j in range(0x110000):
-                if tbl1[j] != UNASSIGNED:
+                if not _allowed_change(j, tbl1[j], tbl2[j]):
                     self.assertEqual(tbl1[j], tbl2[j],
                                      'cp = %d (%s -> %s)' % (j, ver1, ver2))
 
