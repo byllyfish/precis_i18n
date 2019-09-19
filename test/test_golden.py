@@ -19,7 +19,9 @@ class TestGolden(unittest.TestCase):
                                               entry['output'], entry['error'])
             if 'unicode_version' in entry and UCD_VERSION < entry[
                     'unicode_version']:
-                error = r'.+'
+                self.check_fails(profile, input_, output)
+                continue
+
             if not error:
                 self.check_allow(profile, input_, output)
             else:
@@ -46,6 +48,16 @@ class TestGolden(unittest.TestCase):
         #print('check_disallow', profile, input_)
         with self.assertRaisesRegex(UnicodeEncodeError, expected):
             input_.encode(profile)
+
+    def check_fails(self, profile, input_, expected):
+        """Check that output doesn't match or raises UnicodeEncodeError.
+
+        This is used when the Unicode version is too low."""
+        try:
+            actual = input_.encode(profile).decode('utf-8')
+        except UnicodeEncodeError:
+            actual = None
+        self.assertNotEqual(actual, expected)
 
 
 def _escape(s):
