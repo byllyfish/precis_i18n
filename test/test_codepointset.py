@@ -61,8 +61,8 @@ class TestCodepointSet(unittest.TestCase):
         self.assertEqual(repr(cps), "CodepointSet('0000..00FF')")
 
         cps = CodepointSet('0001..FFFF\n100000..10FFFF')
-        self.assertEqual(
-            repr(cps), r"CodepointSet('0001..FFFF\n100000..10FFFF')")
+        self.assertEqual(repr(cps),
+                         r"CodepointSet('0001..FFFF\n100000..10FFFF')")
 
         cps = CodepointSet('FFFF..1FFFF')
         self.assertEqual(repr(cps), "CodepointSet('FFFF..1FFFF')")

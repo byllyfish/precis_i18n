@@ -22,11 +22,13 @@ _PROFILES = {
     'usernamecasemapped':
     _factory(_profile.Username, name='UsernameCaseMapped', casemap='lower'),
     'usernamecasemapped:casefold':
-    _factory(
-        _profile.Username, name='UsernameCaseMapped:CaseFold', casemap='fold'),
+    _factory(_profile.Username,
+             name='UsernameCaseMapped:CaseFold',
+             casemap='fold'),
     'usernamecasemapped:tolower':
-    _factory(
-        _profile.Username, name='UsernameCaseMapped:ToLower', casemap='lower'),
+    _factory(_profile.Username,
+             name='UsernameCaseMapped:ToLower',
+             casemap='lower'),
     'opaquestring':
     _factory(_profile.OpaqueString, name='OpaqueString'),
     'nicknamecasepreserved':
@@ -34,11 +36,13 @@ _PROFILES = {
     'nicknamecasemapped':
     _factory(_profile.Nickname, name='NicknameCaseMapped', casemap='lower'),
     'nicknamecasemapped:casefold':
-    _factory(
-        _profile.Nickname, name='NicknameCaseMapped:CaseFold', casemap='fold'),
+    _factory(_profile.Nickname,
+             name='NicknameCaseMapped:CaseFold',
+             casemap='fold'),
     'nicknamecasemapped:tolower':
-    _factory(
-        _profile.Nickname, name='NicknameCaseMapped:ToLower', casemap='lower'),
+    _factory(_profile.Nickname,
+             name='NicknameCaseMapped:ToLower',
+             casemap='lower'),
 
     # Alias for backward-compatibility with previous version of codec.
     'nickname':

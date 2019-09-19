@@ -58,9 +58,8 @@ class TestPrecisIdentifierClass(unittest.TestCase):
         self.assertEqual(ident.name, 'IdentifierClass')
         self.assertEqual(ident.enforce('abc'), 'abc')
         self.assertEqual(ident.enforce('123'), '123')
-        self.assertEqual(
-            ident.enforce('\u0660\u0661\u0662\u0669'),
-            '\u0660\u0661\u0662\u0669')
+        self.assertEqual(ident.enforce('\u0660\u0661\u0662\u0669'),
+                         '\u0660\u0661\u0662\u0669')
         self.assertEqual(ident.enforce('\u0370\u0371'), '\u0370\u0371')
         # CONTEXTJ
         self.assertEqual(ident.enforce('\u094d\u200c'), '\u094d\u200c')
@@ -103,9 +102,8 @@ class TestPrecisFreeformClass(unittest.TestCase):
 
         self.assertEqual(free.enforce('abc'), 'abc')
         self.assertEqual(free.enforce('123'), '123')
-        self.assertEqual(
-            free.enforce('\u0660\u0661\u0662\u0669'),
-            '\u0660\u0661\u0662\u0669')
+        self.assertEqual(free.enforce('\u0660\u0661\u0662\u0669'),
+                         '\u0660\u0661\u0662\u0669')
         self.assertEqual(free.enforce('\u0370\u0371'), '\u0370\u0371')
         self.assertEqual(free.enforce(' '), ' ')
         self.assertEqual(free.enforce('\u1FBF'), '\u1FBF')
@@ -142,14 +140,12 @@ class TestPrecisFreeformClass(unittest.TestCase):
 class TestDerivedProperty(unittest.TestCase):
     def test_derived_property(self):
         self.assertEqual(derived_property(0, UCD), ('DISALLOWED', 'controls'))
-        self.assertEqual(
-            derived_property(0x10FFFF, UCD),
-            ('DISALLOWED', 'precis_ignorable_properties'))
+        self.assertEqual(derived_property(0x10FFFF, UCD),
+                         ('DISALLOWED', 'precis_ignorable_properties'))
         self.assertEqual(derived_property(0x30, UCD), ('PVALID', 'ascii7'))
         self.assertEqual(derived_property(0x20, UCD), ('FREE_PVAL', 'spaces'))
-        self.assertEqual(
-            derived_property(0xad, UCD),
-            ('DISALLOWED', 'precis_ignorable_properties'))
+        self.assertEqual(derived_property(0xad, UCD),
+                         ('DISALLOWED', 'precis_ignorable_properties'))
 
         with self.assertRaises(ValueError):
             derived_property(0x110000, UCD)
@@ -344,9 +340,8 @@ class TestPrecisContextRule(unittest.TestCase):
 
 class TestPrecisUnicodeData(unittest.TestCase):
     def test_width_map(self):
-        self.assertEqual(
-            UCD.width_map('\uff00\uff01\uff02\uffe3\uffef'),
-            '\uff00!"\uffe3\uffef')
+        self.assertEqual(UCD.width_map('\uff00\uff01\uff02\uffe3\uffef'),
+                         '\uff00!"\uffe3\uffef')
 
     def test_replace_whitespace(self):
         self.assertEqual(
@@ -411,13 +406,13 @@ class TestPrecisUnicodeData(unittest.TestCase):
         # Valid: L J R
         self.assertTrue(UCD.valid_jointype('\ua872\u200c\u0622', 1))
         # Valid: L T J T R
-        self.assertTrue(
-            UCD.valid_jointype('\ua872\u00ad\u200c\u00ad\u0622', 2))
+        self.assertTrue(UCD.valid_jointype('\ua872\u00ad\u200c\u00ad\u0622',
+                                           2))
         # Valid: D J D
         self.assertTrue(UCD.valid_jointype('\u0620\u200c\u0620', 1))
         # Valid: D T J T D
-        self.assertTrue(
-            UCD.valid_jointype('\u0626\u0300\u200c\u0301\u0628', 2))
+        self.assertTrue(UCD.valid_jointype('\u0626\u0300\u200c\u0301\u0628',
+                                           2))
 
         # Invalid: R J L
         self.assertFalse(UCD.valid_jointype('\u0622\u200c\ua872', 1))

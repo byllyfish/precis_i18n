@@ -57,7 +57,6 @@ class UnicodeData:
         Returns:
             str: Result.
         """
-
         def _decompose(m):
             char = m.group(0)
             assert len(char) == 1

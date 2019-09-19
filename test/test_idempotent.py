@@ -8,7 +8,6 @@ class IdempotentTestCase(unittest.TestCase):
     def test_broken_profile(self):
         """Test that we can catch a profile that is not idempotent.
         """
-
         class _BrokenProfile(Username):
             def additional_mapping_rule(self, value):
                 return '%s+' % value

@@ -32,8 +32,9 @@ def search(name):
     except KeyError:
         return None
 
-    return codecs.CodecInfo(
-        name=name, encode=_make_encode(profile), decode=_not_supported)
+    return codecs.CodecInfo(name=name,
+                            encode=_make_encode(profile),
+                            decode=_not_supported)
 
 
 codecs.register(search)

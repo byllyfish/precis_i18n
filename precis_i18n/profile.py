@@ -17,7 +17,6 @@ class Profile:
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
-
     def __init__(self, base, name, casemap=None):
         self._base = base
         self._name = name
@@ -192,7 +191,6 @@ class Username(Profile):
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
-
     def __init__(self, ucd, name, casemap=None):
         super().__init__(IdentifierClass(ucd), name, casemap)
 
@@ -242,7 +240,6 @@ class OpaqueString(Profile):
         ucd (UnicodeData): Unicode character database.
         name (str): Name of profile.
     """
-
     def __init__(self, ucd, name):
         super().__init__(FreeFormClass(ucd), name, casemap=None)
 
@@ -287,7 +284,6 @@ class Nickname(Profile):
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
-
     def __init__(self, ucd, name, casemap=None):
         super().__init__(FreeFormClass(ucd), name, casemap)
 

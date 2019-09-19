@@ -32,7 +32,6 @@ class CodepointSet:
     Args:
         table (str): Multi-line string of code point ranges.
     """
-
     def __init__(self, table):
         self._table = _stringify(_coalesce(_parse(table)))
         assert (len(self._table) % 2) == 0

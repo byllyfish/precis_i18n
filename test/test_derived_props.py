@@ -13,7 +13,6 @@ except ImportError:
 class TestDerivedProperties(unittest.TestCase):
     """ Test output of derived_property function.
     """
-
     def test_derived_props(self):
         """ Compare derived properties against a "golden" file using built-in
         unicodedata module.
