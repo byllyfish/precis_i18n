@@ -37,6 +37,7 @@ install:
         source "$HOME/virtualenvs/$PYPY3_VERSION/bin/activate"
       fi
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then pip3 install codecov; fi
+  - if [ "$TRAVIS_PYTHON_VERSION" = "3.7" ]; then pip3 install unicodedata2==12.0.0; fi
 script:
   - python --version
   - python -c "import unicodedata; print(unicodedata.unidata_version)"

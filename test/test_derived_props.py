@@ -4,6 +4,11 @@ import sys
 from precis_i18n.derived import derived_property
 from precis_i18n.unicode import UnicodeData
 
+try:
+    import unicodedata2
+except ImportError:
+    unicodedata2 = None
+
 
 class TestDerivedProperties(unittest.TestCase):
     """ Test output of derived_property function.
@@ -15,12 +20,12 @@ class TestDerivedProperties(unittest.TestCase):
         """
         self._test_derived_props(UnicodeData())
 
+    @unittest.skipIf(unicodedata2 is None, 'unicodedata2 not available')
     def test_derived_props_unicodedata2(self):
         """ Compare derived properties against a "golden" file using
         pip-installed unicodedata2 module.
         """
 
-        import unicodedata2
         ucd = UnicodeData(unicodedata2)
         assert ucd.version == 12.0
         self._test_derived_props(ucd)
