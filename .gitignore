@@ -10,5 +10,5 @@ docs/
 ~old/
 venv*/
 .mypy_cache/
-.pytype
+.pytype/
 pytype_output/
