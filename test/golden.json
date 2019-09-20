@@ -5385,7 +5385,8 @@
     "profile": "OpaqueString",
     "input": "\ud804\uddc9",
     "output": "\ud804\uddc9",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "NicknameCaseMapped",
@@ -7181,7 +7182,8 @@
     "profile": "NicknameCaseMapped",
     "input": "\ud804\uddc9",
     "output": "\ud804\uddc9",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -10773,7 +10775,8 @@
     "profile": "NicknameCasePreserved",
     "input": "\ud804\uddc9",
     "output": "\ud804\uddc9",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -12569,7 +12572,8 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\ud804\uddc9",
     "output": "\ud804\uddc9",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "FreeFormClass",
@@ -14364,7 +14368,8 @@
     "profile": "FreeFormClass",
     "input": "\ud804\uddc9",
     "output": "\ud804\uddc9",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   },
   {
     "profile": "IdentifierClass",
@@ -19751,6 +19756,7 @@
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\ud804\uddc9",
     "output": "\ud804\uddc9",
-    "error": null
+    "error": null,
+    "unicode_version": 8.0
   }
 ]
