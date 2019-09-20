@@ -9,6 +9,12 @@ class TestGetProfile(unittest.TestCase):
         with self.assertRaises(KeyError):
             get_profile('_does_not_exist_')
 
+    def test_unicodedata_arg(self):
+        import unicodedata
+        profile = get_profile('UsernameCasePreserved', unicodedata=unicodedata)
+        self.assertEqual(profile.enforce('E\u0301\u0301\u0301'),
+                         '\u00c9\u0301\u0301')
+
 
 class TestUsernameCasePreserved(unittest.TestCase):
     def test_enforce(self):
