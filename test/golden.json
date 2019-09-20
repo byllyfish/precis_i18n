@@ -16414,8 +16414,7 @@
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
-    "error": null,
-    "unicode_version": 8.0
+    "error": null
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18204,8 +18203,7 @@
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
     "output": "\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2",
-    "error": null,
-    "unicode_version": 8.0
+    "error": null
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
