@@ -409,3 +409,9 @@ t\u00FCrk\u0131ye
 \u0392\u03CC\u03BB\u03BF\u03A3
 
 \u03A3\u03A3
+
+# Between Unicode 10.0 and 11.0, 70089 (0x111c9, SHARADA SANDHI MARK) changed 
+# from FREE_PVAL to PVALID.
+
+\U000111c9
+
