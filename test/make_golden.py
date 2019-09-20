@@ -26,6 +26,8 @@ EXCEPTIONS = {
     (re.compile(r'.+CaseMapped(:ToLower)?$'), 8.0),
     # U+1AB6 was introduced in 7.0.
     '\u05d0\u1ab6\u05d1': (re.compile(r'.'), 7.0),
+    # U+0111C9 changed to PVALID in 11.0.
+    '\U000111c9': (re.compile(r'^(?:Username.*|IdentifierClass)$'), 11.0),
 }
 
 
