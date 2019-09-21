@@ -3,10 +3,10 @@ PRECIS-i18n: Internationalized Usernames and Passwords
 
 |MIT licensed| |Build Status| |codecov.io|
 
-If you want your application to accept unicode user names and passwords,
+If you want your application to accept Unicode user names and passwords,
 you must be careful in how you validate and compare them. The PRECIS
 framework makes internationalized user names and passwords safer for use
-by applications. PRECIS profiles transform unicode strings into a
+by applications. PRECIS profiles transform Unicode strings into a
 canonical form, suitable for comparison.
 
 This module implements the PRECIS Framework as described in:
@@ -47,7 +47,7 @@ its ``enforce`` method. The ``enforce`` method returns a Unicode string.
 
 Alternatively, you can use the Python ``str.encode`` API. Import the
 ``precis_i18n.codec`` module to register the PRECIS codec names. Now you
-can use the ``str.encode`` method with any unicode string. The result
+can use the ``str.encode`` method with any Unicode string. The result
 will be a UTF-8 encoded byte string or a ``UnicodeEncodeError`` if the
 string is disallowed.
 
@@ -102,7 +102,7 @@ Userparts and Space Delimited Usernames
 
 The Username profiles in this implementation do not allow spaces. The Username
 profiles correspond to the definition of "userparts" in RFC 8265. If you want to
-allow spaces in your application's usernames, you must split the string first.
+allow spaces in your application's user names, you must split the string first.
 
 ::
 
@@ -175,7 +175,7 @@ is disallowed. The ``reason`` field specifies the kind of error.
 +------------------------------+---------------------------------------------+
 | DISALLOWED/symbols           | Non-ASCII symbol character is not allowed.  |
 +------------------------------+---------------------------------------------+
-| DISALLOWED/unassigned        | Unassigned unicode character is not         |
+| DISALLOWED/unassigned        | Unassigned Unicode character is not         |
 |                              | allowed.                                    |
 +------------------------------+---------------------------------------------+
 | DISALLOWED/zero\_width\      | Zero width joiner must immediately follow a |
