@@ -70,6 +70,29 @@ string is disallowed.
         ...
     UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
+Alternative Unicode Versions
+----------------------------
+
+The ``get_profile`` function uses whatever version of ``unicodedata`` is
+provided by the Python runtime. The Unicode version is usually tied to the
+major version of the Python runtime. Python 3.7.x uses Unicode 11.0. Python
+3.6.x uses Unicode 10.0.
+
+To use an alternative ``unicodedata`` implementation, pass the ``unicodedata``
+keyword argument to ``get_profile``.
+
+For example, you could separately install version 12.0 of the
+``unicodedata2`` module from PyPI. Then, pass it to get_profile to retrieve a
+profile that uses Unicode 12.0.
+
+::
+
+    >>> import unicodedata2
+    >>> from precis_i18n import get_profile
+    >>> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
+    >>> username.enforce('Kevin')
+    'kevin'
+
 Supported Profiles and Codecs
 -----------------------------
 
