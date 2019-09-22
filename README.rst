@@ -87,10 +87,10 @@ profile that uses Unicode 12.0.
 
 ::
 
-    >>> import unicodedata2
-    >>> from precis_i18n import get_profile
-    >>> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
-    >>> username.enforce('Kevin')
+    >> import unicodedata2
+    >> from precis_i18n import get_profile
+    >> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
+    >> username.enforce('Kevin')
     'kevin'
 
 Supported Profiles and Codecs
