@@ -12,8 +12,10 @@ class TestCodec(unittest.TestCase):
         self.assertEqual(' Juliet '.encode('NicknameCaseMapped'), b'juliet')
         self.assertEqual('Juliet'.encode('IdentifierClass'), b'Juliet')
         self.assertEqual('Juliet'.encode('FreeFormClass'), b'Juliet')
-        self.assertEqual('Juliet'.encode('UsernameCaseMapped:ToLower'), b'juliet')
-        self.assertEqual('Juliet'.encode('UsernameCaseMapped_ToLower'), b'juliet')
+        self.assertEqual('Juliet'.encode('UsernameCaseMapped:ToLower'),
+                         b'juliet')
+        self.assertEqual('Juliet'.encode('UsernameCaseMapped_ToLower'),
+                         b'juliet')
 
     def test_decode(self):
         with self.assertRaises(NotImplementedError):
