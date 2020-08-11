@@ -1,6 +1,16 @@
 Changelog
 =========
 
+1.0.2
+-----
+
+- ``get_profile`` now supports alternative unicodedata2 module (Issue #8).
+- ``get_profile`` maps ':' to '_' before look up (Issue #10).
+- Test Unicode 12.1 for Python 3.8.
+- Test Unicode 12.0 (Using optional unicodedata2 module)
+- Test Unicode 13.0 for Python 3.9 (Issue #9).
+- Update copyright year (2020).
+
 1.0.1
 -----
 
