@@ -21,11 +21,11 @@ _PROFILES = {
     _factory(_profile.Username, name='UsernameCasePreserved'),
     'usernamecasemapped':
     _factory(_profile.Username, name='UsernameCaseMapped', casemap='lower'),
-    'usernamecasemapped:casefold':
+    'usernamecasemapped_casefold':
     _factory(_profile.Username,
              name='UsernameCaseMapped:CaseFold',
              casemap='fold'),
-    'usernamecasemapped:tolower':
+    'usernamecasemapped_tolower':
     _factory(_profile.Username,
              name='UsernameCaseMapped:ToLower',
              casemap='lower'),
@@ -35,11 +35,11 @@ _PROFILES = {
     _factory(_profile.Nickname, name='NicknameCasePreserved'),
     'nicknamecasemapped':
     _factory(_profile.Nickname, name='NicknameCaseMapped', casemap='lower'),
-    'nicknamecasemapped:casefold':
+    'nicknamecasemapped_casefold':
     _factory(_profile.Nickname,
              name='NicknameCaseMapped:CaseFold',
              casemap='fold'),
-    'nicknamecasemapped:tolower':
+    'nicknamecasemapped_tolower':
     _factory(_profile.Nickname,
              name='NicknameCaseMapped:ToLower',
              casemap='lower'),
@@ -83,4 +83,5 @@ def get_profile(name, *, unicodedata=None):
     Raises:
         KeyError: Profile not found.
     """
-    return _PROFILES[name.lower()](_unicode.UnicodeData(unicodedata))
+    profile = name.lower().replace(':', '_')
+    return _PROFILES[profile](_unicode.UnicodeData(unicodedata))
