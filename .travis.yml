@@ -47,7 +47,7 @@ script:
   - python -m unittest discover
   - python -m doctest README.rst
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py; fi
-  - ./tools/test_source_package.sh
+  - ./tools/test_python_package.sh
 
 after_success:
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then codecov; fi
