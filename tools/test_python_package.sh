@@ -11,7 +11,7 @@ fi
 
 python setup.py sdist
 cd dist
-tar xvfz precis_i18n-*.tar.gz
+tar xfz precis_i18n-*.tar.gz
 cd precis_i18n-*
 python setup.py test
 exit 0
