@@ -47,9 +47,7 @@ script:
   - python -m unittest discover
   - python -m doctest README.rst
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py; fi
-  # Create source package, then run unit tests from source package.
-  - python setup.py sdist
-  - cd dist ; tar xvfz zof-*.tar.gz ; cd zof-* ; python setup.py test ; cd ../..
+  - ./tools/test_source_package.sh
 
 after_success:
   - if [ "$TRAVIS_PYTHON_VERSION" = "3.5" ]; then codecov; fi
