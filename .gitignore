@@ -12,3 +12,5 @@ venv*/
 .mypy_cache/
 .pytype/
 pytype_output/
+/.venv
+/.vscode
