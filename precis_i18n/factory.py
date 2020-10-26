@@ -72,7 +72,7 @@ def get_profile(name, *, unicodedata=None):
     To use an alternative Unicode implementation, pass a module or object that
     implements the unicodedata interface via the unicodedata keyword argument.
     The default is to use the unicodedata module built into the Python runtime.
-     
+
     Args:
         name (str): name of a PRECIS profile
         unicodedata (module|object): Alternative unicodedata interface
