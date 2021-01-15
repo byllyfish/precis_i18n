@@ -4,12 +4,13 @@ https://packaging.python.org/en/latest/distributing.html
 https://github.com/pypa/sampleproject
 """
 
-# Always prefer setuptools over distutils
-from setuptools import setup
+import re
 # To use a consistent encoding
 from codecs import open
 from os import path
-import re
+
+# Always prefer setuptools over distutils
+from setuptools import setup
 
 here = path.abspath(path.dirname(__file__))
 description_path = path.join(here, 'README.rst')
@@ -59,6 +60,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Software Development :: Internationalization'
     ],
 
