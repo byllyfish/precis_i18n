@@ -1,6 +1,12 @@
 Changelog
 =========
 
+tbd
+---
+
+- MANIFEST.in excludes `test_derived_props_files.py`; test data files are not packaged.
+- Travis CI script now builds source package and runs tests from it.
+
 1.0.2
 -----
 
