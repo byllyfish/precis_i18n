@@ -12,6 +12,7 @@ fi
 python setup.py sdist
 cd dist
 tar xfz precis_i18n-*.tar.gz
+GLOBIGNORE='*.tar.gz'
 cd precis_i18n-*
 python setup.py test
 exit 0
