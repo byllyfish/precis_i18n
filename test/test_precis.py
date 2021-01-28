@@ -1,7 +1,7 @@
 # test_precis.py
 
-import unittest
 import platform
+import unittest
 
 import precis_i18n.context as pc
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass

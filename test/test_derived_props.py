@@ -1,6 +1,7 @@
-import unittest
 import os
 import sys
+import unittest
+
 from precis_i18n.derived import derived_property
 from precis_i18n.unicode import UnicodeData
 

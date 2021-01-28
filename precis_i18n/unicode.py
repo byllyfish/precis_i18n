@@ -2,6 +2,7 @@
 
 import re
 import unicodedata
+
 from precis_i18n.codepointset import CodepointSet
 
 # pylint: disable=no-self-use
@@ -116,7 +117,7 @@ class UnicodeData:
     def valid_jointype(self, value, offset):
         assert 0x200c <= ord(value[offset]) <= 0x200d
         return self._scan_join(reversed(value[:offset]), 'L') and \
-                self._scan_join(value[offset + 1:], 'R')
+            self._scan_join(value[offset + 1:], 'R')
 
     def _scan_join(self, iterable, term):
         for char in iterable:

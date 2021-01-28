@@ -1,7 +1,8 @@
-import os
 import json
+import os
 import unittest
-import precis_i18n.codec
+
+import precis_i18n.codec  # noqa: F401
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 GOLDEN_JSON = os.path.join(HERE, 'golden.json')
@@ -28,7 +29,7 @@ class TestGolden(unittest.TestCase):
                 self.check_disallow(profile, input_, error)
 
     def check_allow(self, profile, input_, expected):
-        #print('check_allow', profile, input_)
+        # print('check_allow', profile, input_)
         try:
             actual = input_.encode(profile).decode('utf-8')
         except UnicodeEncodeError as ex:
@@ -45,7 +46,7 @@ class TestGolden(unittest.TestCase):
         self.assertEqual(idempotent, actual)
 
     def check_disallow(self, profile, input_, expected):
-        #print('check_disallow', profile, input_)
+        # print('check_disallow', profile, input_)
         with self.assertRaisesRegex(UnicodeEncodeError, expected):
             input_.encode(profile)
 

@@ -1,7 +1,8 @@
 import unittest
-from precis_i18n.unicode import UnicodeData
-from precis_i18n.profile import Username
+
 from precis_i18n import get_profile
+from precis_i18n.profile import Username
+from precis_i18n.unicode import UnicodeData
 
 
 class IdempotentTestCase(unittest.TestCase):

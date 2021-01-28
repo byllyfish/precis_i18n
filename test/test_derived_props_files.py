@@ -1,6 +1,6 @@
-import unittest
 import os
 import re
+import unittest
 
 VERSIONS = [
     '6.1', '6.2', '6.3', '8.0', '9.0', '10.0', '11.0', '12.0', '12.1', '13.0'
@@ -35,7 +35,7 @@ def _allowed_change(cp, tbl1, tbl2):
     """Return true if the transition is allowed.
 
     We allow changing from UNASSIGNED to anything. Also, in 10.0 -> 11.0, the
-    code point 70089 (0x111c9, SHARADA SANDHI MARK) changed from FREE_PVAL to 
+    code point 70089 (0x111c9, SHARADA SANDHI MARK) changed from FREE_PVAL to
     PVALID.
     """
     if tbl1 == UNASSIGNED:

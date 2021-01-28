@@ -1,5 +1,6 @@
-import unittest
 import codecs
+import unittest
+
 import precis_i18n.codec
 
 

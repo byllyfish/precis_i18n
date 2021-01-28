@@ -1,4 +1,5 @@
 import unittest
+
 from precis_i18n.codepointset import CodepointSet
 
 

@@ -6,10 +6,11 @@
 #
 
 import json
-import sys
 import re
+import sys
 from collections import OrderedDict
-import precis_i18n.codec
+
+import precis_i18n.codec  # noqa: F401
 
 PROFILES = [
     'UsernameCasePreserved', 'UsernameCaseMapped', 'OpaqueString',
