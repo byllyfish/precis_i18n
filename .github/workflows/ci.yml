@@ -36,7 +36,7 @@ jobs:
     - name: Run Tests
       run: |
         python -c "import unicodedata; print(unicodedata.unidata_version)"
-        python -m unittest discover
+        python -m unittest discover -v
         python -m doctest README.rst
     - name: Test source package
       run: ./tools/test_python_package.sh
