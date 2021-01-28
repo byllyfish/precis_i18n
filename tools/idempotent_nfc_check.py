@@ -2,11 +2,14 @@
 
 import unicodedata
 
+
 def case(ch):
     return ch.casefold()
 
+
 def nfc(ch):
     return unicodedata.normalize('NFC', ch)
+
 
 def make(ch):
     return '%s%s' % (ch, unicodedata.normalize('NFD', ch))

@@ -1,4 +1,5 @@
 import unittest
+
 import precis_i18n
 from precis_i18n import get_profile
 from precis_i18n.unicode import UnicodeData

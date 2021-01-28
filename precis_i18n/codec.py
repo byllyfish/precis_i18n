@@ -1,6 +1,7 @@
 """Registers precis_i18n codec."""
 
 import codecs
+
 from precis_i18n import get_profile
 
 

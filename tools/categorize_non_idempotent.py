@@ -1,5 +1,6 @@
 import unicodedata
 from collections import Counter
+
 import precis_i18n as precis
 
 
@@ -30,4 +31,3 @@ for cp in range(0x0110000):
         pass
 
 print(results)
-

@@ -25,6 +25,7 @@ with open(version_path, encoding='utf-8') as f:
     version_regex = re.compile(r"(?m)__version__\s*=\s*'(\d+\.\d+\.\d+)'")
     version = version_regex.search(f.read()).group(1)
 
+
 # Running `python setup.py test` should run unit tests (see `test_suite`).
 def all_tests():
     import unittest
@@ -37,7 +38,6 @@ setup(
     packages=['precis_i18n'],
     version=version,
     license='MIT',
-
     description='PRECIS-i18n: Internationalized Usernames and Passwords',
     long_description=long_description,
     keywords='precis codec username password',
@@ -63,7 +63,5 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Topic :: Software Development :: Internationalization'
     ],
-
     zip_safe=True,
-    test_suite="setup.all_tests"
-)
+    test_suite="setup.all_tests")

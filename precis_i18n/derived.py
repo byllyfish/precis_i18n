@@ -10,7 +10,7 @@ CONTEXTO = 'CONTEXTO'
 # pylint: disable=too-many-return-statements,too-many-branches
 
 
-def derived_property(cp, ucd):
+def derived_property(cp, ucd):  # noqa: C901
     """Return value of the PRECIS derived property of a code point.
 
     From section 8 of RFC 8264:
