@@ -212,7 +212,7 @@ is disallowed. The ``reason`` field specifies the kind of error.
 
 .. |MIT licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt
-.. |Build Status| image:: https://travis-ci.org/byllyfish/precis_i18n.svg?branch=master
-   :target: https://travis-ci.org/byllyfish/precis_i18n
+.. |Build Status| image:: https://github.com/byllyfish/precis_i18n/actions/workflows/ci.yml/badge.svg
+   :target: https://github.com/byllyfish/precis_i18n/actions/workflows/ci.yml
 .. |codecov.io| image:: https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master
    :target: https://codecov.io/gh/byllyfish/precis_i18n?branch=master
