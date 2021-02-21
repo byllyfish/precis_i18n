@@ -5,8 +5,6 @@ https://github.com/pypa/sampleproject
 """
 
 import re
-# To use a consistent encoding
-from codecs import open
 from os import path
 
 # Always prefer setuptools over distutils
@@ -40,6 +38,7 @@ setup(
     license='MIT',
     description='PRECIS-i18n: Internationalized Usernames and Passwords',
     long_description=long_description,
+    long_description_content_type='text/x-rst',
     keywords='precis codec username password',
 
     # The project's main homepage and author.
