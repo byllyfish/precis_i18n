@@ -3,7 +3,14 @@
 
 name: CI
 
-on: [push]
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    # Every Saturday at 4:30 AM UTC.
+    - cron:  '30 4 * * 6'
 
 jobs:
   build:
