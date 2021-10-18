@@ -46,6 +46,10 @@ setup(
     author='William W. Fisher',
     author_email='william.w.fisher@gmail.com',
 
+    package_data = {
+        'precis_i18n': ['py.typed', '*.pyi'],
+    },
+
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 5 - Production/Stable',
