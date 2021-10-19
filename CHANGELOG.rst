@@ -1,6 +1,11 @@
 Changelog
 =========
 
+TBD
+---
+
+- Add type hints for package [Contributed by @lovetox] (Issue #14).
+
 1.0.3
 -----
 
