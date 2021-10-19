@@ -57,4 +57,4 @@ jobs:
     - name: Run mypy to check type stubs
       run: |
         python -m pip install mypy
-        mypy --strict python_i18n
+        mypy --strict precis_i18n
