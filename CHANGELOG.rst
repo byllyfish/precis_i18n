@@ -4,7 +4,7 @@ Changelog
 TBD
 ---
 
-- Add type hints for package [Contributed by @lovetox] (Issue #14).
+- Add type hints for package. Contributed by `lovetox <https://github.com/lovetox>`_ (Issue #14).
 
 1.0.3
 -----
