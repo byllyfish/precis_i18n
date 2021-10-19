@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.4, 3.5, 3.6, 3.7, 3.8, 3.9, '3.10-dev', pypy3]
+        python-version: [3.4, 3.5, 3.6, 3.7, 3.8, 3.9, '3.10', pypy3]
 
     steps:
     - uses: actions/checkout@v2
@@ -54,3 +54,8 @@ jobs:
         python -m pip install codecov
         coverage run --source precis_i18n -m unittest test/test_precis.py test/test_codepointset.py test/test_codec.py test/test_factory.py
         codecov
+    - name: Run mypy to check type stubs
+      if: matrix.python-version != '3.4' && matrix.python-version != 'pypy3'
+      run: |
+        python -m pip install mypy
+        mypy --strict precis_i18n
