@@ -1,6 +1,4 @@
-from typing import Any
-from typing import Tuple
-from typing import Generator
+from typing import Generator, Tuple
 
 
 class CodepointSet:
@@ -14,7 +12,7 @@ class CodepointSet:
     def __len__(self) -> int:
         ...
 
-    def __eq__(self, rhs: Any) -> bool:
+    def __eq__(self, rhs: object) -> bool:
         ...
 
     def __repr__(self) -> str:

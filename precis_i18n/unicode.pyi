@@ -1,12 +1,13 @@
-
 from typing import Any
 
 from precis_i18n.codepointset import CodepointSet
+
 
 class UnicodeData:
 
     _halfwidth_chars = ...
     _space_chars = ...
+    
     def __init__(self, ucd: Any = ...) -> None:
         ...
     
