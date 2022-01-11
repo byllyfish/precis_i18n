@@ -85,8 +85,8 @@ def raise_error(encoding, value, offset, error):
     Args:
         encoding (str): Name of the encoding/codec.
         value (str): Value being encoded.
-        offset (int): Offset in `value` where error detected. Use -1 to indicate
-            the entire string.
+        offset (int): Offset in `value` where error detected. Use -1 to
+            indicate the entire string.
         error (str): Subtype of error detected.
 
     Raises:
