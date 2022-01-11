@@ -46,7 +46,7 @@ setup(
     author='William W. Fisher',
     author_email='william.w.fisher@gmail.com',
 
-    package_data = {
+    package_data={
         'precis_i18n': ['py.typed', '*.pyi'],
     },
 
