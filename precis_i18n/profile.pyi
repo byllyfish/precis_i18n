@@ -1,9 +1,7 @@
-
-from typing import Any
-from typing import Optional
-from typing import Union
+from typing import Optional, Union
 
 from precis_i18n.baseclass import BaseClass
+from precis_i18n.unicode import UnicodeData
 
 
 class Profile:
@@ -45,7 +43,7 @@ class Profile:
 
 
 class Username(Profile):
-    def __init__(self, ucd: Any, name: str, casemap: Optional[str] = ...) -> None:
+    def __init__(self, ucd: UnicodeData, name: str, casemap: Optional[str] = ...) -> None:
         ...
     
     def width_mapping_rule(self, value: str) -> str:
@@ -57,7 +55,7 @@ class Username(Profile):
 
 
 class OpaqueString(Profile):
-    def __init__(self, ucd: Any, name: str) -> None:
+    def __init__(self, ucd: UnicodeData, name: str) -> None:
         ...
     
     def additional_mapping_rule(self, value: str) -> str:
@@ -66,7 +64,7 @@ class OpaqueString(Profile):
 
 
 class Nickname(Profile):
-    def __init__(self, ucd: Any, name: str, casemap: Optional[str] = ...) -> None:
+    def __init__(self, ucd: UnicodeData, name: str, casemap: Optional[str] = ...) -> None:
         ...
     
     def additional_mapping_rule(self, value: str) -> str:

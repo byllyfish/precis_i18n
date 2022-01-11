@@ -76,6 +76,7 @@ def _bidi_rule(value, ucd, allowed, last, exclusive):
     assert ucd.bidirectional(value[0]) in _LTR_FIRST | _RTL_FIRST
 
     # Starting from the end, find the first character whose bidi is not 'NSM'.
+    bidi = None
     found = -1
     for i in reversed(range(len(value))):
         bidi = ucd.bidirectional(value[i])

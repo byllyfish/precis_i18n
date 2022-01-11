@@ -1,6 +1,7 @@
 # test_precis.py
 
 import platform
+import sys
 import unittest
 
 import precis_i18n.context as pc
@@ -10,6 +11,7 @@ from precis_i18n.derived import derived_property
 from precis_i18n.unicode import UnicodeData, _version_to_float
 
 _PYPY = (platform.python_implementation() == 'PyPy')
+_PY3_11 = sys.version_info[:2] >= (3, 11)
 
 UCD = UnicodeData()
 
@@ -392,7 +394,10 @@ class TestPrecisUnicodeData(unittest.TestCase):
 
     def test_combining_virama(self):
         self.assertTrue(UCD.combining_virama(0x1714))
-        self.assertFalse(UCD.combining_virama(0x1715))
+        if _PY3_11:
+            self.assertTrue(UCD.combining_virama(0x1715))
+        else:
+            self.assertFalse(UCD.combining_virama(0x1715))
 
     def test_arabic_indic(self):
         self.assertTrue(UCD.arabic_indic(0x669))
