@@ -658,8 +658,8 @@
 17F0-17F9 FREE_PVAL/other_letter_digits
 17FA-17FF UNASSIGNED/unassigned
 1800-180A FREE_PVAL/punctuation
-180B-180E DISALLOWED/precis_ignorable_properties
-180F-1819 PVALID/letter_digits
+180B-180F DISALLOWED/precis_ignorable_properties
+1810-1819 PVALID/letter_digits
 181A-181F UNASSIGNED/unassigned
 1820-1878 PVALID/letter_digits
 1879-187F UNASSIGNED/unassigned
