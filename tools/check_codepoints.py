@@ -27,7 +27,7 @@ def parse_unicode_datafile(url, props):
         m = PROP_REGEX.match(line)
         if m:
             codepoints, name = m.groups()
-            props.setdefault(f'{prop}{name.decode()}', []).append(codepoints.decode())
+            props.setdefault('%s%s' % (prop, name.decode()), []).append(codepoints.decode())
 
 
 def compare_codepoints(varname, codepoint_str):
@@ -41,7 +41,7 @@ def combine(props, *names):
     result = ''
     for name in names:
         cnt = len(CodepointSet(props[name]))
-        result += f'# {name} ({cnt})\n{props[name]}\n'
+        result += '# %s (%d)\n%s\n' % (name, cnt, props[name])
     return result
 
 
