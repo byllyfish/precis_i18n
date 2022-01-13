@@ -33,6 +33,9 @@ EXCEPTIONS = {
     '\U000111c9': [(re.compile(r'^(?:Username.*|IdentifierClass)$'), 11.0),
                    (_ANY_PROFILE, 8.0)],
 
+    # U+05EF was introduced in 11.0.
+    '\u05EF\u05f3': [(_ANY_PROFILE, 11.0)],
+
     # U+088E, U+0886 were introduced in 14.0.
     '\U00010D00\u200c\u088E': [(_ANY_PROFILE, 14.0)],
     '\U00010D00\u07fd\u200c\u07fd\u088E': [(_ANY_PROFILE, 14.0)],
