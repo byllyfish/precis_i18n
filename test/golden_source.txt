@@ -415,3 +415,15 @@ t\u00FCrk\u0131ye
 
 \U000111c9
 
+# Codepoint Table updates (Issue #19)
+
+# rule_hebrew_punctuation
+\u05EF\u05f3
+# katakana_middle_dot
+\u30fb\u3400
+# valid_join_type: L J R
+\U00010D00\u200c\u088E
+# valid_join_type: L T J T R
+\U00010D00\u07fd\u200c\u07fd\u088E
+# valid_join_type: D J D
+\u0886\u200c\u0886

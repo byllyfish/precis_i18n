@@ -20,16 +20,26 @@ PROFILES = [
     'NicknameCaseMapped:CaseFold'
 ]
 
+_ANY_PROFILE = re.compile(r'.')
+
 EXCEPTIONS = {
     # ToLower difference before Unicode 8.0. The lower case characters weren't
     # added until Unicode 8.0.
     '\u13da\u13a2\u13b5\u13ac\u13a2\u13ac\u13d2':
     [(re.compile(r'.+CaseMapped(:ToLower)?$'), 8.0)],
     # U+1AB6 was introduced in 7.0.
-    '\u05d0\u1ab6\u05d1': [(re.compile(r'.'), 7.0)],
+    '\u05d0\u1ab6\u05d1': [(_ANY_PROFILE, 7.0)],
     # U+0111C9 changed to PVALID in 11.0. It was introduced in 8.0.
     '\U000111c9': [(re.compile(r'^(?:Username.*|IdentifierClass)$'), 11.0),
-                   (re.compile(r'.'), 8.0)],
+                   (_ANY_PROFILE, 8.0)],
+
+    # U+05EF was introduced in 11.0.
+    '\u05EF\u05f3': [(_ANY_PROFILE, 11.0)],
+
+    # U+088E, U+0886 were introduced in 14.0.
+    '\U00010D00\u200c\u088E': [(_ANY_PROFILE, 14.0)],
+    '\U00010D00\u07fd\u200c\u07fd\u088E': [(_ANY_PROFILE, 14.0)],
+    '\u0886\u200c\u0886': [(_ANY_PROFILE, 14.0)],
 }
 
 

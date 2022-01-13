@@ -310,6 +310,8 @@ class TestPrecisContextRule(unittest.TestCase):
         self.assertFalse(_context_rule('\u0031\u05f4', 1, UCD))
         # Invalid: undefined after
         self.assertFalse(_context_rule('\u05f3', 0, UCD))
+        # Valid: 05EF 05f3 (Unicode >= 11.0)
+        self.assertTrue(_context_rule('\u05EF\u05f3', 1, UCD))
 
         # 6. katakana_middle_dot
         # Valid: 0x30fb 0x2e99
@@ -322,6 +324,8 @@ class TestPrecisContextRule(unittest.TestCase):
         self.assertFalse(_context_rule('\u0021\u30fb', 1, UCD))
         # Invalid: 0x30fb
         self.assertFalse(_context_rule('\u30fb', 0, UCD))
+        # Valid: 0x30fb 0x3400 (Unicode >= X)
+        self.assertTrue(_context_rule('\u30fb\u3400', 0, UCD))
 
         # 7. arabic_indic
         # Valid: 0x0660 0x0661 0x0662 0x0669
@@ -398,6 +402,7 @@ class TestPrecisUnicodeData(unittest.TestCase):
             self.assertTrue(UCD.combining_virama(0x1715))
         else:
             self.assertFalse(UCD.combining_virama(0x1715))
+        self.assertFalse(UCD.combining_virama(0x1716))
 
     def test_arabic_indic(self):
         self.assertTrue(UCD.arabic_indic(0x669))
@@ -431,6 +436,14 @@ class TestPrecisUnicodeData(unittest.TestCase):
         # Invalid: U T J T U
         self.assertFalse(
             UCD.valid_jointype('\u0031\u0300\u200c\u0301\u0032', 2))
+
+        # Valid: L J R   (Unicode >= 14.0)
+        self.assertTrue(UCD.valid_jointype('\U00010D00\u200c\u088E', 1))
+        # Valid: L T J T R  (Unicode >= 14.0)
+        self.assertTrue(UCD.valid_jointype('\U00010D00\u07fd\u200c\u07fd\u088E', 2))
+        # Valid: D J D  (Unicode >= 14.0)
+        self.assertTrue(UCD.valid_jointype('\u0886\u200c\u0886', 1))
+
 
     def test_version_to_float(self):
         self.assertEqual(_version_to_float('8.0.0'), 8.0)
