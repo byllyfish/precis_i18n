@@ -310,7 +310,7 @@ class TestPrecisContextRule(unittest.TestCase):
         self.assertFalse(_context_rule('\u0031\u05f4', 1, UCD))
         # Invalid: undefined after
         self.assertFalse(_context_rule('\u05f3', 0, UCD))
-        # Valid: 05EF 05f3 (Unicode >= X)
+        # Valid: 05EF 05f3 (Unicode >= 11.0)
         self.assertTrue(_context_rule('\u05EF\u05f3', 1, UCD))
 
         # 6. katakana_middle_dot
@@ -437,11 +437,11 @@ class TestPrecisUnicodeData(unittest.TestCase):
         self.assertFalse(
             UCD.valid_jointype('\u0031\u0300\u200c\u0301\u0032', 2))
 
-        # Valid: L J R   (Unicode >= X)
+        # Valid: L J R   (Unicode >= 14.0)
         self.assertTrue(UCD.valid_jointype('\U00010D00\u200c\u088E', 1))
-        # Valid: L T J T R  (Unicode >= X)
+        # Valid: L T J T R  (Unicode >= 14.0)
         self.assertTrue(UCD.valid_jointype('\U00010D00\u07fd\u200c\u07fd\u088E', 2))
-        # Valid: D J D  (Unicode >= X)
+        # Valid: D J D  (Unicode >= 14.0)
         self.assertTrue(UCD.valid_jointype('\u0886\u200c\u0886', 1))
 
 
