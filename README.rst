@@ -216,17 +216,17 @@ Unicode Version Update Procedure
 When Unicode releases a new version, the following steps must be take to update
 internal tables and pass unit tests:
 
-- Under a version of Python that supports the new version, run the tests using
-`python -m unittest discover` and check that the `test_derived_props` test FAILS
-due to a missing file.
+-  Under a version of Python that supports the new Unicode version, run the tests using
+   ``python -m unittest discover`` and check that the ``test_derived_props`` test FAILS
+   due to a missing file.
 
-- Generate a new `derived-props` file by running `PYTHONPATH=. python test/test_derived_props.py > derived-props-VERSION.txt`.
-Rename the file using the Unicode version, and re-run the tests. The tests will check 
-that no derived properties in the new file contradict the previous values.
+-  Generate a new ``derived-props`` file by running ``PYTHONPATH=. python test/test_derived_props.py > derived-props-VERSION.txt``.
+   Rename the file using the Unicode version, and re-run the tests. The unit tests will further check
+   that no derived properties in the new file contradict the previous values.
 
-- Check for changes to internal tables (used for context rules) by running 
-`PYTHONPATH=. python tools/check_codepoints.py`. Update the corresponding tables in 
-precis_i18n/unicode.py if necessary.
+-  Check for changes to internal tables used for context rules by running 
+   ``PYTHONPATH=. python tools/check_codepoints.py``. Update the corresponding tables in
+   precis_i18n/unicode.py if necessary.
 
 .. |MIT licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt
