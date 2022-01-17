@@ -1,36 +1,39 @@
 Changelog
 =========
 
-TBD
----
+1.0.4
+-----
 
-- Add type hints for package. Contributed by `lovetox <https://github.com/lovetox>`_ (Issue #14).
+-  Update internal tables for Unicode 14.0. These updates also affect context rules for Unicode 11.0 through 13.0: 
+   In limited cases under previoous versions of precis_i18n, VALID strings under Unicode 11.0-13.0 were DISALLOWED 
+   due to these context reasons: ``hebrew_punctuation, katakana_middle_dot, zero_width_nonjoiner``. (Issue #19)
+-  Add type hints for package. Contributed by `lovetox <https://github.com/lovetox>`_ (Issue #14).
 
 1.0.3
 -----
 
-- MANIFEST.in excludes `test_derived_props_files.py`; test data files are not packaged.
-- CI script now builds source package and runs tests from it.
-- Use Github Actions for continuous integration.
-- Update copyright year (2021).
+-  MANIFEST.in excludes `test_derived_props_files.py`; test data files are not packaged.
+-  CI script now builds source package and runs tests from it.
+-  Use Github Actions for continuous integration.
+-  Update copyright year (2021).
 
 1.0.2
 -----
 
-- ``get_profile`` now supports alternative unicodedata2 module (Issue #8).
-- ``get_profile`` maps ':' to '_' before look up (Issue #10).
-- Test Unicode 12.1 for Python 3.8.
-- Test Unicode 12.0 (Using optional unicodedata2 module)
-- Test Unicode 13.0 for Python 3.9 (Issue #9).
-- Update copyright year (2020).
+-  ``get_profile`` now supports alternative unicodedata2 module (Issue #8).
+-  ``get_profile`` maps ':' to '_' before look up (Issue #10).
+-  Test Unicode 12.1 for Python 3.8.
+-  Test Unicode 12.0 (Using optional unicodedata2 module)
+-  Test Unicode 13.0 for Python 3.9 (Issue #9).
+-  Update copyright year (2020).
 
 1.0.1
 -----
 
-- Fixed a dict/set syntax typo that has no runtime effect (6ae6876).
-- Test forward compatibility of derived props test files as Unicode version increases.
-- Test Unicode 11.0 (Python 3.7).
-- Update copyright year (2019).
+-  Fixed a dict/set syntax typo that has no runtime effect (6ae6876).
+-  Test forward compatibility of derived props test files as Unicode version increases.
+-  Test Unicode 11.0 (Python 3.7).
+-  Update copyright year (2019).
 
 1.0.0
 -----

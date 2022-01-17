@@ -107,7 +107,7 @@ case-insensitive comparison.
 -  NicknameCaseMapped
 
 The ``CaseMapped`` profiles use Unicode ``ToLower`` per the latest RFC. Previous
-verions of this package used Unicode Default Case Folding. There are CaseMapped variants
+versions of this package used Unicode Default Case Folding. There are CaseMapped variants
 for different case transformations. These profile names are deprecated:
 
 -  UsernameCaseMapped:ToLower
@@ -213,7 +213,7 @@ is disallowed. The ``reason`` field specifies the kind of error.
 Unicode Version Update Procedure
 --------------------------------
 
-When Unicode releases a new version, the following steps must be take to update
+When Unicode releases a new version, take the following steps to update
 internal tables and pass unit tests:
 
 -  Under a version of Python that supports the new Unicode version, run the tests using
