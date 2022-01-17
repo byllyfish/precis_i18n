@@ -107,7 +107,7 @@ case-insensitive comparison.
 -  NicknameCaseMapped
 
 The ``CaseMapped`` profiles use Unicode ``ToLower`` per the latest RFC. Previous
-verions of this package used Unicode Default Case Folding. There are CaseMapped variants
+versions of this package used Unicode Default Case Folding. There are CaseMapped variants
 for different case transformations. These profile names are deprecated:
 
 -  UsernameCaseMapped:ToLower
@@ -209,6 +209,24 @@ is disallowed. The ``reason`` field specifies the kind of error.
 |                              | it breaks a cursive connection in a         |
 |                              | formally cursive script. (Context)          |
 +------------------------------+---------------------------------------------+
+
+Unicode Version Update Procedure
+--------------------------------
+
+When Unicode releases a new version, take the following steps to update
+internal tables and pass unit tests:
+
+-  Under a version of Python that supports the new Unicode version, run the tests using
+   ``python -m unittest discover`` and check that the ``test_derived_props`` test FAILS
+   due to a missing file.
+
+-  Generate a new ``derived-props`` file by running ``PYTHONPATH=. python test/test_derived_props.py > derived-props-VERSION.txt``.
+   Rename the file using the Unicode version, and re-run the tests. The unit tests will further check
+   that no derived properties in the new file contradict the previous values.
+
+-  Check for changes to internal tables used for context rules by running 
+   ``PYTHONPATH=. python tools/check_codepoints.py``. Update the corresponding tables in
+   precis_i18n/unicode.py if necessary.
 
 .. |MIT licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt
