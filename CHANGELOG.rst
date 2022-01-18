@@ -4,10 +4,11 @@ Changelog
 1.0.4
 -----
 
--  Update internal tables for Unicode 14.0. These updates also affect context rules for Unicode 11.0 through 13.0: 
-   In limited cases under previoous versions of precis_i18n, VALID strings under Unicode 11.0-13.0 were DISALLOWED 
-   due to these context reasons: ``hebrew_punctuation, katakana_middle_dot, zero_width_nonjoiner``. (Issue #19)
+-  Update internal tables for Unicode 14.0. These updates also affect context rules for Unicode 11.0 through 13.0.
+   In limited cases under previous versions of precis_i18n, valid strings under Unicode 11.0-13.0 were erroneously
+   DISALLOWED due to context reasons hebrew_punctuation, katakana_middle_dot, and zero_width_nonjoiner. (Issue #19)
 -  Add type hints for package. Contributed by `lovetox <https://github.com/lovetox>`_ (Issue #14).
+-  Update copyright year (2022).
 
 1.0.3
 -----
