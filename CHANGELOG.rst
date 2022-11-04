@@ -1,6 +1,12 @@
 Changelog
 =========
 
+unreleased
+-----
+
+-  Update internal tables for Unicode 15.0.
+-  Small type hint fix to one ``.pyi`` file.
+
 1.0.4
 -----
 
