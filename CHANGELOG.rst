@@ -1,11 +1,13 @@
 Changelog
 =========
 
-unreleased
+1.0.5
 -----
 
 -  Update internal tables for Unicode 15.0.
 -  Small type hint fix to one ``.pyi`` file.
+-  Add Python 3.11 and 3.12 to CI build environment.
+-  Update copyright year (2023).
 
 1.0.4
 -----
