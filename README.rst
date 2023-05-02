@@ -69,6 +69,7 @@ string is disallowed.
     Traceback (most recent call last):
       ...
     UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
+    ...
 
 Alternative Unicode Versions
 ----------------------------

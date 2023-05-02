@@ -49,7 +49,7 @@ jobs:
       run: |
         python -c "import unicodedata; print(unicodedata.unidata_version)"
         python -m unittest discover -v
-        python -m doctest -o IGNORE_EXCEPTION_DETAIL README.rst
+        python -m doctest -o IGNORE_EXCEPTION_DETAIL -o ELLIPSIS README.rst
     - name: Test source package
       run: ./tools/test_python_package.sh
     - name: Run Code Coverage (Python 3.9 only)
