@@ -67,7 +67,7 @@ string is disallowed.
     b'\xef\xbc\xabevin'
     >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
     Traceback (most recent call last):
-        ...
+      ...
     UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
 
 Alternative Unicode Versions
