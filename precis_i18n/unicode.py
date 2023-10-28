@@ -827,7 +827,7 @@ FF71..FF9D
 1B120..1B122
 1B155
 1B164..1B167
-# Han (98408)
+# Han (99030)
 2E80..2E99
 2E9B..2EF3
 2F00..2FD5
@@ -848,11 +848,12 @@ FA70..FAD9
 2B740..2B81D
 2B820..2CEA1
 2CEB0..2EBE0
+2EBF0..2EE5D
 2F800..2FA1D
 30000..3134A
 31350..323AF
 ''')
-assert len(_HIRAGANA_KATAKANA_HAN) == (381 + 321 + 98408)
+assert len(_HIRAGANA_KATAKANA_HAN) == (381 + 321 + 99030)
 
 # https://www.unicode.org/Public/UNIDATA/HangulSyllableType.txt
 # Leading_Jamo, Vowel_Jamo, Trailing_Jamo
