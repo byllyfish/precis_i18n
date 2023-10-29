@@ -291,7 +291,7 @@ class Nickname(Profile):
     def additional_mapping_rule(self, value):
         # Override
         temp = self.base.ucd.map_nonascii_space_to_ascii(value)
-        return re.sub(r'  +', ' ', temp.strip())
+        return re.sub(r'  +', ' ', temp.strip(' \t\n\r\x1f'))  # FIXME
 
     def normalization_rule(self, value):
         # Override
