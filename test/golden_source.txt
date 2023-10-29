@@ -19,6 +19,40 @@
 \ufffe
 \U0010ffff
 
+# Python vs Unicode definition of "white space" when using `str.strip()`.
+# Affected codepoints: 0x09 0x0A 0x0B 0x0C 0x0D 0x1C 0x1D 0x1E 0x1F 0x85 0x2028 0x2029.
+
+# Legacy Tab
+A\tA
+\tA
+A\t
+
+# Legacy Newline
+A\nA
+\nA
+A\n
+
+# Legacy Carriage Return
+A\rA
+\rA
+A\r
+
+# Invalid at start/end of nicknames starting in 1.0.6.
+\x0b
+\x0c
+\x1b
+\x1c
+\x1e
+# \x1f is above...
+\x85
+\u2028
+\u2029
+
+A\x0bA
+A\x1fA
+A\u2028A
+A\u2029A
+
 # ASCII Punctuation
 
 ~`!@#$%^&*()-_=+[{}]\\|;:'",<.>/?

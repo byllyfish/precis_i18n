@@ -121,6 +121,132 @@
   },
   {
     "profile": "UsernameCasePreserved",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCasePreserved",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCasePreserved",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -1948,6 +2074,132 @@
     "input": "\udbff\udfff",
     "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3782,6 +4034,132 @@
   },
   {
     "profile": "OpaqueString",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "OpaqueString",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -5609,6 +5987,132 @@
     "input": "\udbff\udfff",
     "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\tA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\t",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\nA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\n",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\rA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\r",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -7443,6 +7947,132 @@
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:ToLower",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -9274,6 +9904,132 @@
   },
   {
     "profile": "NicknameCasePreserved",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\tA",
+    "output": "A",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\t",
+    "output": "A",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\nA",
+    "output": "A",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\n",
+    "output": "A",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\rA",
+    "output": "A",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\r",
+    "output": "A",
+    "error": null
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCasePreserved",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCasePreserved",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -11101,6 +11857,132 @@
     "input": "\udbff\udfff",
     "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\tA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\t",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\nA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\n",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\rA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\r",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:ToLower",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -12935,6 +13817,132 @@
   },
   {
     "profile": "FreeFormClass",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "FreeFormClass",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -14765,6 +15773,132 @@
   },
   {
     "profile": "IdentifierClass",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "IdentifierClass",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -16595,6 +17729,132 @@
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\t",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\n",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\r",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "UsernameCaseMapped:CaseFold",
     "input": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "output": "~`!@#$%^&*()-_=+[{}]\\|;:'\",<.>/?",
     "error": null
@@ -18422,6 +19682,132 @@
     "input": "\udbff\udfff",
     "output": null,
     "error": "DISALLOWED/precis_ignorable_properties"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\tA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\tA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\t",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\nA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\nA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\n",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\rA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\rA",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\r",
+    "output": "a",
+    "error": null
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u000b",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\f",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u001b",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u001c",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u001e",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u0085",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2028",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "\u2029",
+    "output": null,
+    "error": "DISALLOWED/empty"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\u000bA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\u001fA",
+    "output": null,
+    "error": "DISALLOWED/controls"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\u2028A",
+    "output": null,
+    "error": "DISALLOWED/other"
+  },
+  {
+    "profile": "NicknameCaseMapped:CaseFold",
+    "input": "A\u2029A",
+    "output": null,
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
