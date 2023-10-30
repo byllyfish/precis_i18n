@@ -5914,7 +5914,7 @@
     "profile": "NicknameCaseMapped",
     "input": "\u001f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6046,13 +6046,13 @@
     "profile": "NicknameCaseMapped",
     "input": "\u000b",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6064,31 +6064,31 @@
     "profile": "NicknameCaseMapped",
     "input": "\u001c",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u001e",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u0085",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u2028",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped",
     "input": "\u2029",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -9828,7 +9828,7 @@
     "profile": "NicknameCasePreserved",
     "input": "\u001f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9960,13 +9960,13 @@
     "profile": "NicknameCasePreserved",
     "input": "\u000b",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -9978,31 +9978,31 @@
     "profile": "NicknameCasePreserved",
     "input": "\u001c",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u001e",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u0085",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u2028",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCasePreserved",
     "input": "\u2029",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -11784,7 +11784,7 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u001f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -11916,13 +11916,13 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u000b",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -11934,31 +11934,31 @@
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u001c",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u001e",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u0085",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u2028",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u2029",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -19609,7 +19609,7 @@
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u001f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
@@ -19741,13 +19741,13 @@
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u000b",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\f",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
@@ -19759,31 +19759,31 @@
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u001c",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u001e",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u0085",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/controls"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u2028",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u2029",
     "output": null,
-    "error": "DISALLOWED/empty"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
