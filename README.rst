@@ -3,6 +3,8 @@ PRECIS-i18n: Internationalized Usernames and Passwords
 
 |MIT licensed| |Build Status| |codecov.io|
 
+.. highlight:: pycon
+
 If you want your application to accept Unicode user names and passwords,
 you must be careful in how you validate and compare them. The PRECIS
 framework makes internationalized user names and passwords safer for use
@@ -136,6 +138,35 @@ allow spaces in your application's user names, you must split the string first.
 
 Be aware that a username constructed this way can contain bidirectional text in
 the separate userparts.
+
+The Nickname Profile and White Space
+------------------------------------
+
+When PRECIS enforces a string using the ``Nickname`` profile, one of the steps is
+to silently remove leading and trailing white space. Starting with version 
+1.1, this library uses a more *restrictive* definition of *white space*.
+
+- 1.1 and later *only* include Unicode category ``Zs``. If you try to enforce
+  a Nickname that contains white space characters like '\n', you will get a UnicodeEncodeError
+  ``DISALLOWED/controls``.
+- 1.0.5 and earlier included control characters such as '\n', '\t', and '\r'
+  when removing leading/trailing white space from Nicknames. The
+  result treated these legacy white space characters as if they were ``Zs`` and stripped them.
+
+The trimming of white space is specific to the Nickname profile only. Here is an example of
+the new behavior:
+
+::
+
+
+    >> from precis_i18n import get_profile
+    >> username = get_profile('NicknameCasePreserved')
+    >> username.enforce('Kevin\n')
+    Traceback (most recent call last):
+        ...
+    UnicodeEncodeError: 'NicknameCasePreserved' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
+
+
 
 Error Messages
 --------------

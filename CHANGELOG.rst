@@ -1,6 +1,15 @@
 Changelog
 =========
 
+tbd
+-----
+
+- Fixed an issue in the Nickname profile implementation which caused extra leading/trailing white space to be trimmed, beyond the ``Zs`` category expressed in the specification.
+  Python treats certain Unicode control characters such as ``\n`` and ``\t`` as white space. If these appeared as leading/trailing spaces in a Nickname string,
+  they were stripped. With this release, the Nickname profile will raise a UnicodeEncodeError ``DISALLOWED/controls`` instead if any control characters are encountered. (Issue #29)
+- Update internal tables for Unicode 15.1.
+
+
 1.0.5
 -----
 
