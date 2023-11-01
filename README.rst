@@ -33,7 +33,6 @@ its ``enforce`` method. The ``enforce`` method returns a Unicode string.
 
 ::
 
-
     >>> from precis_i18n import get_profile
     >>> username = get_profile('UsernameCaseMapped')
     >>> username.enforce('Kevin')
@@ -54,7 +53,6 @@ will be a UTF-8 encoded byte string or a ``UnicodeEncodeError`` if the
 string is disallowed.
 
 ::
-
 
     >>> import precis_i18n.codec
     >>> 'Kevin'.encode('UsernameCasePreserved')
@@ -89,10 +87,10 @@ profile that uses Unicode 12.0.
 
 ::
 
-    >> import unicodedata2
-    >> from precis_i18n import get_profile
-    >> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
-    >> username.enforce('Kevin')
+    >>> import unicodedata2
+    >>> from precis_i18n import get_profile
+    >>> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
+    >>> username.enforce('Kevin')
     'kevin'
 
 Supported Profiles and Codecs
@@ -138,34 +136,6 @@ allow spaces in your application's user names, you must split the string first.
 
 Be aware that a username constructed this way can contain bidirectional text in
 the separate userparts.
-
-The Nickname Profile and White Space
-------------------------------------
-
-When PRECIS enforces a string using the ``Nickname`` profile, one of the steps is
-to silently remove leading and trailing white space. Starting with version 
-1.1, this library uses a more *restrictive* definition of *white space*.
-
-- 1.1 and later *only* include Unicode category ``Zs``. If you try to enforce
-  a Nickname that contains white space characters like '\n', you will get a UnicodeEncodeError
-  ``DISALLOWED/controls``.
-- 1.0.5 and earlier included control characters such as '\n', '\t', and '\r'
-  when removing leading/trailing white space from Nicknames. The
-  result treated these legacy white space characters as if they were ``Zs`` and stripped them.
-
-The trimming of white space is specific to the Nickname profile only. Here is an example of
-the new behavior:
-
-::
-
-
-    >> from precis_i18n import get_profile
-    >> username = get_profile('NicknameCasePreserved')
-    >> username.enforce('Kevin\n')
-    Traceback (most recent call last):
-        ...
-    UnicodeEncodeError: 'NicknameCasePreserved' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
-
 
 
 Error Messages
@@ -240,6 +210,34 @@ is disallowed. The ``reason`` field specifies the kind of error.
 |                              | it breaks a cursive connection in a         |
 |                              | formally cursive script. (Context)          |
 +------------------------------+---------------------------------------------+
+
+
+The Nickname Profile and White Space
+------------------------------------
+
+When PRECIS enforces a string using the ``Nickname`` profile, one of the steps is
+to silently remove leading and trailing white space. Starting with version 
+1.1, this library uses a more *restrictive* definition of *white space*.
+
+- 1.1 and later *only* include Unicode category ``Zs``. If you try to enforce
+  a Nickname that contains white space characters like `'\n'`, you will get a UnicodeEncodeError
+  ``DISALLOWED/controls``.
+- 1.0.5 and earlier included control characters such as `'\n'`, `'\t'`, and `'\r'`
+  when removing leading/trailing white space from Nicknames. The
+  result treated these legacy white space characters as if they were ``Zs`` and stripped them.
+
+The trimming of white space is specific to the Nickname profile only. Here is an example of
+the current behavior:
+
+::
+
+    >>> from precis_i18n import get_profile
+    >>> username = get_profile('NicknameCasePreserved')
+    >>> username.enforce('Kevin\n')
+    Traceback (most recent call last):
+        ...
+    UnicodeEncodeError: 'NicknameCasePreserved' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
+
 
 Unicode Version Update Procedure
 --------------------------------
