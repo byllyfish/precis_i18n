@@ -215,16 +215,18 @@ is disallowed. The ``reason`` field specifies the kind of error.
 The Nickname Profile and White Space
 ------------------------------------
 
-When PRECIS enforces a string using the ``Nickname`` profile, one of the steps is
-to silently remove leading and trailing white space. Starting with version 
-1.1, this library uses a more *restrictive* definition of *white space*.
+When PRECIS processes a string using the ``Nickname`` profile, one of the enforcement steps silently
+removes leading and trailing white space. Starting with version 1.1, this library uses
+a more *restrictive* definition of *white space* in the ``Nickname`` profile.
 
 - 1.1 and later *only* include Unicode category ``Zs``. If you try to enforce
   a Nickname that contains white space characters like ``'\n'``, you will get a UnicodeEncodeError
   ``DISALLOWED/controls``.
 - 1.0.5 and earlier included control characters such as ``'\n'``, ``'\t'``, and ``'\r'``
-  when removing leading/trailing white space from Nicknames. The
-  result treated these legacy white space characters as if they were ``Zs`` and stripped them.
+  when removing leading/trailing white space from Nicknames. The result treated these legacy white
+  space characters the same as ``Zs`` and stripped them.
+- In all versions, *internal* white space (not leading or trailing) matches Unicode 
+  category ``Zs`` only.
 
 The trimming of white space is specific to the Nickname profile only. Here is an example of
 the current behavior:
@@ -238,6 +240,7 @@ the current behavior:
         ...
     UnicodeEncodeError: 'NicknameCasePreserved' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
 
+In version 1.0.5 and earlier, the Nickname profile enforced ``"Kevin\n"`` as ``"Kevin"``.
 
 Unicode Version Update Procedure
 --------------------------------
