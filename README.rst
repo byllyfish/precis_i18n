@@ -220,9 +220,9 @@ to silently remove leading and trailing white space. Starting with version
 1.1, this library uses a more *restrictive* definition of *white space*.
 
 - 1.1 and later *only* include Unicode category ``Zs``. If you try to enforce
-  a Nickname that contains white space characters like `'\n'`, you will get a UnicodeEncodeError
+  a Nickname that contains white space characters like ``'\n'``, you will get a UnicodeEncodeError
   ``DISALLOWED/controls``.
-- 1.0.5 and earlier included control characters such as `'\n'`, `'\t'`, and `'\r'`
+- 1.0.5 and earlier included control characters such as ``'\n'``, ``'\t'``, and ``'\r'``
   when removing leading/trailing white space from Nicknames. The
   result treated these legacy white space characters as if they were ``Zs`` and stripped them.
 
