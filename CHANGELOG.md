@@ -4,13 +4,15 @@
 
 -   Fixed an issue in the Nickname profile implementation that trimmed
     extra leading/trailing white space beyond the `Zs`
-    category expressed in RFC 8266. Python treats certain
+    category prescribed in RFC 8266. Python treats certain
     Unicode control characters such as `'\n'` and `'\t'` as white space. If
     these appeared as leading/trailing spaces in a Nickname string, they
     were stripped. With this release, the Nickname profile will raise a
     UnicodeEncodeError `DISALLOWED/controls` if any control
     characters are encountered. (Issue #29)
 -   Update internal tables for Unicode 15.1.
+-   Add Python 3.13-dev to CI build environment.
+-   Change format of README and CHANGELOG files to Markdown.
 
 ## 1.0.5
 
