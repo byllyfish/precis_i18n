@@ -14,13 +14,13 @@ here = path.abspath(path.dirname(__file__))
 description_path = path.join(here, "README.md")
 version_path = path.join(here, "precis_i18n", "__init__.py")
 
-# Read README.rst.
+# Read README.md.
 with open(description_path, encoding="utf-8") as f:
     long_description = f.read()
 
 # Extract version number.
 with open(version_path, encoding="utf-8") as f:
-    version_regex = re.compile(r"(?m)__version__\s*=\s*'(\d+\.\d+\.\d+)'")
+    version_regex = re.compile(r'(?m)__version__\s*=\s*"(\d+\.\d+\.\d+)"')
     version = version_regex.search(f.read()).group(1)
 
 
