@@ -8,14 +8,14 @@ def case(ch):
 
 
 def nfc(ch):
-    return unicodedata.normalize('NFC', ch)
+    return unicodedata.normalize("NFC", ch)
 
 
 def make(ch):
-    return '%s%s' % (ch, unicodedata.normalize('NFD', ch))
+    return "%s%s" % (ch, unicodedata.normalize("NFD", ch))
 
 
-for i in range(0, 0x010ffff):
+for i in range(0, 0x010FFFF):
     s = make(chr(i))
     if case(nfc(s)) != nfc(case(s)):
-        print(s.encode('unicode-escape'))
+        print(s.encode("unicode-escape"))

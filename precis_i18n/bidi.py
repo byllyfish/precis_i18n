@@ -29,17 +29,17 @@ the rule to be satisfied.
    Bidi property NSM.
 """
 
-_LTR_FIRST = {'L'}
-_LTR_ALLOWED = {'L', 'EN', 'ES', 'CS', 'ET', 'ON', 'BN', 'NSM'}
-_LTR_LAST = {'L', 'EN'}
+_LTR_FIRST = {"L"}
+_LTR_ALLOWED = {"L", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
+_LTR_LAST = {"L", "EN"}
 _LTR_EXCL = set()
 
-_RTL_FIRST = {'R', 'AL'}
-_RTL_ALLOWED = {'R', 'AL', 'AN', 'EN', 'ES', 'CS', 'ET', 'ON', 'BN', 'NSM'}
-_RTL_LAST = {'R', 'AL', 'EN', 'AN'}
-_RTL_EXCL = {'EN', 'AN'}
+_RTL_FIRST = {"R", "AL"}
+_RTL_ALLOWED = {"R", "AL", "AN", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
+_RTL_LAST = {"R", "AL", "EN", "AN"}
+_RTL_EXCL = {"EN", "AN"}
 
-_RTL_ANY = {'R', 'AL', 'AN'}
+_RTL_ANY = {"R", "AL", "AN"}
 
 
 def bidi_rule(value, ucd):
@@ -80,7 +80,7 @@ def _bidi_rule(value, ucd, allowed, last, exclusive):
     found = -1
     for i in reversed(range(len(value))):
         bidi = ucd.bidirectional(value[i])
-        if bidi != 'NSM':
+        if bidi != "NSM":
             found = i
             break
 

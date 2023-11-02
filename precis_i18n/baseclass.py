@@ -1,8 +1,7 @@
 """Implements the PRECIS string classes."""
 
 from precis_i18n.context import context_rule_error
-from precis_i18n.derived import (CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
-                                 derived_property)
+from precis_i18n.derived import CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID, derived_property
 
 
 class BaseClass:
@@ -19,6 +18,7 @@ class BaseClass:
         ucd (UnicodeData): Unicode character database.
         name (str): String class name.
     """
+
     _allowed = ()
 
     def __init__(self, ucd, name=None):
@@ -66,7 +66,8 @@ class IdentifierClass(BaseClass):
         ucd (UnicodeData): Unicode character database.
         name (str): String class name.
     """
-    _allowed = (PVALID, )
+
+    _allowed = (PVALID,)
 
 
 class FreeFormClass(BaseClass):
@@ -76,6 +77,7 @@ class FreeFormClass(BaseClass):
         ucd (UnicodeData): Unicode character database.
         name (str): String class name.
     """
+
     _allowed = (PVALID, FREE_PVAL)
 
 
@@ -99,5 +101,5 @@ def raise_error(encoding, value, offset, error):
         start = offset
         end = offset + 1
 
-    reason = 'DISALLOWED/%s' % error
+    reason = "DISALLOWED/%s" % error
     raise UnicodeEncodeError(encoding, value, start, end, reason)

@@ -1,11 +1,11 @@
 """Implements the PRECIS (RFC 8264) `derived_property` function."""
 
-PVALID = 'PVALID'
-FREE_PVAL = 'FREE_PVAL'
-DISALLOWED = 'DISALLOWED'
-UNASSIGNED = 'UNASSIGNED'
-CONTEXTJ = 'CONTEXTJ'
-CONTEXTO = 'CONTEXTO'
+PVALID = "PVALID"
+FREE_PVAL = "FREE_PVAL"
+DISALLOWED = "DISALLOWED"
+UNASSIGNED = "UNASSIGNED"
+CONTEXTJ = "CONTEXTJ"
+CONTEXTO = "CONTEXTO"
 
 # pylint: disable=too-many-return-statements,too-many-branches
 
@@ -41,35 +41,34 @@ def derived_property(cp, ucd):  # noqa: C901
     category = ucd.category(chr(cp))
 
     if in_exceptions(cp):
-        return exceptions(cp), 'exceptions'
+        return exceptions(cp), "exceptions"
     if in_backward_compatible(cp):
-        return backward_compatible(
-            cp), 'backward_compatible'  # pragma: no cover
+        return backward_compatible(cp), "backward_compatible"  # pragma: no cover
     if in_unassigned(cp, category, ucd):
-        return UNASSIGNED, 'unassigned'
+        return UNASSIGNED, "unassigned"
     if in_ascii7(cp):
-        return PVALID, 'ascii7'
+        return PVALID, "ascii7"
     if in_join_control(cp):
-        return CONTEXTJ, 'join_control'
+        return CONTEXTJ, "join_control"
     if in_old_hangul_jamo(cp, ucd):
-        return DISALLOWED, 'old_hangul_jamo'
+        return DISALLOWED, "old_hangul_jamo"
     if in_precis_ignorable_properties(cp, ucd):
-        return DISALLOWED, 'precis_ignorable_properties'
+        return DISALLOWED, "precis_ignorable_properties"
     if in_controls(cp, ucd):
-        return DISALLOWED, 'controls'
+        return DISALLOWED, "controls"
     if in_has_compat(cp, ucd):
-        return FREE_PVAL, 'has_compat'
+        return FREE_PVAL, "has_compat"
     if in_letter_digits(category):
-        return PVALID, 'letter_digits'
+        return PVALID, "letter_digits"
     if in_other_letter_digits(category):
-        return FREE_PVAL, 'other_letter_digits'
+        return FREE_PVAL, "other_letter_digits"
     if in_spaces(category):
-        return FREE_PVAL, 'spaces'
+        return FREE_PVAL, "spaces"
     if in_symbols(category):
-        return FREE_PVAL, 'symbols'
+        return FREE_PVAL, "symbols"
     if in_punctuation(category):
-        return FREE_PVAL, 'punctuation'
-    return DISALLOWED, 'other'
+        return FREE_PVAL, "punctuation"
+    return DISALLOWED, "other"
 
 
 def in_letter_digits(category):
@@ -81,7 +80,7 @@ def in_letter_digits(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {'Ll', 'Lu', 'Lo', 'Nd', 'Lm', 'Mn', 'Mc'}
+    return category in {"Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"}
 
 
 def in_exceptions(cp):
@@ -120,7 +119,7 @@ def in_join_control(cp):
     Returns:
         bool: True if `cp` is in set.
     """
-    return 0x200c <= cp <= 0x200d
+    return 0x200C <= cp <= 0x200D
 
 
 def in_old_hangul_jamo(cp, ucd):
@@ -148,7 +147,7 @@ def in_unassigned(cp, category, ucd):
     Returns:
         bool: True if `cp` is in set.
     """
-    return category == 'Cn' and not ucd.noncharacter(cp)
+    return category == "Cn" and not ucd.noncharacter(cp)
 
 
 def in_ascii7(cp):
@@ -199,7 +198,7 @@ def in_spaces(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {'Zs'}
+    return category in {"Zs"}
 
 
 def in_symbols(category):
@@ -211,7 +210,7 @@ def in_symbols(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {'Sm', 'Sc', 'Sk', 'So'}
+    return category in {"Sm", "Sc", "Sk", "So"}
 
 
 def in_punctuation(category):
@@ -223,7 +222,7 @@ def in_punctuation(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {'Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'}
+    return category in {"Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"}
 
 
 def in_has_compat(cp, ucd):
@@ -249,7 +248,7 @@ def in_other_letter_digits(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {'Lt', 'Nl', 'No', 'Me'}
+    return category in {"Lt", "Nl", "No", "Me"}
 
 
 def exceptions(cp):

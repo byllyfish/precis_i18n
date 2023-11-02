@@ -13,40 +13,31 @@ def _factory(profile, **kwds):
 
 
 _PROFILES = {
-    'identifierclass':
-    _factory(_base.IdentifierClass, name='IdentifierClass'),
-    'freeformclass':
-    _factory(_base.FreeFormClass, name='FreeFormClass'),
-    'usernamecasepreserved':
-    _factory(_profile.Username, name='UsernameCasePreserved'),
-    'usernamecasemapped':
-    _factory(_profile.Username, name='UsernameCaseMapped', casemap='lower'),
-    'usernamecasemapped_casefold':
-    _factory(_profile.Username,
-             name='UsernameCaseMapped:CaseFold',
-             casemap='fold'),
-    'usernamecasemapped_tolower':
-    _factory(_profile.Username,
-             name='UsernameCaseMapped:ToLower',
-             casemap='lower'),
-    'opaquestring':
-    _factory(_profile.OpaqueString, name='OpaqueString'),
-    'nicknamecasepreserved':
-    _factory(_profile.Nickname, name='NicknameCasePreserved'),
-    'nicknamecasemapped':
-    _factory(_profile.Nickname, name='NicknameCaseMapped', casemap='lower'),
-    'nicknamecasemapped_casefold':
-    _factory(_profile.Nickname,
-             name='NicknameCaseMapped:CaseFold',
-             casemap='fold'),
-    'nicknamecasemapped_tolower':
-    _factory(_profile.Nickname,
-             name='NicknameCaseMapped:ToLower',
-             casemap='lower'),
-
+    "identifierclass": _factory(_base.IdentifierClass, name="IdentifierClass"),
+    "freeformclass": _factory(_base.FreeFormClass, name="FreeFormClass"),
+    "usernamecasepreserved": _factory(_profile.Username, name="UsernameCasePreserved"),
+    "usernamecasemapped": _factory(
+        _profile.Username, name="UsernameCaseMapped", casemap="lower"
+    ),
+    "usernamecasemapped_casefold": _factory(
+        _profile.Username, name="UsernameCaseMapped:CaseFold", casemap="fold"
+    ),
+    "usernamecasemapped_tolower": _factory(
+        _profile.Username, name="UsernameCaseMapped:ToLower", casemap="lower"
+    ),
+    "opaquestring": _factory(_profile.OpaqueString, name="OpaqueString"),
+    "nicknamecasepreserved": _factory(_profile.Nickname, name="NicknameCasePreserved"),
+    "nicknamecasemapped": _factory(
+        _profile.Nickname, name="NicknameCaseMapped", casemap="lower"
+    ),
+    "nicknamecasemapped_casefold": _factory(
+        _profile.Nickname, name="NicknameCaseMapped:CaseFold", casemap="fold"
+    ),
+    "nicknamecasemapped_tolower": _factory(
+        _profile.Nickname, name="NicknameCaseMapped:ToLower", casemap="lower"
+    ),
     # Alias for backward-compatibility with previous version of codec.
-    'nickname':
-    _factory(_profile.Nickname, name='Nickname', casemap='lower')
+    "nickname": _factory(_profile.Nickname, name="Nickname", casemap="lower"),
 }
 
 
@@ -83,5 +74,5 @@ def get_profile(name, *, unicodedata=None):
     Raises:
         KeyError: Profile not found.
     """
-    profile = name.lower().replace(':', '_')
+    profile = name.lower().replace(":", "_")
     return _PROFILES[profile](_unicode.UnicodeData(unicodedata))

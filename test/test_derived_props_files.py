@@ -3,33 +3,39 @@ import re
 import unittest
 
 VERSIONS = [
-    '6.1', '6.2', '6.3', '8.0', '9.0', '10.0', '11.0', '12.0', '12.1', '13.0',
-    '14.0',
+    "6.1",
+    "6.2",
+    "6.3",
+    "8.0",
+    "9.0",
+    "10.0",
+    "11.0",
+    "12.0",
+    "12.1",
+    "13.0",
+    "14.0",
 ]
 
 UNASSIGNED = 1
 
 PROPS = {
-    'UNASSIGNED': UNASSIGNED,
-    'PVALID': 2,
-    'FREE_PVAL': 3,
-    'ID_DIS or FREE_PVAL': 3,  # found in IANA format only
-    'DISALLOWED': 4,
-    'CONTEXTJ': 5,
-    'CONTEXTO': 6
+    "UNASSIGNED": UNASSIGNED,
+    "PVALID": 2,
+    "FREE_PVAL": 3,
+    "ID_DIS or FREE_PVAL": 3,  # found in IANA format only
+    "DISALLOWED": 4,
+    "CONTEXTJ": 5,
+    "CONTEXTO": 6,
 }
 
-LINE_REGEX = re.compile(
-    r'^([0-9A-F]{4,6})-([0-9A-F]{4,6}) ([A-Z_]+)/[a-z0-9_]+$')
+LINE_REGEX = re.compile(r"^([0-9A-F]{4,6})-([0-9A-F]{4,6}) ([A-Z_]+)/[a-z0-9_]+$")
 
-IANA_LINE_REGEX = re.compile(r'^([0-9A-F]{4,6})(-[0-9A-F]{4,6})?,([^,]+),.+$')
+IANA_LINE_REGEX = re.compile(r"^([0-9A-F]{4,6})(-[0-9A-F]{4,6})?,([^,]+),.+$")
 
 DIR_PATH = os.path.dirname(__file__)
 
 # Allowed transitions between two versions V1 -> V2 for specific code points.
-EXCEPTIONS = {
-    0x111c9: (PROPS['FREE_PVAL'], PROPS['PVALID'])  # SHARADA SANDHI MARK
-}
+EXCEPTIONS = {0x111C9: (PROPS["FREE_PVAL"], PROPS["PVALID"])}  # SHARADA SANDHI MARK
 
 
 def _allowed_change(cp, tbl1, tbl2):
@@ -55,7 +61,7 @@ def _load_table(filename):
     with open(filename) as fp:
         for line in fp:
             m = LINE_REGEX.match(line)
-            assert m, 'Unexpected format: %s' % line
+            assert m, "Unexpected format: %s" % line
 
             lo, hi = int(m.group(1), 16), int(m.group(2), 16)
             prop = PROPS[m.group(3)]
@@ -64,7 +70,7 @@ def _load_table(filename):
 
     # Check that all codepoints are assigned.
     for cp in range(0x110000):
-        assert table[cp] != 0, 'Codepoint missing: %d' % cp
+        assert table[cp] != 0, "Codepoint missing: %d" % cp
 
     return table
 
@@ -77,11 +83,11 @@ def _load_table_iana(filename):
     with open(filename) as fp:
         for line in fp:
             # Ignore csv header.
-            if line == 'Codepoint,Property,Description\n':
+            if line == "Codepoint,Property,Description\n":
                 continue
 
             m = IANA_LINE_REGEX.match(line)
-            assert m, 'Unexpected format: %s' % line
+            assert m, "Unexpected format: %s" % line
 
             lo = int(m.group(1), 16)
             if m.group(2):
@@ -95,7 +101,7 @@ def _load_table_iana(filename):
 
     # Check that all codepoints are assigned.
     for cp in range(0x110000):
-        assert table[cp] != 0, 'Codepoint missing: %d' % cp
+        assert table[cp] != 0, "Codepoint missing: %d" % cp
 
     return table
 
@@ -104,7 +110,7 @@ def _load_tables():
     """Load data from all derived-props files."""
 
     tables = []
-    file_template = os.path.join(DIR_PATH, 'derived-props-%s.txt')
+    file_template = os.path.join(DIR_PATH, "derived-props-%s.txt")
 
     for version in VERSIONS:
         table = _load_table(file_template % version)
@@ -128,14 +134,15 @@ class TestDerivedPropsFiles(unittest.TestCase):
             ver2, tbl2 = tables[i + 1]
             for j in range(0x110000):
                 if not _allowed_change(j, tbl1[j], tbl2[j]):
-                    self.assertEqual(tbl1[j], tbl2[j],
-                                     'cp = %d (%s -> %s)' % (j, ver1, ver2))
+                    self.assertEqual(
+                        tbl1[j], tbl2[j], "cp = %d (%s -> %s)" % (j, ver1, ver2)
+                    )
 
     def test_iana_derived_props(self):
         """Compare IANA precis-tables to derived-props-6.3.txt"""
 
-        iana_path = os.path.join(DIR_PATH, 'iana-precis-tables-6.3.0.csv')
-        test_path = os.path.join(DIR_PATH, 'derived-props-6.3.txt')
+        iana_path = os.path.join(DIR_PATH, "iana-precis-tables-6.3.0.csv")
+        test_path = os.path.join(DIR_PATH, "derived-props-6.3.txt")
 
         iana_table = _load_table_iana(iana_path)
         table = _load_table(test_path)

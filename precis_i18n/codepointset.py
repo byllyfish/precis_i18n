@@ -32,6 +32,7 @@ class CodepointSet:
     Args:
         table (str): Multi-line string of code point ranges.
     """
+
     def __init__(self, table):
         self._table = _stringify(_coalesce(_parse(table)))
         assert (len(self._table) % 2) == 0
@@ -86,7 +87,7 @@ class CodepointSet:
         Example:
             "CodepointSet('0000\n0010..00FF')"
         """
-        elems = '\\n'.join(_repr(elem) for elem in self.items())
+        elems = "\\n".join(_repr(elem) for elem in self.items())
         return "CodepointSet('%s')" % elems
 
     def items(self):
@@ -109,19 +110,19 @@ def _parse(table):
     Raises:
         ValueError: Error while parsing `table`.
     """
-    codepoint = re.compile(r'^([0-9A-Fa-f]+)(?:\.\.([0-9A-Fa-f]+))?$')
+    codepoint = re.compile(r"^([0-9A-Fa-f]+)(?:\.\.([0-9A-Fa-f]+))?$")
     elems = []
     for line in io.StringIO(table):
         line = line.strip()
         m = codepoint.match(line)
         if not m:
-            if line and line[0] != '#':
-                raise ValueError('Unable to parse line: %s' % line)
+            if line and line[0] != "#":
+                raise ValueError("Unable to parse line: %s" % line)
             continue
         lo = int(m.group(1), 16)
         hi = int(m.group(2), 16) if m.group(2) else lo
         if lo > hi:
-            raise ValueError('Invalid range (lo > hi): %s' % line)
+            raise ValueError("Invalid range (lo > hi): %s" % line)
         elems.append((lo, hi))
     return elems
 
@@ -141,12 +142,11 @@ def _coalesce(elems):
     elems.sort()
     i = 0
     while i < len(elems) - 1:
-        (lo0, hi0), (lo1, hi1) = elems[i:i + 2]
+        (lo0, hi0), (lo1, hi1) = elems[i : i + 2]
         if not lo0 <= hi0 < lo1 <= hi1:
-            raise ValueError('Range overlaps at index %d: %r' %
-                             (i, elems[i:i + 2]))
+            raise ValueError("Range overlaps at index %d: %r" % (i, elems[i : i + 2]))
         if lo1 == hi0 + 1:
-            elems[i:i + 2] = [(lo0, hi1)]
+            elems[i : i + 2] = [(lo0, hi1)]
         else:
             i += 1
     return elems
@@ -161,7 +161,7 @@ def _stringify(elems):
     Returns:
         str: String with lo..hi ranges concatenated.
     """
-    return ''.join(chr(lo) + chr(hi) for (lo, hi) in elems)
+    return "".join(chr(lo) + chr(hi) for (lo, hi) in elems)
 
 
 def _repr(elem):
@@ -178,5 +178,5 @@ def _repr(elem):
         str: String representation of range tuple.
     """
     if elem[0] == elem[1]:
-        return '%04X' % elem[0]
-    return '%04X..%04X' % elem
+        return "%04X" % elem[0]
+    return "%04X..%04X" % elem
