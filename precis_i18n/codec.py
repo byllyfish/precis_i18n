@@ -6,17 +6,17 @@ from precis_i18n import get_profile
 
 
 def _make_encode(profile):
-    def _encode(input, errors='strict'):
-        if errors != 'strict':
-            raise ValueError('invalid errors argument')
-        return (profile.enforce(input).encode('utf-8'), len(input))
+    def _encode(input, errors="strict"):
+        if errors != "strict":
+            raise ValueError("invalid errors argument")
+        return (profile.enforce(input).encode("utf-8"), len(input))
 
     return _encode
 
 
-def _not_supported(input, errors='strict'):
+def _not_supported(input, errors="strict"):
     # pylint: disable=unused-argument
-    raise NotImplementedError('decode not supported')
+    raise NotImplementedError("decode not supported")
 
 
 def search(name):
@@ -33,9 +33,9 @@ def search(name):
     except KeyError:
         return None
 
-    return codecs.CodecInfo(name=name,
-                            encode=_make_encode(profile),
-                            decode=_not_supported)
+    return codecs.CodecInfo(
+        name=name, encode=_make_encode(profile), decode=_not_supported
+    )
 
 
 codecs.register(search)

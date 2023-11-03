@@ -13,38 +13,36 @@ import sqlite3
 
 
 class UnicodeDatabase(object):
-
-    property_regex = re.compile(
-        r'^([0-9A-F]+)(?:\.\.([0-9A-F]+))?\s*;\s*(\S+)\s*[#;]')
+    property_regex = re.compile(r"^([0-9A-F]+)(?:\.\.([0-9A-F]+))?\s*;\s*(\S+)\s*[#;]")
 
     def __init__(self, filename):
         self._conn = sqlite3.connect(filename)
 
     def load(self):
-        """ Load database files.
-        """
+        """Load database files."""
         self.create_tables()
-        self.parse_unicodedata('UnicodeData.txt')
+        self.parse_unicodedata("UnicodeData.txt")
         self.add_non_characters()
-        self.parse_properties('DerivedAge.txt', 'age')
-        self.parse_properties('Scripts.txt', 'script')
-        self.parse_properties('HangulSyllableType.txt', 'hst')
+        self.parse_properties("DerivedAge.txt", "age")
+        self.parse_properties("Scripts.txt", "script")
+        self.parse_properties("HangulSyllableType.txt", "hst")
 
         self.add_reserved_dicp()
-        self.parse_property_present('DerivedCoreProperties.txt', 'dicp',
-                                    'Default_Ignorable_Code_Point')
-        self.parse_property_present('DerivedNormalizationProps.txt', 'fce',
-                                    'Full_Composition_Exclusion')
+        self.parse_property_present(
+            "DerivedCoreProperties.txt", "dicp", "Default_Ignorable_Code_Point"
+        )
+        self.parse_property_present(
+            "DerivedNormalizationProps.txt", "fce", "Full_Composition_Exclusion"
+        )
         self.add_exceptions()
         self.assign_has_compat()
         self.assign_precis()
         self._conn.commit()
 
     def create_tables(self):
-        """ Create database tables.
-        """
+        """Create database tables."""
         cur = self._conn.cursor()
-        ddl = '''
+        ddl = """
             CREATE TABLE codepoints (
               cp         INTEGER PRIMARY KEY,
               name       TEXT NOT NULL,
@@ -61,116 +59,110 @@ class UnicodeDatabase(object):
               has_compat INT,
               precis     TEXT
             )
-        '''
+        """
         cur.execute(ddl)
 
     def parse_unicodedata(self, filename):
-        """ Load data from UnicodeData.txt file.
-        """
+        """Load data from UnicodeData.txt file."""
         cur = self._conn.cursor()
         for line in open(filename):
-            cols = line.split(';')
+            cols = line.split(";")
             cp = int(cols[0], 16)
             name = cols[1]
-            if name.endswith(', First>'):
+            if name.endswith(", First>"):
                 first = cp
-            elif name.endswith(', Last>'):
-                name = name[:-7] + ' %4.4x-%4.4x>' % (first, cp)
+            elif name.endswith(", Last>"):
+                name = name[:-7] + " %4.4x-%4.4x>" % (first, cp)
                 for n in range(first, cp + 1):
-                    self._insert(cur, n, name, cols[2], cols[3], cols[4],
-                                 cols[5])
+                    self._insert(cur, n, name, cols[2], cols[3], cols[4], cols[5])
             else:
                 self._insert(cur, cp, name, cols[2], cols[3], cols[4], cols[5])
 
     def add_non_characters(self):
-        """ Add entries for non-characters.
-        """
+        """Add entries for non-characters."""
         cur = self._conn.cursor()
-        for cp in range(0xfdd0, 0xfdef + 1):
-            self._insert(cur, cp, '<noncharacter>', 'Cn', 0, '', '')
+        for cp in range(0xFDD0, 0xFDEF + 1):
+            self._insert(cur, cp, "<noncharacter>", "Cn", 0, "", "")
         for n in range(0, 17):
-            cp1 = (n << 16) | 0xfffe
-            cp2 = (n << 16) | 0xffff
-            self._insert(cur, cp1, '<noncharacter>', 'Cn', 0, '', '')
-            self._insert(cur, cp2, '<noncharacter>', 'Cn', 0, '', '')
+            cp1 = (n << 16) | 0xFFFE
+            cp2 = (n << 16) | 0xFFFF
+            self._insert(cur, cp1, "<noncharacter>", "Cn", 0, "", "")
+            self._insert(cur, cp2, "<noncharacter>", "Cn", 0, "", "")
 
     def add_reserved_dicp(self):
-        """ Add entries for <reserved> chars that have the 'dicp' property.
-        """
+        """Add entries for <reserved> chars that have the 'dicp' property."""
         cur = self._conn.cursor()
-        self._insert(cur, 0x2065, '<reserved>', 'Cn', 0, '', '')
-        for cp in range(0xfff0, 0xfff8 + 1):
-            self._insert(cur, cp, '<reserved>', 'Cn', 0, '', '')
-        self._insert(cur, 0xe0000, '<reserved>', 'Cn', 0, '', '')
-        for cp in range(0xe0002, 0xe001f + 1):
-            self._insert(cur, cp, '<reserved>', 'Cn', 0, '', '')
-        for cp in range(0xe0080, 0xe00ff + 1):
-            self._insert(cur, cp, '<reserved>', 'Cn', 0, '', '')
-        for cp in range(0xe01f0, 0xe0fff + 1):
-            self._insert(cur, cp, '<reserved>', 'Cn', 0, '', '')
+        self._insert(cur, 0x2065, "<reserved>", "Cn", 0, "", "")
+        for cp in range(0xFFF0, 0xFFF8 + 1):
+            self._insert(cur, cp, "<reserved>", "Cn", 0, "", "")
+        self._insert(cur, 0xE0000, "<reserved>", "Cn", 0, "", "")
+        for cp in range(0xE0002, 0xE001F + 1):
+            self._insert(cur, cp, "<reserved>", "Cn", 0, "", "")
+        for cp in range(0xE0080, 0xE00FF + 1):
+            self._insert(cur, cp, "<reserved>", "Cn", 0, "", "")
+        for cp in range(0xE01F0, 0xE0FFF + 1):
+            self._insert(cur, cp, "<reserved>", "Cn", 0, "", "")
 
     def parse_properties(self, filename, column):
-        """ Load data from a Unicode property file.
-        """
+        """Load data from a Unicode property file."""
         cur = self._conn.cursor()
         for line in open(filename):
             line = line[:-1]
-            if not line or line[0] == '#':
+            if not line or line[0] == "#":
                 continue
             m = self.property_regex.match(line)
             if not m:
-                raise ValueError('Parse failed: %s' % line)
+                raise ValueError("Parse failed: %s" % line)
             self._set_column(cur, column, m.group(1), m.group(2), m.group(3))
 
     def parse_property_present(self, filename, column, value):
-        """ Load data from a Unicode property file. Set `column` to 1 if we
+        """Load data from a Unicode property file. Set `column` to 1 if we
         find `value`.
         """
         cur = self._conn.cursor()
         for line in open(filename):
             line = line[:-1]
-            if not line or line[0] == '#':
+            if not line or line[0] == "#":
                 continue
             m = self.property_regex.match(line)
             if not m:
-                raise ValueError('Parse failed: %s' % line)
+                raise ValueError("Parse failed: %s" % line)
             if m.group(3) == value:
                 self._set_column(cur, column, m.group(1), m.group(2), 1)
 
     def _insert(self, cur, cp, name, category, combining, bidi, decomp):
-        """ Insert a codepoint into table.
-        """
+        """Insert a codepoint into table."""
         # Set `first_cp` depending on the value of the `decomp` field. If
         # `decomp` is empty, set first_cp to -1. If `decomp` is a compatibility
         # decomposition (starts with '<'), set first_cp to -2. Otherwise, set
         # first_cp to the character code of the first codepoint in `decomp`.
         if not decomp:
             first_cp = -1
-        elif decomp.startswith('<'):
+        elif decomp.startswith("<"):
             first_cp = -2
         else:
             first_cp = int(decomp.split()[0], 16)
         cur.execute(
-            'INSERT INTO codepoints (cp, name, category, combining, bidi, decomp, first_cp) VALUES (?, ?, ?, ?, ?, ?, ?)',
-            (cp, name, category, int(combining), bidi, decomp, first_cp))
+            "INSERT INTO codepoints (cp, name, category, combining, bidi, decomp, first_cp) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            (cp, name, category, int(combining), bidi, decomp, first_cp),
+        )
 
     def _set_column(self, cur, column, first, last, value):
-        """ Set a specific column in the
-        """
+        """Set a specific column in the"""
         first = int(first, 16)
         last = int(last, 16) if last else first
-        sql = 'UPDATE codepoints SET %s=? WHERE cp=? AND %s IS NULL' % (column,
-                                                                        column)
+        sql = "UPDATE codepoints SET %s=? WHERE cp=? AND %s IS NULL" % (column, column)
         for cp in range(first, last + 1):
             cur.execute(sql, (value, cp))
             if cur.rowcount != 1:
-                print('failed update: %4.4x  %s=%s [%04x-%04x]' %
-                      (cp, column, value, first, last))
+                print(
+                    "failed update: %4.4x  %s=%s [%04x-%04x]"
+                    % (cp, column, value, first, last)
+                )
 
     def add_exceptions(self):
-        """ Add PRECIS exceptions.
-        """
-        sql = '''
+        """Add PRECIS exceptions."""
+        sql = """
         UPDATE codepoints SET precis = 'PVALID/exceptions' WHERE cp in (0x00DF,
             0x03C2, 0x06FD, 0x06FE, 0x0F0B, 0x3007);
         UPDATE codepoints SET precis = 'CONTEXTO/exceptions' WHERE cp in (0x00B7, 0x0375,
@@ -180,17 +172,17 @@ class UnicodeDatabase(object):
         UPDATE codepoints SET precis = 'DISALLOWED/exceptions' WHERE cp in (
             0x0640, 0x07FA, 0x302E, 0x302F, 0x3031, 0x3032, 0x3033, 0x3034,
             0x3035, 0x303B);
-        '''
+        """
         cur = self._conn.cursor()
         cur.executescript(sql)
 
     def assign_precis(self):
-        """ Assign precis derived property value to each codepoint.
+        """Assign precis derived property value to each codepoint.
 
         This is called after exceptions and backward_compatible have been
         assigned their precis properties.
         """
-        sql = '''
+        sql = """
             UPDATE codepoints SET precis = (
               CASE
               -- unassigned
@@ -221,64 +213,65 @@ class UnicodeDatabase(object):
               ELSE 'DISALLOWED/other'
               END
             ) WHERE precis IS NULL
-        '''
+        """
         cur = self._conn.cursor()
         cur.execute(sql)
 
     def assign_has_compat(self):
-        """ Assign true to characters that have compatibility decompositions.
-         For these, `normalize('NFKC', ch) != ch`.
+        """Assign true to characters that have compatibility decompositions.
+        For these, `normalize('NFKC', ch) != ch`.
         """
         cur = self._conn.cursor()
         # Set has_compat=1 for characters whose decomp field begins with '<' or
         # has a 'full composition exclusion' of 1.
-        sql = '''
+        sql = """
             UPDATE codepoints SET has_compat=1 WHERE decomp LIKE '<%' OR fce = 1
-        '''
+        """
         cur.execute(sql)
         # The set of codepoints with compatibility decompositions is not complete
         # until we include the set of approximately 15 chars whose CANONICAL
         # decomposition has a further COMPATIBILITY decomposition.
-        sql = '''
+        sql = """
             UPDATE codepoints SET has_compat=1 WHERE cp IN (
                 SELECT a.cp from codepoints a, codepoints b  WHERE b.cp = a.first_cp AND b.first_cp == -2
             )
-        '''
+        """
         cur.execute(sql)
 
     def check_has_compat(self, ucd):
-        """ Check that has_compat is set to 1 for every character where
+        """Check that has_compat is set to 1 for every character where
         normalize(NFKC, ch) != ch.
         """
         cur = self._conn.cursor()
-        sql = 'SELECT cp, has_compat, age FROM codepoints WHERE age <= %g' % ucd.version
+        sql = "SELECT cp, has_compat, age FROM codepoints WHERE age <= %g" % ucd.version
         for cp, has_compat, age in cur.execute(sql):
             char = chr(cp)
-            norm = ucd.normalize('NFKC', char)
+            norm = ucd.normalize("NFKC", char)
             if has_compat == 1:
                 if norm == char:
-                    print('Invalid has_compat=1 for cp=%d, age=%s' % (cp, age))
+                    print("Invalid has_compat=1 for cp=%d, age=%s" % (cp, age))
             else:
                 if norm != char:
-                    print('Invalid has_compat=0 for cp=%d, age=%s' % (cp, age))
+                    print("Invalid has_compat=0 for cp=%d, age=%s" % (cp, age))
 
     def check_precis(self, ucd):
-        """ Compare derived property computation to `precis` value in database.
-        """
+        """Compare derived property computation to `precis` value in database."""
         from precis_i18n.derived import derived_property
 
         cur = self._conn.cursor()
-        sql = 'SELECT cp, precis, age FROM codepoints WHERE age <= %g' % UCD.version
+        sql = "SELECT cp, precis, age FROM codepoints WHERE age <= %g" % UCD.version
         for cp, precis, age in cur.execute(sql):
-            prop = '%s/%s' % derived_property(cp, ucd)
+            prop = "%s/%s" % derived_property(cp, ucd)
             if prop != precis:
-                print('Different precis value: %s vs %s for cp=%d, age=%s' %
-                      (prop, precis, cp, age))
+                print(
+                    "Different precis value: %s vs %s for cp=%d, age=%s"
+                    % (prop, precis, cp, age)
+                )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
-        db = UnicodeDatabase('unicode.db')
+        db = UnicodeDatabase("unicode.db")
         db.load()
     except sqlite3.OperationalError:
         pass

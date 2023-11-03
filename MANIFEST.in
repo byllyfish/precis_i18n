@@ -1,2 +1,2 @@
-include README.rst LICENSE.txt CHANGELOG.rst test/golden.json
+include README.md LICENSE.txt CHANGELOG.md test/golden.json
 exclude test/test_derived_props.py test/test_derived_props_files.py

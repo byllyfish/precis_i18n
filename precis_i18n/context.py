@@ -27,12 +27,12 @@ def context_rule_error(value, offset, ucd):
         valid = False
 
     if valid:
-        return ''
+        return ""
 
     # If context rule fails, return name of context rule (the name of the
     # function with 'rule_' prefix removed.)
     result = rule.__name__
-    if result.startswith('rule_'):
+    if result.startswith("rule_"):
         result = result[5:]
     return result
 
@@ -60,7 +60,7 @@ def rule_zero_width_nonjoiner(value, offset, ucd):
     Returns:
         bool: True if value is allowed.
     """
-    assert value[offset] == '\u200c'
+    assert value[offset] == "\u200c"
     if ucd.combining_virama(_before(value, offset)):
         return True
     if ucd.valid_jointype(value, offset):
@@ -85,7 +85,7 @@ def rule_zero_width_joiner(value, offset, ucd):
     Returns:
         bool: True if value is allowed.
     """
-    assert value[offset] == '\u200d'
+    assert value[offset] == "\u200d"
     return ucd.combining_virama(_before(value, offset))
 
 
@@ -106,8 +106,8 @@ def rule_middle_dot(value, offset, ucd):
         bool: True if value is allowed.
     """
     # pylint: disable=unused-argument
-    assert value[offset] == '\u00b7'
-    return 0x06c == _before(value, offset) == _after(value, offset)
+    assert value[offset] == "\u00b7"
+    return 0x06C == _before(value, offset) == _after(value, offset)
 
 
 def rule_greek_keraia(value, offset, ucd):
@@ -125,7 +125,7 @@ def rule_greek_keraia(value, offset, ucd):
     Returns:
         bool: True if value is allowed.
     """
-    assert value[offset] == '\u0375'
+    assert value[offset] == "\u0375"
     return ucd.greek_script(_after(value, offset))
 
 
@@ -146,7 +146,7 @@ def rule_hebrew_punctuation(value, offset, ucd):
     Returns:
         bool: True if value is allowed.
     """
-    assert value[offset] in '\u05f3\u05f4'
+    assert value[offset] in "\u05f3\u05f4"
     return ucd.hebrew_script(_before(value, offset))
 
 
@@ -173,7 +173,7 @@ def rule_katakana_middle_dot(value, offset, ucd):
     Returns:
         bool: True if value is allowed.
     """
-    assert value[offset] == '\u30fb'
+    assert value[offset] == "\u30fb"
     return any(ucd.hiragana_katakana_han_script(ord(x)) for x in value)
 
 
@@ -217,13 +217,13 @@ def rule_extended_arabic_indic(value, offset, ucd):
 
 
 _RULES = {
-    0x200c: rule_zero_width_nonjoiner,
-    0x200d: rule_zero_width_joiner,
-    0x00b7: rule_middle_dot,
+    0x200C: rule_zero_width_nonjoiner,
+    0x200D: rule_zero_width_joiner,
+    0x00B7: rule_middle_dot,
     0x0375: rule_greek_keraia,
-    0x05f3: rule_hebrew_punctuation,
-    0x05f4: rule_hebrew_punctuation,
-    0x30fb: rule_katakana_middle_dot,
+    0x05F3: rule_hebrew_punctuation,
+    0x05F4: rule_hebrew_punctuation,
+    0x30FB: rule_katakana_middle_dot,
 }
 
 

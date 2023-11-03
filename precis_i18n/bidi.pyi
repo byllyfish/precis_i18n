@@ -12,11 +12,5 @@ _RTL_LAST = Set[str]
 _RTL_EXCL = Set[str]
 _RTL_ANY = Set[str]
 
-
-def bidi_rule(value: str, ucd: UnicodeData) -> bool:
-    ...
-
-
-def has_rtl(value: str, ucd: UnicodeData) -> bool:
-    ...
-
+def bidi_rule(value: str, ucd: UnicodeData) -> bool: ...
+def has_rtl(value: str, ucd: UnicodeData) -> bool: ...

@@ -18,18 +18,19 @@ class Profile:
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
+
     def __init__(self, base, name, casemap=None):
         self._base = base
         self._name = name
         # casemap can be either None, 'fold', or 'lower'.
         if casemap is None:
             self._casemap = None
-        elif casemap == 'fold':
+        elif casemap == "fold":
             self._casemap = _casefold
-        elif casemap == 'lower':
+        elif casemap == "lower":
             self._casemap = _caselower
         else:
-            raise ValueError('Unknown casemap value: %s' % casemap)
+            raise ValueError("Unknown casemap value: %s" % casemap)
 
     @property
     def base(self):
@@ -58,14 +59,14 @@ class Profile:
         """
         # If we get called with a byte string, decode it first.
         if isinstance(value, bytes):
-            value = value.decode('utf-8')
+            value = value.decode("utf-8")
         elif not isinstance(value, str):
-            raise ValueError('not a string')
+            raise ValueError("not a string")
         temp = self.apply_five_rules(value)
         temp = self.idempotence_check(temp)
         # Make sure the resulting value is not empty.
         if not temp:
-            raise_error(self.name, value, -1, 'empty')
+            raise_error(self.name, value, -1, "empty")
         # Apply behavioral rules from the base string class last.
         return self.base.enforce(temp, self.name)
 
@@ -128,7 +129,7 @@ class Profile:
         Returns:
             str: Enforced value.
         """
-        return self.base.ucd.normalize('NFC', value)
+        return self.base.ucd.normalize("NFC", value)
 
     def directionality_rule(self, value):
         """Apply directionality rule.
@@ -154,7 +155,7 @@ class Profile:
         """
         new_value = self.apply_five_rules(value)
         if new_value != value:
-            raise_error(self.name, value, -1, 'not_idempotent')
+            raise_error(self.name, value, -1, "not_idempotent")
         return value
 
 
@@ -192,6 +193,7 @@ class Username(Profile):
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
+
     def __init__(self, ucd, name, casemap=None):
         super().__init__(IdentifierClass(ucd), name, casemap)
 
@@ -204,7 +206,7 @@ class Username(Profile):
         # Only apply the "bidi rule" if the string contains RTL characters.
         if has_rtl(value, self.base.ucd):
             if not bidi_rule(value, self.base.ucd):
-                raise_error(self.name, value, -1, 'bidi_rule')
+                raise_error(self.name, value, -1, "bidi_rule")
         return value
 
 
@@ -241,6 +243,7 @@ class OpaqueString(Profile):
         ucd (UnicodeData): Unicode character database.
         name (str): Name of profile.
     """
+
     def __init__(self, ucd, name):
         super().__init__(FreeFormClass(ucd), name, casemap=None)
 
@@ -285,17 +288,18 @@ class Nickname(Profile):
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
+
     def __init__(self, ucd, name, casemap=None):
         super().__init__(FreeFormClass(ucd), name, casemap)
 
     def additional_mapping_rule(self, value):
         # Override
         temp = self.base.ucd.map_nonascii_space_to_ascii(value)
-        return re.sub(r'  +', ' ', temp.strip(' '))
+        return re.sub(r"  +", " ", temp.strip(" "))
 
     def normalization_rule(self, value):
         # Override
-        return self.base.ucd.normalize('NFKC', value)
+        return self.base.ucd.normalize("NFKC", value)
 
     def idempotence_check(self, value):
         # Override
