@@ -22,7 +22,7 @@ This module implements the PRECIS Framework as described in:
     Strings Representing Nicknames ([RFC
     8266](https://tools.ietf.org/html/rfc8266))
 
-Requires Python 3.3 or later.
+Requires Python 3.5 or later.
 
 ## Usage
 

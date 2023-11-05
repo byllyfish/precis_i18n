@@ -13,6 +13,7 @@
 -   Update internal tables for Unicode 15.1.
 -   Add Python 3.13-dev to CI build environment.
 -   Change format of README and CHANGELOG files to Markdown.
+-   Drop support for Python 3.3 and 3.4.
 
 ## 1.0.5
 
