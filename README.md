@@ -1,8 +1,8 @@
 # PRECIS-i18n: Internationalized Usernames and Passwords
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/main/LICENSE.txt)
 [![Build Status](https://github.com/byllyfish/precis_i18n/actions/workflows/ci.yml/badge.svg)](https://github.com/byllyfish/precis_i18n/actions/workflows/ci.yml)
-[![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_i18n?branch=master)
+[![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=main)](https://codecov.io/gh/byllyfish/precis_i18n?branch=main)
 
 If you want your application to accept Unicode user names and passwords,
 you must be careful in how you validate and compare them. The PRECIS
