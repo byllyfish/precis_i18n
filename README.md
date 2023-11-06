@@ -190,16 +190,16 @@ Here is an example of the current behavior:
 
 ```pycon
 >>> from precis_i18n import get_profile
->>> username = get_profile('NicknameCasePreserved')
->>> username.enforce('Kevin\n')
+>>> nickname = get_profile('NicknameCaseMapped')
+>>> nickname.enforce('Kevin\n')
 Traceback (most recent call last):
   ...
-UnicodeEncodeError: 'NicknameCasePreserved' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
+UnicodeEncodeError: 'NicknameCaseMapped' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
 
 ```
 
-In version 1.0.5 and earlier, the `NicknameCasePreserved` profile enforced `"Kevin\n"`
-as `"Kevin"`.
+In version 1.0.5 and earlier, the `NicknameCaseMapped` profile enforced `"Kevin\n"`
+as `"kevin"`.
 
 ## Unicode Version Update Procedure
 
