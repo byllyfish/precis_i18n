@@ -27,7 +27,7 @@ class TestDerivedProperties(unittest.TestCase):
         """
 
         ucd = UnicodeData(unicodedata2)
-        assert ucd.version in {10.0, 12.0, 14.0, 15.0}
+        assert ucd.version in {10.0, 12.0, 14.0, 15.0, 15.1}
         self._test_derived_props(ucd)
 
     def _test_derived_props(self, ucd):

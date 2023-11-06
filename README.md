@@ -1,8 +1,8 @@
 # PRECIS-i18n: Internationalized Usernames and Passwords
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/master/LICENSE.txt)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/byllyfish/precis_i18n/main/LICENSE.txt)
 [![Build Status](https://github.com/byllyfish/precis_i18n/actions/workflows/ci.yml/badge.svg)](https://github.com/byllyfish/precis_i18n/actions/workflows/ci.yml)
-[![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=master)](https://codecov.io/gh/byllyfish/precis_i18n?branch=master)
+[![codecov.io](https://codecov.io/gh/byllyfish/precis_i18n/coverage.svg?branch=main)](https://codecov.io/gh/byllyfish/precis_i18n?branch=main)
 
 If you want your application to accept Unicode user names and passwords,
 you must be careful in how you validate and compare them. The PRECIS
@@ -22,14 +22,14 @@ This module implements the PRECIS Framework as described in:
     Strings Representing Nicknames ([RFC
     8266](https://tools.ietf.org/html/rfc8266))
 
-Requires Python 3.3 or later.
+Requires Python 3.5 or later.
 
 ## Usage
 
 Use the `get_profile` function to obtain a profile object, then use its
 `enforce` method. The `enforce` method returns a Unicode string.
 
-``` pycon
+```pycon
 >>> from precis_i18n import get_profile
 >>> username = get_profile('UsernameCaseMapped')
 >>> username.enforce('Kevin')
@@ -40,8 +40,9 @@ Use the `get_profile` function to obtain a profile object, then use its
 'kevin'
 >>> username.enforce('\U0001F17Aevin')
 Traceback (most recent call last):
-    ...
+  ...
 UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
+
 ```
 
 Alternatively, you can use the Python `str.encode` API. Import the
@@ -50,7 +51,7 @@ can use the `str.encode` method with any Unicode string. The result will
 be a UTF-8 encoded byte string or a `UnicodeEncodeError` if the string
 is disallowed.
 
-``` pycon
+```pycon
 >>> import precis_i18n.codec
 >>> 'Kevin'.encode('UsernameCasePreserved')
 b'Kevin'
@@ -64,8 +65,9 @@ b'kevin'
 b'\xef\xbc\xabevin'
 >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
 Traceback (most recent call last):
-    ...
+  ...
 UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001f17a' in position 0: DISALLOWED/symbols
+
 ```
 
 ## Alternative Unicode Versions
@@ -82,12 +84,13 @@ For example, you could separately install version 12.0 of the
 `unicodedata2` module from PyPI. Then, pass it to get_profile to
 retrieve a profile that uses Unicode 12.0.
 
-``` pycon
+```pycon
 >>> import unicodedata2
 >>> from precis_i18n import get_profile
 >>> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
 >>> username.enforce('Kevin')
 'kevin'
+
 ```
 
 ## Supported Profiles and Codecs
@@ -124,7 +127,7 @@ Username profiles correspond to the definition of \"userparts\" in RFC
 8265. If you want to allow spaces in your application\'s user names, you
 must split the string first.
 
-``` pycon
+```python
 def enforce_app_username(name):
     profile = precis_i18n.get_profile('UsernameCasePreserved')
     userparts = [profile.enforce(userpart) for userpart in name.split(' ')]
@@ -185,17 +188,18 @@ definition of *white space* in the `Nickname` profile.
 The trimming of white space is specific to the Nickname profile only.
 Here is an example of the current behavior:
 
-``` pycon
+```pycon
 >>> from precis_i18n import get_profile
->>> username = get_profile('NicknameCasePreserved')
->>> username.enforce('Kevin\n')
+>>> nickname = get_profile('NicknameCaseMapped')
+>>> nickname.enforce('Kevin\n')
 Traceback (most recent call last):
-    ...
-UnicodeEncodeError: 'NicknameCasePreserved' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
+  ...
+UnicodeEncodeError: 'NicknameCaseMapped' codec can't encode character '\x0a' in position 5: DISALLOWED/controls
+
 ```
 
-In version 1.0.5 and earlier, the Nickname profile enforced `"Kevin\n"`
-as `"Kevin"`.
+In version 1.0.5 and earlier, the `NicknameCaseMapped` profile enforced `"Kevin\n"`
+as `"kevin"`.
 
 ## Unicode Version Update Procedure
 
