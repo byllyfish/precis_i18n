@@ -24,14 +24,6 @@ with open(version_path, encoding="utf-8") as f:
     version = version_regex.search(f.read()).group(1)
 
 
-# Running `python setup.py test` should run unit tests (see `test_suite`).
-def all_tests():
-    import unittest
-
-    test_loader = unittest.TestLoader()
-    return test_loader.discover("test")
-
-
 setup(
     name="precis_i18n",
     packages=["precis_i18n"],
@@ -66,5 +58,4 @@ setup(
         "Topic :: Software Development :: Internationalization",
     ],
     zip_safe=True,
-    test_suite="setup.all_tests",
 )
