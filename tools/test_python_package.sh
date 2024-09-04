@@ -14,5 +14,5 @@ cd dist
 tar xfz precis_i18n-*.tar.gz
 GLOBIGNORE='*.tar.gz'
 cd precis_i18n-*
-python setup.py test
+python -m unittest
 exit 0
