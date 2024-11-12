@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+-   Update internal tables for Unicode 16.0.
+-   Remove `test_suite` from setup.py file. Contributed by `adrien-n` (PR #38).
+-   Add Python 3.14-dev to CI build environment.
+-   Update copyright year (2024).
+
 ## 1.1.0
 
 -   Fixed an issue in the Nickname profile implementation that trimmed
@@ -30,13 +37,12 @@
     11.0-13.0 were erroneously DISALLOWED due to context reasons
     hebrew_punctuation, katakana_middle_dot, and zero_width_nonjoiner.
     (Issue #19)
--   Add type hints for package. Contributed by
-    [lovetox](https://github.com/lovetox) (Issue #14).
+-   Add type hints for package. Contributed by `lovetox` (Issue #14).
 -   Update copyright year (2022).
 
 ## 1.0.3
 
--   MANIFEST.in excludes [test_derived_props_files.py]{.title-ref}; test
+-   MANIFEST.in excludes `test_derived_props_files.py`; test
     data files are not packaged.
 -   CI script now builds source package and runs tests from it.
 -   Use Github Actions for continuous integration.

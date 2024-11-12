@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '3.11', '3.12', '3.13-dev', 'pypy3.10']
+        python-version: ['3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14-dev', 'pypy3.10']
         include:
           - pip-trusted-host: ''
           # Relax security checks for Python 3.5 only. (https://github.com/actions/setup-python/issues/866)
