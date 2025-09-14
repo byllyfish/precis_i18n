@@ -14,8 +14,8 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-20.04
+    timeout-minutes: 10  # stop runaway job after 10 minutes
     strategy:
       fail-fast: false
       matrix:
