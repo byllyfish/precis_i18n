@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2
+
+-   Update internal tables for Unicode 17.0.
+-   Drop support for Python 3.5 and 3.6.
+-   Update copyright year (2025).
+
 ## 1.1.1
 
 -   Update internal tables for Unicode 16.0.
