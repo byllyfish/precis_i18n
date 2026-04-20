@@ -9,7 +9,7 @@ class TestCodec(unittest.TestCase):
         self.assertEqual("Juliet".encode("UsernameCasePreserved"), b"Juliet")
         self.assertEqual("Juliet".encode("UsernameCaseMapped"), b"juliet")
         self.assertEqual(
-            " pass \u1FBF\u3000".encode("OpaqueString"), b" pass \xe1\xbe\xbf "
+            " pass \u1fbf\u3000".encode("OpaqueString"), b" pass \xe1\xbe\xbf "
         )
         self.assertEqual(" Juliet ".encode("NicknameCaseMapped"), b"juliet")
         self.assertEqual("Juliet".encode("IdentifierClass"), b"Juliet")

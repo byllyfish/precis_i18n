@@ -95,7 +95,7 @@ class TestPrecisIdentifierClass(unittest.TestCase):
             UnicodeEncodeError,
             r"'IdentifierClass' codec can't encode character '\\u1fbf' in position 0: DISALLOWED/has_compat",
         ):
-            ident.enforce("\u1FBF")
+            ident.enforce("\u1fbf")
 
 
 class TestPrecisFreeformClass(unittest.TestCase):
@@ -110,7 +110,7 @@ class TestPrecisFreeformClass(unittest.TestCase):
         )
         self.assertEqual(free.enforce("\u0370\u0371"), "\u0370\u0371")
         self.assertEqual(free.enforce(" "), " ")
-        self.assertEqual(free.enforce("\u1FBF"), "\u1FBF")
+        self.assertEqual(free.enforce("\u1fbf"), "\u1fbf")
 
     def test_invalid_freeform(self):
         free = FreeFormClass(UCD)
@@ -312,7 +312,7 @@ class TestPrecisContextRule(unittest.TestCase):
         # Invalid: undefined after
         self.assertFalse(_context_rule("\u05f3", 0, UCD))
         # Valid: 05EF 05f3 (Unicode >= 11.0)
-        self.assertTrue(_context_rule("\u05EF\u05f3", 1, UCD))
+        self.assertTrue(_context_rule("\u05ef\u05f3", 1, UCD))
 
         # 6. katakana_middle_dot
         # Valid: 0x30fb 0x2e99
@@ -354,7 +354,7 @@ class TestPrecisUnicodeData(unittest.TestCase):
     def test_replace_whitespace(self):
         self.assertEqual(
             UCD.map_nonascii_space_to_ascii(
-                " .\u00a0.\u1680 .\u2000.\u200A.\u202F.\u205F.\u3000"
+                " .\u00a0.\u1680 .\u2000.\u200a.\u202f.\u205f.\u3000"
             ),
             " . .  . . . . . ",
         )
@@ -438,9 +438,9 @@ class TestPrecisUnicodeData(unittest.TestCase):
         self.assertFalse(UCD.valid_jointype("\u0031\u0300\u200c\u0301\u0032", 2))
 
         # Valid: L J R   (Unicode >= 14.0)
-        self.assertTrue(UCD.valid_jointype("\U00010D00\u200c\u088E", 1))
+        self.assertTrue(UCD.valid_jointype("\U00010d00\u200c\u088e", 1))
         # Valid: L T J T R  (Unicode >= 14.0)
-        self.assertTrue(UCD.valid_jointype("\U00010D00\u07fd\u200c\u07fd\u088E", 2))
+        self.assertTrue(UCD.valid_jointype("\U00010d00\u07fd\u200c\u07fd\u088e", 2))
         # Valid: D J D  (Unicode >= 14.0)
         self.assertTrue(UCD.valid_jointype("\u0886\u200c\u0886", 1))
 
