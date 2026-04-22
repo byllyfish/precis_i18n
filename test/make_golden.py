@@ -42,10 +42,10 @@ EXCEPTIONS = {
         (_ANY_PROFILE, 8.0),
     ],
     # U+05EF was introduced in 11.0.
-    "\u05EF\u05f3": [(_ANY_PROFILE, 11.0)],
+    "\u05ef\u05f3": [(_ANY_PROFILE, 11.0)],
     # U+088E, U+0886 were introduced in 14.0.
-    "\U00010D00\u200c\u088E": [(_ANY_PROFILE, 14.0)],
-    "\U00010D00\u07fd\u200c\u07fd\u088E": [(_ANY_PROFILE, 14.0)],
+    "\U00010d00\u200c\u088e": [(_ANY_PROFILE, 14.0)],
+    "\U00010d00\u07fd\u200c\u07fd\u088e": [(_ANY_PROFILE, 14.0)],
     "\u0886\u200c\u0886": [(_ANY_PROFILE, 14.0)],
 }
 
@@ -53,7 +53,7 @@ EXCEPTIONS = {
 def _unescape(value):
     """Unescape escapes in a python string.
 
-    Examples:   \xFF \uFFFF \U0010FFFF \\ \n \t \r
+    Examples:   \xff \uffff \U0010ffff \\ \n \t \r
     """
     return value.encode("ascii").decode("unicode_escape")
 

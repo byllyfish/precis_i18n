@@ -144,8 +144,7 @@ class UnicodeData:
 
 # https://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt
 # Derived Property: Default_Ignorable_Code_Point
-_DEFAULT_IGNORABLE = CodepointSet(
-    """
+_DEFAULT_IGNORABLE = CodepointSet("""
 00AD
 034F
 061C
@@ -173,14 +172,12 @@ E0020..E007F
 E0080..E00FF
 E0100..E01EF
 E01F0..E0FFF
-"""
-)
+""")
 assert len(_DEFAULT_IGNORABLE) == 4174
 
 # https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningType.txt
 # Joining_Type=Dual_Joining
-_JOINTYPE_DUAL_JOINING = CodepointSet(
-    """
+_JOINTYPE_DUAL_JOINING = CodepointSet("""
 0620
 0626
 0628
@@ -261,14 +258,12 @@ A840..A871
 10FC4
 10FCA
 1E900..1E943
-"""
-)
+""")
 assert len(_JOINTYPE_DUAL_JOINING) == 615
 
 # https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningType.txt
 # Joining_Type=Right_Joining
-_JOINTYPE_RIGHT_JOINING = CodepointSet(
-    """
+_JOINTYPE_RIGHT_JOINING = CodepointSet("""
 0622..0625
 0627
 0629
@@ -335,27 +330,23 @@ _JOINTYPE_RIGHT_JOINING = CodepointSet(
 10FBD
 10FC2..10FC3
 10FC9
-"""
-)
+""")
 assert len(_JOINTYPE_RIGHT_JOINING) == 153
 
 # https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningType.txt
 # Joining_Type=Left_Joining
-_JOINTYPE_LEFT_JOINING = CodepointSet(
-    """
+_JOINTYPE_LEFT_JOINING = CodepointSet("""
 A872
 10ACD
 10AD7
 10D00
 10FCB
-"""
-)
+""")
 assert len(_JOINTYPE_LEFT_JOINING) == 5
 
 # https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningType.txt
 # Joining_Type=Transparent
-_JOINTYPE_TRANSPARENT = CodepointSet(
-    """
+_JOINTYPE_TRANSPARENT = CodepointSet("""
 00AD
 0300..036F
 0483..0487
@@ -742,14 +733,12 @@ FFF9..FFFB
 E0001
 E0020..E007F
 E0100..E01EF
-"""
-)
+""")
 assert len(_JOINTYPE_TRANSPARENT) == 2224
 
 # https://www.unicode.org/Public/UNIDATA/Scripts.txt
 # Greek
-_GREEK_SCRIPT = CodepointSet(
-    """
+_GREEK_SCRIPT = CodepointSet("""
 0370..0373
 0375
 0376..0377
@@ -805,14 +794,12 @@ AB65
 1D200..1D241
 1D242..1D244
 1D245
-"""
-)
+""")
 assert len(_GREEK_SCRIPT) == 518
 
 # https://www.unicode.org/Public/UNIDATA/Scripts.txt
 # Hebrew
-_HEBREW_SCRIPT = CodepointSet(
-    """
+_HEBREW_SCRIPT = CodepointSet("""
 0591..05BD
 05BE
 05BF
@@ -835,14 +822,12 @@ FB3E
 FB40..FB41
 FB43..FB44
 FB46..FB4F
-"""
-)
+""")
 assert len(_HEBREW_SCRIPT) == 134
 
 # https://www.unicode.org/Public/UNIDATA/Scripts.txt
 # Hiragana, Katakana, Han
-_HIRAGANA_KATAKANA_HAN = CodepointSet(
-    """
+_HIRAGANA_KATAKANA_HAN = CodepointSet("""
 # Hiragana (381)
 3041..3096
 309D..309E
@@ -893,14 +878,12 @@ FA70..FAD9
 2F800..2FA1D
 30000..3134A
 31350..33479
-"""
-)
+""")
 assert len(_HIRAGANA_KATAKANA_HAN) == (381 + 321 + 103351)
 
 # https://www.unicode.org/Public/UNIDATA/HangulSyllableType.txt
 # Leading_Jamo, Vowel_Jamo, Trailing_Jamo
-_OLD_HANGUL_JAMO = CodepointSet(
-    """
+_OLD_HANGUL_JAMO = CodepointSet("""
 # Leading_Jamo (125)
 1100..115F
 A960..A97C
@@ -910,6 +893,5 @@ D7B0..D7C6
 # Trailing_Jamo (137)
 11A8..11FF
 D7CB..D7FB
-"""
-)
+""")
 assert len(_OLD_HANGUL_JAMO) == (125 + 95 + 137)

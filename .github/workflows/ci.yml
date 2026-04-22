@@ -44,9 +44,11 @@ jobs:
         elif [ "${{ matrix.python-version }}" = "3.11" ]; then
           python -m pip install unicodedata2==15.1.0
         elif [ "${{ matrix.python-version }}" = "3.12" ]; then
-          python -m pip install unicodedata2==15.1.0
+          python -m pip install unicodedata2==16.0.0
+        elif [ "${{ matrix.python-version }}" = "3.13" ]; then
+          python -m pip install unicodedata2==17.0.1
         else
-          python -m pip install unicodedata2==15.0.0
+          python -m pip install unicodedata2==17.0.1
         fi
     - name: Lint with flake8
       run: |
