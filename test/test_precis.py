@@ -388,7 +388,7 @@ class TestPrecisUnicodeData(unittest.TestCase):
 
     def test_hebrew_script(self):
         self.assertTrue(UCD.hebrew_script(0x05C7))
-        self.assertFalse(UCD.hebrew_script(0x05C8))
+        self.assertFalse(UCD.hebrew_script(0x05CA))
 
     def test_hiragana_katakana_han_script(self):
         self.assertTrue(UCD.hiragana_katakana_han_script(0x1F200))
