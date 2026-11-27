@@ -14,7 +14,7 @@ def observe_calls(operation):
     counts = Counter()
 
     def observe(frame, event, _arg):
-        if event == "call" and frame.f_globals["__name__"].startswith("precis_i18n."):
+        if event == "call" and frame.f_globals.get("__name__", "").startswith("precis_i18n."):
             counts[frame.f_code.co_name] += 1
 
     original = sys.getprofile()
@@ -37,6 +37,7 @@ class NativeProfileWorkTest(unittest.TestCase):
 
         actual, calls = observe_calls(reject)
         self.assertEqual(actual, ("aא", 0, 2))
+        self.assertEqual(calls["_native_username_bidi"], 1)
         self.assertEqual(calls["bidirectional"], 0)
 
     def test_username_bidi_matches_generic_for_directional_combinations(self):
