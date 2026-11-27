@@ -4,6 +4,8 @@ import argparse
 import gzip
 from email import message_from_bytes
 from pathlib import Path, PurePosixPath
+import subprocess
+import sys
 import tarfile
 from zipfile import ZipFile
 
@@ -67,6 +69,23 @@ def verify_wheel(root, direct, rebuilt):
                     raise ValueError("Wheel notice differs from source.")
 
 
+def install_runtime_wheel(wheel):
+    pip = [sys.executable, "-I", "-m", "pip"]
+
+    def dependency_check():
+        result = subprocess.run([*pip, "check"], capture_output=True, text=True)
+        return result.returncode, result.stdout, result.stderr
+
+    # Some interpreter distributions seed packages with unresolved dependencies.
+    # The qualification checks whether installing this wheel changes that state.
+    before = dependency_check()
+    subprocess.run([*pip, "install", "--no-deps", "--no-index", str(wheel)], check=True)
+    after = dependency_check()
+    if before != after or before[0] not in (0, 1) or before[2]:
+        raise ValueError("Wheel installation did not preserve the dependency check: {!r}".format(after))
+    print("Dependency check before and after installation: {}".format(after[1].strip()))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="operation", required=True)
@@ -78,11 +97,15 @@ def main():
     wheel.add_argument("root", type=Path)
     wheel.add_argument("direct", type=Path)
     wheel.add_argument("rebuilt", type=Path)
+    install = commands.add_parser("install")
+    install.add_argument("wheel", type=Path)
     args = parser.parse_args()
     if args.operation == "sdist":
         canonical_sdist(args.raw, args.output, args.epoch)
-    else:
+    elif args.operation == "wheel":
         verify_wheel(args.root, args.direct, args.rebuilt)
+    else:
+        install_runtime_wheel(args.wheel)
 
 
 if __name__ == "__main__":
