@@ -1,6 +1,9 @@
 """Implements the PRECIS string classes."""
 
+from _thread import allocate_lock
 from functools import lru_cache
+import re
+from typing import NamedTuple
 
 from precis_i18n.context import _context_rule_error
 from precis_i18n.derived import CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID, derived_property
@@ -11,14 +14,56 @@ _CLASSIFICATION_OVERRIDES = frozenset((
     "category", "control", "default_ignorable", "has_compat", "noncharacter",
     "normalize", "old_hangul_jamo",
 ))
+_NATIVE_LOCK = allocate_lock()
+_NATIVE_FLAGS = None
+_CLASS_MASKS = {(PVALID,): 1, (PVALID, FREE_PVAL): 2}
+_PROPERTY_FLAGS = {PVALID: 3, FREE_PVAL: 2}
 
 
-@lru_cache(maxsize=1)
+class _NativeAdmission(NamedTuple):
+    codes: bytes
+    outcomes: tuple
+
+
 def _native_common_properties():
-    """Classify Basic Latin through Combining Diacritical Marks once."""
+    """Store native admission bits for Basic Latin through Combining Marks."""
+    global _NATIVE_FLAGS
+    if _NATIVE_FLAGS is None:
+        with _NATIVE_LOCK:
+            if _NATIVE_FLAGS is None:
+                _NATIVE_FLAGS = _build_native_admission()
+    return _NATIVE_FLAGS
+
+
+def _build_native_admission():
     native = UnicodeData()
-    # A fixed table of public Unicode data, independent of input values.
-    return tuple(derived_property(cp, native) for cp in range(0x0370))
+    # The low two bits indicate admission. The other bits index the unchanged
+    # classification and diagnostic only when a character needs more work.
+    codes = {}
+    packed = bytearray()
+    for cp in range(0x0370):
+        outcome = derived_property(cp, native)
+        code = codes.get(outcome)
+        if code is None:
+            code = (len(codes) << 2) | _PROPERTY_FLAGS.get(outcome[0], 0)
+            codes[outcome] = code
+        packed.append(code)
+    return _NativeAdmission(bytes(packed), tuple(codes))
+
+
+@lru_cache(maxsize=2)
+def _bulk_pattern(mask):
+    """Compile admitted ranges for long strings wholly in the packed domain."""
+    ranges = []
+    start = None
+    for cp, flags in enumerate(_native_common_properties().codes + b"\0"):
+        if flags & mask:
+            if start is None:
+                start = cp
+        elif start is not None:
+            ranges.append(r"\u{:04x}-\u{:04x}".format(start, cp - 1))
+            start = None
+    return re.compile("[" + "".join(ranges) + "]+")
 
 
 class BaseClass:
@@ -61,7 +106,9 @@ class BaseClass:
 
         ucd = self.ucd
         allowed = self._allowed
-        properties = ()
+        properties = b""
+        outcomes = ()
+        mask = 0
         if (type(value) is str and type(ucd) is UnicodeData and ucd.mode == "native"
                 and _CLASSIFICATION_OVERRIDES.isdisjoint(vars(ucd))):
             # All printable ASCII except space is PVALID. Space is FREE_PVAL.
@@ -69,13 +116,24 @@ class BaseClass:
             if value.isascii() and value.isprintable() and PVALID in allowed:
                 if FREE_PVAL in allowed or " " not in value:
                     return value
-            properties = _native_common_properties()
+            if isinstance(allowed, tuple):
+                mask = _CLASS_MASKS.get(allowed, 0)
+            if mask:
+                properties, outcomes = _native_common_properties()
+                if len(value) >= 128 and _bulk_pattern(mask).fullmatch(value):
+                    return value
 
         limit = len(properties)
         whole_string_results = None
         for i, char in enumerate(value):
             cp = ord(char)
-            prop, kind = properties[cp] if cp < limit else derived_property(cp, ucd)
+            if cp < limit:
+                code = properties[cp]
+                if code & mask:
+                    continue
+                prop, kind = outcomes[code >> 2]
+            else:
+                prop, kind = derived_property(cp, ucd)
             if prop in allowed:
                 continue
 
