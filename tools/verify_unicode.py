@@ -148,8 +148,12 @@ def verify_properties(ucd, files, classifier, classification):
     )
     for cp in range(SCALAR_END):
         char = chr(cp)
-        expected = expected_props.get(cp, ("Cn", 0, ""))
-        assert (ucd.category(char), ucd.combining(char), ucd.bidirectional(char)) == expected, "UCD U+{:04X}".format(cp)
+        category, combining, bidi = expected_props.get(cp, ("Cn", 0, None))
+        assert (ucd.category(char), ucd.combining(char)) == (category, combining), "UCD U+{:04X}".format(cp)
+        # Some provider APIs report a default bidi value for unassigned code
+        # points. PRECIS excludes those points before evaluating bidi rules.
+        if bidi is not None:
+            assert ucd.bidirectional(char) == bidi, "bidi U+{:04X}".format(cp)
         assert classifier(cp, ucd)[0] == expected_precis[cp], "PRECIS U+{:04X}".format(cp)
         for method, points in compared:
             assert method(cp) == (cp in points), "{} U+{:04X}".format(method.__name__, cp)
@@ -162,6 +166,10 @@ def _outcome(prepare, value):
         return prepare(value).hex()
     except UnicodeEncodeError as error:
         return ("reject", error.start, error.end, error.reason)
+
+
+def _digest(rows):
+    return hashlib.sha256(json.dumps(rows, ensure_ascii=True).encode("ascii")).hexdigest()
 
 
 def profile_digest(factory, identify, provider, version):
@@ -178,21 +186,21 @@ def profile_digest(factory, identify, provider, version):
         "\u05d0\u05f3", "\u0375\u03b1", "\u30fbカ", "ﾡￂ", "ｶﾞ", "\u0301",
         "\u200d", "\u0600", "\ud800", "", "  Ｆoo\u3000 BAR  ", " \u200b",
     )
-    seen = []
+    outcomes = []
+    identities = []
     comparison_count = 0
     for name in profiles:
         profile = factory(name, unicodedata=provider, unicode_version=version)
         identity = identify(profile)
         assert identity.fingerprint is not None and identity.unicode_version == version
-        seen.append((name, identity.fingerprint))
+        identities.append((name, identity.fingerprint))
         key = getattr(profile, "comparison_key", None)
         for value in values:
             outcome = _outcome(lambda text: profile.enforce(text).encode("utf-8"), value)
             comparison = None if key is None else _outcome(key, value)
             comparison_count += key is not None
-            seen.append((name, outcome, comparison))
-    digest = hashlib.sha256(json.dumps(seen, ensure_ascii=True).encode("ascii")).hexdigest()
-    return len(profiles) * len(values), comparison_count, digest
+            outcomes.append((name, outcome, comparison))
+    return len(profiles) * len(values), comparison_count, _digest(outcomes), _digest(identities)
 
 
 def main():
@@ -216,7 +224,7 @@ def main():
     nfc = verify_normalization(ucd, files)
     widths, lowercase, casefold, contextual = verify_mappings(ucd, files)
     classifications = verify_properties(ucd, files, derived_property, args.classification)
-    profile_cases, comparisons, semantic_hash = profile_digest(
+    profile_cases, comparisons, outcome_hash, identity_hash = profile_digest(
         get_profile, get_profile_identity, unicodedata2, args.version
     )
     print(json.dumps({
@@ -232,7 +240,8 @@ def main():
         "checked_code_points": classifications,
         "profile_cases": profile_cases,
         "comparison_cases": comparisons,
-        "profile_semantic_sha256": semantic_hash,
+        "profile_outcome_sha256": outcome_hash,
+        "profile_identity_sha256": identity_hash,
     }, sort_keys=True))
 
 
