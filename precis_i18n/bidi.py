@@ -119,3 +119,17 @@ def has_rtl(value, ucd):
         if bidirectional(char) in _RTL_ANY:
             return True
     return False
+
+
+def _native_username_bidi(value, ucd):
+    """Apply the bidi rule when native Unicode reports an RTL character."""
+    bidirectional = ucd._ucd.bidirectional
+    for offset, char in enumerate(value):
+        direction = bidirectional(char)
+        if direction in _RTL_ANY:
+            # A label containing RTL must start R or AL. A first L would
+            # select the LTR rule, whose allowed set excludes all RTL types.
+            return offset == 0 and direction in _RTL_FIRST and _bidi_rule(
+                value, ucd, _RTL_ALLOWED, _RTL_LAST, _RTL_EXCL
+            )
+    return True

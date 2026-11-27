@@ -1,6 +1,7 @@
 """Deterministic work and compatibility witnesses for profile optimizations."""
 
 from collections import Counter
+from itertools import product
 import sys
 import unittest
 
@@ -25,6 +26,48 @@ def observe_calls(operation):
 
 
 class NativeProfileWorkTest(unittest.TestCase):
+    def test_native_bidi_rejects_with_the_same_bounds_in_one_direction_scan(self):
+        username = get_profile("UsernameCaseMapped")
+
+        def reject():
+            with self.assertRaisesRegex(UnicodeEncodeError, "DISALLOWED/bidi_rule") as raised:
+                username.enforce("aא")
+            error = raised.exception
+            return error.object, error.start, error.end
+
+        actual, calls = observe_calls(reject)
+        self.assertEqual(actual, ("aא", 0, 2))
+        self.assertEqual(calls["bidirectional"], 0)
+
+    def test_username_bidi_matches_generic_for_directional_combinations(self):
+        class AlternateUnicodeData(UnicodeData):
+            pass
+
+        native = get_profile("UsernameCaseMapped")
+        generic = get_profile("UsernameCaseMapped")
+        generic.base.ucd = AlternateUnicodeData()
+
+        def outcome(profile, value):
+            try:
+                return profile.directionality_rule(value)
+            except UnicodeEncodeError as error:
+                return error.object, error.start, error.end, error.reason
+
+        alphabet = ("a", "א", "م", "١", "1", "+", ".", "$", ")", "\u0301",
+                    "\u200c", " ", "\n", "\u202a", "\u2067", "\u0378")
+        for length in range(4):
+            for parts in product(alphabet, repeat=length):
+                value = "".join(parts)
+                self.assertEqual(outcome(native, value), outcome(generic, value), value)
+
+    def test_ordinary_native_characters_use_the_same_two_admissions(self):
+        username = get_profile("UsernameCaseMapped")
+        username.enforce("é")
+        actual, calls = observe_calls(lambda: username.enforce("Élise-漢字"))
+        self.assertEqual(actual, "élise-漢字")
+        self.assertEqual(calls["enforce"], 3)
+        self.assertEqual(calls["derived_property"], 0)
+
     def test_width_mapped_ascii_username_uses_proven_ascii_invariants(self):
         username = get_profile("UsernameCaseMapped")
         actual, calls = observe_calls(lambda: username.enforce("Ａ-Ｂ"))

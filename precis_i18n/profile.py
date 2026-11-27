@@ -4,7 +4,7 @@ import re
 from functools import partial
 
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass, raise_error
-from precis_i18n.bidi import bidi_rule, has_rtl
+from precis_i18n.bidi import _native_username_bidi, bidi_rule, has_rtl
 from precis_i18n.unicode import UnicodeData
 
 # pylint: disable=no-self-use
@@ -273,10 +273,14 @@ class Username(Profile):
 
     def directionality_rule(self, value):
         # Override
-        # Only apply the "bidi rule" if the string contains RTL characters.
-        if has_rtl(value, self.base.ucd):
-            if not bidi_rule(value, self.base.ucd):
-                raise_error(self.name, value, -1, "bidi_rule")
+        ucd = self.base.ucd
+        if (type(value) is str and type(ucd) is UnicodeData and ucd.mode == "native"
+                and "bidirectional" not in vars(ucd)):
+            valid = _native_username_bidi(value, ucd)
+        else:
+            valid = not has_rtl(value, ucd) or bidi_rule(value, ucd)
+        if not valid:
+            raise_error(self.name, value, -1, "bidi_rule")
         return value
 
 
