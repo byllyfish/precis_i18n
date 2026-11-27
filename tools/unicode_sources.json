@@ -1,0 +1,94 @@
+{
+  "17.0.0": {
+    "ArabicShaping.txt": {
+      "sha256": "39afa01e680e27d0fd10b67a9b27be13fbaa3d0efecfb5be45991de9a0d267d0",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/ArabicShaping.txt"
+    },
+    "CaseFolding.txt": {
+      "sha256": "ff8d8fefbf123574205085d6714c36149eb946d717a0c585c27f0f4ef58c4183",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/CaseFolding.txt"
+    },
+    "DerivedCoreProperties.txt": {
+      "sha256": "24c7fed1195c482faaefd5c1e7eb821c5ee1fb6de07ecdbaa64b56a99da22c08",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/DerivedCoreProperties.txt"
+    },
+    "DerivedJoiningType.txt": {
+      "sha256": "f39ebe974825d6736aee15582250307aa532b2cfab3caf3f86bd23fddc9c5c4d",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/extracted/DerivedJoiningType.txt"
+    },
+    "DerivedNormalizationProps.txt": {
+      "sha256": "71fd6a206a2c0cdd41feb6b7f656aa31091db45e9cedc926985d718397f9e488",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/DerivedNormalizationProps.txt"
+    },
+    "HangulSyllableType.txt": {
+      "sha256": "5a57450afde0d082bc5026f7458649eac3b615490cc7e3d916b0367f1593c0e3",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/HangulSyllableType.txt"
+    },
+    "NormalizationTest.txt": {
+      "sha256": "5019ffd530751a741900c849c0e010332f142a3612234639bd200b82138a87db",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/NormalizationTest.txt"
+    },
+    "PropList.txt": {
+      "sha256": "130dcddcaadaf071008bdfce1e7743e04fdfbc910886f017d9f9ac931d8c64dd",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/PropList.txt"
+    },
+    "Scripts.txt": {
+      "sha256": "9f5e50d3abaee7d6ce09480f325c706f485ae3240912527e651954d2d6b035bf",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/Scripts.txt"
+    },
+    "SpecialCasing.txt": {
+      "sha256": "efc25faf19de21b92c1194c111c932e03d2a5eaf18194e33f1156e96de4c9588",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/SpecialCasing.txt"
+    },
+    "UnicodeData.txt": {
+      "sha256": "2e1efc1dcb59c575eedf5ccae60f95229f706ee6d031835247d843c11d96470c",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt"
+    }
+  },
+  "18.0.0": {
+    "ArabicShaping.txt": {
+      "sha256": "8ccde4ebd070500a68e8bcb9d5514522fb0bebe57b9ebad3ff925b8e1e669f83",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/ArabicShaping.txt"
+    },
+    "CaseFolding.txt": {
+      "sha256": "a004797658a457bec4dc11683e39f69249ea3b595b752dbea6721c4c9f587b0d",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/CaseFolding.txt"
+    },
+    "DerivedCoreProperties.txt": {
+      "sha256": "09c928886a178fcafd93c29e4bd59073a058e5a100b716d425cb563ab50f68c9",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/DerivedCoreProperties.txt"
+    },
+    "DerivedJoiningType.txt": {
+      "sha256": "e2408ff2c92b175b0f7bf62c989bbb54c7b077528fe31f8d69b96fa09e7d61ed",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/extracted/DerivedJoiningType.txt"
+    },
+    "DerivedNormalizationProps.txt": {
+      "sha256": "98ac7f67d985fe781e317f6182e885e94cabb0c314769e6dd73e48b226931ccd",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/DerivedNormalizationProps.txt"
+    },
+    "HangulSyllableType.txt": {
+      "sha256": "0468ce5e735a6e3f0e9d12ec006410e86cedc515c34706704c756808a6cf740e",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/HangulSyllableType.txt"
+    },
+    "NormalizationTest.txt": {
+      "sha256": "25a50d816764b04abfb4a646d3eb2b2a803284c3873d9a06757b94fe4513dde3",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/NormalizationTest.txt"
+    },
+    "PropList.txt": {
+      "sha256": "f438f532e8737bb8a2702126cdf9c4af5e357c58c7acf9d9eb2fc7c1a1d955d6",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/PropList.txt"
+    },
+    "Scripts.txt": {
+      "sha256": "0071fd81b6aeae25f6e8bce8efec3066a6476a91b49bdb2f52dc76e817862a6a",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Scripts.txt"
+    },
+    "SpecialCasing.txt": {
+      "sha256": "8538dea57c184f1ef3783885ea79677b10f6efa06423717157e63712f14d1ad2",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/SpecialCasing.txt"
+    },
+    "UnicodeData.txt": {
+      "sha256": "0736451de439ae7baf1425136617da495e09ee5afbe6e394374db7009ea08950",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/UnicodeData.txt"
+    }
+  }
+}

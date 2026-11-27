@@ -29,6 +29,7 @@ setup(
     packages=["precis_i18n"],
     version=version,
     license="MIT",
+    license_files=["LICENSE.txt", "UNICODE-LICENSE.txt"],
     description="PRECIS-i18n: Internationalized Usernames and Passwords",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -38,7 +39,7 @@ setup(
     author="William W. Fisher",
     author_email="william.w.fisher@gmail.com",
     package_data={
-        "precis_i18n": ["py.typed", "*.pyi"],
+        "precis_i18n": ["py.typed", "*.pyi", "_unicode_*.json"],
     },
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[

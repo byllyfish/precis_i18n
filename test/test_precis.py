@@ -348,7 +348,8 @@ class TestPrecisContextRule(unittest.TestCase):
 class TestPrecisUnicodeData(unittest.TestCase):
     def test_width_map(self):
         self.assertEqual(
-            UCD.width_map("\uff00\uff01\uff02\uffe3\uffef"), '\uff00!"\uffe3\uffef'
+            # U+FFE3 has the literal <wide> mapping to U+00AF.
+            UCD.width_map("\uff00\uff01\uff02\uffe3\uffef"), '\uff00!"\u00af\uffef'
         )
 
     def test_replace_whitespace(self):
