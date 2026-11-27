@@ -9,6 +9,15 @@ from precis_i18n.unicode import UnicodeData
 
 # pylint: disable=no-self-use
 
+_USERNAME_RULE_OVERRIDES = frozenset((
+    "width_mapping_rule", "additional_mapping_rule", "case_mapping_rule",
+    "normalization_rule", "directionality_rule",
+))
+_USERNAME_DATABASE_OVERRIDES = frozenset((
+    "width_map", "lower", "casefold", "normalize", "bidirectional",
+    "category", "control", "default_ignorable", "has_compat", "noncharacter", "old_hangul_jamo",
+))
+
 
 class Profile:
     """Base class for a PRECIS profile.
@@ -81,6 +90,15 @@ class Profile:
         enforce = self.base.enforce
         width_map = self.width_mapping_rule
         admitted = enforce(width_map(source), name)
+        ucd = self.base.ucd
+        if (type(self) is Username and admitted and admitted.isascii() and ucd.mode == "native"
+                and _USERNAME_RULE_OVERRIDES.isdisjoint(vars(self))
+                and _USERNAME_DATABASE_OVERRIDES.isdisjoint(vars(ucd))
+                and "enforce" not in vars(self.base)):
+            # Admission already excluded spaces and controls. ASCII case
+            # mapping preserves that class, NFC, the absence of RTL and the
+            # absence of width mappings. Its result is already stable.
+            return admitted if self._casemap is None else admitted.lower()
         output = self._apply_mappings(admitted, case_mapping)
         if output == source:
             # An unchanged result from deterministic rules is stable. The
@@ -89,7 +107,6 @@ class Profile:
                 return output
             return self._enforced_output(source, output)
 
-        ucd = self.base.ucd
         reuse = (ucd.mode == "native" and "normalize" not in vars(ucd)
                  and "bidirectional" not in vars(ucd)
                  and "normalization_rule" not in vars(self)

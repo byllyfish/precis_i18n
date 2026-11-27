@@ -25,6 +25,20 @@ def observe_calls(operation):
 
 
 class NativeProfileWorkTest(unittest.TestCase):
+    def test_width_mapped_ascii_username_uses_proven_ascii_invariants(self):
+        username = get_profile("UsernameCaseMapped")
+        actual, calls = observe_calls(lambda: username.enforce("Ａ-Ｂ"))
+        self.assertEqual(actual, "a-b")
+        self.assertEqual(calls["normalization_rule"], 0)
+        self.assertEqual(calls["has_rtl"], 0)
+        with self.assertRaisesRegex(UnicodeEncodeError, "DISALLOWED/spaces"):
+            username.enforce("Ａ\u3000Ｂ")
+
+    def test_ascii_username_preserves_an_instance_normalization_override(self):
+        username = get_profile("UsernameCaseMapped")
+        username.normalization_rule = lambda value: value.replace("a", "z")
+        self.assertEqual(username.enforce("Ａ"), "z")
+
     def test_common_native_classification_uses_fixed_unicode_data(self):
         username = get_profile("UsernameCaseMapped")
         username.enforce("é")

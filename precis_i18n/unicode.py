@@ -151,13 +151,13 @@ class UnicodeData:
 
     def lower(self, value):
         """Apply default lowercase under the selected casing configuration."""
-        if self.mode == "versioned":
+        if self.mode == "versioned" and (type(value) is not str or not value.isascii()):
             return versioned_lower(value, self._tables)
         return value.lower()
 
     def casefold(self, value):
         """Apply full, non-Turkic case folding under the selected configuration."""
-        if self.mode == "versioned":
+        if self.mode == "versioned" and (type(value) is not str or not value.isascii()):
             return value.translate(self._tables.fold)
         return value.casefold()
 
