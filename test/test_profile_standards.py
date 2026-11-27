@@ -5,7 +5,7 @@ import unittest
 import precis_i18n.codec  # noqa: F401
 from precis_i18n import get_profile
 from precis_i18n.baseclass import FreeFormClass
-from precis_i18n.profile import Profile
+from precis_i18n.profile import Profile, Username
 from precis_i18n.unicode import UnicodeData
 
 _USERNAME_PROFILES = (
@@ -165,6 +165,69 @@ class FreeformStandardsTest(unittest.TestCase):
 
 
 class StabilizationTest(unittest.TestCase):
+    @staticmethod
+    def observe_admission(profile):
+        observed = []
+        enforce = profile.base.enforce
+
+        def admit(value, name):
+            observed.append(value)
+            return enforce(value, name)
+
+        profile.base.enforce = admit
+        return observed
+
+    def test_unchanged_profiles_admit_once_per_call(self):
+        for name in ("UsernameCaseMapped", "OpaqueString", "NicknameCasePreserved"):
+            with self.subTest(profile=name):
+                profile = get_profile(name)
+                observed = self.observe_admission(profile)
+                self.assertEqual(profile.comparison_key("example"), b"example")
+                self.assertEqual(profile.comparison_key("example"), b"example")
+                self.assertEqual(observed, ["example", "example"])
+
+    def test_changed_profiles_admit_each_distinct_stage(self):
+        for name, raw, admitted, expected in (
+            ("OpaqueString", "cafe\u0301", "cafe\u0301", "caf\u00e9"),
+            ("UsernameCaseMapped", "\uff21bc", "Abc", "abc"),
+        ):
+            with self.subTest(profile=name):
+                profile = get_profile(name)
+                observed = self.observe_admission(profile)
+                self.assertEqual(profile.enforce(raw), expected)
+                self.assertEqual(observed, [admitted, expected])
+
+    def test_rejects_an_invalid_raw_context_and_newly_invalid_output_context(self):
+        profile = get_profile("UsernameCaseMapped")
+        observed = self.observe_admission(profile)
+        with self.assertRaisesRegex(UnicodeEncodeError, "DISALLOWED/middle_dot"):
+            profile.enforce("L\xb7L")
+        self.assertEqual(observed, ["L\xb7L"])
+
+        profile = get_profile("NicknameCasePreserved")
+        observed = self.observe_admission(profile)
+        # U+037A has the Greek script, but NFKC replaces it with
+        # a space and a combining mark. The resulting context is invalid.
+        with self.assertRaisesRegex(UnicodeEncodeError, "DISALLOWED/greek_keraia"):
+            profile.enforce("\u0375\u037a")
+        self.assertEqual(observed, ["\u0375\u037a", "\u0375 \u0345"])
+
+    def test_unchanged_subclass_still_calls_overridden_hooks(self):
+        observed = []
+
+        class CustomUsername(Username):
+            def apply_five_rules(self, value):
+                observed.append("rules")
+                return super().apply_five_rules(value)
+
+            def idempotence_check(self, value):
+                observed.append("idempotence")
+                return super().idempotence_check(value)
+
+        profile = CustomUsername(UnicodeData(), "CustomUsername")
+        self.assertEqual(profile.enforce("example"), "example")
+        self.assertEqual(observed, ["rules", "idempotence", "rules"])
+
     def test_supports_three_additional_passes_for_stability(self):
         class ConvergingProfile(Profile):
             def additional_mapping_rule(self, value):

@@ -5,6 +5,7 @@ from functools import partial
 
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass, raise_error
 from precis_i18n.bidi import bidi_rule, has_rtl
+from precis_i18n.unicode import UnicodeData
 
 # pylint: disable=no-self-use
 
@@ -55,6 +56,8 @@ class Profile:
             ValueError: `value` not a string or bytes.
         """
         value = _decode(value)
+        if self._uses_stock_rules(value):
+            return self._enforce_stock(value, self.case_mapping_rule)
         output = self.idempotence_check(self.apply_five_rules(value))
         return self._enforced_output(value, output)
 
@@ -62,10 +65,40 @@ class Profile:
         """Return the exact UTF-8 bytes used to compare an enforced value."""
         return self.enforce(value).encode("utf-8")
 
-    def _enforced_output(self, source, output):
+    def _enforced_output(self, source, output, admit=None):
         if not output:
             raise_error(self.name, source, -1, "empty")
+        if admit is not None:
+            return admit(output)
         return self.base.enforce(output, self.name)
+
+    def _uses_stock_rules(self, value):
+        if type(self) not in _STOCK_PROFILES or type(value) is not str:
+            return False
+        ucd = self.base.ucd
+        return type(ucd) is UnicodeData and ucd.identity_attestable
+
+    def _enforce_stock(self, source, case_mapping):
+        name = self.name
+        enforce = self.base.enforce
+        admitted = enforce(self.width_mapping_rule(source), name)
+        output = self._apply_mappings(admitted, case_mapping)
+        if output == source:
+            # An unchanged result from deterministic rules is stable. The
+            # class check already covers it when preparation saw that string.
+            if output and output == admitted:
+                return output
+            return self._enforced_output(source, output)
+
+        def admit(value):
+            nonlocal admitted
+            if value != admitted:
+                admitted = enforce(value, name)
+            return admitted
+
+        apply = partial(self._apply_rules, case_mapping=case_mapping, admit=admit)
+        output = _stabilize(output, apply, name)
+        return self._enforced_output(source, output, admit)
 
     def apply_five_rules(self, value):
         """Apply the five rules and any profile-specific preparation in order.
@@ -78,13 +111,18 @@ class Profile:
         """
         return self._apply_rules(value, self.case_mapping_rule)
 
-    def _apply_rules(self, value, case_mapping):
+    def _apply_rules(self, value, case_mapping, admit=None):
         value = self.width_mapping_rule(value)
         # For Username this is the width-mapped IdentifierClass check.
         # OpaqueString and Nickname use identity width mapping, so they
         # check FreeformClass before any mapping or normalization.
-        if self._admit_before_mapping:
+        if admit is not None:
+            value = admit(value)
+        elif self._admit_before_mapping:
             value = self.base.enforce(value, self.name)
+        return self._apply_mappings(value, case_mapping)
+
+    def _apply_mappings(self, value, case_mapping):
         value = self.additional_mapping_rule(value)
         value = case_mapping(value)
         value = self.normalization_rule(value)
@@ -317,9 +355,15 @@ class Nickname(Profile):
         if self._casemap is not None:
             return super().comparison_key(value)
         source = _decode(value)
-        compare = partial(self._apply_rules, case_mapping=self.base.ucd.lower)
+        case_mapping = self.base.ucd.lower
+        if self._uses_stock_rules(source):
+            return self._enforce_stock(source, case_mapping).encode("utf-8")
+        compare = partial(self._apply_rules, case_mapping=case_mapping)
         output = _stabilize(compare(source), compare, self.name)
         return self._enforced_output(source, output).encode("utf-8")
+
+
+_STOCK_PROFILES = (Username, OpaqueString, Nickname)
 
 
 def _decode(value):
