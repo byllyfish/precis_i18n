@@ -4,3 +4,5 @@ include UNICODE-LICENSE.txt
 include tools/generate_unicode_data.py tools/unicode_sources.json tools/verify_unicode.py
 include tools/qualification_archive.py
 include tools/compare_qualification.py
+include docs/performance.md
+include tools/benchmark_precis.py tools/benchmark_statistics.py tools/benchmark_workloads.py
