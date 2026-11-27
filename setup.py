@@ -26,6 +26,7 @@ with open(version_path, encoding="utf-8") as f:
 
 setup(
     name="precis_i18n",
+    python_requires=">=3.7",
     packages=["precis_i18n"],
     version=version,
     license="MIT",

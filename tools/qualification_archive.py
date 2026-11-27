@@ -55,6 +55,8 @@ def verify_wheel(root, direct, rebuilt):
         metadata = message_from_bytes(wheel.read(metadata_path))
         if metadata["Name"].lower().replace("_", "-") != "precis-i18n":
             raise ValueError("The existing distribution name must be preserved.")
+        if metadata["Requires-Python"] != ">=3.7":
+            raise ValueError("Wheel must declare the supported Python floor.")
         if metadata.get_all("Requires-Dist") or metadata.get_all("Provides-Extra"):
             raise ValueError("The existing base runtime has no dependency declarations.")
         for name in ("LICENSE.txt", "UNICODE-LICENSE.txt"):
