@@ -1,7 +1,10 @@
 """Exercise the Unicode provider boundary using independent UCD examples."""
 
+import sys
+from types import ModuleType
 import unicodedata
 import unittest
+from unittest.mock import patch
 
 from precis_i18n import get_profile
 from precis_i18n.unicode import UnicodeData
@@ -82,3 +85,29 @@ class UnicodeModeTests(unittest.TestCase):
         changed = UnicodeData(provider, unicode_version="17.0.0")
         self.assertTrue(first.identity_attestable)
         self.assertNotEqual(first.data_identity, changed.data_identity)
+
+    def test_versioned_provider_rejects_incoherent_normalization(self):
+        class UnorderedDecomposition(FixtureProvider):
+            @staticmethod
+            def normalize(form, value):
+                if form == "NFD" and value == "\u1e0a\u0323":
+                    return "D\u0307\u0323"
+                return unicodedata.normalize(form, value)
+
+        provider = UnorderedDecomposition()
+        self.assertEqual(UnicodeData(provider).mode, "legacy")
+        with self.assertRaisesRegex(ValueError, "incompatible normalization"):
+            get_profile("UsernameCaseMapped", unicodedata=provider, unicode_version="17.0.0")
+
+    def test_registered_versioned_provider_identity_captures_runtime(self):
+        from precis_i18n import unicode as backend
+
+        provider = ModuleType("unicodedata2")
+        for attribute in ("unidata_version", "category", "combining", "bidirectional", "normalize"):
+            setattr(provider, attribute, getattr(FixtureProvider, attribute))
+        with patch.dict(sys.modules, unicodedata2=provider):
+            with patch.object(backend, "_unicodedata2_revision", return_value="17.0.1"):
+                first = UnicodeData(provider, unicode_version="17.0.0")
+                with patch.object(backend, "_RUNTIME_IDENTITY", ("other-runtime-build",)):
+                    second = UnicodeData(provider, unicode_version="17.0.0")
+        self.assertNotEqual(first.data_identity, second.data_identity)

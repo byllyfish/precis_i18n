@@ -87,7 +87,8 @@ continues to use interpreter-native lowercase and casefold.
 Select `unicode_version="17.0.0"` or `unicode_version="18.0.0"` to use
 matching bundled width, case-mapping and contextual data. The selected
 database must report the same Unicode version and provide category,
-normalization, combining class and bidi operations. Omit the provider when
+normalization, combining class and bidi operations. Versioned setup rejects
+providers that fail a canonical reordering check. Omit the provider when
 the interpreter's built-in database matches. Applications can separately
 install a matching `unicodedata2` version and pass it as the provider.
 The package does not install that provider.
@@ -110,8 +111,11 @@ They must keep the declared data and behavior fixed. Legacy external
 providers without an identity still work and expose a descriptor with no
 attestable fingerprint. The descriptor includes the profile, standards
 generation, case rules, normalization, Unicode versions, data identity and
-execution mode. A provider or profile change can alter admission or create key
-collisions. Revalidate the identity domain before changing the active policy.
+execution mode. For built-in databases and identified `unicodedata2`
+distributions, it also records the runtime and platform. Compare equivalent
+configurations across runtimes using independent conformance evidence. A
+provider or profile change can alter admission or create key collisions.
+Revalidate the identity domain before changing the active policy.
 
 ## Supported Profiles and Codecs
 

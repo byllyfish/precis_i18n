@@ -3,12 +3,31 @@
 import json
 import re
 import sys
+import sysconfig
 import unicodedata
 from types import ModuleType
 
 from precis_i18n._unicode_tables import AVAILABLE, CURRENT, load, versioned_lower
 
 # pylint: disable=no-self-use
+
+_RUNTIME_IDENTITY = (
+    sys.implementation.name, sys.version, sysconfig.get_platform(), unicodedata.unidata_version,
+)
+
+
+def _validate_normalization(ucd):
+    # The UAX #15 corpus includes this canonical reordering case in every
+    # supported generation. A version string alone cannot attest normalization.
+    source = "\u1e0a\u0323"
+    composed = "\u1e0c\u0307"
+    decomposed = "D\u0323\u0307"
+    try:
+        actual = tuple(ucd.normalize(form, source) for form in ("NFC", "NFD", "NFKC", "NFKD"))
+    except Exception:
+        raise ValueError("Versioned Unicode provider has incompatible normalization") from None
+    if actual != (composed, decomposed, composed, decomposed):
+        raise ValueError("Versioned Unicode provider has incompatible normalization")
 
 
 def _version_to_float(version):
@@ -54,8 +73,10 @@ class UnicodeData:
         if unicode_version is not None:
             self._mode = "versioned"
         self._data_identity, self._identity_attestable = self._describe_data()
-        if self.mode == "versioned" and not self.identity_attestable:
-            raise ValueError("Versioned Unicode provider requires a stable data identity")
+        if self.mode == "versioned":
+            if not self.identity_attestable:
+                raise ValueError("Versioned Unicode provider requires a stable data identity")
+            _validate_normalization(self._ucd)
 
     @property
     def version(self):
@@ -103,8 +124,8 @@ class UnicodeData:
             self.mode, str(origin), str(provider), str(revision), custom_id,
             self.data_version, self._tables.identity,
         ]
-        if self.mode != "versioned":
-            fields.extend((sys.implementation.name, sys.version, unicodedata.unidata_version))
+        if self.mode != "versioned" or self._ucd is unicodedata or registered is not None:
+            fields.extend(_RUNTIME_IDENTITY)
         attestable = self._ucd is unicodedata or registered is not None or custom_id is not None
         return json.dumps(fields, ensure_ascii=True, separators=(",", ":")), attestable
 

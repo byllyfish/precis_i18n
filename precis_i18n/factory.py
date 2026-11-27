@@ -112,7 +112,7 @@ def _describe_profile(key, name, ucd):
         profile=name,
         standards=standards,
         library_version=__version__,
-        semantic_revision="2",
+        semantic_revision="3",
         unicode_version=ucd.data_version,
         property_version=ucd.property_version,
         execution_mode=ucd.mode,
