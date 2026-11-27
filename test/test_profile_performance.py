@@ -1,0 +1,74 @@
+"""Deterministic work and compatibility witnesses for profile optimizations."""
+
+from collections import Counter
+import sys
+import unittest
+
+from precis_i18n import get_profile
+from precis_i18n.unicode import UnicodeData
+
+
+def observe_calls(operation):
+    """Measure calls to real PRECIS functions on one thread."""
+    counts = Counter()
+
+    def observe(frame, event, _arg):
+        if event == "call" and frame.f_globals["__name__"].startswith("precis_i18n."):
+            counts[frame.f_code.co_name] += 1
+
+    original = sys.getprofile()
+    sys.setprofile(observe)
+    try:
+        return operation(), counts
+    finally:
+        sys.setprofile(original)
+
+
+class NativeProfileWorkTest(unittest.TestCase):
+    def test_common_native_classification_uses_fixed_unicode_data(self):
+        username = get_profile("UsernameCaseMapped")
+        username.enforce("é")
+        actual, calls = observe_calls(lambda: username.enforce("Élise"))
+        self.assertEqual(actual, "élise")
+        self.assertEqual(calls["derived_property"], 0)
+
+    def test_reuses_normalization_after_a_changed_result_is_readmitted(self):
+        password = get_profile("OpaqueString")
+        password.enforce("warm")
+        actual, calls = observe_calls(lambda: password.enforce("cafe\u0301"))
+        self.assertEqual(actual, "café")
+        self.assertEqual(calls["normalization_rule"], 1)
+        self.assertEqual(calls["enforce"], 3)  # Profile and both class admissions.
+
+    def test_custom_provider_keeps_its_normalization_hook(self):
+        class AlternateUnicodeData(UnicodeData):
+            def normalize(self, form, value):
+                if form == "NFC" and value == "a":
+                    return "b"
+                return super().normalize(form, value)
+
+        profile = get_profile("UsernameCaseMapped")
+        profile.base.ucd = AlternateUnicodeData()
+        self.assertEqual(profile.enforce("A"), "b")
+
+    def test_native_admission_preserves_error_order_and_offset(self):
+        identifier = get_profile("IdentifierClass")
+        freeform = get_profile("FreeFormClass")
+        for cls, value, offset, reason in (
+            (identifier, "é \x00", 1, "spaces"),
+            (identifier, "a\x7f ", 1, "controls"),
+            (freeform, "é \x00", 2, "controls"),
+            (freeform, "l·l\x00", 3, "controls"),
+        ):
+            with self.subTest(value=value), self.assertRaises(UnicodeEncodeError) as raised:
+                cls.enforce(value)
+            error = raised.exception
+            self.assertEqual((error.object, error.start, error.end), (value, offset, offset + 1))
+            self.assertEqual(error.reason, "DISALLOWED/" + reason)
+
+    def test_an_overridden_native_property_still_controls_admission(self):
+        identifier = get_profile("IdentifierClass")
+        identifier.enforce("a")
+        identifier.ucd.category = lambda _value: "Cn"
+        with self.assertRaisesRegex(UnicodeEncodeError, "DISALLOWED/unassigned"):
+            identifier.enforce("a")

@@ -114,4 +114,8 @@ def has_rtl(value, ucd):
     Returns:
         bool: True if value contains RTL characters.
     """
-    return any(ucd.bidirectional(x) in _RTL_ANY for x in value)
+    bidirectional = ucd.bidirectional
+    for char in value:
+        if bidirectional(char) in _RTL_ANY:
+            return True
+    return False

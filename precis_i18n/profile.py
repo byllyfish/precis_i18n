@@ -65,11 +65,9 @@ class Profile:
         """Return the exact UTF-8 bytes used to compare an enforced value."""
         return self.enforce(value).encode("utf-8")
 
-    def _enforced_output(self, source, output, admit=None):
+    def _enforced_output(self, source, output):
         if not output:
             raise_error(self.name, source, -1, "empty")
-        if admit is not None:
-            return admit(output)
         return self.base.enforce(output, self.name)
 
     def _uses_stock_rules(self, value):
@@ -81,7 +79,8 @@ class Profile:
     def _enforce_stock(self, source, case_mapping):
         name = self.name
         enforce = self.base.enforce
-        admitted = enforce(self.width_mapping_rule(source), name)
+        width_map = self.width_mapping_rule
+        admitted = enforce(width_map(source), name)
         output = self._apply_mappings(admitted, case_mapping)
         if output == source:
             # An unchanged result from deterministic rules is stable. The
@@ -90,15 +89,23 @@ class Profile:
                 return output
             return self._enforced_output(source, output)
 
-        def admit(value):
-            nonlocal admitted
-            if value != admitted:
-                admitted = enforce(value, name)
-            return admitted
-
-        apply = partial(self._apply_rules, case_mapping=case_mapping, admit=admit)
-        output = _stabilize(output, apply, name)
-        return self._enforced_output(source, output, admit)
+        ucd = self.base.ucd
+        reuse = (ucd.mode == "native" and "normalize" not in vars(ucd)
+                 and "bidirectional" not in vars(ucd)
+                 and "normalization_rule" not in vars(self)
+                 and "directionality_rule" not in vars(self))
+        # Recheck preparation before considering the previous output stable.
+        for _ in range(3):
+            prepared = width_map(output)
+            if prepared != admitted:
+                admitted = enforce(prepared, name)
+            updated = self._apply_mappings(admitted, case_mapping, output if reuse else None)
+            if updated == output:
+                if output and output == admitted:
+                    return output
+                return self._enforced_output(source, output)
+            output = updated
+        raise_error(name, output, -1, "not_idempotent")
 
     def apply_five_rules(self, value):
         """Apply the five rules and any profile-specific preparation in order.
@@ -111,20 +118,22 @@ class Profile:
         """
         return self._apply_rules(value, self.case_mapping_rule)
 
-    def _apply_rules(self, value, case_mapping, admit=None):
+    def _apply_rules(self, value, case_mapping):
         value = self.width_mapping_rule(value)
         # For Username this is the width-mapped IdentifierClass check.
         # OpaqueString and Nickname use identity width mapping, so they
         # check FreeformClass before any mapping or normalization.
-        if admit is not None:
-            value = admit(value)
-        elif self._admit_before_mapping:
+        if self._admit_before_mapping:
             value = self.base.enforce(value, self.name)
         return self._apply_mappings(value, case_mapping)
 
-    def _apply_mappings(self, value, case_mapping):
+    def _apply_mappings(self, value, case_mapping, checked_output=None):
         value = self.additional_mapping_rule(value)
         value = case_mapping(value)
+        # The previous pass normalized this exact string and checked its
+        # directionality. NFC and NFKC are idempotent for the native database.
+        if checked_output is not None and value == checked_output:
+            return value
         value = self.normalization_rule(value)
         return self.directionality_rule(value)
 
