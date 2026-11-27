@@ -35,7 +35,9 @@ Use the `get_profile` function to obtain a profile object, then use its
 >>> username.enforce('Kevin')
 'kevin'
 >>> username.enforce('\u212Aevin')
-'kevin'
+Traceback (most recent call last):
+  ...
+UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\u212a' in position 0: DISALLOWED/has_compat
 >>> username.enforce('\uFF2Bevin')
 'kevin'
 >>> username.enforce('\U0001F17Aevin')
@@ -56,11 +58,15 @@ is disallowed.
 >>> 'Kevin'.encode('UsernameCasePreserved')
 b'Kevin'
 >>> '\u212Aevin'.encode('UsernameCasePreserved')
-b'Kevin'
+Traceback (most recent call last):
+  ...
+UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\u212a' in position 0: DISALLOWED/has_compat
 >>> '\uFF2Bevin'.encode('UsernameCasePreserved')
 b'Kevin'
 >>> '\u212Aevin'.encode('UsernameCaseMapped')
-b'kevin'
+Traceback (most recent call last):
+  ...
+UnicodeEncodeError: 'UsernameCaseMapped' codec can't encode character '\u212a' in position 0: DISALLOWED/has_compat
 >>> '\uFF2Bevin'.encode('OpaqueString')
 b'\xef\xbc\xabevin'
 >>> '\U0001F17Aevin'.encode('UsernameCasePreserved')
@@ -70,28 +76,42 @@ UnicodeEncodeError: 'UsernameCasePreserved' codec can't encode character '\U0001
 
 ```
 
-## Alternative Unicode Versions
+## Unicode configurations
 
-The `get_profile` function uses whatever version of `unicodedata` is
-provided by the Python runtime. The Unicode version is usually tied to
-the major version of the Python runtime. Python 3.7.x uses Unicode 11.0.
-Python 3.6.x uses Unicode 10.0.
+The default uses the interpreter's Unicode categories, combining classes,
+directionality, normalization and casing with the current bundled supplementary
+properties. The existing `unicodedata=` argument accepts an alternate
+database. Without an explicit version selection, that legacy alternate mode
+continues to use interpreter-native lowercase and casefold.
 
-To use an alternative `unicodedata` implementation, pass the
-`unicodedata` keyword argument to `get_profile`.
+Select `unicode_version="17.0.0"` or `unicode_version="18.0.0"` to use
+matching bundled width, case-mapping and contextual data. The selected
+database must report the same Unicode version and provide category,
+normalization, combining class and bidi operations. Omit the provider when
+the interpreter's built-in database matches. Applications can separately
+install a matching `unicodedata2` version and pass it as the provider.
+The package does not install that provider.
 
-For example, you could separately install version 12.0 of the
-`unicodedata2` module from PyPI. Then, pass it to get_profile to
-retrieve a profile that uses Unicode 12.0.
+```python
+import unicodedata2
 
-```pycon
->>> import unicodedata2
->>> from precis_i18n import get_profile
->>> username = get_profile('UsernameCaseMapped', unicodedata=unicodedata2)
->>> username.enforce('Kevin')
-'kevin'
+from precis_i18n import get_profile, get_profile_identity
 
+username = get_profile(
+    "UsernameCaseMapped", unicodedata=unicodedata2, unicode_version="18.0.0"
+)
+identity = get_profile_identity(username)
+key = username.comparison_key("Kevin")
 ```
+
+Application-supplied database objects can declare a stable
+`precis_data_identity` string covering their actual implementation and data.
+They must keep the declared data and behavior fixed. Legacy external
+providers without an identity still work and expose a descriptor with no
+attestable fingerprint. The descriptor includes the profile, standards
+generation, case rules, normalization, Unicode versions, data identity and
+execution mode. A provider or profile change can alter admission or create key
+collisions. Revalidate the identity domain before changing the active policy.
 
 ## Supported Profiles and Codecs
 
@@ -119,6 +139,14 @@ The PRECIS base string classes are also available as codecs:
 
 -   IdentifierClass
 -   FreeFormClass
+
+For RFC 8266 nickname display, use `NicknameCasePreserved.enforce()`.
+Its `comparison_key()` applies the profile's lowercase comparison mapping
+and returns exact UTF-8 bytes. `Nickname` remains an alias for the historical
+lowercase-enforcement variant. The explicit casefold variants implement a
+different equality policy. Compare keys under the same profile and data
+identity. Treat plaintext and prepared credentials as sensitive, including
+the input object carried by Python's `UnicodeEncodeError`.
 
 ## Userparts and Space Delimited Usernames
 
@@ -201,19 +229,16 @@ UnicodeEncodeError: 'NicknameCaseMapped' codec can't encode character '\x0a' in 
 In version 1.0.5 and earlier, the `NicknameCaseMapped` profile enforced `"Kevin\n"`
 as `"kevin"`.
 
-## Unicode Version Update Procedure
+## Unicode version updates
 
-When Unicode releases a new version, take the following steps to update
-internal tables and pass unit tests:
+- Add the new official UCD inputs and SHA-256 digests to
+  `tools/unicode_sources.json`. The generator verifies each file before
+  using it. Keep the Unicode data notice with the derived tables.
+- Run `python tools/generate_unicode_data.py /path/to/ucd-parent /path/to/output`.
+  Compare the generated package data and retain the existing supported
+  generation unless its removal is an intentional compatibility change.
+- Audit derived-property differences against the authoritative files. Update
+  the code-point fixture only for reviewed changes.
+- Run the source tests with `python -m unittest discover`.
 
--   Under a version of Python that supports the new Unicode version, run
-    the tests using `python -m unittest discover` and check that the
-    `test_derived_props` test FAILS due to a missing file.
--   Generate a new `derived-props` file by running
-    `PYTHONPATH=. python test/test_derived_props.py > derived-props-VERSION.txt`.
-    Rename the file using the Unicode version, and re-run the tests. The
-    unit tests will further check that no derived properties in the new
-    file contradict the previous values.
--   Check for changes to internal tables used for context rules by
-    running `PYTHONPATH=. python tools/check_codepoints.py`. Update the
-    corresponding tables in precis_i18n/unicode.py if necessary.
+The library has no mandatory runtime dependencies.

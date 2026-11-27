@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased
+
+- Apply profile-specific base-class admission before later mapping and
+  normalization. Username profiles first apply literal Unicode width
+  decompositions. U+212A and an uppercase middle-dot context now fail
+  before lowercase can make them admissible.
+- Prepare strings before enforcing later profile rules and check
+  stability using bounded repetition. Password and nickname preparation
+  preserve their own class and normalization rules. A preceding invalid
+  character can now be reported before a later bidi failure.
+- Add explicitly versioned Unicode 17 and 18 configurations, exact comparison
+  keys, and immutable semantic identities. Keep native and legacy provider
+  calls available. Revalidate existing keys and collisions before switching.
+- Reuse string-wide contextual verdicts within one pass and remove joining-type
+  string slices. Keep context rules and error offsets.
+
 ## 1.1.2
 
 -   Update internal tables for Unicode 17.0.
