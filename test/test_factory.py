@@ -39,9 +39,8 @@ class TestUsernameCasePreserved(unittest.TestCase):
             profile.enforce(1)
 
     def test_identifier_oddities(self):
-        # Make a list of all codepoints < 10,000 which are allowed in the
-        # UsernameCasePreserved profile even though they are not allowed in
-        # IdentifierClass.
+        # These code points have no width mapping. RFC 8265 section 3.4.2
+        # requires the class check before they can reach normalization.
         profile = get_profile("UsernameCasePreserved")
         allowed = []
         for cp in range(0, 10000):
@@ -53,74 +52,79 @@ class TestUsernameCasePreserved(unittest.TestCase):
                     allowed.append(cp)
             except UnicodeEncodeError:
                 pass
-        self.assertEqual(
-            allowed,
-            [
-                832,
-                833,
-                835,
-                836,
-                884,
-                894,
-                2392,
-                2393,
-                2394,
-                2395,
-                2396,
-                2397,
-                2398,
-                2399,
-                2524,
-                2525,
-                2527,
-                2611,
-                2614,
-                2649,
-                2650,
-                2651,
-                2654,
-                2908,
-                2909,
-                3907,
-                3917,
-                3922,
-                3927,
-                3932,
-                3945,
-                3955,
-                3957,
-                3958,
-                3960,
-                3969,
-                3987,
-                3997,
-                4002,
-                4007,
-                4012,
-                4025,
-                8049,
-                8051,
-                8053,
-                8055,
-                8057,
-                8059,
-                8061,
-                8123,
-                8126,
-                8137,
-                8139,
-                8147,
-                8155,
-                8163,
-                8171,
-                8175,
-                8185,
-                8187,
-                8486,
-                8490,
-                8491,
-            ],
+        self.assertEqual(allowed, [])
+
+        # Retain the exact historical cases that normalization admitted.
+        formerly_admitted = (
+            832,
+            833,
+            835,
+            836,
+            884,
+            894,
+            2392,
+            2393,
+            2394,
+            2395,
+            2396,
+            2397,
+            2398,
+            2399,
+            2524,
+            2525,
+            2527,
+            2611,
+            2614,
+            2649,
+            2650,
+            2651,
+            2654,
+            2908,
+            2909,
+            3907,
+            3917,
+            3922,
+            3927,
+            3932,
+            3945,
+            3955,
+            3957,
+            3958,
+            3960,
+            3969,
+            3987,
+            3997,
+            4002,
+            4007,
+            4012,
+            4025,
+            8049,
+            8051,
+            8053,
+            8055,
+            8057,
+            8059,
+            8061,
+            8123,
+            8126,
+            8137,
+            8139,
+            8147,
+            8155,
+            8163,
+            8171,
+            8175,
+            8185,
+            8187,
+            8486,
+            8490,
+            8491,
         )
+        for cp in formerly_admitted:
+            with self.subTest(code_point=f"U+{cp:04X}"), self.assertRaisesRegex(
+                UnicodeEncodeError, "DISALLOWED/has_compat"
+            ):
+                profile.enforce(chr(cp))
 
 
 class TestUsernameCaseMapped(unittest.TestCase):

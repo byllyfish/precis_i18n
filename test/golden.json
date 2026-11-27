@@ -260,8 +260,8 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212aevin",
-    "output": "Kevin",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -662,20 +662,20 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fef",
-    "output": "`",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212a",
-    "output": "K",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -728,8 +728,8 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212a",
-    "output": "K",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -752,8 +752,8 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u2126",
-    "output": "\u03a9",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -788,14 +788,14 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u212b",
-    "output": "\u00c5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -824,8 +824,8 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -842,20 +842,20 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
-    "output": "Z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "Z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033dA\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362L\u0320\u0368\u0367\u0369\u0358G\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01ea\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": null,
-    "error": "DISALLOWED/precis_ignorable_properties"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -866,14 +866,14 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
-    "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u0386\u03b9\u0388\u0389\u0390\u038a\u03b0\u038e`\u038c\u038f\u03a9K\u00c5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1618,13 +1618,13 @@
     "profile": "UsernameCasePreserved",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "UsernameCasePreserved",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1690,7 +1690,7 @@
     "profile": "UsernameCasePreserved",
     "input": "\u0600",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1821,8 +1821,8 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fd3\u03b9\u0308\u0301",
-    "output": "\u0390\u0390",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -1845,8 +1845,8 @@
   {
     "profile": "UsernameCasePreserved",
     "input": "\u1fe3\u03c5\u0308\u0301",
-    "output": "\u03b0\u03b0",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCasePreserved",
@@ -2216,8 +2216,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212aevin",
-    "output": "kevin",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2619,20 +2619,20 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fef",
-    "output": "`",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212a",
-    "output": "k",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2685,8 +2685,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212a",
-    "output": "k",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2709,8 +2709,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u2126",
-    "output": "\u03c9",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2745,14 +2745,14 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u212b",
-    "output": "\u00e5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2781,8 +2781,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2799,20 +2799,20 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
-    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": null,
-    "error": "DISALLOWED/precis_ignorable_properties"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -2823,14 +2823,14 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
-    "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3466,8 +3466,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "ruL\u00b7Lz",
-    "output": "rul\u00b7lz",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3575,13 +3575,13 @@
     "profile": "UsernameCaseMapped",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "UsernameCaseMapped",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3647,7 +3647,7 @@
     "profile": "UsernameCaseMapped",
     "input": "\u0600",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3778,8 +3778,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fd3\u03b9\u0308\u0301",
-    "output": "\u0390\u0390",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -3802,8 +3802,8 @@
   {
     "profile": "UsernameCaseMapped",
     "input": "\u1fe3\u03c5\u0308\u0301",
-    "output": "\u03b0\u03b0",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped",
@@ -4701,8 +4701,8 @@
   {
     "profile": "OpaqueString",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "OpaqueString",
@@ -4737,8 +4737,8 @@
   {
     "profile": "OpaqueString",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "OpaqueString",
@@ -6658,8 +6658,8 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -6694,8 +6694,8 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -7379,8 +7379,8 @@
   {
     "profile": "NicknameCaseMapped",
     "input": "ruL\u00b7Lz",
-    "output": "rul\u00b7lz",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped",
@@ -8086,8 +8086,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u212aevin",
-    "output": "kevin",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8489,20 +8489,20 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fef",
-    "output": "`",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u212a",
-    "output": "k",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8555,8 +8555,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u212a",
-    "output": "k",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8579,8 +8579,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u2126",
-    "output": "\u03c9",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8615,14 +8615,14 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u212b",
-    "output": "\u00e5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8651,8 +8651,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8669,20 +8669,20 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
-    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": null,
-    "error": "DISALLOWED/precis_ignorable_properties"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -8693,14 +8693,14 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
-    "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -9336,8 +9336,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "ruL\u00b7Lz",
-    "output": "rul\u00b7lz",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -9445,13 +9445,13 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -9517,7 +9517,7 @@
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u0600",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -9648,8 +9648,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fd3\u03b9\u0308\u0301",
-    "output": "\u0390\u0390",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -9672,8 +9672,8 @@
   {
     "profile": "UsernameCaseMapped:ToLower",
     "input": "\u1fe3\u03c5\u0308\u0301",
-    "output": "\u03b0\u03b0",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:ToLower",
@@ -10571,8 +10571,8 @@
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -10607,8 +10607,8 @@
   {
     "profile": "NicknameCasePreserved",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCasePreserved",
@@ -12528,8 +12528,8 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -12564,8 +12564,8 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -13249,8 +13249,8 @@
   {
     "profile": "NicknameCaseMapped:ToLower",
     "input": "ruL\u00b7Lz",
-    "output": "rul\u00b7lz",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:ToLower",
@@ -17868,8 +17868,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u212aevin",
-    "output": "kevin",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18270,20 +18270,20 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u1fef",
-    "output": "`",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u212a",
-    "output": "k",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18336,8 +18336,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u212a",
-    "output": "k",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18360,8 +18360,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u2126",
-    "output": "\u03c9",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18396,14 +18396,14 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u212b",
-    "output": "\u00e5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18420,8 +18420,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\ufb01",
-    "output": "fi",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18432,8 +18432,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18450,20 +18450,20 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d",
-    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033d",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
-    "output": "z\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034d\u0351\u036b\u0313\u036a\u0302\u036b\u033da\u0334\u0335\u031c\u0330\u0354\u036b\u0357\u0362l\u0320\u0368\u0367\u0369\u0358g\u0334\u033b\u0348\u034d\u0354\u0339\u0311\u0357\u030e\u0305\u035b\u0301\u01eb\u0335\u0339\u033b\u031d\u0333\u0342\u030c\u030c\u0358!\u0356\u032c\u0330\u0319\u0317\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035c\u035e",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "Z\u0351\u036b\u0343\u036a\u0302\u036b\u033d\u034f\u0334\u0319\u0324\u031e\u0349\u035a\u032f\u031e\u0320\u034dA\u036b\u0357\u0334\u0362\u0335\u031c\u0330\u0354L\u0368\u0367\u0369\u0358\u0320G\u0311\u0357\u030e\u0305\u035b\u0341\u0334\u033b\u0348\u034d\u0354\u0339O\u0342\u030c\u030c\u0358\u0328\u0335\u0339\u033b\u031d\u0333!\u033f\u030b\u0365\u0365\u0302\u0363\u0310\u0301\u0301\u035e\u035c\u0356\u032c\u0330\u0319\u0317",
     "output": null,
-    "error": "DISALLOWED/precis_ignorable_properties"
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -18474,14 +18474,14 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u037e",
-    "output": ";",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u0340\u0341\u0343\u0344\u0374\u037e\u0958\u0959\u095a\u095b\u095c\u095d\u095e\u095f\u09dc\u09dd\u09df\u0a33\u0a36\u0a59\u0a5a\u0a5b\u0a5e\u0b5c\u0b5d\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f73\u0f75\u0f76\u0f78\u0f81\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9\u1f71\u1f73\u1f75\u1f77\u1f79\u1f7b\u1f7d\u1fbb\u1fbe\u1fc9\u1fcb\u1fd3\u1fdb\u1fe3\u1feb\u1fef\u1ff9\u1ffb\u2126\u212a\u212b",
-    "output": "\u0300\u0301\u0313\u0308\u0301\u02b9;\u0915\u093c\u0916\u093c\u0917\u093c\u091c\u093c\u0921\u093c\u0922\u093c\u092b\u093c\u092f\u093c\u09a1\u09bc\u09a2\u09bc\u09af\u09bc\u0a32\u0a3c\u0a38\u0a3c\u0a16\u0a3c\u0a17\u0a3c\u0a1c\u0a3c\u0a2b\u0a3c\u0b21\u0b3c\u0b22\u0b3c\u0f42\u0fb7\u0f4c\u0fb7\u0f51\u0fb7\u0f56\u0fb7\u0f5b\u0fb7\u0f40\u0fb5\u0f71\u0f71\u0f72\u0f74\u0fb2\u0f80\u0fb3\u0f71\u0f80\u0f80\u0f92\u0fb7\u0f9c\u0fb7\u0fa1\u0fb7\u0fa6\u0fb7\u0fab\u0fb7\u0f90\u0fb5\u03ac\u03ad\u03ae\u03af\u03cc\u03cd\u03ce\u03ac\u03b9\u03ad\u03ae\u0390\u03af\u03b0\u03cd`\u03cc\u03ce\u03c9k\u00e5",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -19117,8 +19117,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "ruL\u00b7Lz",
-    "output": "rul\u00b7lz",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -19226,13 +19226,13 @@
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u0623\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669\u06f0",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/arabic_indic"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u0623\u06f0\u06f1\u06f2\u06f3\u06f4\u06f5\u06f6\u06f7\u06f8\u06f9\u0660",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/extended_arabic_indic"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -19298,7 +19298,7 @@
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u0600",
     "output": null,
-    "error": "DISALLOWED/bidi_rule"
+    "error": "DISALLOWED/other"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -19429,8 +19429,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u1fd3\u03b9\u0308\u0301",
-    "output": "\u0390\u0390",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -19453,8 +19453,8 @@
   {
     "profile": "UsernameCaseMapped:CaseFold",
     "input": "\u1fe3\u03c5\u0308\u0301",
-    "output": "\u03b0\u03b0",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/has_compat"
   },
   {
     "profile": "UsernameCaseMapped:CaseFold",
@@ -20352,8 +20352,8 @@
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u1100\u1161",
-    "output": "\uac00",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
@@ -20388,8 +20388,8 @@
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "\u1100\u1161\u11a8",
-    "output": "\uac01",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/old_hangul_jamo"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",
@@ -21073,8 +21073,8 @@
   {
     "profile": "NicknameCaseMapped:CaseFold",
     "input": "ruL\u00b7Lz",
-    "output": "rul\u00b7lz",
-    "error": null
+    "output": null,
+    "error": "DISALLOWED/middle_dot"
   },
   {
     "profile": "NicknameCaseMapped:CaseFold",

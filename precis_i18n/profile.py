@@ -1,6 +1,7 @@
 """Implements the PRECIS profile classes."""
 
 import re
+from functools import partial
 
 from precis_i18n.baseclass import FreeFormClass, IdentifierClass, raise_error
 from precis_i18n.bidi import bidi_rule, has_rtl
@@ -19,18 +20,14 @@ class Profile:
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
 
+    _admit_before_mapping = False
+
     def __init__(self, base, name, casemap=None):
         self._base = base
         self._name = name
-        # casemap can be either None, 'fold', or 'lower'.
-        if casemap is None:
-            self._casemap = None
-        elif casemap == "fold":
-            self._casemap = _casefold
-        elif casemap == "lower":
-            self._casemap = _caselower
-        else:
+        if casemap not in (None, "fold", "lower"):
             raise ValueError("Unknown casemap value: %s" % casemap)
+        self._casemap = casemap
 
     @property
     def base(self):
@@ -57,21 +54,21 @@ class Profile:
             UnicodeEncodeError: Value is disallowed by the profile.
             ValueError: `value` not a string or bytes.
         """
-        # If we get called with a byte string, decode it first.
-        if isinstance(value, bytes):
-            value = value.decode("utf-8")
-        elif not isinstance(value, str):
-            raise ValueError("not a string")
-        temp = self.apply_five_rules(value)
-        temp = self.idempotence_check(temp)
-        # Make sure the resulting value is not empty.
-        if not temp:
-            raise_error(self.name, value, -1, "empty")
-        # Apply behavioral rules from the base string class last.
-        return self.base.enforce(temp, self.name)
+        value = _decode(value)
+        output = self.idempotence_check(self.apply_five_rules(value))
+        return self._enforced_output(value, output)
+
+    def comparison_key(self, value):
+        """Return the exact UTF-8 bytes used to compare an enforced value."""
+        return self.enforce(value).encode("utf-8")
+
+    def _enforced_output(self, source, output):
+        if not output:
+            raise_error(self.name, source, -1, "empty")
+        return self.base.enforce(output, self.name)
 
     def apply_five_rules(self, value):
-        """Apply the five rules specified by RFC 8264 in order.
+        """Apply the five rules and any profile-specific preparation in order.
 
         Args:
             value (str): Value to enforce.
@@ -79,11 +76,19 @@ class Profile:
         Returns:
             str: Enforced value.
         """
-        temp = self.width_mapping_rule(value)
-        temp = self.additional_mapping_rule(temp)
-        temp = self.case_mapping_rule(temp)
-        temp = self.normalization_rule(temp)
-        return self.directionality_rule(temp)
+        return self._apply_rules(value, self.case_mapping_rule)
+
+    def _apply_rules(self, value, case_mapping):
+        value = self.width_mapping_rule(value)
+        # For Username this is the width-mapped IdentifierClass check.
+        # OpaqueString and Nickname use identity width mapping, so they
+        # check FreeformClass before any mapping or normalization.
+        if self._admit_before_mapping:
+            value = self.base.enforce(value, self.name)
+        value = self.additional_mapping_rule(value)
+        value = case_mapping(value)
+        value = self.normalization_rule(value)
+        return self.directionality_rule(value)
 
     def width_mapping_rule(self, value):
         """Apply width mapping rule.
@@ -116,8 +121,10 @@ class Profile:
         Returns:
             str: Enforced value.
         """
-        if self._casemap:
-            return self._casemap(value)
+        if self._casemap == "lower":
+            return self.base.ucd.lower(value)
+        if self._casemap == "fold":
+            return self.base.ucd.casefold(value)
         return value
 
     def normalization_rule(self, value):
@@ -153,10 +160,7 @@ class Profile:
         Returns:
             str: Enforced value.
         """
-        new_value = self.apply_five_rules(value)
-        if new_value != value:
-            raise_error(self.name, value, -1, "not_idempotent")
-        return value
+        return _stabilize(value, self.apply_five_rules, self.name)
 
 
 class Username(Profile):
@@ -193,6 +197,8 @@ class Username(Profile):
         name (str): Name of profile.
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
+
+    _admit_before_mapping = True
 
     def __init__(self, ucd, name, casemap=None):
         super().__init__(IdentifierClass(ucd), name, casemap)
@@ -244,6 +250,8 @@ class OpaqueString(Profile):
         name (str): Name of profile.
     """
 
+    _admit_before_mapping = True
+
     def __init__(self, ucd, name):
         super().__init__(FreeFormClass(ucd), name, casemap=None)
 
@@ -272,8 +280,9 @@ class Nickname(Profile):
            space, strip leading and trailing space characters, map interior
            sequences of multiple space characters to a single ASCII space.
 
-        Case Mapping Rule:  Map uppercase and titlecase characters to
-           lowercase using Unicode Default Case Folding.
+        Case Mapping Rule:  Unicode lowercase during RFC 8266 comparison.
+           The case-mapped compatibility profiles apply their selected case
+           rule during enforcement.
 
         Normalization Rule:  NFKC.
 
@@ -289,6 +298,8 @@ class Nickname(Profile):
         casemap (Optional[str]): Case mapping function: 'fold' or 'lower'.
     """
 
+    _admit_before_mapping = True
+
     def __init__(self, ucd, name, casemap=None):
         super().__init__(FreeFormClass(ucd), name, casemap)
 
@@ -301,17 +312,29 @@ class Nickname(Profile):
         # Override
         return self.base.ucd.normalize("NFKC", value)
 
-    def idempotence_check(self, value):
-        # Override
-        # Nickname profile is not idempotent due to ordering of additional
-        # and case mapping rules, so we apply them again.
-        value = self.apply_five_rules(value)
-        return super().idempotence_check(value)
+    def comparison_key(self, value):
+        """Return exact UTF-8 bytes after applying the nickname comparison rules."""
+        if self._casemap is not None:
+            return super().comparison_key(value)
+        source = _decode(value)
+        compare = partial(self._apply_rules, case_mapping=self.base.ucd.lower)
+        output = _stabilize(compare(source), compare, self.name)
+        return self._enforced_output(source, output).encode("utf-8")
 
 
-def _casefold(s):
-    return s.casefold()
+def _decode(value):
+    if isinstance(value, bytes):
+        return value.decode("utf-8")
+    if not isinstance(value, str):
+        raise ValueError("not a string")
+    return value
 
 
-def _caselower(s):
-    return s.lower()
+def _stabilize(value, operation, name):
+    # RFC 8264 section 7 recommends up to three passes after the first.
+    for _ in range(3):
+        updated = operation(value)
+        if updated == value:
+            return value
+        value = updated
+    raise_error(name, value, -1, "not_idempotent")
