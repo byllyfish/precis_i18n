@@ -26,6 +26,64 @@ def observe_calls(operation):
 
 
 class NativeProfileWorkTest(unittest.TestCase):
+    def test_nickname_space_collapse_preserves_string_subclass_fallback(self):
+        class UnusualContainment(str):
+            def strip(self, chars=None):
+                return self
+
+            def __contains__(self, element):
+                return False
+
+        profile = get_profile("NicknameCaseMapped")
+        self.assertEqual(profile.additional_mapping_rule(UnusualContainment("a  b")), "a b")
+        self.assertEqual(profile.additional_mapping_rule("  a\u00a0 b  "), "a b")
+
+    def test_width_applicability_keeps_unchanged_text_and_subclass_hooks(self):
+        ucd = UnicodeData()
+        source = "ab漢字آ"
+        self.assertIs(ucd.width_map(source), source)
+        self.assertEqual(ucd.width_map("ｶﾞﾊﾟ"), "カ\u3099ハ\u309a")
+
+        class OverriddenTranslate(str):
+            def translate(self, table):
+                return "replacement"
+
+        self.assertEqual(ucd.width_map(OverriddenTranslate(source)), "replacement")
+
+    def test_stock_username_rejection_preserves_preparation_precedence(self):
+        profile = get_profile("UsernameCaseMapped")
+
+        def reject(value):
+            with self.assertRaises(UnicodeEncodeError) as raised:
+                profile.enforce(value)
+            error = raised.exception
+            return error.object, error.start, error.end, error.reason
+
+        actual, counts = observe_calls(lambda: reject("Ａא"))
+        self.assertEqual(actual, ("aא", 0, 2, "DISALLOWED/bidi_rule"))
+        self.assertEqual(counts["_enforce_native_username"], 1)
+        self.assertEqual(reject("Kא"), ("Kא", 0, 1, "DISALLOWED/has_compat"))
+        self.assertEqual(reject("l·א"), ("l·א", 1, 2, "DISALLOWED/middle_dot"))
+
+    def test_stock_pipeline_matches_alternate_adapter_on_transformed_inputs(self):
+        class GenericDatabase(UnicodeData):
+            pass
+
+        for name in ("UsernameCaseMapped", "UsernameCasePreserved", "UsernameCaseMapped:CaseFold",
+                     "UsernameCaseMapped:ToLower"):
+            stock = get_profile(name)
+            generic = get_profile(name)
+            generic.base.ucd = GenericDatabase()
+            for value in ("ｶﾞ", "ﾊﾟ", "ＡE\u0301", "l·l", "ΣΣA", "İı", "𐐀", "ẞ",
+                          "\u05d0\u0301", "א١1", "Aא", "Kא", "L·L", "a\u200db", ""):
+                def outcome(profile):
+                    try:
+                        return profile.comparison_key(value)
+                    except UnicodeEncodeError as error:
+                        return error.args
+
+                self.assertEqual(outcome(stock), outcome(generic), (name, value))
+
     def test_native_bidi_rejects_with_the_same_bounds_in_one_direction_scan(self):
         username = get_profile("UsernameCaseMapped")
 

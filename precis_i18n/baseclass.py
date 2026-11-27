@@ -21,12 +21,15 @@ _NATIVE_LOCK = allocate_lock()
 _NATIVE_FLAGS = None
 _CLASS_MASKS = {(PVALID,): 1, (PVALID, FREE_PVAL): 2}
 _PROPERTY_FLAGS = {PVALID: 3, FREE_PVAL: 2}
+_HEBREW_START = 0x0590
+_HEBREW_END = 0x0600
 
 
 class _NativeAdmission(NamedTuple):
     codes: bytes
     outcomes: tuple
     exception_pages: Mapping[int, int]
+    hebrew_flags: bytes
 
 
 def _native_common_properties():
@@ -52,21 +55,27 @@ def _build_native_admission():
             code = (len(codes) << 2) | _PROPERTY_FLAGS.get(outcome[0], 0)
             codes[outcome] = code
         packed.append(code)
-    return _NativeAdmission(bytes(packed), tuple(codes), native._tables.exception_pages)
+    hebrew_flags = bytes(
+        _PROPERTY_FLAGS.get(derived_property(cp, native)[0], 0)
+        for cp in range(_HEBREW_START, _HEBREW_END)
+    )
+    return _NativeAdmission(bytes(packed), tuple(codes), native._tables.exception_pages, hebrew_flags)
 
 
 @lru_cache(maxsize=2)
 def _bulk_pattern(mask):
-    """Compile admitted ranges for long strings wholly in the packed domain."""
+    """Compile admitted ranges wholly in the native packed domains."""
+    table = _native_common_properties()
     ranges = []
-    start = None
-    for cp, flags in enumerate(_native_common_properties().codes + b"\0"):
-        if flags & mask:
-            if start is None:
-                start = cp
-        elif start is not None:
-            ranges.append(r"\u{:04x}-\u{:04x}".format(start, cp - 1))
-            start = None
+    for offset, codes in ((0, table.codes), (_HEBREW_START, table.hebrew_flags)):
+        start = None
+        for cp, flags in enumerate(codes + b"\0", offset):
+            if flags & mask:
+                if start is None:
+                    start = cp
+            elif start is not None:
+                ranges.append(r"\u{:04x}-\u{:04x}".format(start, cp - 1))
+                start = None
     return re.compile("[" + "".join(ranges) + "]+")
 
 
@@ -112,6 +121,7 @@ class BaseClass:
         allowed = self._allowed
         properties = b""
         outcomes = ()
+        hebrew_flags = b""
         mask = 0
         if (type(value) is str and type(ucd) is UnicodeData and ucd._stock_admission
                 and _CLASSIFICATION_OVERRIDES.isdisjoint(vars(ucd))):
@@ -123,8 +133,8 @@ class BaseClass:
             if isinstance(allowed, tuple):
                 mask = _CLASS_MASKS.get(allowed, 0)
             if mask:
-                if ucd.mode == "native":
-                    properties, outcomes, exceptions = _native_common_properties()
+                if ucd._mode == "native":
+                    properties, outcomes, exceptions, hebrew_flags = _NATIVE_FLAGS or _native_common_properties()
                     if len(value) >= 128 and _bulk_pattern(mask).fullmatch(value):
                         return value
                 else:
@@ -140,6 +150,9 @@ class BaseClass:
                     continue
                 prop, kind = outcomes[code >> 2]
             elif mask:
+                if (hebrew_flags and _HEBREW_START <= cp < _HEBREW_END
+                        and hebrew_flags[cp - _HEBREW_START] & mask):
+                    continue
                 prop = _EXCEPTIONS_TABLE.get(cp)
                 if prop is not None:
                     kind = "exceptions"

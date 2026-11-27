@@ -3,8 +3,9 @@
 import re
 from functools import partial
 
-from precis_i18n.baseclass import FreeFormClass, IdentifierClass, raise_error
+from precis_i18n.baseclass import FreeFormClass, IdentifierClass, _HEBREW_END, _bulk_pattern, raise_error
 from precis_i18n.bidi import _native_username_bidi, bidi_rule, has_rtl
+from precis_i18n.derived import PVALID
 from precis_i18n.unicode import UnicodeData
 
 # pylint: disable=no-self-use
@@ -17,6 +18,8 @@ _USERNAME_DATABASE_OVERRIDES = frozenset((
     "width_map", "lower", "casefold", "normalize", "bidirectional",
     "category", "control", "default_ignorable", "has_compat", "noncharacter", "old_hangul_jamo",
 ))
+_NATIVE_CASE_METHODS = {"lower": str.lower, "fold": str.casefold}
+_MULTIPLE_SPACES = re.compile(r"  +")
 
 
 class Profile:
@@ -64,7 +67,18 @@ class Profile:
             UnicodeEncodeError: Value is disallowed by the profile.
             ValueError: `value` not a string or bytes.
         """
-        value = _decode(value)
+        if type(value) is str:
+            if type(self) is Username:
+                base = self._base
+                ucd = base.ucd
+                if (type(base) is IdentifierClass and base._allowed == (PVALID,)
+                        and type(ucd) is UnicodeData and ucd._mode == "native"
+                        and _USERNAME_RULE_OVERRIDES.isdisjoint(vars(self))
+                        and _USERNAME_DATABASE_OVERRIDES.isdisjoint(vars(ucd))
+                        and "enforce" not in vars(base)):
+                    return self._enforce_native_username(value, ucd)
+        else:
+            value = _decode(value)
         if self._uses_stock_rules(value):
             return self._enforce_stock(value, self.case_mapping_rule)
         output = self.idempotence_check(self.apply_five_rules(value))
@@ -267,6 +281,48 @@ class Username(Profile):
     def __init__(self, ucd, name, casemap=None):
         super().__init__(IdentifierClass(ucd), name, casemap)
 
+    def _enforce_native_username(self, source, ucd):
+        """Run the stock native rules with their operations bound once."""
+        name = self._name
+        enforce = self._base.enforce
+        width = ucd._tables.width
+        has_width_mapping = ucd._tables.width_characters.search
+        normalize = ucd._ucd.normalize
+        case_mapping = _NATIVE_CASE_METHODS.get(self._casemap)
+        value = source
+        admitted = None
+
+        # The first preparation is followed by at most three stability passes.
+        for attempt in range(4):
+            prepared = value
+            if not value.isascii() and has_width_mapping(value) is not None:
+                prepared = value.translate(width)
+            if prepared != admitted:
+                if prepared.isascii():
+                    valid = prepared.isprintable() and " " not in prepared
+                else:
+                    valid = ord(prepared[0]) < _HEBREW_END and _bulk_pattern(1).fullmatch(prepared) is not None
+                # The compiled pattern contains only unconditionally admitted
+                # characters. Everything outside it uses the diagnostic path.
+                admitted = prepared if valid else enforce(prepared, name)
+            if attempt == 0 and admitted and admitted.isascii():
+                # Case mapping preserves admitted ASCII and is already stable.
+                return case_mapping(admitted) if case_mapping else admitted
+            mapped = case_mapping(admitted) if case_mapping else admitted
+            if attempt and mapped == value:
+                # The previous output already passed NFC and the bidi check.
+                output = value
+            else:
+                output = normalize("NFC", mapped)
+                if not _native_username_bidi(output, ucd):
+                    raise UnicodeEncodeError(name, output, 0, len(output), "DISALLOWED/bidi_rule")
+            if output == value:
+                if not output:
+                    raise_error(name, source, -1, "empty")
+                return output if output == admitted else enforce(output, name)
+            value = output
+        raise_error(name, value, -1, "not_idempotent")
+
     def width_mapping_rule(self, value):
         # Override
         return self.base.ucd.width_map(value)
@@ -374,7 +430,10 @@ class Nickname(Profile):
     def additional_mapping_rule(self, value):
         # Override
         temp = self.base.ucd.map_nonascii_space_to_ascii(value)
-        return re.sub(r"  +", " ", temp.strip(" "))
+        trimmed = temp.strip(" ")
+        if type(trimmed) is str and "  " not in trimmed:
+            return trimmed
+        return _MULTIPLE_SPACES.sub(" ", trimmed)
 
     def normalization_rule(self, value):
         # Override

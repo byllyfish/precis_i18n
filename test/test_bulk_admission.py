@@ -2,7 +2,7 @@
 
 import unittest
 
-from precis_i18n.baseclass import FreeFormClass, IdentifierClass, _native_common_properties
+from precis_i18n.baseclass import FreeFormClass, IdentifierClass, _bulk_pattern, _native_common_properties
 from precis_i18n.unicode import UnicodeData
 
 
@@ -18,6 +18,24 @@ def outcome(string_class, value):
 
 
 class BulkAdmissionTests(unittest.TestCase):
+    def test_short_patterns_prove_admission_for_each_packed_code_point(self):
+        for cls, mask in ((IdentifierClass, 1), (FreeFormClass, 2)):
+            generic = cls(GenericUnicodeData())
+            pattern = _bulk_pattern(mask)
+            for first, last in ((0, 0x0370), (0x0590, 0x0600)):
+                for cp in range(first, last):
+                    value = chr(cp)
+                    self.assertEqual(pattern.fullmatch(value) is not None, outcome(generic, value) == value,
+                                     (cls, cp))
+
+    def test_complete_hebrew_block_matches_generic_admission(self):
+        for cls in (IdentifierClass, FreeFormClass):
+            native = cls(UnicodeData())
+            generic = cls(GenericUnicodeData())
+            for cp in range(0x0590, 0x0600):
+                value = "א" + chr(cp)
+                self.assertEqual(outcome(native, value), outcome(generic, value), (cls, cp))
+
     def test_native_admission_flags_are_immutable_and_compact(self):
         table = _native_common_properties()
         codes, outcomes = table.codes, table.outcomes
