@@ -140,6 +140,8 @@ The PRECIS base string classes are also available as codecs:
 -   IdentifierClass
 -   FreeFormClass
 
+The bare string classes return exact comparison octets after class admission.
+
 For RFC 8266 nickname display, use `NicknameCasePreserved.enforce()`.
 Its `comparison_key()` applies the profile's lowercase comparison mapping
 and returns exact UTF-8 bytes. `Nickname` remains an alias for the historical

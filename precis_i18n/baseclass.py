@@ -61,6 +61,12 @@ class BaseClass:
 
         return value
 
+    def comparison_key(self, value):
+        """Return the exact bytes of an admitted value without profile mapping."""
+        if isinstance(value, bytes):
+            value = value.decode("utf-8")
+        return self.enforce(value).encode("utf-8")
+
 
 class IdentifierClass(BaseClass):
     """Concrete class representing PRECIS IdentifierClass from RFC 8264.

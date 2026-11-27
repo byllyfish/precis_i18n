@@ -77,3 +77,12 @@ class TestProfileIdentity(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "Synthetic provider failure"):
             profile.enforce("x")
         self.assertEqual(profile.enforce("SAFE"), "safe")
+
+    def test_bare_string_classes_offer_exact_keys_without_profile_mapping(self):
+        identifier = get_profile("IdentifierClass")
+        freeform = get_profile("FreeFormClass")
+        self.assertEqual(identifier.comparison_key("Straße"), "Straße".encode("utf-8"))
+        self.assertEqual(freeform.comparison_key(b"Stra\xc3\x9fe"), b"Stra\xc3\x9fe")
+        self.assertNotEqual(freeform.comparison_key("Ａ"), freeform.comparison_key("A"))
+        with self.assertRaises(UnicodeEncodeError):
+            identifier.comparison_key("\u212a")
