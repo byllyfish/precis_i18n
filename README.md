@@ -243,11 +243,19 @@ as `"kevin"`.
 - Add the new official UCD inputs and SHA-256 digests to
   `tools/unicode_sources.json`. The generator verifies each file before
   using it. Keep the Unicode data notice with the derived tables.
-- Run `python tools/generate_unicode_data.py /path/to/ucd-parent /path/to/output`.
+- Run `nox -s unicode_data -- /path/to/ucd-parent /path/to/output`.
   Compare the generated package data and retain the existing supported
   generation unless its removal is an intentional compatibility change.
 - Audit derived-property differences against the authoritative files. Update
   the code-point fixture only for reviewed changes.
-- Run the source tests with `python -m unittest discover`.
+- Run the complete source and installed-wheel Nox suites. With a local
+  provider lock and wheelhouse, run `unicode_source` and `unicode_wheel`
+  for each selected generation and supported interpreter.
 
-The library has no mandatory runtime dependencies.
+Set `PRECIS_QUALIFICATION_DIR` to an external directory for JUnit and
+build artifacts. `PRECIS_PROVIDER_LOCK` and `PRECIS_PROVIDER_WHEELHOUSE`
+select optional test artifacts by their exact hashes. The library has
+no mandatory runtime dependencies.
+
+Use `nox --default-venv-backend venv` when the installed virtualenv seeder
+no longer supplies pip for an older target interpreter.
