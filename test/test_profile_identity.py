@@ -86,3 +86,12 @@ class TestProfileIdentity(unittest.TestCase):
         self.assertNotEqual(freeform.comparison_key("Ａ"), freeform.comparison_key("A"))
         with self.assertRaises(UnicodeEncodeError):
             identifier.comparison_key("\u212a")
+
+    def test_nickname_comparison_uses_original_input_before_display_normalization(self):
+        nickname = get_profile("NicknameCasePreserved")
+        source = "\u2100\u03a3"
+        self.assertEqual(nickname.enforce(source), "a/c\u03a3")
+        self.assertEqual(nickname.comparison_key(source), "a/c\u03c3".encode("utf-8"))
+        self.assertEqual(
+            nickname.comparison_key(nickname.enforce(source)), "a/c\u03c2".encode("utf-8")
+        )

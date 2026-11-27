@@ -146,8 +146,11 @@ For RFC 8266 nickname display, use `NicknameCasePreserved.enforce()`.
 Its `comparison_key()` applies the profile's lowercase comparison mapping
 and returns exact UTF-8 bytes. `Nickname` remains an alias for the historical
 lowercase-enforcement variant. The explicit casefold variants implement a
-different equality policy. Compare keys under the same profile and data
-identity. Treat plaintext and prepared credentials as sensitive, including
+different equality policy. Compute the comparison key from the original
+nickname. The RFC applies lowercase before NFKC for comparison, while
+display enforcement preserves case. For example, U+2100 followed by
+capital sigma produces a different key if display normalization precedes
+comparison. Compare keys under the same profile and data identity. Treat plaintext and prepared credentials as sensitive, including
 the input object carried by Python's `UnicodeEncodeError`.
 
 ## Userparts and Space Delimited Usernames
