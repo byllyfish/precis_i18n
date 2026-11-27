@@ -37,6 +37,23 @@ class CodepointSet:
         self._table = _stringify(_coalesce(_parse(table)))
         assert (len(self._table) % 2) == 0
 
+    @classmethod
+    def _from_sorted_ranges(cls, ranges):
+        """Build from already parsed, sorted Unicode data in one traversal."""
+        merged = []
+        end = -2
+        for first, last in ranges:
+            if not 0 <= first <= last <= 0x10FFFF or first <= end:
+                raise ValueError("Invalid or overlapping Unicode range")
+            if first == end + 1:
+                merged[-1] = (merged[-1][0], last)
+            else:
+                merged.append((first, last))
+            end = last
+        result = cls.__new__(cls)
+        result._table = _stringify(merged)
+        return result
+
     def __contains__(self, cp):
         """Check if code point `cp` is in the set.
 

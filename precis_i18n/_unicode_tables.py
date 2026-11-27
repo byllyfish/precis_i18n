@@ -2,47 +2,63 @@
 
 import hashlib
 import json
-from functools import lru_cache
+from _thread import allocate_lock
 from pkgutil import get_data
 from types import MappingProxyType
-from typing import Iterable, List, Mapping, NamedTuple, Tuple, Union
+from typing import Dict, List, Mapping, NamedTuple, Union
 
 from precis_i18n.codepointset import CodepointSet
 
 AVAILABLE = ("17.0.0", "18.0.0")
 CURRENT = AVAILABLE[-1]
+_LOAD_LOCKS = {version: allocate_lock() for version in AVAILABLE}
+_Translation = Mapping[int, Union[int, str]]
 
 
 class Tables(NamedTuple):
     version: str
     identity: str
-    width: Mapping[int, str]
-    lower: Mapping[int, str]
-    fold: Mapping[int, str]
-    spaces: Mapping[int, str]
+    width: _Translation
+    lower: _Translation
+    fold: _Translation
+    spaces: _Translation
     sigma: int
     final_sigma: str
     ranges: Mapping[str, CodepointSet]
 
 
-def _translation(values: Mapping[str, Union[List[int], int]]) -> Mapping[int, str]:
-    return MappingProxyType({
-        int(cp): "".join(map(chr, mapping)) if isinstance(mapping, list) else chr(mapping)
-        for cp, mapping in values.items()
-    })
+_LOADED: Dict[str, Tables] = {}
 
 
-def _codepoint_set(ranges: Iterable[Tuple[int, int]]) -> CodepointSet:
-    return CodepointSet("\n".join(
-        "{:04X}..{:04X}".format(first, last) for first, last in ranges
-    ))
+def _translation(values: Mapping[str, Union[List[int], int]]) -> _Translation:
+    table: Dict[int, Union[int, str]] = {}
+    for cp, mapping in values.items():
+        if isinstance(mapping, list):
+            table[int(cp)] = mapping[0] if len(mapping) == 1 else "".join(map(chr, mapping))
+        else:
+            table[int(cp)] = mapping
+    return MappingProxyType(table)
 
 
-@lru_cache(maxsize=len(AVAILABLE))
 def load(version: str) -> Tables:
     """Load and share only immutable Unicode data, never application input."""
-    if version not in AVAILABLE:
+    table = _LOADED.get(version)
+    if table is not None:
+        return table
+    lock = _LOAD_LOCKS.get(version)
+    if lock is None:
         raise ValueError("Unsupported versioned Unicode data: {}".format(version))
+    # A concurrent miss must share the completed table. Failed loads publish
+    # nothing, and later callers can retry. Established lookups take no lock.
+    with lock:
+        table = _LOADED.get(version)
+        if table is None:
+            table = _load_tables(version)
+            _LOADED[version] = table
+        return table
+
+
+def _load_tables(version: str) -> Tables:
     filename = "_unicode_{}.json".format(version.split(".", 1)[0])
     payload = get_data("precis_i18n", filename)
     if payload is None:
@@ -57,7 +73,8 @@ def load(version: str) -> Tables:
         _translation(document["fold"]), _translation(document["spaces"]),
         sigma, "".join(map(chr, final_sigma)),
         MappingProxyType({
-            name: _codepoint_set(ranges) for name, ranges in document["ranges"].items()
+            name: CodepointSet._from_sorted_ranges(ranges)
+            for name, ranges in document["ranges"].items()
         }),
     )
 
@@ -80,7 +97,8 @@ def versioned_lower(value: str, tables: Tables) -> str:
                 result[pending] = tables.final_sigma
             pending = len(result) if cp == tables.sigma and after_cased else None
             after_cased = next_is_cased
-        result.append(tables.lower.get(cp, char))
+        mapping = tables.lower.get(cp, char)
+        result.append(chr(mapping) if isinstance(mapping, int) else mapping)
     if pending is not None:
         result[pending] = tables.final_sigma
     return "".join(result)
