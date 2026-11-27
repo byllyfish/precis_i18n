@@ -1,6 +1,6 @@
 """Implements the PRECIS string classes."""
 
-from precis_i18n.context import context_rule_error
+from precis_i18n.context import _context_rule_error
 from precis_i18n.derived import CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID, derived_property
 
 
@@ -42,15 +42,18 @@ class BaseClass:
         if codec_name is None:
             codec_name = self.name
 
+        whole_string_results = None
         for i, char in enumerate(value):
             prop, kind = derived_property(ord(char), self.ucd)
             if prop in self._allowed:
                 continue
 
             if prop in (CONTEXTJ, CONTEXTO):
-                # Replace `kind` ('exceptions', 'join_control') with the
-                # specific name of the context rule, if the rule fails.
-                kind = context_rule_error(value, i, self.ucd)
+                # Check each occurrence. Reuse verdicts only for rules that
+                # depend on the whole string and are invariant at each offset.
+                if whole_string_results is None:
+                    whole_string_results = {}
+                kind = _context_rule_error(value, i, self.ucd, whole_string_results)
                 if not kind:
                     continue
 

@@ -116,14 +116,19 @@ class UnicodeData:
         return 0x06F0 <= cp <= 0x06F9
 
     def valid_jointype(self, value, offset):
+        """Check the parsed join-control position without copying input slices."""
         assert 0x200C <= ord(value[offset]) <= 0x200D
-        return self._scan_join(reversed(value[:offset]), "L") and self._scan_join(
-            value[offset + 1 :], "R"
+        if offset < 0:
+            offset += len(value)
+        # Transparent runs end at nontransparent characters, including
+        # join controls. Across all join controls each run is scanned at most twice.
+        return self._scan_join(value, range(offset - 1, -1, -1), "L") and self._scan_join(
+            value, range(offset + 1, len(value)), "R"
         )
 
-    def _scan_join(self, iterable, term):
-        for char in iterable:
-            join_type = self._join_type(ord(char))
+    def _scan_join(self, value, offsets, term):
+        for index in offsets:
+            join_type = self._join_type(ord(value[index]))
             if join_type in (term, "D"):
                 return True
             if join_type != "T":
