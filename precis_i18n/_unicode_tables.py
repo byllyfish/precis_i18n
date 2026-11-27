@@ -2,12 +2,14 @@
 
 import hashlib
 import json
+import re
 from _thread import allocate_lock
 from pkgutil import get_data
 from types import MappingProxyType
-from typing import Dict, List, Mapping, NamedTuple, Union
+from typing import Dict, List, Mapping, NamedTuple, Pattern, Union
 
 from precis_i18n.codepointset import CodepointSet
+from precis_i18n.derived import _BACKWARD_COMPATIBLE_TABLE
 
 AVAILABLE = ("17.0.0", "18.0.0")
 CURRENT = AVAILABLE[-1]
@@ -19,12 +21,14 @@ class Tables(NamedTuple):
     version: str
     identity: str
     width: _Translation
+    width_characters: Pattern[str]
     lower: _Translation
     fold: _Translation
     spaces: _Translation
     sigma: int
     final_sigma: str
     ranges: Mapping[str, CodepointSet]
+    exception_pages: Mapping[int, int]
 
 
 _LOADED: Dict[str, Tables] = {}
@@ -67,16 +71,36 @@ def _load_tables(version: str) -> Tables:
     if document["version"] != version:
         raise RuntimeError("Wrong bundled Unicode data version")
     sigma, final_sigma = document["context"]["final_sigma"]
+    ranges = document["ranges"]
+    width = _translation(document["width"])
+    width_characters = re.compile("[" + re.escape("".join(map(chr, width))) + "]")
     return Tables(
         version, hashlib.sha256(payload).hexdigest(),
-        _translation(document["width"]), _translation(document["lower"]),
+        width, width_characters, _translation(document["lower"]),
         _translation(document["fold"]), _translation(document["spaces"]),
         sigma, "".join(map(chr, final_sigma)),
         MappingProxyType({
-            name: CodepointSet._from_sorted_ranges(ranges)
-            for name, ranges in document["ranges"].items()
+            name: CodepointSet._from_sorted_ranges(intervals)
+            for name, intervals in ranges.items()
         }),
+        _exception_pages(ranges),
     )
+
+
+def _exception_pages(ranges: Mapping[str, List[List[int]]]) -> Mapping[int, int]:
+    """Pack properties checked before ordinary category or NFKC admission."""
+    excluded = [(0, 0x1F), (0x7F, 0x9F), (0x200C, 0x200D), (0xFDD0, 0xFDEF)]
+    excluded.extend(((plane << 16) | 0xFFFE, (plane << 16) | 0xFFFF) for plane in range(17))
+    excluded.extend((cp, cp) for cp in _BACKWARD_COMPATIBLE_TABLE)
+    for name in ("jamo", "default_ignorable"):
+        excluded.extend((first, last) for first, last in ranges[name])
+    pages: Dict[int, int] = {}
+    for first, last in excluded:
+        for page in range(first >> 8, (last >> 8) + 1):
+            low = max(first - (page << 8), 0)
+            high = min(last - (page << 8), 255)
+            pages[page] = pages.get(page, 0) | (((1 << (high - low + 1)) - 1) << low)
+    return MappingProxyType(pages)
 
 
 def versioned_lower(value: str, tables: Tables) -> str:

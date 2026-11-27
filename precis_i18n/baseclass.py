@@ -3,12 +3,11 @@
 from _thread import allocate_lock
 from functools import lru_cache
 import re
-from types import MappingProxyType
 from typing import Mapping, NamedTuple
 
 from precis_i18n.context import _context_rule_error
 from precis_i18n.derived import (
-    CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID, _BACKWARD_COMPATIBLE_TABLE,
+    CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID,
     _EXCEPTIONS_TABLE, _FREEFORM_CATEGORIES, _LETTER_DIGITS, derived_property,
 )
 from precis_i18n.unicode import UnicodeData
@@ -53,23 +52,7 @@ def _build_native_admission():
             code = (len(codes) << 2) | _PROPERTY_FLAGS.get(outcome[0], 0)
             codes[outcome] = code
         packed.append(code)
-    return _NativeAdmission(bytes(packed), tuple(codes), _native_exception_pages(native))
-
-
-def _native_exception_pages(native):
-    """Pack the rules that precede category and compatibility admission."""
-    ranges = [(0, 0x1F), (0x7F, 0x9F), (0x200C, 0x200D), (0xFDD0, 0xFDEF)]
-    ranges.extend(((plane << 16) | 0xFFFE, (plane << 16) | 0xFFFF) for plane in range(17))
-    ranges.extend((cp, cp) for cp in _BACKWARD_COMPATIBLE_TABLE)
-    ranges.extend(native._tables.ranges["jamo"].items())
-    ranges.extend(native._tables.ranges["default_ignorable"].items())
-    pages = {}
-    for first, last in ranges:
-        for page in range(first >> 8, (last >> 8) + 1):
-            low = max(first - (page << 8), 0)
-            high = min(last - (page << 8), 255)
-            pages[page] = pages.get(page, 0) | (((1 << (high - low + 1)) - 1) << low)
-    return MappingProxyType(pages)
+    return _NativeAdmission(bytes(packed), tuple(codes), native._tables.exception_pages)
 
 
 @lru_cache(maxsize=2)
@@ -130,7 +113,7 @@ class BaseClass:
         properties = b""
         outcomes = ()
         mask = 0
-        if (type(value) is str and type(ucd) is UnicodeData and ucd.mode == "native"
+        if (type(value) is str and type(ucd) is UnicodeData and ucd._stock_admission
                 and _CLASSIFICATION_OVERRIDES.isdisjoint(vars(ucd))):
             # All printable ASCII except space is PVALID. Space is FREE_PVAL.
             # A failed shortcut falls through to preserve the exact error.
@@ -140,9 +123,12 @@ class BaseClass:
             if isinstance(allowed, tuple):
                 mask = _CLASS_MASKS.get(allowed, 0)
             if mask:
-                properties, outcomes, exceptions = _native_common_properties()
-                if len(value) >= 128 and _bulk_pattern(mask).fullmatch(value):
-                    return value
+                if ucd.mode == "native":
+                    properties, outcomes, exceptions = _native_common_properties()
+                    if len(value) >= 128 and _bulk_pattern(mask).fullmatch(value):
+                        return value
+                else:
+                    exceptions = ucd._tables.exception_pages
 
         limit = len(properties)
         whole_string_results = None

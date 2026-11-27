@@ -127,6 +127,9 @@ class UnicodeData:
         if self.mode != "versioned" or self._ucd is unicodedata or registered is not None:
             fields.extend(_RUNTIME_IDENTITY)
         attestable = self._ucd is unicodedata or registered is not None or custom_id is not None
+        self._stock_admission = self._ucd is unicodedata or (
+            self.mode == "versioned" and registered is not None
+        )
         return json.dumps(fields, ensure_ascii=True, separators=(",", ":")), attestable
 
     # These methods call through to the underlying unicodedata object.
@@ -146,6 +149,8 @@ class UnicodeData:
     def width_map(self, value):
         """Map only the UCD's literal wide and narrow decompositions."""
         if value.isascii():
+            return value
+        if type(value) is str and self._tables.width_characters.search(value) is None:
             return value
         return value.translate(self._tables.width)
 
