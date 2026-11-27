@@ -7,6 +7,13 @@ UNASSIGNED = "UNASSIGNED"
 CONTEXTJ = "CONTEXTJ"
 CONTEXTO = "CONTEXTO"
 
+_LETTER_DIGITS = frozenset(("Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"))
+_OTHER_LETTER_DIGITS = frozenset(("Lt", "Nl", "No", "Me"))
+_SPACES = frozenset(("Zs",))
+_SYMBOLS = frozenset(("Sm", "Sc", "Sk", "So"))
+_PUNCTUATION = frozenset(("Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"))
+_FREEFORM_CATEGORIES = _LETTER_DIGITS | _OTHER_LETTER_DIGITS | _SPACES | _SYMBOLS | _PUNCTUATION
+
 # pylint: disable=too-many-return-statements,too-many-branches
 
 
@@ -82,7 +89,7 @@ def in_letter_digits(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"}
+    return category in _LETTER_DIGITS
 
 
 def in_exceptions(cp):
@@ -200,7 +207,7 @@ def in_spaces(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Zs"}
+    return category in _SPACES
 
 
 def in_symbols(category):
@@ -212,7 +219,7 @@ def in_symbols(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Sm", "Sc", "Sk", "So"}
+    return category in _SYMBOLS
 
 
 def in_punctuation(category):
@@ -224,7 +231,7 @@ def in_punctuation(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"}
+    return category in _PUNCTUATION
 
 
 def in_has_compat(cp, ucd):
@@ -250,7 +257,7 @@ def in_other_letter_digits(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Lt", "Nl", "No", "Me"}
+    return category in _OTHER_LETTER_DIGITS
 
 
 def exceptions(cp):

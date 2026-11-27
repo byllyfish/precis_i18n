@@ -19,7 +19,8 @@ def outcome(string_class, value):
 
 class BulkAdmissionTests(unittest.TestCase):
     def test_native_admission_flags_are_immutable_and_compact(self):
-        codes, outcomes = _native_common_properties()
+        table = _native_common_properties()
+        codes, outcomes = table.codes, table.outcomes
         self.assertIsInstance(codes, bytes)
         self.assertEqual(len(codes), 0x0370)
         self.assertEqual(len(outcomes), len(set(outcomes)))
@@ -33,3 +34,13 @@ class BulkAdmissionTests(unittest.TestCase):
                 self.assertEqual(outcome(native, value), outcome(generic, value), (cls, cp))
             for value in ("a" * 128 + "l·l", "a" * 128 + "L·L", "a" * 128 + "\u30fb\u30ab"):
                 self.assertEqual(outcome(native, value), outcome(generic, value))
+
+    def test_ordinary_and_exceptional_native_characters_match_generic(self):
+        inputs = ("漢字", "カ\u3099", "αβ", "Жц", "aא", "الإ", "\u2163", "\u1100", "\u115f",
+                  "\u3164", "\ud7ca", "\ufdd0", "\U0010ffff", "\u200d", "\u302e", "\ufeff",
+                  "a\u0661\u06f1", "\u0375α", "\u0375漢", "\U00010400", "\ud800", "Ａ")
+        for cls in (IdentifierClass, FreeFormClass):
+            native = cls(UnicodeData())
+            generic = cls(GenericUnicodeData())
+            for value in inputs:
+                self.assertEqual(outcome(native, value), outcome(generic, value), (cls, value))

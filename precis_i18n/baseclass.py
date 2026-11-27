@@ -3,10 +3,14 @@
 from _thread import allocate_lock
 from functools import lru_cache
 import re
-from typing import NamedTuple
+from types import MappingProxyType
+from typing import Mapping, NamedTuple
 
 from precis_i18n.context import _context_rule_error
-from precis_i18n.derived import CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID, derived_property
+from precis_i18n.derived import (
+    CONTEXTJ, CONTEXTO, FREE_PVAL, PVALID, _BACKWARD_COMPATIBLE_TABLE,
+    _EXCEPTIONS_TABLE, _FREEFORM_CATEGORIES, _LETTER_DIGITS, derived_property,
+)
 from precis_i18n.unicode import UnicodeData
 
 
@@ -23,6 +27,7 @@ _PROPERTY_FLAGS = {PVALID: 3, FREE_PVAL: 2}
 class _NativeAdmission(NamedTuple):
     codes: bytes
     outcomes: tuple
+    exception_pages: Mapping[int, int]
 
 
 def _native_common_properties():
@@ -48,7 +53,23 @@ def _build_native_admission():
             code = (len(codes) << 2) | _PROPERTY_FLAGS.get(outcome[0], 0)
             codes[outcome] = code
         packed.append(code)
-    return _NativeAdmission(bytes(packed), tuple(codes))
+    return _NativeAdmission(bytes(packed), tuple(codes), _native_exception_pages(native))
+
+
+def _native_exception_pages(native):
+    """Pack the rules that precede category and compatibility admission."""
+    ranges = [(0, 0x1F), (0x7F, 0x9F), (0x200C, 0x200D), (0xFDD0, 0xFDEF)]
+    ranges.extend(((plane << 16) | 0xFFFE, (plane << 16) | 0xFFFF) for plane in range(17))
+    ranges.extend((cp, cp) for cp in _BACKWARD_COMPATIBLE_TABLE)
+    ranges.extend(native._tables.ranges["jamo"].items())
+    ranges.extend(native._tables.ranges["default_ignorable"].items())
+    pages = {}
+    for first, last in ranges:
+        for page in range(first >> 8, (last >> 8) + 1):
+            low = max(first - (page << 8), 0)
+            high = min(last - (page << 8), 255)
+            pages[page] = pages.get(page, 0) | (((1 << (high - low + 1)) - 1) << low)
+    return MappingProxyType(pages)
 
 
 @lru_cache(maxsize=2)
@@ -119,7 +140,7 @@ class BaseClass:
             if isinstance(allowed, tuple):
                 mask = _CLASS_MASKS.get(allowed, 0)
             if mask:
-                properties, outcomes = _native_common_properties()
+                properties, outcomes, exceptions = _native_common_properties()
                 if len(value) >= 128 and _bulk_pattern(mask).fullmatch(value):
                     return value
 
@@ -132,6 +153,23 @@ class BaseClass:
                 if code & mask:
                     continue
                 prop, kind = outcomes[code >> 2]
+            elif mask:
+                prop = _EXCEPTIONS_TABLE.get(cp)
+                if prop is not None:
+                    kind = "exceptions"
+                else:
+                    page = exceptions.get(cp >> 8, 0)
+                    if not page or not page & (1 << (cp & 255)):
+                        category = ucd._ucd.category(char)
+                        # Freeform admits both the ordinary categories and
+                        # their compatibility variants. Identifier requires
+                        # a letter/digit category and exact NFKC identity.
+                        if mask == 2:
+                            if category in _FREEFORM_CATEGORIES:
+                                continue
+                        elif category in _LETTER_DIGITS and ucd._ucd.normalize("NFKC", char) == char:
+                            continue
+                    prop, kind = derived_property(cp, ucd)
             else:
                 prop, kind = derived_property(cp, ucd)
             if prop in allowed:
