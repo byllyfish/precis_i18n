@@ -12,6 +12,10 @@ def context_rule_error(value, offset, ucd):
     Returns:
         str: '' if no error, or name of the rule that failed.
     """
+    return _context_rule_error(value, offset, ucd, None)
+
+
+def _context_rule_error(value, offset, ucd, whole_string_results):
     cp = ord(value[offset])
     if ucd.arabic_indic(cp):
         rule = rule_arabic_indic
@@ -20,6 +24,16 @@ def context_rule_error(value, offset, ucd):
     else:
         rule = _RULES[cp]
 
+    if whole_string_results is not None and rule in _WHOLE_STRING_RULES:
+        result = whole_string_results.get(rule)
+        if result is None:
+            result = _rule_error(rule, value, offset, ucd)
+            whole_string_results[rule] = result
+        return result
+    return _rule_error(rule, value, offset, ucd)
+
+
+def _rule_error(rule, value, offset, ucd):
     try:
         valid = rule(value, offset, ucd)
     except IndexError:
@@ -225,6 +239,12 @@ _RULES = {
     0x05F4: rule_hebrew_punctuation,
     0x30FB: rule_katakana_middle_dot,
 }
+
+_WHOLE_STRING_RULES = frozenset({
+    rule_arabic_indic,
+    rule_extended_arabic_indic,
+    rule_katakana_middle_dot,
+})
 
 
 def _before(value, offset):

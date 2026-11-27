@@ -1,30 +1,32 @@
 """
-Program to check tables included in precis_i18n.unicode module.
+Program to check bundled ranges against their pinned Unicode data.
 """
 
+import hashlib
+import json
 import re
 from urllib.request import urlopen
 
-import precis_i18n.unicode as ucd
+from generate_unicode_data import SOURCES
+
+from precis_i18n._unicode_tables import CURRENT, load
 from precis_i18n.codepointset import CodepointSet
 
 PROP_REGEX = re.compile(rb"^([0-9A-Za-z.]+)\s+;\s+(\w+)\s+#")
-DATAFILE_URLS = [
-    "https://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt",
-    "https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningType.txt#Join_Type",
-    "https://www.unicode.org/Public/UNIDATA/Scripts.txt",
-    "https://www.unicode.org/Public/UNIDATA/HangulSyllableType.txt#Hangul_Type",
-]
+FILES = (
+    ("DerivedCoreProperties.txt", ""),
+    ("DerivedJoiningType.txt", "Join_Type="),
+    ("Scripts.txt", ""),
+    ("HangulSyllableType.txt", "Hangul_Type="),
+)
 
 
-def parse_unicode_datafile(url, props):
-    if "#" in url:
-        url, prop = url.split("#")
-        prop += "="
-    else:
-        prop = ""
-
-    for line in urlopen(url):
+def parse_unicode_datafile(receipt, prop, props):
+    with urlopen(receipt["url"], timeout=30) as response:
+        source = response.read()
+    if hashlib.sha256(source).hexdigest() != receipt["sha256"]:
+        raise ValueError("Unicode source hash mismatch")
+    for line in source.splitlines():
         m = PROP_REGEX.match(line)
         if m:
             codepoints, name = m.groups()
@@ -35,7 +37,7 @@ def parse_unicode_datafile(url, props):
 
 def compare_codepoints(varname, codepoint_str):
     codepoints = CodepointSet(codepoint_str)
-    if codepoints != getattr(ucd, varname):
+    if codepoints != load(CURRENT).ranges[varname]:
         print(varname)
         print(codepoint_str)
 
@@ -50,24 +52,25 @@ def combine(props, *names):
 
 def main():
     props = {}
-    for url in DATAFILE_URLS:
-        parse_unicode_datafile(url, props)
+    inputs = json.loads(SOURCES.read_text(encoding="ascii"))[CURRENT]
+    for filename, prop in FILES:
+        parse_unicode_datafile(inputs[filename], prop, props)
 
     for prop in props:
         props[prop] = "\n".join(props[prop])
 
-    compare_codepoints("_DEFAULT_IGNORABLE", props["Default_Ignorable_Code_Point"])
-    compare_codepoints("_JOINTYPE_DUAL_JOINING", props["Join_Type=D"])
-    compare_codepoints("_JOINTYPE_RIGHT_JOINING", props["Join_Type=R"])
-    compare_codepoints("_JOINTYPE_LEFT_JOINING", props["Join_Type=L"])
-    compare_codepoints("_JOINTYPE_TRANSPARENT", props["Join_Type=T"])
-    compare_codepoints("_GREEK_SCRIPT", props["Greek"])
-    compare_codepoints("_HEBREW_SCRIPT", props["Hebrew"])
+    compare_codepoints("default_ignorable", props["Default_Ignorable_Code_Point"])
+    compare_codepoints("dual_joining", props["Join_Type=D"])
+    compare_codepoints("right_joining", props["Join_Type=R"])
+    compare_codepoints("left_joining", props["Join_Type=L"])
+    compare_codepoints("transparent_joining", props["Join_Type=T"])
+    compare_codepoints("greek", props["Greek"])
+    compare_codepoints("hebrew", props["Hebrew"])
     compare_codepoints(
-        "_HIRAGANA_KATAKANA_HAN", combine(props, "Hiragana", "Katakana", "Han")
+        "hiragana_katakana_han", combine(props, "Hiragana", "Katakana", "Han")
     )
     compare_codepoints(
-        "_OLD_HANGUL_JAMO",
+        "jamo",
         combine(props, "Hangul_Type=L", "Hangul_Type=V", "Hangul_Type=T"),
     )
 

@@ -7,6 +7,13 @@ UNASSIGNED = "UNASSIGNED"
 CONTEXTJ = "CONTEXTJ"
 CONTEXTO = "CONTEXTO"
 
+_LETTER_DIGITS = frozenset(("Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"))
+_OTHER_LETTER_DIGITS = frozenset(("Lt", "Nl", "No", "Me"))
+_SPACES = frozenset(("Zs",))
+_SYMBOLS = frozenset(("Sm", "Sc", "Sk", "So"))
+_PUNCTUATION = frozenset(("Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"))
+_FREEFORM_CATEGORIES = _LETTER_DIGITS | _OTHER_LETTER_DIGITS | _SPACES | _SYMBOLS | _PUNCTUATION
+
 # pylint: disable=too-many-return-statements,too-many-branches
 
 
@@ -40,23 +47,25 @@ def derived_property(cp, ucd):  # noqa: C901
     """
     category = ucd.category(chr(cp))
 
-    if in_exceptions(cp):
-        return exceptions(cp), "exceptions"
-    if in_backward_compatible(cp):
-        return backward_compatible(cp), "backward_compatible"  # pragma: no cover
-    if in_unassigned(cp, category, ucd):
+    prop = _EXCEPTIONS_TABLE.get(cp)
+    if prop is not None:
+        return prop, "exceptions"
+    prop = _BACKWARD_COMPATIBLE_TABLE.get(cp)
+    if prop is not None:
+        return prop, "backward_compatible"  # pragma: no cover
+    if category == "Cn" and not ucd.noncharacter(cp):
         return UNASSIGNED, "unassigned"
-    if in_ascii7(cp):
+    if 0x21 <= cp <= 0x7E:
         return PVALID, "ascii7"
-    if in_join_control(cp):
+    if 0x200C <= cp <= 0x200D:
         return CONTEXTJ, "join_control"
-    if in_old_hangul_jamo(cp, ucd):
+    if ucd.old_hangul_jamo(cp):
         return DISALLOWED, "old_hangul_jamo"
-    if in_precis_ignorable_properties(cp, ucd):
+    if ucd.default_ignorable(cp) or ucd.noncharacter(cp):
         return DISALLOWED, "precis_ignorable_properties"
-    if in_controls(cp, ucd):
+    if ucd.control(cp):
         return DISALLOWED, "controls"
-    if in_has_compat(cp, ucd):
+    if ucd.has_compat(cp):
         return FREE_PVAL, "has_compat"
     if in_letter_digits(category):
         return PVALID, "letter_digits"
@@ -80,7 +89,7 @@ def in_letter_digits(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"}
+    return category in _LETTER_DIGITS
 
 
 def in_exceptions(cp):
@@ -198,7 +207,7 @@ def in_spaces(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Zs"}
+    return category in _SPACES
 
 
 def in_symbols(category):
@@ -210,7 +219,7 @@ def in_symbols(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Sm", "Sc", "Sk", "So"}
+    return category in _SYMBOLS
 
 
 def in_punctuation(category):
@@ -222,7 +231,7 @@ def in_punctuation(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"}
+    return category in _PUNCTUATION
 
 
 def in_has_compat(cp, ucd):
@@ -248,7 +257,7 @@ def in_other_letter_digits(category):
     Returns:
         bool: True if `category` in set.
     """
-    return category in {"Lt", "Nl", "No", "Me"}
+    return category in _OTHER_LETTER_DIGITS
 
 
 def exceptions(cp):

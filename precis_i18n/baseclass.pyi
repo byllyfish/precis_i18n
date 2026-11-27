@@ -1,4 +1,4 @@
-from typing import NoReturn, Optional, Tuple
+from typing import NoReturn, Optional, Tuple, Union
 
 from precis_i18n.unicode import UnicodeData
 
@@ -8,6 +8,7 @@ class BaseClass:
 
     def __init__(self, ucd: UnicodeData, name: str = ...) -> None: ...
     def enforce(self, value: str, codec_name: Optional[str] = ...) -> str: ...
+    def comparison_key(self, value: Union[str, bytes]) -> bytes: ...
 
 class IdentifierClass(BaseClass):
     _allowed: Tuple[str]

@@ -1,5 +1,95 @@
 # Changelog
 
+## Unreleased
+
+- Bind native username operations once per preparation and validate stock
+  inputs against the same admitted Unicode data before mapping and bidi.
+- Share exclusion masks with qualified explicit Unicode providers and avoid
+  width translation on text without a mapped character.
+- Avoid regular-expression dispatch when a nickname has no repeated spaces.
+- Combine exceptional native admission properties in sparse bitmaps and use
+  the active Unicode backend to classify ordinary characters. Preserve
+  diagnostics and positional checks for exceptional characters.
+- Detect native username bidi requirements in one scan and reject a label
+  with RTL characters when its first character cannot start an RTL label.
+- Share one initialized immutable table per Unicode generation, with direct
+  range loading and compact one-code-point mappings.
+- Pack common native classifications and use bulk admission for long strings
+  composed entirely of those admitted characters.
+- Apply the established ASCII invariants after username admission, including
+  when width mapping yields ASCII. Custom rules keep their existing behavior.
+- Apply profile-specific base-class admission before later mapping and
+  normalization. Username profiles first apply literal Unicode width
+  decompositions. U+212A and an uppercase middle-dot context now fail
+  before lowercase can make them admissible.
+- Prepare strings before enforcing later profile rules and check
+  stability using bounded repetition. Password and nickname preparation
+  preserve their own class and normalization rules. A preceding invalid
+  character can now be reported before a later bidi failure.
+- Add explicitly versioned Unicode 17 and 18 configurations, exact comparison
+  keys, and immutable semantic identities. Keep native and legacy provider
+  calls available. Revalidate existing keys and collisions before switching.
+- Reuse string-wide contextual verdicts within one pass and remove joining-type
+  string slices. Keep context rules and error offsets.
+- Reduce native admission work for printable ASCII and common Unicode
+  characters. Reuse normalization and directionality checks during
+  stabilization when the mapped value matches the previous checked output.
+
+### Performance
+
+[Full benchmark results and methodology](docs/performance.md).
+
+Upstream commit `865faed` and this implementation were measured in six
+balanced fresh-process pairs per interpreter using its native Unicode
+configuration. Short workloads used 10,000 timed samples per process.
+Each comparison uses inputs with equivalent preparation or rejection
+outcomes. The counts use the paired P50 verdicts. Negative percentages
+indicate lower latency, and the last column takes the median of the
+paired P50 changes across comparable workloads.
+
+| Runtime | Architecture | Faster | Within uncertainty | Slower | Median P50 change |
+| --- | --- | ---: | ---: | ---: | ---: |
+| CPython 3.7.17 | x86_64 | 27 | 0 | 0 | -52.7% |
+| CPython 3.8.20 | arm64 | 27 | 0 | 0 | -54.0% |
+| CPython 3.9.25 | arm64 | 27 | 0 | 0 | -52.0% |
+| CPython 3.10.22 | arm64 | 27 | 0 | 0 | -52.5% |
+| CPython 3.11.17 | arm64 | 27 | 0 | 0 | -43.6% |
+| CPython 3.12.15 | arm64 | 25 | 1 | 1 | -40.5% |
+| CPython 3.13.16 | arm64 | 26 | 1 | 0 | -46.5% |
+| CPython 3.14.8 | arm64 | 25 | 2 | 0 | -43.6% |
+| CPython 3.15.2 | arm64 | 26 | 1 | 0 | -44.1% |
+| PyPy 3.10.16 (7.3.19) | arm64 | 13 | 3 | 11 | -14.1% |
+| PyPy 3.11.15 (7.3.23) | arm64 | 13 | 3 | 11 | -10.8% |
+| CPython 3.14.8 (GIL disabled) | arm64 | 26 | 1 | 0 | -42.5% |
+
+Selected preparation and rejection P50s in microseconds, shown as upstream → candidate.
+
+| Runtime | ASCII mapped | Unicode mapped | Halfwidth Katakana | Lowercase | Bidi rejection |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| CPython 3.7.17 | 15.521 → 2.375 | 26.666 → 14.521 | 12.396 → 10.667 | 13.479 → 8.666 | 5.896 → 4.729 |
+| CPython 3.8.20 | 6.750 → 0.958 | 11.334 → 5.667 | 5.458 → 4.292 | 5.917 → 3.334 | 2.541 → 1.750 |
+| CPython 3.9.25 | 7.333 → 1.083 | 12.501 → 6.500 | 5.938 → 4.958 | 6.354 → 3.875 | 2.604 → 1.896 |
+| CPython 3.10.22 | 7.417 → 1.020 | 12.541 → 6.312 | 6.000 → 4.771 | 6.396 → 3.771 | 2.688 → 1.916 |
+| CPython 3.11.17 | 5.875 → 1.000 | 9.979 → 5.813 | 4.917 → 4.479 | 5.083 → 3.437 | 2.271 → 1.771 |
+| CPython 3.12.15 | 5.459 → 1.042 | 9.334 → 5.917 | 4.813 → 4.729 | 4.709 → 3.583 | 2.333 → 2.000 |
+| CPython 3.13.16 | 5.646 → 0.917 | 9.791 → 5.938 | 4.979 → 4.604 | 4.875 → 3.479 | 2.250 → 1.855 |
+| CPython 3.14.8 | 5.854 → 1.042 | 10.104 → 6.292 | 5.292 → 5.083 | 5.062 → 3.750 | 2.354 → 2.083 |
+| CPython 3.15.2 | 5.083 → 0.875 | 8.729 → 5.271 | 4.542 → 4.188 | 4.417 → 3.167 | 2.042 → 1.750 |
+| PyPy 3.10.16 (7.3.19) | 1.875 → 0.875 | 3.500 → 4.167 | 1.438 → 3.021 | 2.062 → 2.667 | 3.397 → 1.375 |
+| PyPy 3.11.15 (7.3.23) | 1.875 → 0.834 | 3.500 → 3.958 | 1.417 → 2.896 | 2.062 → 2.583 | 3.396 → 1.333 |
+| CPython 3.14.8 (GIL disabled) | 4.396 → 0.834 | 7.646 → 4.688 | 4.062 → 3.834 | 3.854 → 2.792 | 1.792 → 1.625 |
+
+Additional representative measurements on CPython 3.10 in microseconds.
+
+| Workload | Upstream → candidate P50 (µs) | Paired P50 change |
+| --- | ---: | ---: |
+| Fullwidth username | 8.459 → 1.375 | -83.6% |
+| Mixed-script username | 11.938 → 6.771 | -43.1% |
+| Mapped nickname | 9.000 → 5.791 | -35.9% |
+| OpaqueString | 9.729 → 6.000 | -38.3% |
+| 1,025-code-point combining sequence | 2004.761 → 107.229 | -94.6% |
+| 256-code-point Katakana context | 29487.011 → 265.198 | -99.1% |
+
 ## 1.1.2
 
 -   Update internal tables for Unicode 17.0.

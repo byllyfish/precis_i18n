@@ -1,5 +1,8 @@
 """Implements the `get_profile` factory function used to create profiles."""
 
+from precis_i18n import __version__
+from precis_i18n.identity import ProfileIdentity
+
 import precis_i18n.baseclass as _base
 import precis_i18n.profile as _profile
 import precis_i18n.unicode as _unicode
@@ -41,7 +44,7 @@ _PROFILES = {
 }
 
 
-def get_profile(name, *, unicodedata=None):
+def get_profile(name, *, unicodedata=None, unicode_version=None):
     """Return the desired PRECIS profile object.
 
     Choose name from:
@@ -66,7 +69,8 @@ def get_profile(name, *, unicodedata=None):
 
     Args:
         name (str): name of a PRECIS profile
-        unicodedata (module|object): Alternative unicodedata interface
+        unicodedata (module|object): Alternative unicodedata interface.
+        unicode_version (str|None): Explicitly select matching versioned Unicode semantics.
 
     Returns:
         AbstractProfile: PRECIS profile object.
@@ -74,5 +78,48 @@ def get_profile(name, *, unicodedata=None):
     Raises:
         KeyError: Profile not found.
     """
-    profile = name.lower().replace(":", "_")
-    return _PROFILES[profile](_unicode.UnicodeData(unicodedata))
+    key = name.lower().replace(":", "_")
+    factory = _PROFILES[key]
+    ucd = _unicode.UnicodeData(unicodedata, unicode_version=unicode_version)
+    profile = factory(ucd)
+    profile._profile_identity = _describe_profile(key, profile.name, ucd)
+    profile._profile_identity_data = ucd
+    return profile
+
+
+def _describe_profile(key, name, ucd):
+    if key.startswith("username"):
+        standards, width, normalization = "RFC 8265", "wide/narrow decomposition", "NFC"
+    elif key.startswith("nickname"):
+        standards, width, normalization = "RFC 8266", "none", "NFKC"
+    elif key == "opaquestring":
+        standards, width, normalization = "RFC 8265", "none", "NFC"
+    else:
+        standards, width, normalization = "RFC 8264", "none", "none"
+
+    if key.endswith("_casefold"):
+        standards += " casefold compatibility variant"
+        case = "casefold"
+    elif key in ("nickname", "nicknamecasemapped", "nicknamecasemapped_tolower"):
+        standards += " lowercase enforcement variant"
+        case = "lowercase"
+    elif key in ("usernamecasemapped", "usernamecasemapped_tolower"):
+        case = "lowercase"
+    else:
+        case = "none"
+    comparison = "lowercase" if key == "nicknamecasepreserved" else case
+    return ProfileIdentity(
+        profile=name,
+        standards=standards,
+        library_version=__version__,
+        semantic_revision="3",
+        unicode_version=ucd.data_version,
+        property_version=ucd.property_version,
+        execution_mode=ucd.mode,
+        width_mapping=width,
+        case_mapping=case,
+        comparison_case_mapping=comparison,
+        normalization=normalization,
+        data_identity=ucd.data_identity,
+        attestable=ucd.identity_attestable,
+    )
